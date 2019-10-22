@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net" xmlns:v="http://www.springframework.net/validation">
+  
+  <!--<object id="IAlarmService" parent="BaseTransactionManager"  >
+    <property name="Target">
+      <object type="Sys.Safety.Processing.Alarm.AlarmService, Sys.Safety.Processing.Alarm">
+      </object>
+    </property>
+  </object>-->
+</objects>

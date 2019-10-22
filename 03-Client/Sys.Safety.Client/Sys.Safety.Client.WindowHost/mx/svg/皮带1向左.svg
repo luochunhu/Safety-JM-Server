@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 750 70" width="750" height="70" hape-rendering="geometricPrecision" xmlns:a="http://www.adobe.com/svg10-extensions" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <desc>70</desc>
+  <rect id="CHINPMC_BGK" width="750" height="70" fill="rgb(255,255,255)" stroke-width="0" stroke="none"/>
+  <defs/>
+  <g id="0">
+    <g id="Fill_0" fill="rgb(0,153,51)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+      <path id="path_0_0" d="M 659 61 L 659 61 C 656 59 656 53 659 49 L 694 5 C 697 1 703 0 706 3 L 707 3 C 710 6 710 12 708 16 L 672 60 C 669 63 663 64 660 62 L 659 61 Z"/>
+      <text id="Text_0_0" x="678.000000" text-anchor="start" y="5.000000" vertical-align="top" transform="rotate(37.60 683.00 32.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+    </g>
+    <g id="Fill_1" fill="rgb(0,153,51)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+      <path id="path_0_1" d="M 62 2 C 276 2 490 2 706 2 692 16 679 29 664 44 450 44 236 44 20 44 34 30 47 17 62 2 Z"/>
+    </g>
+    <g id="0_2" fill="rgb(206,206,206)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+      <path id="path_0_2" d="M 347 62 L 39 62 C 31 62 24 57 24 52 L 24 52 C 24 47 31 42 39 42 L 655 42 C 663 42 670 47 670 52 L 670 52 C 670 57 663 62 655 62 L 347 62 Z"/>
+      <text id="Text_0_2" x="28.000000" text-anchor="start" y="53.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+    </g>
+    <g id="0_3" fill="rgb(122,106,86)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+      <path id="path_0_3" d="M 33 66 C 24 66 16 60 16 52 16 52 16 52 16 52 16 44 24 38 33 38 241 38 449 38 659 38 668 38 676 44 676 52 676 52 676 52 676 52 676 60 668 66 659 66 451 66 243 66 33 66 Z"/>
+    </g>
+    <g id="0_4" fill="rgb(82,82,82)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+      <path id="path_0_4" d="M 34 42 L 660 42 660 48 34 48 34 42 Z"/>
+      <text id="Text_0_4" x="38.000000" text-anchor="start" y="53.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+    </g>
+    <g id="0_5">
+      <g id="0_5_0" fill="rgb(0,0,0)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <ellipse id="ellipse_0_5_0" cx="660" cy="52" rx="10.500000" ry="10.500000"/>
+        <text id="Text_0_5_0" x="654.000000" text-anchor="start" y="53.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="0_5_1" fill="rgb(186,189,217)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <ellipse id="ellipse_0_5_1" cx="659" cy="52" rx="9.500000" ry="9.500000"/>
+        <text id="Text_0_5_1" x="654.000000" text-anchor="start" y="54.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="0_5_2" fill="rgb(96,76,63)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <ellipse id="ellipse_0_5_2" cx="659" cy="52" rx="6.500000" ry="6.500000"/>
+        <text id="Text_0_5_2" x="657.000000" text-anchor="start" y="57.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="0_5_3" fill="rgb(186,189,217)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <ellipse id="ellipse_0_5_3" cx="659" cy="52" rx="3.500000" ry="3.500000"/>
+        <text id="Text_0_5_3" x="660.000000" text-anchor="start" y="60.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_0_5" x="661.500000" text-anchor="start" y="84" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <g id="0_6">
+      <g id="0_6_0" fill="rgb(0,0,0)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <ellipse id="ellipse_0_6_0" cx="34" cy="52" rx="10.500000" ry="10.500000"/>
+        <text id="Text_0_6_0" x="28.000000" text-anchor="start" y="53.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="0_6_1" fill="rgb(186,189,217)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <ellipse id="ellipse_0_6_1" cx="33" cy="52" rx="9.500000" ry="9.500000"/>
+        <text id="Text_0_6_1" x="28.000000" text-anchor="start" y="54.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="0_6_2" fill="rgb(96,76,63)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <ellipse id="ellipse_0_6_2" cx="33" cy="52" rx="6.500000" ry="6.500000"/>
+        <text id="Text_0_6_2" x="31.000000" text-anchor="start" y="57.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="0_6_3" fill="rgb(186,189,217)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <ellipse id="ellipse_0_6_3" cx="33" cy="52" rx="3.500000" ry="3.500000"/>
+        <text id="Text_0_6_3" x="34.000000" text-anchor="start" y="60.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_0_6" x="34.500000" text-anchor="start" y="88" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <text id="Text_0" x="362.500000" text-anchor="start" y="91" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+  </g>
+  <g id="1" RefCenter="70,18">
+    <g id="1_0">
+      <g id="1_0_0" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_0_0" d="M 659 27 L 659 9 646 18 646 18 659 27 Z"/>
+        <text id="Text_1_0_0" x="649.000000" text-anchor="start" y="20.000000" vertical-align="top" transform="rotate(180.00 652.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="1_0_1" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_0_1" d="M 684 22 L 659 22 659 16 684 16 684 22 Z"/>
+        <text id="Text_1_0_1" x="662.000000" text-anchor="start" y="27.000000" vertical-align="top" transform="rotate(180.00 671.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_1_0" x="665.500000" text-anchor="start" y="-7" transform="rotate(180.00 667.00 -11.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <g id="1_1">
+      <g id="1_1_0" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_1_0" d="M 587 27 L 587 9 574 18 574 18 587 27 Z"/>
+        <text id="Text_1_1_0" x="577.000000" text-anchor="start" y="20.000000" vertical-align="top" transform="rotate(180.00 580.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="1_1_1" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_1_1" d="M 612 22 L 587 22 587 16 612 16 612 22 Z"/>
+        <text id="Text_1_1_1" x="590.000000" text-anchor="start" y="27.000000" vertical-align="top" transform="rotate(180.00 599.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_1_1" x="593.500000" text-anchor="start" y="-7" transform="rotate(180.00 595.00 -11.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <g id="1_2">
+      <g id="1_2_0" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_2_0" d="M 515 27 L 515 9 502 18 502 18 515 27 Z"/>
+        <text id="Text_1_2_0" x="505.000000" text-anchor="start" y="20.000000" vertical-align="top" transform="rotate(180.00 508.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="1_2_1" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_2_1" d="M 540 22 L 515 22 515 16 540 16 540 22 Z"/>
+        <text id="Text_1_2_1" x="518.000000" text-anchor="start" y="27.000000" vertical-align="top" transform="rotate(180.00 527.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_1_2" x="521.500000" text-anchor="start" y="-7" transform="rotate(180.00 523.00 -11.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <g id="1_3">
+      <g id="1_3_0" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_3_0" d="M 443 27 L 443 9 430 18 430 18 443 27 Z"/>
+        <text id="Text_1_3_0" x="433.000000" text-anchor="start" y="20.000000" vertical-align="top" transform="rotate(180.00 436.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="1_3_1" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_3_1" d="M 468 22 L 443 22 443 16 468 16 468 22 Z"/>
+        <text id="Text_1_3_1" x="446.000000" text-anchor="start" y="27.000000" vertical-align="top" transform="rotate(180.00 455.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_1_3" x="449.500000" text-anchor="start" y="-7" transform="rotate(180.00 451.00 -11.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <g id="1_4">
+      <g id="1_4_0" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_4_0" d="M 371 27 L 371 9 358 18 358 18 371 27 Z"/>
+        <text id="Text_1_4_0" x="361.000000" text-anchor="start" y="20.000000" vertical-align="top" transform="rotate(180.00 364.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="1_4_1" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_4_1" d="M 396 22 L 371 22 371 16 396 16 396 22 Z"/>
+        <text id="Text_1_4_1" x="374.000000" text-anchor="start" y="27.000000" vertical-align="top" transform="rotate(180.00 383.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_1_4" x="377.500000" text-anchor="start" y="-7" transform="rotate(180.00 379.00 -11.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <g id="1_5">
+      <g id="1_5_0" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_5_0" d="M 299 27 L 299 9 286 18 286 18 299 27 Z"/>
+        <text id="Text_1_5_0" x="289.000000" text-anchor="start" y="20.000000" vertical-align="top" transform="rotate(180.00 292.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="1_5_1" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_5_1" d="M 324 22 L 299 22 299 16 324 16 324 22 Z"/>
+        <text id="Text_1_5_1" x="302.000000" text-anchor="start" y="27.000000" vertical-align="top" transform="rotate(180.00 311.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_1_5" x="305.500000" text-anchor="start" y="-7" transform="rotate(180.00 307.00 -11.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <g id="1_6">
+      <g id="1_6_0" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_6_0" d="M 227 27 L 227 9 214 18 214 18 227 27 Z"/>
+        <text id="Text_1_6_0" x="217.000000" text-anchor="start" y="20.000000" vertical-align="top" transform="rotate(180.00 220.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="1_6_1" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_6_1" d="M 252 22 L 227 22 227 16 252 16 252 22 Z"/>
+        <text id="Text_1_6_1" x="230.000000" text-anchor="start" y="27.000000" vertical-align="top" transform="rotate(180.00 239.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_1_6" x="233.500000" text-anchor="start" y="-7" transform="rotate(180.00 235.00 -11.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <g id="1_7">
+      <g id="1_7_0" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_7_0" d="M 155 27 L 155 9 142 18 142 18 155 27 Z"/>
+        <text id="Text_1_7_0" x="145.000000" text-anchor="start" y="20.000000" vertical-align="top" transform="rotate(180.00 148.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="1_7_1" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_7_1" d="M 180 22 L 155 22 155 16 180 16 180 22 Z"/>
+        <text id="Text_1_7_1" x="158.000000" text-anchor="start" y="27.000000" vertical-align="top" transform="rotate(180.00 167.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_1_7" x="161.500000" text-anchor="start" y="-7" transform="rotate(180.00 163.00 -11.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <g id="1_8">
+      <g id="1_8_0" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_8_0" d="M 83 27 L 83 9 70 18 70 18 83 27 Z"/>
+        <text id="Text_1_8_0" x="73.000000" text-anchor="start" y="20.000000" vertical-align="top" transform="rotate(180.00 76.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="1_8_1" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_8_1" d="M 108 22 L 83 22 83 16 108 16 108 22 Z"/>
+        <text id="Text_1_8_1" x="86.000000" text-anchor="start" y="27.000000" vertical-align="top" transform="rotate(180.00 95.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_1_8" x="89.500000" text-anchor="start" y="-7" transform="rotate(180.00 91.00 -11.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <g id="1_9">
+      <g id="1_9_0" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_9_0" d="M 720 27 L 720 9 707 18 707 18 720 27 Z"/>
+        <text id="Text_1_9_0" x="710.000000" text-anchor="start" y="20.000000" vertical-align="top" transform="rotate(180.00 713.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="1_9_1" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_1_9_1" d="M 745 22 L 720 22 720 16 745 16 745 22 Z"/>
+        <text id="Text_1_9_1" x="723.000000" text-anchor="start" y="27.000000" vertical-align="top" transform="rotate(180.00 732.00 18.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_1_9" x="726.500000" text-anchor="start" y="-7" transform="rotate(180.00 728.00 -11.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <text id="Text_1" x="408.500000" text-anchor="start" y="-7" transform="rotate(180.00 410.00 -11.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    <animateMotion id="Rotate_1" begin="indefinite" end="indefinite" attributeName="transform" attributeType="XML" type="translate" path="M 40 0 L -30 0 " dur="1.000000s" additive="replace" fill="freeze" accumulate="none" restart="whenNotActive" repeatCount="indefinite"/>
+  </g>
+  <g id="2" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_2" d="M 713 11 C 733 11 751 11 772 11 759 28 746 45 732 63 712 63 692 63 671 63 684 46 700 29 713 11 Z"/>
+  </g>
+  <g id="3" fill="rgb(255,255,255)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_3" d="M 0 11 C 5 11 48 11 53 11 L 25 38 0 38 C 0 29 0 20 0 11 Z"/>
+  </g>
+</svg>

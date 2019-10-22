@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73378B61-2955-4908-9E10-A992141EE07A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sys.Safety.Client.Display</RootNamespace>
+    <AssemblyName>Sys.Safety.Client.Display</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Basic.Framework">
+      <HintPath>..\..\..\01-Library\Framework\Basic.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2.UI, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2.Extensions, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sys.DataCollection.Common, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\01-Library\Framework\Sys.DataCollection.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DDGXForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DDGXForm.Designer.cs">
+      <DependentUpon>DDGXForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinkageItemSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LinkageItemSelect.Designer.cs">
+      <DependentUpon>LinkageItemSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonInfo\PersonRealForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonInfo\PersonRealForm.Designer.cs">
+      <DependentUpon>PersonRealForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonInfo\RecognizerRealForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonInfo\RecognizerRealForm.Designer.cs">
+      <DependentUpon>RecognizerRealForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealDDControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealDDControl.Designer.cs">
+      <DependentUpon>RealDDControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealKglDDControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealKglDDControl.Designer.cs">
+      <DependentUpon>RealKglDDControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealKglControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealKglControl.Designer.cs">
+      <DependentUpon>RealKglControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutomaticArtControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AutomaticArtControl.Designer.cs">
+      <DependentUpon>AutomaticArtControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealRunRecordControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealRunRecordControl.Designer.cs">
+      <DependentUpon>RealRunRecordControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealMnlControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealMnlControl.Designer.cs">
+      <DependentUpon>RealMnlControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SwitchRealForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SwitchRealForm.Designer.cs">
+      <DependentUpon>SwitchRealForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSForm.Designer.cs">
+      <DependentUpon>CSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CuCharge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CuCharge.Designer.cs">
+      <DependentUpon>CuCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayNavagation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DisplayNavagation.designer.cs">
+      <DependentUpon>DisplayNavagation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBxDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBxDetail.Designer.cs">
+      <DependentUpon>FrmBxDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBxTj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBxTj.Designer.cs">
+      <DependentUpon>FrmBxTj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDefWB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDefWB.Designer.cs">
+      <DependentUpon>frmDefWB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFaultInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFaultInfo.designer.cs">
+      <DependentUpon>frmFaultInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGetHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGetHistory.designer.cs">
+      <DependentUpon>frmGetHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRunLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRunLog.designer.cs">
+      <DependentUpon>frmRunLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FzShowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FzShowForm.Designer.cs">
+      <DependentUpon>FzShowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KzDefineMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KzDefineMsg.Designer.cs">
+      <DependentUpon>KzDefineMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalogRealForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalogRealForm.Designer.cs">
+      <DependentUpon>AnalogRealForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KzRealForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KzRealForm.Designer.cs">
+      <DependentUpon>KzRealForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ChargeMgrModel.cs" />
+    <Compile Include="Model\RealInterfaceFuction.cs" />
+    <Compile Include="NetCuCharge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NetCuCharge.Designer.cs">
+      <DependentUpon>NetCuCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NetForm.Designer.cs">
+      <DependentUpon>NetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OprFuction.cs" />
+    <Compile Include="PointArrangeConfig.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RealBJControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealBJControl.Designer.cs">
+      <DependentUpon>RealBJControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealDataDisplayConfig.cs" />
+    <Compile Include="RealDatadisplaySetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealDatadisplaySetForm.designer.cs">
+      <DependentUpon>RealDatadisplaySetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealDisplayForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RealDisplayForm.designer.cs">
+      <DependentUpon>RealDisplayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealHandControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealHandControl.Designer.cs">
+      <DependentUpon>RealHandControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealKDYCControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealKDYCControl.Designer.cs">
+      <DependentUpon>RealKDYCControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealKGLBDControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealKGLBDControl.Designer.cs">
+      <DependentUpon>RealKGLBDControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealKglBjControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealKglBjControl.Designer.cs">
+      <DependentUpon>RealKglBjControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealKZControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealKZControl.Designer.cs">
+      <DependentUpon>RealKZControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealyjControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealyjControl.Designer.cs">
+      <DependentUpon>RealyjControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SBSJForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SBSJForm.designer.cs">
+      <DependentUpon>SBSJForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensorTypeErrorDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SensorTypeErrorDisplay.Designer.cs">
+      <DependentUpon>SensorTypeErrorDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetPoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetPoints.designer.cs">
+      <DependentUpon>SetPoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetPointsShowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetPointsShowForm.designer.cs">
+      <DependentUpon>SetPointsShowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StateToClient.cs" />
+    <Compile Include="Showform.cs" />
+    <Compile Include="StaticClass.cs" />
+    <Compile Include="VideoMrg\CFVideoInf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoMrg\CFVideoInf.Designer.cs">
+      <DependentUpon>CFVideoInf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VideoMrg\CHCNetSDK.cs" />
+    <Compile Include="WorkMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkMainForm.designer.cs">
+      <DependentUpon>WorkMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XJForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XJForm.designer.cs">
+      <DependentUpon>XJForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XmlConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DDGXForm.resx">
+      <DependentUpon>DDGXForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinkageItemSelect.resx">
+      <DependentUpon>LinkageItemSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonInfo\PersonRealForm.resx">
+      <DependentUpon>PersonRealForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonInfo\RecognizerRealForm.resx">
+      <DependentUpon>RecognizerRealForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="RealDDControl.resx">
+      <DependentUpon>RealDDControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealKglDDControl.resx">
+      <DependentUpon>RealKglDDControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealKglControl.resx">
+      <DependentUpon>RealKglControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutomaticArtControl.resx">
+      <DependentUpon>AutomaticArtControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealRunRecordControl.resx">
+      <DependentUpon>RealRunRecordControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealMnlControl.resx">
+      <DependentUpon>RealMnlControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SwitchRealForm.resx">
+      <DependentUpon>SwitchRealForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CSForm.resx">
+      <DependentUpon>CSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CuCharge.resx">
+      <DependentUpon>CuCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayNavagation.resx">
+      <DependentUpon>DisplayNavagation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBxDetail.resx">
+      <DependentUpon>FrmBxDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBxTj.resx">
+      <DependentUpon>FrmBxTj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDefWB.resx">
+      <DependentUpon>frmDefWB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFaultInfo.resx">
+      <DependentUpon>frmFaultInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGetHistory.resx">
+      <DependentUpon>frmGetHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRunLog.resx">
+      <DependentUpon>frmRunLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FzShowForm.resx">
+      <DependentUpon>FzShowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KzDefineMsg.resx">
+      <DependentUpon>KzDefineMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalogRealForm.resx">
+      <DependentUpon>AnalogRealForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KzRealForm.resx">
+      <DependentUpon>KzRealForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetCuCharge.resx">
+      <DependentUpon>NetCuCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetForm.resx">
+      <DependentUpon>NetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealBJControl.resx">
+      <DependentUpon>RealBJControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealDatadisplaySetForm.resx">
+      <DependentUpon>RealDatadisplaySetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealDisplayForm.resx">
+      <DependentUpon>RealDisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealHandControl.resx">
+      <DependentUpon>RealHandControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealKDYCControl.resx">
+      <DependentUpon>RealKDYCControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealKGLBDControl.resx">
+      <DependentUpon>RealKGLBDControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealKglBjControl.resx">
+      <DependentUpon>RealKglBjControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealKZControl.resx">
+      <DependentUpon>RealKZControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealyjControl.resx">
+      <DependentUpon>RealyjControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SBSJForm.resx">
+      <DependentUpon>SBSJForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SensorTypeErrorDisplay.resx">
+      <DependentUpon>SensorTypeErrorDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPoints.resx">
+      <DependentUpon>SetPoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPointsShowForm.resx">
+      <DependentUpon>SetPointsShowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoMrg\CFVideoInf.resx">
+      <DependentUpon>CFVideoInf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkMainForm.resx">
+      <DependentUpon>WorkMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XJForm.resx">
+      <DependentUpon>XJForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.Common\Sys.Safety.Common.csproj">
+      <Project>{8e5d494d-95b5-46ae-9642-92d04410a5f9}</Project>
+      <Name>Sys.Safety.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.DataContract\Sys.Safety.DataContract.csproj">
+      <Project>{bb6fbb99-66e9-4d1e-b1d1-d585a0151505}</Project>
+      <Name>Sys.Safety.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.Enums\Sys.Safety.Enums.csproj">
+      <Project>{59d5703e-ea5e-4836-b557-1b99e80754e4}</Project>
+      <Name>Sys.Safety.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.Request\Sys.Safety.Request.csproj">
+      <Project>{c17815bf-001e-4872-a45e-0e6e48a59f0f}</Project>
+      <Name>Sys.Safety.Request</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.ServiceContract\Sys.Safety.ServiceContract.csproj">
+      <Project>{f723137b-dc93-4e92-b3a3-c02281b46e0f}</Project>
+      <Name>Sys.Safety.ServiceContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sys.Safety.Reports\Sys.Safety.Reports\Sys.Safety.Reports.csproj">
+      <Project>{0085d351-ddc5-48c5-a214-1a1ab023ae16}</Project>
+      <Name>Sys.Safety.Reports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sys.Safety.ClientFramework\Sys.Safety.ClientFramework\Sys.Safety.ClientFramework.csproj">
+      <Project>{5d3ad7d1-bed1-4507-be4b-febcc7170589}</Project>
+      <Name>Sys.Safety.ClientFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Client.Alarm\Sys.Safety.Client.Alarm.csproj">
+      <Project>{9455BAF4-2232-4D52-A422-5A082B2E8261}</Project>
+      <Name>Sys.Safety.Client.Alarm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Client.Chart\Sys.Safety.Client.Chart.csproj">
+      <Project>{f22afcfa-155f-44a9-8202-480194dbf0fc}</Project>
+      <Name>Sys.Safety.Client.Chart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Client.Define\Sys.Safety.Client.Define.csproj">
+      <Project>{85dc5fd0-e028-442f-829d-9ae36b3b79ed}</Project>
+      <Name>Sys.Safety.Client.Define</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d0020.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

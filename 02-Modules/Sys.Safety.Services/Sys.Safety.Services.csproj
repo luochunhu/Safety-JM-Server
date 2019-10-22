@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7FA650F-88C2-4417-A349-CF9E0CBEF6FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sys.Safety.Services</RootNamespace>
+    <AssemblyName>Sys.Safety.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Basic.Cache">
+      <HintPath>..\..\01-Library\Framework\Basic.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="Basic.Framework">
+      <HintPath>..\..\01-Library\Framework\Basic.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\01-Library\Framework\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\..\01-Library\Framework\MongoDb\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\..\01-Library\Framework\MongoDb\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core">
+      <HintPath>..\..\01-Library\Framework\MongoDb\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Legacy">
+      <HintPath>..\..\01-Library\Framework\MongoDb\MongoDB.Driver.Legacy.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis">
+      <HintPath>..\..\01-Library\Framework\StackExchange.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="Sys.DataCollection.Common">
+      <HintPath>..\..\01-Library\Framework\Sys.DataCollection.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>..\..\01-Library\Framework\MongoDb\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccumulationDayService.cs" />
+    <Compile Include="AccumulationHourService.cs" />
+    <Compile Include="AccumulationMonthService.cs" />
+    <Compile Include="AccumulationYearService.cs" />
+    <Compile Include="BigDataAnalysis\AlarmHandleService.Build.cs" />
+    <Compile Include="AlarmModule\AlarmService.cs" />
+    <Compile Include="BigDataAnalysis\AlarmNotificationPersonnelConfigService.Build.cs" />
+    <Compile Include="BigDataAnalysis\AlarmNotificationPersonnelService.Build.cs" />
+    <Compile Include="BigDataAnalysis\AnalysistemplatealarmlevelService.Build.cs" />
+    <Compile Include="BigDataAnalysis\AnalysisTemplateConfigService.Build.cs" />
+    <Compile Include="BigDataAnalysis\AnalysisTemplateService.Build.cs" />
+    <Compile Include="BigDataAnalysis\AnalyticalExpressionService.Build.cs" />
+    <Compile Include="App\KJ73NAppService.cs" />
+    <Compile Include="B_BroadcastplanpointlistService.Build.cs" />
+    <Compile Include="B_BroadcastplanService.Build.cs" />
+    <Compile Include="B_CallhistorypointlistService.Build.cs" />
+    <Compile Include="B_CallhistoryService.Build.cs" />
+    <Compile Include="B_CallpointlistService.Build.cs" />
+    <Compile Include="B_CallMonitorService.Build.cs" />
+    <Compile Include="B_CallService.Build.cs" />
+    <Compile Include="B_CallCacheService.cs" />
+    <Compile Include="B_DefCacheService.cs" />
+    <Compile Include="B_DefService.Build.cs" />
+    <Compile Include="B_MusicfilesService.Build.cs" />
+    <Compile Include="B_PlaylistmusiclinkService.Build.cs" />
+    <Compile Include="B_PlaylistService.Build.cs" />
+    <Compile Include="Cache\AnalysisTemplateAlarmLevelCacheService.cs" />
+    <Compile Include="Cache\GasContentAlarmCacheService.cs" />
+    <Compile Include="Cache\GasContentAnalyzeConfigCacheService.cs" />
+    <Compile Include="Cache\SysEmergencyLinkageCacheService.cs" />
+    <Compile Include="DataToDb\R_RunLogDataInsertToDbService.cs" />
+    <Compile Include="DataToDb\R_AlarmDataInsertToDbService.cs" />
+    <Compile Include="EmergencyLinkageHistoryMasterPointAssService.Build.cs" />
+    <Compile Include="EmergencyLinkHistoryService.Build.cs" />
+    <Compile Include="GascontentanalyzeconfigService.Build.cs" />
+    <Compile Include="KJ237Cache\R_PBCacheService.cs" />
+    <Compile Include="KJ237Cache\AreaCacheService.cs" />
+    <Compile Include="BroadCastPointDefineService.Build.cs" />
+    <Compile Include="KJ_AddresstyperuleService.Build.cs" />
+    <Compile Include="KJ_AddresstypeService.Build.cs" />
+    <Compile Include="PowerboxchargehistoryService.Build.cs" />
+    <Compile Include="PtQuery\PtQueryService.cs" />
+    <Compile Include="R_AreaAlarmService.Build.cs" />
+    <Compile Include="R_ArearestrictedpersonService.Build.cs" />
+    <Compile Include="AreaRuleService.Build.cs" />
+    <Compile Include="AreaService.Build.cs" />
+    <Compile Include="Cache\RatioAlarmCacheService.cs" />
+    <Compile Include="Cache\AlarmCacheService.cs" />
+    <Compile Include="Cache\ConfigCacheService.cs" />
+    <Compile Include="Cache\DeviceClassCacheService.cs" />
+    <Compile Include="Cache\DeviceDefineCacheService.cs" />
+    <Compile Include="Cache\DevicePropertyCacheService.cs" />
+    <Compile Include="Cache\DeviceTypeCacheService.cs" />
+    <Compile Include="Cache\LargeDataAnalysisConfigCacheService.cs" />
+    <Compile Include="Cache\ManualCrossControlCacheService.cs" />
+    <Compile Include="Cache\NetworkModuleCacheService.cs" />
+    <Compile Include="Cache\PointDefineCacheService.cs" />
+    <Compile Include="Cache\PositionCacheService.cs" />
+    <Compile Include="Cache\AutomaticArticulatedDeviceCacheService.cs" />
+    <Compile Include="Cache\RunLogCacheService.cs" />
+    <Compile Include="Cache\SettingCacheService.cs" />
+    <Compile Include="ClientFramework\RemoteStateService.cs" />
+    <Compile Include="Chart\ChartService.cs" />
+    <Compile Include="ClassService.Build.cs" />
+    <Compile Include="ConfigService.Build.cs" />
+    <Compile Include="Control\ControlService.cs" />
+    <Compile Include="DataexchangesettingService.Build.cs" />
+    <Compile Include="DatarightService.Build.cs" />
+    <Compile Include="DataToDb\AccumulationDayDataToDbService.cs" />
+    <Compile Include="DataToDb\AccumulationHourDataToDbService.cs" />
+    <Compile Include="DataToDb\AccumulationMonthDataToDbService.cs" />
+    <Compile Include="DataToDb\AccumulationYearDataToDbService.cs" />
+    <Compile Include="DataToDb\AlarmDataInsertToDbService.cs" />
+    <Compile Include="DataToDb\InsertToDbService.cs" />
+    <Compile Include="DataToDb\FeedDataInsertToDbService.cs" />
+    <Compile Include="DataToDb\FiveDataInsertToDbService.cs" />
+    <Compile Include="DataToDb\InitialDataInsertToDbService.cs" />
+    <Compile Include="DataToDb\RunLogDataInsertToDbService.cs" />
+    <Compile Include="DataToDb\R_PbDataToDbService.cs" />
+    <Compile Include="DataToDb\R_PhistoryDataToDbService.cs" />
+    <Compile Include="DataToDb\R_AreaAlarmDataToDbService.cs" />
+    <Compile Include="DataToDb\R_PhjDataToDbService.cs" />
+    <Compile Include="DeletecheckService.Build.cs" />
+    <Compile Include="DeptinfService.Build.cs" />
+    <Compile Include="EmergencyLinkageMasterAreaAssService.Build.cs" />
+    <Compile Include="EmergencyLinkageMasterDevTypeAssService.Build.cs" />
+    <Compile Include="EmergencyLinkageMasterPointAssService.Build.cs" />
+    <Compile Include="EmergencyLinkageMasterTriDataStateAssService.Build.cs" />
+    <Compile Include="EmergencyLinkagePassiveAreaAssService.Build.cs" />
+    <Compile Include="EmergencyLinkagePassivePersonAssService.Build.cs" />
+    <Compile Include="EmergencyLinkagePassivePointAssService.Build.cs" />
+    <Compile Include="KJ237Cache\RUndefinedDefCacheService.cs" />
+    <Compile Include="KJ237Cache\RKqbcCacheService.cs" />
+    <Compile Include="KJ237Cache\RCallCacheService.cs" />
+    <Compile Include="KJ237Cache\RPersoninfCacheService.cs" />
+    <Compile Include="KJ237Cache\RPointDefineCacheService.cs" />
+    <Compile Include="KJ237Cache\RPrealCacheService.cs" />
+    <Compile Include="KJ237Cache\RsyncLocalCacheService.cs" />
+    <Compile Include="AllSystemPointDefineService.Build.cs" />
+    <Compile Include="R_KqbcService.Build.cs" />
+    <Compile Include="R_PbService.Build.cs" />
+    <Compile Include="PersonPointDefineService.Build.cs" />
+    <Compile Include="R_CallService.Build.cs" />
+    <Compile Include="R_DefService.Build.cs" />
+    <Compile Include="R_DeptService.Build.cs" />
+    <Compile Include="Driver\DriverManualCrossControlService.cs" />
+    <Compile Include="EmergencyLinkageConfigService.Build.cs" />
+    <Compile Include="EnumcodeService.Build.cs" />
+    <Compile Include="EnumtypeService.Build.cs" />
+    <Compile Include="BigDataAnalysis\ExpressionConfigService.Build.cs" />
+    <Compile Include="BigDataAnalysis\FactorCalculateService.cs" />
+    <Compile Include="BigDataAnalysis\FactorService.Build.cs" />
+    <Compile Include="FklibService.Build.cs" />
+    <Compile Include="FlagService.Build.cs" />
+    <Compile Include="GraphicsbaseinfService.Build.cs" />
+    <Compile Include="GraphicspointsinfService.Build.cs" />
+    <Compile Include="GraphicsrouteinfService.Build.cs" />
+    <Compile Include="AlarmRecordService.Build.cs" />
+    <Compile Include="CalibrationStatisticsService.Build.cs" />
+    <Compile Include="CalibrationDefService.Build.cs" />
+    <Compile Include="Jc_BzService.Build.cs" />
+    <Compile Include="Jc_CsService.Build.cs" />
+    <Compile Include="Jc_DayService.Build.cs" />
+    <Compile Include="BigDataAnalysis\LargeDataAnalysisCacheClientService.cs" />
+    <Compile Include="BigDataAnalysis\LargedataAnalysisConfigService.Build.cs" />
+    <Compile Include="BigDataAnalysis\LargeDataAnalysisLastChangedService.cs" />
+    <Compile Include="BigDataAnalysis\LargedataAnalysisLogService.Build.cs" />
+    <Compile Include="JC_MbService.Build.cs" />
+    <Compile Include="JC_MultiplesettingService.Build.cs" />
+    <Compile Include="ListdataremarkService.Build.cs" />
+    <Compile Include="MsgLogService.Build.cs" />
+    <Compile Include="MsgRuleService.Build.cs" />
+    <Compile Include="MsgUserRuleService.Build.cs" />
+    <Compile Include="BigDataAnalysis\ParameterService.Build.cs" />
+    <Compile Include="R_PersoninfService.Build.cs" />
+    <Compile Include="R_PhistoryService.Build.cs" />
+    <Compile Include="PointDefineService.Build.cs" />
+    <Compile Include="DeviceKoriyasuService.Build.cs" />
+    <Compile Include="DeviceDefineService.Build.cs" />
+    <Compile Include="Jc_HourService.Build.cs" />
+    <Compile Include="ManualCrossControlService.Build.cs" />
+    <Compile Include="Jc_KdService.Build.cs" />
+    <Compile Include="Jc_LlService.Build.cs" />
+    <Compile Include="EmissionDayService.Build.cs" />
+    <Compile Include="EmissionHourService.Build.cs" />
+    <Compile Include="EmissionMonthService.Build.cs" />
+    <Compile Include="EmissionYearService.Build.cs" />
+    <Compile Include="NetworkModuleService.Build.cs" />
+    <Compile Include="Jc_McService.Build.cs" />
+    <Compile Include="Jc_MonthService.Build.cs" />
+    <Compile Include="Jc_MService.Build.cs" />
+    <Compile Include="Jc_PointhisService.Build.cs" />
+    <Compile Include="Jc_RemarkService.Build.cs" />
+    <Compile Include="Jc_RService.Build.cs" />
+    <Compile Include="Jc_SeasonService.Build.cs" />
+    <Compile Include="Jc_ShowService.Build.cs" />
+    <Compile Include="PositionService.Build.cs" />
+    <Compile Include="Jc_YearService.Build.cs" />
+    <Compile Include="LighthistoryService.Build.cs" />
+    <Compile Include="ListcommandexService.Build.cs" />
+    <Compile Include="ListdataexService.Build.cs" />
+    <Compile Include="ListdatalayountService.Build.cs" />
+    <Compile Include="ListdisplayexService.Build.cs" />
+    <Compile Include="ListexService.Build.cs" />
+    <Compile Include="ListmetadataService.Build.cs" />
+    <Compile Include="ListReport\ServerDataCache.cs" />
+    <Compile Include="ListReport\SqlService.cs" />
+    <Compile Include="ListtempleService.Build.cs" />
+    <Compile Include="MenuService.Build.cs" />
+    <Compile Include="MetadatafieldsService.Build.cs" />
+    <Compile Include="MetadataService.Build.cs" />
+    <Compile Include="OperatelogService.Build.cs" />
+    <Compile Include="PointDefineComom\PointDefineCommon.cs" />
+    <Compile Include="R_PhjService.Build.cs" />
+    <Compile Include="R_PrealService.Build.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealModule\CalibrationService.cs" />
+    <Compile Include="RealModule\RealMessageService.cs" />
+    <Compile Include="BigDataAnalysis\RegionOutageConfigService.Build.cs" />
+    <Compile Include="ReportService.cs" />
+    <Compile Include="RequestService.Build.cs" />
+    <Compile Include="RightService.Build.cs" />
+    <Compile Include="RoledatarightService.Build.cs" />
+    <Compile Include="RolefieldsService.Build.cs" />
+    <Compile Include="RolerightService.Build.cs" />
+    <Compile Include="RoleService.Build.cs" />
+    <Compile Include="RolewebmenuauthService.Build.cs" />
+    <Compile Include="RolewebmenuService.Build.cs" />
+    <Compile Include="RunlogService.Build.cs" />
+    <Compile Include="R_RestrictedpersonService.Build.cs" />
+    <Compile Include="BigDataAnalysis\SetAnalysisModelPointRecordService.Build.cs" />
+    <Compile Include="SettingService.Build.cs" />
+    <Compile Include="ShortCutMenuService.Build.cs" />
+    <Compile Include="StaionControlHistoryDataService.Build.cs" />
+    <Compile Include="StaionHistoryDataService.Build.cs" />
+    <Compile Include="StationUpdateService.cs" />
+    <Compile Include="R_SyncLocalService.Build.cs" />
+    <Compile Include="SysEmergencyLinkageService.Build.cs" />
+    <Compile Include="SysinfService.Build.cs" />
+    <Compile Include="R_UndefinedDefService.Build.cs" />
+    <Compile Include="UserrightService.Build.cs" />
+    <Compile Include="UserRoleAuthorize\BaseLoginService.cs" />
+    <Compile Include="UserRoleAuthorize\LoginService.cs" />
+    <Compile Include="UserroleService.Build.cs" />
+    <Compile Include="UserService.Build.cs" />
+    <Compile Include="V_DefCacheService.cs" />
+    <Compile Include="V_DefService.Build.cs" />
+    <Compile Include="WebauthorityService.Build.cs" />
+    <Compile Include="WebmenuauthService.Build.cs" />
+    <Compile Include="WebmenuService.Build.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\06-Drivers\Sys.Safety.Interface\Sys.Safety.Interface.csproj">
+      <Project>{b43ed9fa-12ac-43e5-9f7e-ef3a5d043299}</Project>
+      <Name>Sys.Safety.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Cache\Sys.Safety.Cache.csproj">
+      <Project>{43505e0c-55a1-4bf5-a89f-989d19a846dc}</Project>
+      <Name>Sys.Safety.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Common\Sys.Safety.Common.csproj">
+      <Project>{8e5d494d-95b5-46ae-9642-92d04410a5f9}</Project>
+      <Name>Sys.Safety.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.DataContract\Sys.Safety.DataContract.csproj">
+      <Project>{bb6fbb99-66e9-4d1e-b1d1-d585a0151505}</Project>
+      <Name>Sys.Safety.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.DataAccess\Sys.Safety.DataAccess.csproj">
+      <Project>{a46e653e-a3b8-4d4c-9110-a97fd747c31f}</Project>
+      <Name>Sys.Safety.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Model\Sys.Safety.Model.csproj">
+      <Project>{3b9ff2e1-f240-4bb3-a116-5976892a2301}</Project>
+      <Name>Sys.Safety.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Enums\Sys.Safety.Enums.csproj">
+      <Project>{59d5703e-ea5e-4836-b557-1b99e80754e4}</Project>
+      <Name>Sys.Safety.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Request\Sys.Safety.Request.csproj">
+      <Project>{c17815bf-001e-4872-a45e-0e6e48a59f0f}</Project>
+      <Name>Sys.Safety.Request</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Processing\Sys.Safety.Processing.csproj">
+      <Project>{fdee6f92-8d6d-4627-808e-d6b83bf55def}</Project>
+      <Name>Sys.Safety.Processing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.ServiceContract\Sys.Safety.ServiceContract.csproj">
+      <Project>{f723137b-dc93-4e92-b3a3-c02281b46e0f}</Project>
+      <Name>Sys.Safety.ServiceContract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GasContentService.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AlarmSettings>
+  <PropertySetting>
+    <Item code="0" name="分站" alarmType="通讯中断" alarmCode="0" alarmShow="1, 2, 3" />
+    <Item code="0" name="分站" alarmType="通讯误码" alarmCode="1" alarmShow="" />
+    <Item code="0" name="分站" alarmType="初始化中" alarmCode="2" alarmShow="" />
+    <Item code="0" name="分站" alarmType="交流正常" alarmCode="3" alarmShow="" />
+    <Item code="0" name="分站" alarmType="直流正常" alarmCode="4" alarmShow="1, 2, 3" />
+    <Item code="2" name="开关量" alarmType="0态" alarmCode="25" alarmShow="1, 2, 3" />
+    <Item code="2" name="开关量" alarmType="1态" alarmCode="26" alarmShow="" />
+    <Item code="2" name="开关量" alarmType="2态" alarmCode="27" alarmShow="" />
+    <Item code="3" name="控制量" alarmType="控制量0态" alarmCode="43" alarmShow="" />
+    <Item code="3" name="控制量" alarmType="控制量1态" alarmCode="44" alarmShow="" />
+    <Item code="3" name="控制量" alarmType="控制量断线" alarmCode="45" alarmShow="" />
+    <Item code="3" name="控制量" alarmType="复电成功 " alarmCode="29" alarmShow="" />
+    <Item code="3" name="控制量" alarmType="复电失败" alarmCode="30" alarmShow="1, 2, 3" />
+    <Item code="3" name="控制量" alarmType="断电成功 " alarmCode="31" alarmShow="" />
+    <Item code="3" name="控制量" alarmType="断电失败" alarmCode="32" alarmShow="1, 2, 3" />
+    <Item code="1" name="模拟量" alarmType="上限预警" alarmCode="8" alarmShow="1, 2, 3" />
+    <Item code="1" name="模拟量" alarmType="上限预警解除" alarmCode="9" alarmShow="" />
+    <Item code="1" name="模拟量" alarmType="上限报警" alarmCode="10" alarmShow="1, 2, 3" />
+    <Item code="1" name="模拟量" alarmType="上限报警解除" alarmCode="11" alarmShow="" />
+    <Item code="1" name="模拟量" alarmType="上限断电" alarmCode="12" alarmShow="1, 2, 3" />
+    <Item code="1" name="模拟量" alarmType="上限断电解除" alarmCode="13" alarmShow="" />
+    <Item code="1" name="模拟量" alarmType="下限预警" alarmCode="14" alarmShow="1, 2, 3" />
+    <Item code="1" name="模拟量" alarmType="下限预警解除" alarmCode="15" alarmShow="" />
+    <Item code="1" name="模拟量" alarmType="下限报警" alarmCode="16" alarmShow="1, 2, 3" />
+    <Item code="1" name="模拟量" alarmType="下限报警解除" alarmCode="17" alarmShow="" />
+    <Item code="1" name="模拟量" alarmType="下限断电" alarmCode="18" alarmShow="1, 2, 3" />
+    <Item code="1" name="模拟量" alarmType="下限断电解除" alarmCode="19" alarmShow="" />
+    <Item code="1" name="模拟量" alarmType="断线" alarmCode="20" alarmShow="1, 2, 3" />
+    <Item code="1" name="模拟量" alarmType="正常" alarmCode="21" alarmShow="" />
+    <Item code="1" name="模拟量" alarmType="上溢" alarmCode="22" alarmShow="1, 2, 3" />
+    <Item code="1" name="模拟量" alarmType="负漂" alarmCode="23" alarmShow="1, 2, 3" />
+    
+    <Item code="6" name="其它" alarmType="风门开报警" alarmCode="102" alarmShow="1, 2, 3" />
+    <Item code="6" name="其它" alarmType="测点定义异常报警" alarmCode="104" alarmShow="1, 2, 3" />
+    <Item code="6" name="其它" alarmType="传感器未标校报警" alarmCode="105" alarmShow="1, 2, 3" />
+    <Item code="6" name="其它" alarmType="传感器超期服役报警" alarmCode="106" alarmShow="1, 2, 3" />
+    <Item code="6" name="其它" alarmType="电源箱放电提醒" alarmCode="107" alarmShow="1, 2, 3" />
+    <Item code="6" name="其它" alarmType="瓦斯含量超标" alarmCode="108" alarmShow="1, 2, 3" />
+    <Item code="6" name="其它" alarmType="传感器电量过低报警" alarmCode="109" alarmShow="1, 2, 3" />
+    <Item code="6" name="其它" alarmType="传感器分级报警" alarmCode="110" alarmShow="1, 2, 3" />
+    <Item code="6" name="其它" alarmType="传感器定义不匹配" alarmCode="111" alarmShow="1, 2, 3" />
+    <Item code="6" name="其它" alarmType="双机异常报警" alarmCode="112" alarmShow="1, 2, 3" />
+    <Item code="6" name="其它" alarmType="传感器欠压报警" alarmCode="113" alarmShow="1, 2, 3" />    
+  </PropertySetting>
+  <ClassSetting>
+  </ClassSetting>
+  <DevSetting>
+  </DevSetting>
+  <PointSetting>
+  </PointSetting>
+  <SoundLightSetting>
+    <Item key="SoundLightPortName" value="COM4" />
+    <Item key="SoundLightBaudRate" value="9600" />
+  </SoundLightSetting>
+  <OtherAlarmSwitch>
+    <Item key="IsUseAlarmConfig" value="true" />
+    <Item key="IsUsePopupAlarm" value="true" />
+  </OtherAlarmSwitch>
+</AlarmSettings>

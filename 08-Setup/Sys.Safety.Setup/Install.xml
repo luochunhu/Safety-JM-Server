@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+  <Install>
+    <Information SystemName="安全监控系统" SystemFolder="Zhzsoft\安全监控系统"/>
+    <Items>
+      <Item Name="数据库" Type="install" RunType="service" InstallFile="mysql-installer-community-5.6.23.0.msi" InstallFolder="Packages\MySQL" CopyFrom="" InstallLicence="False" ApplicationName="MySQL Server 5.6" ServiceName="MYSQL56" DisplayOrder="1"/>
+      <Item Name="服务端程序" Type="copy" RunType="exe" InstallFile="Sys.Safety.Server.ConsoleHost.exe" InstallFolder="Server"  CopyFrom="Packages\Server" InstallLicence="True"  ApplicationName="安全监控服务端" ServiceName="SafetyCoreService" DisplayOrder="2">
+        <SubItem InstallFile="mysql-connector-net-6.9.5.msi" InstallFolder="Packages\MySQL" ApplicationName="MySQL Connector Net 6.9.5" />        
+      </Item>
+      <Item Name="数采程序" Type="copy" RunType="exe" InstallFile="Sys.DataCollection.ConsoleHost.exe" InstallFolder="Collection" CopyFrom="Packages\Collection" InstallLicence="False"  ApplicationName="安全监控数采程序" ServiceName="DataCollectionService" DisplayOrder="3"/>
+      <Item Name="客户端程序" Type="copy" RunType="exe" InstallFile="Sys.Safety.Client.WindowHost.exe" InstallFolder="Client" CopyFrom="Packages\Client" InstallLicence="False"  ApplicationName="安全监控客户端" ServiceName="" DisplayOrder="4">       
+        <SubItem InstallFile="中文男声语音库.exe" InstallFolder="Packages\SpeekSDK" ApplicationName="SimpChinese Speech Engine" />
+      </Item>
+      <Item Name="双机热备" Type="copy" RunType="exe" InstallFile="Basic.DoubleSwitch.exe" InstallFolder="HA" CopyFrom="Packages\HA" InstallLicence="False"  ApplicationName="安全监控双机热备" ServiceName="BasicHAService" DisplayOrder="5"/>
+      <Item Name="大数据分析" Type="copy" RunType="exe" InstallFile="Sys.Safety.DataAnalysis.ConsoleHost.exe" InstallFolder="DataAnalysis" CopyFrom="Packages\DataAnalysis" InstallLicence="False"  ApplicationName="安全监控大数据分析" ServiceName="DataAnalysisService" DisplayOrder="6">
+        <SubItem InstallFile="vcredist_x86.exe" InstallFolder="Packages\C++Redistributable" ApplicationName="Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729" />
+      </Item>
+    </Items>
+  </Install>
+</Configuration>

@@ -1,0 +1,3212 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<cmds>
+  <!-- 2017-07-03  根据传输的表名查找未处理的馈电计算的记录 -->
+  <cmd name="global_AlarmRecordRepository_FindAlarmRecordByMaster">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select id,point,kzk,stime,etime,type,kdid from {0} where  upflag=0 and (kzk is not null and kzk <> '' ) and (stime>='{1}' and etime<'{2}')   order by stime
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-07-03  根据传输的主控时间和控制量，查找对的控制量馈电记录【主控有结束时间的情况】 -->
+  <cmd name="global_AlarmRecordRepository_FindAlarmRecordByControl">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql> 
+      <![CDATA[
+select id  from {0} where  ((type=32 and stime<='{1}' and etime>='{2}') or (type=30  and stime>='{2}')) and point in ('{3}')
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-07-03  根据传输的主控时间和控制量，查找对的控制量馈电记录【主控无结束时间的情况】 -->
+  <cmd name="global_AlarmRecordRepository_FindAlarmRecordByControlNotime">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select id from {0} where  (type=30 or type=32) and stime>='{1}'  and point in ('{2}')
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-07-03  根据测点号和时间删除分站历史数据 -->
+  <cmd name="global_StationHistoryData_DeleteStationHistoryDataByPointAndTime">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+delete from KJ_StaionHistoryData where  Point= '{0}'  and  SaveTime='{1}'
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-07-03  根据测点号和时间删除分站历史数据 -->
+  <cmd name="global_Staioncontrolhistorydata_DeleteStaioncontrolhistorydataByPointAndTime">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+delete from KJ_StaionControlHistoryData where  Point= '{0}'  and  SaveTime='{1}'
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-22 客户端框架-操作日志模块，删除某时间之前的操作日志-->
+  <cmd name="global_OperateLogHelper_DelOperateLog_ByEtime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[delete from BFT_OperateLog where CreateTime<='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-22 客户端框架-操作日志模块，删除指定时间范围内的操作日志-->
+  <cmd name="global_OperateLogHelper_DelOperateLog_ByStimeEtime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[delete from BFT_OperateLog where CreateTime<='{0}' and CreateTime>='{1}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-22 客户端框架-请求库管理，请求库编码查询对应菜单-->
+  <cmd name="global_RequestUtil_GetMenuFromRequest_ByRequestCode">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select menuname from BFT_Menu where requestcode='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-22 客户端框架-运行日志模块，删除某时间之前的运行日志-->
+  <cmd name="global_RunLogHelper_ClearRunLog_ByEtime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[delete from BFT_RunLog where CreateTime<='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-22 客户端框架-运行日志模块，删除指定时间范围内的运行日志-->
+  <cmd name="global_RunLogHelper_ClearRunLog_ByStimeEtime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[delete from BFT_RunLog where CreateTime<='{0}' and CreateTime>='{1}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 客户端框架-枚举管理模块，获取所有枚举信息DataTable-->
+  <cmd name="global_EnumcodeService_UpdateCache_GetAllEnumcode">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from BFT_EnumCode]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 客户端框架-用户管理模块，获取当前用户对应的权限信息-->
+  <cmd name="global_UserService_GetRightsByUserCode">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from 
+(
+SELECT   BFT_Right.*           
+FROM         BFT_Right RIGHT OUTER JOIN
+                      BFT_RoleRight ON BFT_Right.RightID = BFT_RoleRight.RightID RIGHT OUTER JOIN
+                      BFT_UserRole ON BFT_RoleRight.RoleID = BFT_UserRole.RoleID RIGHT OUTER JOIN
+                      BFT_User ON BFT_UserRole.UserID = BFT_User.UserID RIGHT OUTER JOIN
+                      BFT_Role ON BFT_UserRole.RoleID=BFT_Role.RoleID
+WHERE     (BFT_User.UserCode = '{0}' and BFT_User.UserFlag=1 and BFT_Role.RoleFlag=1) 
+union 
+SELECT     BFT_Right.*
+FROM         BFT_Right RIGHT OUTER JOIN
+                      BFT_UserRight ON BFT_Right.RightID = BFT_UserRight.RightID RIGHT OUTER JOIN
+                      BFT_User ON BFT_UserRight.UserID = BFT_User.UserID
+WHERE     (BFT_User.UserCode = '{0}' and BFT_User.UserFlag=1)
+) as t1 where RightID>0
+order by t1.rightType]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 客户端框架-用户管理模块，获取当前用户对应的菜单信息-->
+  <cmd name="global_UserService_GetMenusByUserCodeMenuType">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from BFT_Menu where MenuFlag=1 and Remark2='{1}' and
+(RightCode in 
+(
+SELECT   rightCode           
+FROM         BFT_Right RIGHT OUTER JOIN
+                      BFT_RoleRight ON BFT_Right.RightID = BFT_RoleRight.RightID RIGHT OUTER JOIN
+                      BFT_UserRole ON BFT_RoleRight.RoleID = BFT_UserRole.RoleID RIGHT OUTER JOIN
+                      BFT_User ON BFT_UserRole.UserID = BFT_User.UserID RIGHT OUTER JOIN
+                      BFT_Role ON BFT_UserRole.RoleID=BFT_Role.RoleID
+WHERE     (BFT_User.UserCode = '{0}'   and BFT_User.UserFlag=1 and BFT_Role.RoleFlag=1) 
+union 
+SELECT     rightCode
+FROM         BFT_Right RIGHT OUTER JOIN
+                      BFT_UserRight ON BFT_Right.RightID = BFT_UserRight.RightID RIGHT OUTER JOIN
+                      BFT_User ON BFT_UserRight.UserID = BFT_User.UserID
+WHERE     (BFT_User.UserCode = '{0}' and BFT_User.UserFlag=1)
+)
+or RightCode='' or RightCode is null
+) order by MenuCode]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 客户端框架-角色权限管理模块，获取当前角色对应的权限信息-->
+  <cmd name="global_RolerightService_GetRightsByRoleId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from BFT_Right where RightID in (select RightID from BFT_RoleRight where RoleId={0})]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 实时模块，根据开始时间和结束时间获取标校详情-->
+  <cmd name="global_RealModule_GetBxDetail_Bytime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select a.*,sec_to_time(a.cx) as cxzh,b.pointid,case bxzt when '1' then '标校中' when '2' then '标校完成' end as bxztStr from KJ_EffectEx as a inner join KJ_DeviceDefInfo as b on a.point=b.point and b.activity=1 where stime>='{0}' and stime<'{1}' order by point,stime desc]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 实时模块，根据时间获取标校统计-->
+  <cmd name="global_RealModule_GetBx_Bytime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select distinct date_format(timer,'%Y-%m-%d') as time from KJ_Effect where year(timer)=year('{0}') order by convert(time,datetime) desc]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 实时模块，根据时间获取已标校测点-->
+  <cmd name="global_RealModule_GetYesBxPoint_Bytime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select distinct point from KJ_EffectEx where to_days(stime)=to_days('{0}')]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 实时模块，根据时间获取未标校测点-->
+  <cmd name="global_RealModule_GetNoBxPoint_Bytime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select distinct point from KJ_Effect where point not in (select distinct point from KJ_EffectEx where to_days(stime)=to_days('{0}')) and to_days(timer)=to_days('{1}')]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 实时模块，读取自定义编排测点号-->
+  <cmd name="global_RealModule_GetCustomPagePoint_byPage">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from KJ_UIOrganize where page='{0}' order by px]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 实时模块，读取配置信息到config表中-->
+  <cmd name="global_RealModule_readConfig_byKeyName">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from BFT_Setting where strkey='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 实时模块，根据page删除Jc_Show-->
+  <cmd name="global_RealModule_DeleteJc_show_byPage">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[delete from KJ_UIOrganize where page= '{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 实时模块，Jc_Show插入-->
+  <cmd name="global_RealModule_InsertJc_show">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[insert into KJ_UIOrganize(id,px,rowid,point,page,remark,upflag) values('{0}','{1}','{2}','{3}','{4}','','0')]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 实时模块，修改报警措施-->
+  <cmd name="global_RealModule_UpdateAlarmStep">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[update {0} set cs='{1}' where id='{2}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 实时模块，根据时间获取测点-->
+  <cmd name="global_RealModule_GetPoint_Bytime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select point from KJ_Effect where timer='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 实时模块，根据时间删除标标校-->
+  <cmd name="global_RealModule_DeleteJc_bx_Bytime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[delete from KJ_Effect where timer='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 实时模块，根据测点号获取历史维保记录-->
+  <cmd name="global_RealModule_MaintenanceHistory_PointId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select KJ_DeviceMaintenance.ID,KJ_DeviceDefInfo.point as pointid,BFT_User.UserName as user,remerk,timer,KJ_DeviceAddress.wz,BFT_EnumCode.strEnumDisplay as sbxh  from KJ_DeviceMaintenance left join KJ_DeviceDefInfo on KJ_DeviceMaintenance.pointid=KJ_DeviceDefInfo.pointid left join BFT_User on KJ_DeviceMaintenance.user=BFT_User.UserID left join KJ_DeviceAddress on KJ_DeviceDefInfo.wzid=KJ_DeviceAddress.wzid left join KJ_DeviceType on KJ_DeviceDefInfo.devid=KJ_DeviceType.devid left join BFT_EnumCode on KJ_DeviceType.bz4=BFT_EnumCode.lngEnumValue and EnumTypeID=3 where KJ_DeviceMaintenance.pointid={0} order by timer desc]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 实时模块，根据测点号获取历史维保记录-->
+  <cmd name="global_RealModule_MaintenanceHistory_PointId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select KJ_DeviceMaintenance.ID,KJ_DeviceDefInfo.point as pointid,BFT_User.UserName as user,remerk,timer,KJ_DeviceAddress.wz,BFT_EnumCode.strEnumDisplay as sbxh  from KJ_DeviceMaintenance left join KJ_DeviceDefInfo on KJ_DeviceMaintenance.pointid=KJ_DeviceDefInfo.pointid left join BFT_User on KJ_DeviceMaintenance.user=BFT_User.UserID left join KJ_DeviceAddress on KJ_DeviceDefInfo.wzid=KJ_DeviceAddress.wzid left join KJ_DeviceType on KJ_DeviceDefInfo.devid=KJ_DeviceType.devid left join BFT_EnumCode on KJ_DeviceType.bz4=BFT_EnumCode.lngEnumValue and EnumTypeID=3 where KJ_DeviceMaintenance.pointid={0} order by timer desc]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 实时模块，根据EnumTypeId获取Enumcode-->
+  <cmd name="global_RealModule_GetEnumcode_ByPointId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT lngEnumValue StrType,strEnumDisplay FROM BFT_EnumCode WHERE EnumTypeID='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 实时模块，获取手动控制-->
+  <cmd name="global_RealModule_GetHandControlData_ByPoint">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from KJ_ManualControl where  (zkpoint='000000' and type=0 and bkpoint='{0}') or bkpoint='全部']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 实时模块，根据Id获取报警数据-->
+  <cmd name="global_RealModule_GetAlarmData_ById">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from {0} where Id='{1}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 报警模块，根据EnumTypeId获取Enumcode-->
+  <cmd name="global_RealModule_GetDataDefProperty">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select distinct etype.strEnumDisplay [key],etype.lngEnumValue val from KJ_DeviceDefInfo def left join KJ_DeviceType dev on dev.devID=def.devid　left join (select * from BFT_EnumCode where EnumTypeID=1) etype on etype.lngEnumValue=def.devid]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 报警模块，根据type获取根据性质获取种类-->
+  <cmd name="global_RealModule_GetClassByProperty_ByType">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select '=全部=' txt,'0' val union select distinct dev.Name txt,dev.devID val from KJ_DeviceDefInfo def　left join KJ_DeviceType dev on def.devid=dev.devID　where dev.type='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 报警模块，根据种类获取测点定义-->
+  <cmd name="global_RealModule_GetPoint_ByClass">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT '=全部=' txt,'0' val UNION SELECT CONCAT_WS(':',def.point,WZ.WZ)txt,def.point val from KJ_DeviceDefInfo def LEFT JOIN KJ_DeviceType dev on dev.devid=def.devid LEFT JOIN KJ_DeviceAddress wz on WZ.WZID=def.wzid where def.devid='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 报警模块，根据设备性质来获取设备性质对应的状态类型-->
+  <cmd name="global_RealModule_GetAlarmTypeData_ByProperty">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select '{0}' code,'{1}' name,strEnumDisplay alarmType,lngEnumValue alarmCode,'' alarmShow from BFT_EnumCode where EnumTypeID=4 and INSTR(CONCAT(lngEnumValue3,'|'),'{0}|')>0]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-01 图形处理模块，获取图形对应的线路信息-->
+  <cmd name="global_GraphicsModule_GetMapRoutesInfo_ByGraphicsId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from GS_GraphicsRouteInf  where GraphId='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-01 图形处理模块，获取图形对应测点绑定信息-->
+  <cmd name="global_GraphicsModule_GetMapPointsInfo_ByGraphicsId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select GS_GraphicsPointsInf.*,KJ_DeviceAddress.wz,wz1.wz as wz1,KJ_DeviceType.name from GS_GraphicsPointsInf 
+                    left join KJ_DeviceDefInfo on substring_index(GS_GraphicsPointsInf.point,'￣',1)=KJ_DeviceDefInfo.point and KJ_DeviceDefInfo.activity=1
+                    left join KJ_DeviceAddress on KJ_DeviceAddress.wzid=KJ_DeviceDefInfo.wzid 
+                    left join KJ_DeviceType on KJ_DeviceType.devid=KJ_DeviceDefInfo.devid
+                    left join KJ_SysSwitches on substring_index(GS_GraphicsPointsInf.point,'￣',1)=KJ_SysSwitches.IP
+                    left join KJ_DeviceAddress as wz1 on wz1.wzid=KJ_SysSwitches.wzid 
+                    where GraphId='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-01 图形处理模块，获取图形更细时间-->
+  <cmd name="global_GraphicsModule_GetGraphicTimer">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select GraphId,GraphName,Timer from GS_GraphicsBaseInf where GraphName='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-01 图形处理模块，获取图形中的所有测点列表-->
+  <cmd name="global_GraphicsModule_GetAllGraphPoint">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select GS_GraphicsPointsInf.*,KJ_DeviceDefInfo.point as Pnt,KJ_DeviceAddress.wz,wz1.wz as wz1,KJ_DeviceType.name,KJ_DeviceType.devid,
+                case when KJ_DeviceType.type is null then '10' else KJ_DeviceType.type end as type from GS_GraphicsPointsInf 
+                left join KJ_DeviceDefInfo on substring_index(GS_GraphicsPointsInf.point,'￣',1)=KJ_DeviceDefInfo.point and KJ_DeviceDefInfo.activity=1
+                left join KJ_DeviceAddress on KJ_DeviceAddress.wzid=KJ_DeviceDefInfo.wzid 
+                left join KJ_DeviceType on KJ_DeviceType.devid=KJ_DeviceDefInfo.devid
+                left join KJ_SysSwitches on substring_index(GS_GraphicsPointsInf.point,'￣',1)=KJ_SysSwitches.IP
+                left join KJ_DeviceAddress as wz1 on wz1.wzid=KJ_SysSwitches.wzid 
+                where GraphId='{0}' order by GS_GraphicsPointsInf.Point asc]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-01 图形处理模块，GetAllPoint-->
+  <cmd name="global_GraphicsModule_GetAllPoint">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select point as Point,wz as Wz,KJ_DeviceType.name as DevName,KJ_DeviceType.type,KJ_DeviceType.Xs1,KJ_DeviceType.Xs2,KJ_DeviceType.Xs3 from KJ_DeviceDefInfo 
+               left join KJ_DeviceAddress on KJ_DeviceAddress.wzid=KJ_DeviceDefInfo.wzid left join KJ_DeviceType on KJ_DeviceType.devid=KJ_DeviceDefInfo.devid where activity='1' order by Point]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-12-15 图形处理模块，获取多系统所有测点-->
+  <cmd name="global_GraphicsModule_GetAllEmergencyLinkPoint">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT t.* FROM  (
+select point as Point,wz as Wz,KJ_DeviceType.name as DevName,KJ_DeviceType.type,KJ_DeviceType.Xs1,KJ_DeviceType.Xs2,KJ_DeviceType.Xs3 from KJ_DeviceDefInfo 
+               left join KJ_DeviceAddress on KJ_DeviceAddress.wzid=KJ_DeviceDefInfo.wzid left join KJ_DeviceType on KJ_DeviceType.devid=KJ_DeviceDefInfo.devid where activity='1' 
+UNION ALL 
+
+select point as Point,wz as Wz,KJ_DeviceType.name as DevName,KJ_DeviceType.type,KJ_DeviceType.Xs1,KJ_DeviceType.Xs2,KJ_DeviceType.Xs3 from PE_DeviceDefInfo 
+               left join KJ_DeviceAddress on KJ_DeviceAddress.wzid=PE_DeviceDefInfo.wzid left join KJ_DeviceType on KJ_DeviceType.devid=PE_DeviceDefInfo.devid where activity='1' 
+UNION  ALL 
+
+select point as Point,wz as Wz,KJ_DeviceType.name as DevName,KJ_DeviceType.type,KJ_DeviceType.Xs1,KJ_DeviceType.Xs2,KJ_DeviceType.Xs3 from RA_DeviceDefInfo 
+               left join KJ_DeviceAddress on KJ_DeviceAddress.wzid=RA_DeviceDefInfo.wzid left join KJ_DeviceType on KJ_DeviceType.devid=RA_DeviceDefInfo.devid where activity='1' 
+) t ORDER BY t.Point]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  
+  <!-- 2017-06-01 图形处理模块，GetAllIp-->
+  <cmd name="global_GraphicsModule_GetAllIp">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select KJ_SysSwitches.ip as Point,KJ_DeviceAddress.wz as Wz,'交换机' as DevName,'10' as type from KJ_SysSwitches left join KJ_DeviceAddress on KJ_SysSwitches.wzid=KJ_DeviceAddress.wzid order by Point]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-01 图形处理模块，删除图形绑定线路信息-->
+  <cmd name="global_GraphicsModule_DeleteGraphicsrouteinf_ForGraphId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[delete from GS_GraphicsRouteInf where GraphId='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-01 图形处理模块，删除图形的绑定测点信息-->
+  <cmd name="global_GraphicsModule_DeleteGraphicsPointsInf_ForGraphId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[delete from GS_GraphicsPointsInf where GraphId='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-01 图形处理模块，删除图形-->
+  <cmd name="global_GraphicsModule_DeleteGraphicsbaseinf_ForGraphId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[delete from GS_GraphicsBaseInf where GraphId='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-01 图形处理模块，获取交换机信息-->
+  <cmd name="global_GraphicsModule_GetSwitchInformation">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select KJ_SysSwitches.ip,KJ_DeviceAddress.wz from KJ_SysSwitches left join KJ_DeviceAddress on KJ_SysSwitches.wzid=KJ_DeviceAddress.wzid]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-01 图形处理模块，获取测点信息-->
+  <cmd name="global_GraphicsModule_GetDefPointInformation">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select point,KJ_DeviceAddress.wz,KJ_DeviceType.name,KJ_DeviceType.Xs1,KJ_DeviceType.type,ssz,state,alarm,jckz2,fzh,kh from KJ_DeviceDefInfo 
+               left join KJ_DeviceAddress on KJ_DeviceAddress.wzid=KJ_DeviceDefInfo.wzid 
+               left join KJ_DeviceType on KJ_DeviceType.devid=KJ_DeviceDefInfo.devid where activity='1' order by KJ_DeviceDefInfo.point]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-01 图形处理模块，读取所有设备、数据状态枚举类型-->
+  <cmd name="global_GraphicsModule_GetAllDeviceEnumcode">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select lngEnumValue,strEnumDisplay from BFT_EnumCode where EnumTypeID='4']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-01 图形处理模块，加载所有图形信息-->
+  <cmd name="global_GraphicsModule_LoadGraphicsInfo">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select GraphName,GraphData,Type,Timer from GS_GraphicsBaseInf]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-01 图形处理模块，获取图形上的所有测点信息-->
+  <cmd name="global_GraphicsModule_GetAllPointInMap">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select Point,SysId,GraphBindName from GS_GraphicsPointsInf  where GraphId='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-06 图形处理模块，修改系统默认图形-->
+  <cmd name="global_GraphicsModule_UpdateSystemDefinedGraphics">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[update GS_GraphicsBaseInf set Bz3='{0}' where GraphId='{1}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-06 图形处理模块，修改应急联动图形-->
+  <cmd name="global_GraphicsModule_UpdateEmergencyLinkageGraphics">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[update GS_GraphicsBaseInf set Bz4=0 where GraphId='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-07-28 报警模块，查询未结束的逻辑分析报警-->
+  <cmd name="global_RealModule_GetAlarmHandleNoEndListByCondition">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select a.Id,a.AnalysisModelId,a.StartTime,a.AnalysisResult,a.EndTime,
+a.AlarmType,a.AlarmColor,b.Name from KJ_AlarmHandle as a 
+left join KJ_LargedataAnalysisConfig as b on a.AnalysisModelId=b.Id
+left join KJ_AlarmNotificationPersonnelConfig as c on a.AnalysisModelId=c.AnalysisModelId
+left join KJ_AlarmNotificationPersonnel as d on c.Id=d.AlarmConfigId
+where a.StartTime>'{0}' and a.EndTime='{1}' and d.PersonId='{2}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2018-1-4 数据同步模块，新增位置信息-->
+  <cmd name="global_PointDefineService_AddPosition">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[INSERT INTO KJ_DeviceAddress (id, wzid, wz, createtime) SELECT {0}, max(wzid) + 1, '{1}', '{2}' FROM KJ_DeviceAddress;SELECT max(wzID) FROM KJ_DeviceAddress;]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-11-28 应急联动模块，查询定义应急联动及对应统计数量-->
+  <cmd name="global_SysEmergencyLinkageService_GetSysEmergencyLinkageListAndStatistics">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT a.*, CASE WHEN a.DeleteTime = '1900-01-01' THEN '' ELSE a.DeleteTime END AS DeleteTimeConvert, i. NAME AS MasterModelName, ( SELECT count(c.Id) FROM KJ_SysEmergencyLinkage AS b LEFT JOIN KJ_EmergencyLinkageMasterAreaAss AS c ON b.MasterAreaAssId = c.MasterAreaAssId WHERE b.Id = a.Id ) AS MasterAreaNum, ( SELECT count(c.Id) FROM KJ_SysEmergencyLinkage AS b LEFT JOIN KJ_EmergencyLinkageMasterDevTypeAss AS c ON b.MasterDevTypeAssId = c.MasterDevTypeAssId WHERE b.Id = a.Id ) AS MasterDevTypeNum, ( SELECT count(c.Id) FROM KJ_SysEmergencyLinkage AS b LEFT JOIN KJ_EmergencyLinkageMasterPointAss AS c ON b.MasterPointAssId = c.MasterPointAssId WHERE b.Id = a.Id ) AS MasterPointNum, ( SELECT count(c.Id) FROM KJ_SysEmergencyLinkage AS b LEFT JOIN KJ_EmergencyLinkageMasterTriDataStateAss AS c ON b.MasterTriDataStateAssId = c.MasterTriDataStateAssId WHERE b.Id = a.Id ) AS MasterTriDataStateNum, ( SELECT count(c.Id) FROM KJ_SysEmergencyLinkage AS b LEFT JOIN KJ_EmergencyLinkagePassiveAreaAss AS c ON b.PassiveAreaAssId = c.PassiveAreaAssId WHERE b.Id = a.Id ) AS PassiveAreaNum, ( SELECT count(c.Id) FROM KJ_SysEmergencyLinkage AS b LEFT JOIN KJ_EmergencyLinkagePassivePersonAss AS c ON b.PassivePersonAssId = c.PassivePersonAssId WHERE b.Id = a.Id ) AS PassivePersonNum, ( SELECT count(c.Id) FROM KJ_SysEmergencyLinkage AS b LEFT JOIN KJ_EmergencyLinkagePassivePointAss AS c ON b.PassivePointAssId = c.PassivePointAssId WHERE b.Id = a.Id ) AS PassivePointNum FROM KJ_SysEmergencyLinkage AS a LEFT JOIN KJ_LargedataAnalysisConfig AS i ON a.MasterModelId = i.Id WHERE a.Activity = 1 and a.`Name` like '%{0}%']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-05-23 报表模块，根据ListCode获取ListEx-->
+  <cmd name="global_ListExService_GetListExListID_ByStrListCode">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select ListID from BFT_ListEx where strListCode='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-23 报表模块，根据ListCode、ListId获取ListEx-->
+  <cmd name="global_ListExService_GetListExListID_ByStrListCodeListId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select ListID from BFT_ListEx where strListCode='{0}' and ListID <> {1}]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-24 报表模块，删除所有BFT_MetaData-->
+  <cmd name="global_MetadataService_DeleteMetaDataAll">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[delete from BFT_MetaData]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-24 报表模块，删除所有BFT_MetaDataFields-->
+  <cmd name="global_MetadataService_DeleteMetaDataFieldsAll">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[delete from BFT_MetaDataFields]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-24 报表模块，根据operatorid查询UserFieldRight-->
+  <cmd name="global_ServerDataCache_GetMetadatafieldid_ByOperatorid">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select distinct metadatafieldid from UserFieldRight where typeid=1  and  operatorid={0}]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-24 报表模块，根据operatorid查询UserFieldRight-->
+  <cmd name="global_ServerDataCache_GetMetadatafieldid_ByOperatorid2">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select distinct metadatafieldid from UserFieldRight where typeid=0 and operatorid=(select RoleID from operator where operatorid={0})]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-11-04 报表模块，根据视图名称获取视图-->
+  <cmd name="global_ReportService_GetViewFromViews">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT TABLE_NAME,VIEW_DEFINITION as Text FROM information_schema.VIEWS where TABLE_NAME in({0}) and TABLE_SCHEMA='{1}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-09-15 报表模块，-->
+  <cmd name="global_ListtempleService_GetNameFromListDataExListEx">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT a.strListDataName, b.strListCode, b.strListName FROM BFT_ListDataEx AS a INNER JOIN BFT_ListEx AS b ON a.ListID = b.ListID WHERE ListDataID = {0}]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+
+  <!-- 2017-05-25 曲线模块，根据起止时间查询定义信息排序-->
+  <cmd name="global_ChartService_GetJcdef_ByStimeEtimeOrder">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select distinct A.PointID,A.point,A.fzh,A.kh,A.dzh,KJ_DeviceAddress.wz as wz,KJ_DeviceType.name as name,A.wzid as wzid,A.devid as devid,A.DeleteTime as DeleteTime from {0} as A left outer join KJ_DeviceType on KJ_DeviceType.devid=A.devid left outer join KJ_DeviceAddress on KJ_DeviceAddress.wzid=A.wzid where {1} and ((A.CreateUpdateTime<='{2}' and A.DeleteTime>='{3}') or (A.CreateUpdateTime<='{2}' and A.DeleteTime='1900-01-01 00:00:00')) order by A.fzh,A.kh]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 曲线模块，根据起止时间查询定义信息-->
+  <cmd name="global_ChartService_GetJcdef_ByStimeEtime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select distinct A.PointID,A.point,A.fzh,A.kh,A.dzh,KJ_DeviceAddress.wz as wz,KJ_DeviceType.name as name,A.wzid as wzid,A.devid as devid from {0} as A left outer join KJ_DeviceType on KJ_DeviceType.devid=A.devid left outer join KJ_DeviceAddress on KJ_DeviceAddress.wzid=A.wzid where {1} and ((A.CreateUpdateTime<='{2}' and A.DeleteTime>='{3}') or (A.CreateUpdateTime<='{2}' and A.DeleteTime='1900-01-01 00:00:00'))]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 曲线模块，根据wzid devid查询设备类型信息-->
+  <cmd name="global_ChartService_GetJcdev_ByWzIdDevId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select  KJ_DeviceAddress.wz,KJ_DeviceType.name,KJ_DeviceDefInfo.z2,KJ_DeviceDefInfo.z3,KJ_DeviceDefInfo.z4,KJ_DeviceDefInfo.z6,KJ_DeviceDefInfo.z7,KJ_DeviceDefInfo.z8,KJ_DeviceDefInfo.bz6 as xs1 from KJ_DeviceDefInfo
+left outer join KJ_DeviceAddress on KJ_DeviceAddress.wzID={0} left join KJ_DeviceType on KJ_DeviceType.devid=KJ_DeviceDefInfo.devid where KJ_DeviceDefInfo.pointid='{1}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 曲线模块，根据pointid查询定义信息-->
+  <cmd name="global_ChartService_GetJcdef_ByPointId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select KJ_DeviceAddress.wz as wz,KJ_DeviceDefInfo.point as point from KJ_DeviceDefInfo left outer join KJ_DeviceAddress on KJ_DeviceAddress.wzid=KJ_DeviceDefInfo.wzid where PointID='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 曲线模块，根据pointid查询定义信息-->
+  <cmd name="global_ChartService_GetJcdef_ByPointId2">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select KJ_DeviceDefInfo.devid,KJ_DeviceDefInfo.wzid,KJ_DeviceType.name as devname,KJ_DeviceAddress.wz as wz from KJ_DeviceDefInfo left join KJ_DeviceType on KJ_DeviceType.devid=KJ_DeviceDefInfo.devid left join KJ_DeviceAddress on KJ_DeviceAddress.wzid=KJ_DeviceDefInfo.wzid where PointID='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 曲线模块，根据point查询定义信息-->
+  <cmd name="global_ChartService_GetJcdef_ByPoint">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select KJ_DeviceAddress.wz as wz from KJ_DeviceDefInfo left outer join KJ_DeviceAddress on KJ_DeviceAddress.wzid=KJ_DeviceDefInfo.wzid  where KJ_DeviceDefInfo.point in ('{0}')]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 曲线模块，查询sqlserver表是否存在-->
+  <cmd name="global_ChartService_GetSqlServerTableName_ByTableName">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select name from dbo.sysobjects where id = object_id(N'[dbo].[{0}]')and OBJECTPROPERTY(id, N'IsUserTable') = 1]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 曲线模块，查询mysql表是否存在-->
+  <cmd name="global_ChartService_GetMySqlTableName_ByTableName">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SHOW TABLES LIKE  '{0}';]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-15 统计模块，查询需标校测点-->
+  <cmd name="global_Calibration_GetPointFromJcbxByTime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select point from KJ_Effect where TO_DAYS(timer)=TO_DAYS('{0}')]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-15 统计模块，获取最后一条标校详细记录-->
+  <cmd name="global_Calibration_GetEtimeFromJcbxexByPointStimeEtime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select etime from KJ_EffectEx where bxzt='2' and point='{0}' and stime>='{1}' and stime<'{2}' order by stime desc limit 1]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-15 统计模块，获取循环时间之后的第一条标校密采记录且该记录的时间没有非标校密采记录的时间-->
+  <cmd name="global_Calibration_GetTimerFromJcmcByLoopTime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select timer from {0} as a where point='{1}' and state=24 and (select count(*) from {0} as b	where point='{1}' and state!=24 and b.timer=a.timer)=0  and timer>'{2}' order by timer limit 1]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-15 统计模块，获取(循环时间之后的第一条标校密采记录且该记录的时间没有非标校密采记录)之后且在((循环时间之后的第一条标校密采记录且该记录的时间没有非标校密采记录)之后的第一条非标校记录)之前的最后一条标校记录-->
+  <cmd name="global_Calibration_GetTimerFromJcmcByPointTimer">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT *, IF (( SELECT timer FROM {0} WHERE point = '{1}' AND state != 24 AND timer >  '{2}' ORDER BY timer LIMIT 1 ) IS NULL, 1, 2 ) AS hasFbx FROM {0} WHERE point = '{1}' AND state = 24 AND timer < IF (( SELECT timer FROM {0} WHERE point = '{1}' AND state != 24 AND timer > '{2}' ORDER BY timer LIMIT 1 ) IS NULL, '{3}', ( SELECT timer FROM {0} WHERE point = '{1}' AND state != 24 AND timer > '{2}' ORDER BY timer LIMIT 1 )) ORDER BY timer DESC LIMIT 1]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-09-26 统计模块，从密采表获取最大值及时间-->
+  <cmd name="global_Calibration_GetMaxValueFromJcmcByPointTimer">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT timer, ssz FROM {0} WHERE point = '{1}' AND state = 24 AND timer >= '{2}' AND timer <= '{3}' AND ssz = ( SELECT max(ssz) FROM {0} WHERE point = '{1}' AND state = 24 AND timer >= '{2}' AND timer <= '{3}' LIMIT 1 ) ORDER BY timer LIMIT 1]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-09-26 统计模块，从密采表获取最小值及时间-->
+  <cmd name="global_Calibration_GetMinValueFromJcmcByPointTimer">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT timer, ssz FROM {0} WHERE point = '{1}' AND state = 24 AND timer >= '{2}' AND timer <= '{3}' AND ssz = ( SELECT min(ssz) FROM {0} WHERE point = '{1}' AND state = 24 AND timer >= '{2}' AND timer <= '{3}' LIMIT 1 ) ORDER BY timer LIMIT 1]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-09-26 统计模块，从密采表获取平均值及时间-->
+  <cmd name="global_Calibration_GetAvgValueFromJcmcByPointTimer">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT TRUNCATE (avg(ssz), 2) AS avgSsz FROM {0} WHERE point = '{1}' AND state = 24 AND timer >= '{2}' AND timer <= '{3}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-09-26 统计模块，从密采表获取平均值及时间-->
+  <cmd name="global_Calibration_GetBxexCountFromJcbxexByPointStime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select count(*) from KJ_EffectEx where point='{0}' and stime='{1}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-09-26 统计模块，从密采表获取平均值及时间-->
+  <cmd name="global_Calibration_InsertIntoJcbxex">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[insert into KJ_EffectEx (ID,point,pointid,stime,etime,cx,zdz,zxz,pjz,zdztime,zxztime,bxzt) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!--2017.12.18 by 手动处理标校-->
+  <cmd name="global_Calibration_InsertIntoJcbxex1">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[insert into KJ_EffectEx (ID,point,pointid,stime,etime,cx,zdz,zxz,pjz,zdztime,zxztime,bxzt,cs) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-09-26 统计模块，从密采表获取平均值及时间-->
+  <cmd name="global_Calibration_UpdateJcbxex">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[update KJ_EffectEx set etime='{0}',cx='{1}',zdz='{2}',zxz='{3}',pjz='{4}',zdztime='{5}',zxztime='{6}',bxzt='{7}' where pointid='{8}' and stime='{9}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-09-26 统计模块，获取所有未结束的标校记录-->
+  <cmd name="global_Calibration_GetBxexFromJcbxexByState">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from KJ_EffectEx where bxzt='1' and TO_DAYS(stime)=TO_DAYS('{0}') order by stime desc limit 1]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-10-17 统计模块，根据密采表统计标校数据-->
+  <cmd name="global_Calibration_GetBxexFromJcmcByTableName">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT temp.*, timestampdiff( SECOND, temp.starttime, temp.stoptime ) AS cx, IF (( SELECT count(1) FROM {0} AS d WHERE d.pointid = temp.pointid AND d.timer > temp.stoptime ) > 0, 2, 1 ) AS bxzt FROM ( SELECT a.pointid, a.point, min(a.timer) AS starttime, max(a.timer) AS stoptime, max(a.ssz) AS maxssz, min(a.ssz) AS minssz, CONVERT (avg(a.ssz), DECIMAL(8, 2)) AS avgssz, ( SELECT timer FROM {0} AS b WHERE b.pointid = a.pointid AND b.bz5 = a.bz5 AND b.ssz = max(a.ssz) LIMIT 1 ) AS maxtime, ( SELECT timer FROM {0} AS c WHERE c.pointid = a.pointid AND c.bz5 = a.bz5 AND c.ssz = min(a.ssz) LIMIT 1 ) AS mintime FROM {0} AS a WHERE (a.state = 24 or a.state = 21 or a.state = 5) AND a.bz5 != '' AND a.bz5 IS NOT NULL GROUP BY a.pointID, a.point, a.Bz5 ) AS temp WHERE TIMESTAMPDIFF( SECOND, temp.starttime, temp.stoptime ) >= 30]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-10-17 统计模块，根据时间获取标校记录-->
+  <cmd name="global_Calibration_GetBxexFromJcbxexByStartStopStime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from KJ_EffectEx where stime>='{0}' and stime<'{1}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-09-15 统计模块，获取所有记录-->
+  <cmd name="global_Calibration_GetAllByCondition">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select {0} from {1}]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-09-15 统计模块，从密采表统计5分钟最大最小平均值-->
+  <cmd name="global_DataStatistics_GetMaxMinAvgFromJcmc">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select c.PointID,c.fzh,c.kh,c.dzh,c.point,c.devid,c.wzid,c.zdz,
+                c.pjz,c.zdzs,d.zxz,d.zxzs from (select a.PointID,a.fzh,a.kh,a.dzh,a.point,a.devid,a.wzid,a.zdz ,
+                a.pjz,b.timer zdzs from ( SELECT PointID ,fzh,kh,dzh,point,devid,wzid,max(ssz ) zdz ,
+                ROUND(avg(ssz ),2) pjz from {0} where timer >='{1}' and timer <'{2}' GROUP BY PointID,fzh,kh,dzh,point,devid,wzid)a join (
+                select PointID,ssz,timer from {0} where timer >='{1}' and timer <'{2}' GROUP BY PointID,ssz,timer) b on a.PointID=b.PointID 
+                and a.zdz=b.ssz)c join (select a.PointID,a.zxz,b.timer zxzs from ( SELECT PointID ,min(ssz) zxz  
+                from {0} where timer >='{1}' and timer <'{2}'GROUP BY PointID)a join (select PointID,ssz,timer 
+                from {0} where timer >='{1}' and timer <'{2}'GROUP BY PointID,ssz,timer ) b on a.PointID=b.PointID 
+                and a.zxz=b.ssz)d on c.PointID=d.PointID]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-09-15 统计模块，从5分钟表统计小时最大最小平均值-->
+  <cmd name="global_DataStatistics_GetMaxMinAvgFromJcm">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select c.PointID,c.fzh,c.kh,c.dzh,c.point,c.devid,c.wzid,c.zdz,
+                c.pjz,c.zdzs,d.zxz,d.zxzs from (select a.PointID,a.fzh,a.kh,a.dzh,a.point,a.devid,a.wzid,a.zdz ,
+                a.pjz,b.zdzs zdzs from ( SELECT PointID ,fzh,kh,dzh,point,devid,wzid,max(zdz ) zdz ,
+                ROUND(avg(pjz ),2) pjz from {0} where timer >='{1}' and timer <'{2}' GROUP BY PointID)a
+ join (select PointID,zdz,zdzs from {0} where timer >='{1}' and timer <'{2}' GROUP BY PointID,zdz  ) b
+ on a.PointID=b.PointID and a.zdz=b.zdz)c join (select a.PointID,a.zxz,b.zxzs zxzs from ( SELECT PointID ,min(zxz) zxz  
+                from {0} where timer >='{1}' and timer <'{2}'   GROUP BY PointID)a join (select PointID,zxz,zxzs 
+                from {0} where timer >='{1}' and timer <'{2}'   GROUP BY PointID,zxz ) b on a.PointID=b.PointID 
+                and a.zxz=b.zxz)d on c.PointID=d.PointID]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-09-15 统计模块，从小时表统计小时最大最小平均值-->
+  <cmd name="global_DataStatistics_GetMaxMinAvgFromJchour">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select c.PointID,c.fzh,c.kh,c.dzh,c.point,c.devid,c.wzid,c.zdz,
+                c.pjz,c.zdzs,d.zxz,d.zxzs from (select a.PointID,a.fzh,a.kh,a.dzh,a.point,a.devid,a.wzid,a.zdz ,
+                a.pjz,b.zdzs zdzs from ( SELECT PointID ,fzh,kh,dzh,point,devid,wzid,max(zdz ) zdz ,
+                ROUND(avg(pjz ),2) pjz from {0} where timer >='{1}' and timer <'{2}' GROUP BY PointID)a join (
+                select PointID,zdz,zdzs from {0} where timer >='{1}' and timer <'{2}' GROUP BY PointID,zdz ) b on a.PointID=b.PointID 
+                and a.zdz=b.zdz)c join (select a.PointID,a.zxz,b.zxzs zxzs from ( SELECT PointID ,min(zxz) zxz  
+                from {0} where timer >='{1}' and timer <'{2}'GROUP BY PointID)a join (select PointID,zxz,zxzs 
+                from {0} where timer >='{1}' and timer <'{2}' GROUP BY PointID,zxz  ) b on a.PointID=b.PointID 
+                and a.zxz=b.zxz)d on c.PointID=d.PointID]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-09-15 统计模块，从日表统计小时最大最小平均值-->
+  <cmd name="global_DataStatistics_GetMaxMinAvgFromJcday">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select c.PointID,c.fzh,c.kh,c.dzh,c.point,c.devid,c.wzid,c.zdz,
+                c.pjz,c.zdzs,d.zxz,d.zxzs from (select a.PointID,a.fzh,a.kh,a.dzh,a.point,a.devid,a.wzid,a.zdz ,
+                a.pjz,b.zdzs zdzs from ( SELECT PointID ,fzh,kh,dzh,point,devid,wzid,max(zdz ) zdz ,
+                ROUND(avg(pjz ),2) pjz from {0} where timer >='{1}' and timer <'{2}' GROUP BY PointID)a join (
+                select PointID,zdz,zdzs from {0} where timer >='{1}' and timer <'{2}' GROUP BY PointID,zdz ) b on a.PointID=b.PointID 
+                and a.zdz=b.zdz)c join (select a.PointID,a.zxz,b.zxzs zxzs from ( SELECT PointID ,min(zxz) zxz  
+                from {0} where timer >='{1}' and timer <'{2}'GROUP BY PointID)a join (select PointID,zxz,zxzs 
+                from {0} where timer >='{1}' and timer <'{2}' GROUP BY PointID,zxz ) b on a.PointID=b.PointID 
+                and a.zxz=b.zxz)d on c.PointID=d.PointID]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-09-15 统计模块，从月表统计季度小时最大最小平均值-->
+  <cmd name="global_DataStatistics_GetQuarterMaxMinAvgFromJcmonth">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select c.PointID,c.fzh,c.kh,c.dzh,c.point,c.devid,c.wzid,c.zdz,
+                c.pjz,c.zdzs,d.zxz,d.zxzs from (select a.PointID,a.fzh,a.kh,a.dzh,a.point,a.devid,a.wzid,a.zdz ,
+                a.pjz,b.zdzs zdzs from ( SELECT PointID ,fzh,kh,dzh,point,devid,wzid,max(zdz ) zdz ,
+                ROUND(avg(pjz ),2) pjz from {0} where timer >='{1}' and timer <='{2}' GROUP BY PointID)a join (
+                select PointID,zdz,zdzs from {0} where timer >='{1}' and timer <='{2}' GROUP BY PointID,zdz ) b on a.PointID=b.PointID 
+                and a.zdz=b.zdz)c join (select a.PointID,a.zxz,b.zxzs zxzs from ( SELECT PointID ,min(zxz) zxz  
+                from {0} where timer >='{1}' and timer <='{2}'GROUP BY PointID)a join (select PointID,zxz,zxzs 
+                from {0} where timer >='{1}' and timer <='{2}' GROUP BY PointID,zxz ) b on a.PointID=b.PointID 
+                and a.zxz=b.zxz)d on c.PointID=d.PointID]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-09-15 统计模块，从月表统计年小时最大最小平均值-->
+  <cmd name="global_DataStatistics_GetYearMaxMinAvgFromJcmonth">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select c.PointID,c.fzh,c.kh,c.dzh,c.point,c.devid,c.wzid,c.zdz,
+                c.pjz,c.zdzs,d.zxz,d.zxzs from (select a.PointID,a.fzh,a.kh,a.dzh,a.point,a.devid,a.wzid,a.zdz ,
+                a.pjz,b.zdzs zdzs from ( SELECT PointID ,fzh,kh,dzh,point,devid,wzid,max(zdz ) zdz ,
+                ROUND(avg(pjz ),2) pjz from {0} where timer >='{1}' and timer <='{2}' GROUP BY PointID)a join (
+                select PointID,zdz,zdzs from {0} where timer >='{1}' and timer <='{2}' GROUP BY PointID,zdz ) b on a.PointID=b.PointID 
+                and a.zdz=b.zdz)c join (select a.PointID,a.zxz,b.zxzs zxzs from ( SELECT PointID ,min(zxz) zxz  
+                from {0} where timer >='{1}' and timer <='{2}'GROUP BY PointID)a join (select PointID,zxz,zxzs 
+                from {0} where timer >='{1}' and timer <='{2}' GROUP BY PointID,zxz ) b on a.PointID=b.PointID 
+                and a.zxz=b.zxz)d on c.PointID=d.PointID]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2018-03-27 统计模块，从jcm获取口号为9、10、11、12的平均值-->
+  <cmd name="global_DataStatistics_GetKhAvgFromJcm">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT temp.PointID, temp.fzh, ( SELECT avg(pjz) FROM {0} AS c WHERE c.fzh = temp.fzh AND kh = 10 and dzh=3 AND unix_timestamp(timer) >= unix_timestamp('{1}') AND unix_timestamp(timer) < unix_timestamp('{2}')) AS FY, ( SELECT avg(pjz) FROM {0} AS c WHERE c.fzh = temp.fzh AND kh = 10 and dzh=2  AND unix_timestamp(timer) >= unix_timestamp('{1}') AND unix_timestamp(timer) < unix_timestamp('{2}')) AS WD, ( SELECT avg(pjz) FROM {0} AS c WHERE c.fzh = temp.fzh AND kh = 11 AND unix_timestamp(timer) >= unix_timestamp('{1}') AND unix_timestamp(timer) < unix_timestamp('{2}')) AS WS, ( SELECT avg(pjz) FROM {0} AS c WHERE c.fzh = temp.fzh AND kh = 12 AND unix_timestamp(timer) >= unix_timestamp('{1}') AND unix_timestamp(timer) < unix_timestamp('{2}')) AS CO FROM ( SELECT PointID, fzh FROM KJ_DeviceDefInfo AS a INNER JOIN KJ_DeviceType AS b ON a.devid = b.devid AND b.type = 0 AND b.LC2 = 14 WHERE a.kh = 0 AND activity = 1 ) AS temp]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2018-03-27 统计模块，从jcllh获取平均值-->
+  <cmd name="global_DataStatistics_GetAvgFromJcllh">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT temp.PointID, temp.fzh, ( SELECT avg(FY) FROM {0} AS c WHERE c.pointID = temp.PointID AND unix_timestamp(timer) >= unix_timestamp('{1}') AND unix_timestamp(timer) < unix_timestamp('{2}')) AS FY, ( SELECT avg(WD) FROM {0} AS c WHERE c.pointID = temp.PointID AND unix_timestamp(timer) >= unix_timestamp('{1}') AND unix_timestamp(timer) < unix_timestamp('{2}')) AS WD, ( SELECT avg(WS) FROM {0} AS c WHERE c.pointID = temp.PointID AND unix_timestamp(timer) >= unix_timestamp('{1}') AND unix_timestamp(timer) < unix_timestamp('{2}')) AS WS, ( SELECT avg(CO) FROM {0} AS c WHERE c.pointID = temp.PointID AND unix_timestamp(timer) >= unix_timestamp('{1}') AND unix_timestamp(timer) < unix_timestamp('{2}')) AS CO FROM ( SELECT PointID, fzh FROM KJ_DeviceDefInfo AS a INNER JOIN KJ_DeviceType AS b ON a.devid = b.devid AND b.type = 0 AND b.LC2 = 14 WHERE a.kh = 0 AND activity = 1 ) AS temp]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2018-03-27 统计模块，从Jclld获取平均值-->
+  <cmd name="global_DataStatistics_GetAvgFromJclld">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT temp.PointID, temp.fzh, ( SELECT avg(FY) FROM CF_Day AS c WHERE c.pointID = temp.PointID AND unix_timestamp(timer) >= unix_timestamp('{0}') AND unix_timestamp(timer) < unix_timestamp('{1}')) AS FY, ( SELECT avg(WD) FROM CF_Day AS c WHERE c.pointID = temp.PointID AND unix_timestamp(timer) >= unix_timestamp('{0}') AND unix_timestamp(timer) < unix_timestamp('{1}')) AS WD, ( SELECT avg(WS) FROM CF_Day AS c WHERE c.pointID = temp.PointID AND unix_timestamp(timer) >= unix_timestamp('{0}') AND unix_timestamp(timer) < unix_timestamp('{1}')) AS WS, ( SELECT avg(CO) FROM CF_Day AS c WHERE c.pointID = temp.PointID AND unix_timestamp(timer) >= unix_timestamp('{0}') AND unix_timestamp(timer) < unix_timestamp('{1}')) AS CO FROM ( SELECT PointID, fzh FROM KJ_DeviceDefInfo AS a INNER JOIN KJ_DeviceType AS b ON a.devid = b.devid AND b.type = 0 AND b.LC2 = 14 WHERE a.kh = 0 AND activity = 1 ) AS temp]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2018-03-27 统计模块，从jcllm获取平均值-->
+  <cmd name="global_DataStatistics_GetAvgFromJcllm">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT temp.PointID, temp.fzh, ( SELECT avg(FY) FROM CF_Month AS c WHERE c.pointID = temp.PointID AND unix_timestamp(timer) >= unix_timestamp('{0}') AND unix_timestamp(timer) < unix_timestamp('{1}')) AS FY, ( SELECT avg(WD) FROM CF_Month AS c WHERE c.pointID = temp.PointID AND unix_timestamp(timer) >= unix_timestamp('{0}') AND unix_timestamp(timer) < unix_timestamp('{1}')) AS WD, ( SELECT avg(WS) FROM CF_Month AS c WHERE c.pointID = temp.PointID AND unix_timestamp(timer) >= unix_timestamp('{0}') AND unix_timestamp(timer) < unix_timestamp('{1}')) AS WS, ( SELECT avg(CO) FROM CF_Month AS c WHERE c.pointID = temp.PointID AND unix_timestamp(timer) >= unix_timestamp('{0}') AND unix_timestamp(timer) < unix_timestamp('{1}')) AS CO FROM ( SELECT PointID, fzh FROM KJ_DeviceDefInfo AS a INNER JOIN KJ_DeviceType AS b ON a.devid = b.devid AND b.type = 0 AND b.LC2 = 14 WHERE a.kh = 0 AND activity = 1 ) AS temp]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2018-03-27 统计模块，从jcdef获取抽放分站-->
+  <cmd name="global_DataStatistics_GetCffzFromjcdef">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT PointID, fzh, jckz3 FROM KJ_DeviceDefInfo AS a INNER JOIN KJ_DeviceType AS b ON a.devid = b.devid AND b.type = 0 AND b.LC2 = 14 WHERE a.kh = 0 AND activity = 1]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+
+  <!-- 2017-06-20 控制模块，根据分站号和时间获取分站5分钟历史数据-->
+  <cmd name="global_StaionHistoryDataService_GetSubstationHistoryRealDataByFzhTime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <!--<![CDATA[SELECT a.*, c.strEnumDisplay AS TypeName, d.wz as Location, e.strEnumDisplay AS StateName FROM KJ_StaionHistoryData AS a LEFT JOIN KJ_DeviceType AS b ON a.devid = b.devid LEFT JOIN BFT_EnumCode AS c ON c.EnumTypeID = 1 AND b.type = c.lngEnumValue LEFT JOIN KJ_DeviceAddress AS d ON a.wzid = d.wzID LEFT JOIN BFT_EnumCode AS e ON e.EnumTypeID = 8 AND a.State = e.lngEnumValue WHERE a.fzh = {0} AND TO_DAYS(a.SaveTime) = TO_DAYS('{1}') order by a.SaveTime desc]]>-->
+      <![CDATA[SELECT a.*, e.strEnumDisplay AS StateName, f.strEnumDisplay AS DeviceTypeName FROM KJ_StaionHistoryData AS a 
+LEFT JOIN BFT_EnumCode AS e ON e.EnumTypeID = 8 AND a.State = e.lngEnumValue 
+LEFT JOIN BFT_EnumCode AS f ON f.EnumTypeID = 3 AND  a.DeviceTypeCode = f.lngEnumValue
+WHERE a.fzh = {0} AND TO_DAYS(a.SaveTime) = TO_DAYS('{1}') ORDER BY a.SaveTime DESC]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-20 控制模块，根据分站号和时间获取分站控制历史数据-->
+  <cmd name="global_StaionControlHistoryDataService_GetStaionControlHistoryDataByByFzhTime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <!--<![CDATA[SELECT a.*, c.strEnumDisplay AS TypeName, d.wz as Location, e.strEnumDisplay AS StateName FROM KJ_StaionControlHistoryData AS a LEFT JOIN KJ_DeviceType AS b ON a.devid = b.devid LEFT JOIN BFT_EnumCode AS c ON c.EnumTypeID = 1 AND b.type = c.lngEnumValue LEFT JOIN KJ_DeviceAddress AS d ON a.wzid = d.wzID LEFT JOIN BFT_EnumCode AS e ON e.EnumTypeID = 8 AND a.State = e.lngEnumValue WHERE a.fzh = {0} AND TO_DAYS(a.SaveTime) = TO_DAYS('{1}') order by a.SaveTime desc]]>-->
+      <![CDATA[SELECT a.*, e.strEnumDisplay AS StateName FROM KJ_StaionControlHistoryData AS a LEFT JOIN BFT_EnumCode AS e ON e.EnumTypeID = 8 AND a.State = e.lngEnumValue WHERE a.fzh = {0} AND TO_DAYS(a.SaveTime) = TO_DAYS('{1}') ORDER BY a.SaveTime DESC]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-26 控制模块，获取交叉控制详情-->
+  <!-- 2017-07-05 解决测点存在,安装位置不存在时显示测点已删除的问题-->
+  <cmd name="global_ManualCrossControlService_GetDetailFromManualCrossControl">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT a.ID, a.Type, a.upflag, case IFNULL(a.Bkpoint,'') when '' then  '(测点已删除)' else CONCAT(a.Bkpoint, case IFNULL(c.wz,'')
+      when '' then '' else concat('(', c.wz, ')') end) end AS bkPoint, IFNULL( CASE WHEN (a.type = {0} or a.type={1}) THEN f.`name` 
+      ELSE CASE WHEN a.ZkPoint = '0000000' THEN '手动控制' ELSE CONCAT(a.ZkPoint, '(', e.wz, ')') END END, '(测点已删除)' ) AS zkPoint 
+      FROM KJ_ManualControl AS a LEFT JOIN KJ_DeviceDefInfo AS b ON a.Bkpoint = b.point AND b.activity = 1 
+      LEFT JOIN KJ_DeviceAddress AS c ON b.wzid = c.wzid 
+      LEFT JOIN KJ_DeviceDefInfo AS d ON a.zkpoint = d.point AND d.activity = 1 
+      LEFT JOIN KJ_DeviceAddress AS e ON d.wzid = e.wzid 
+      LEFT JOIN KJ_LargedataAnalysisConfig AS f ON a.zkpoint = f.id]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+
+  <!-- 2017-05-23 大数据分析模块，设置测点. 通过模板Id获取设置测点的模板.-->
+  <cmd name="dataAnalysis_GetAnalysisModelPointBindingTemplateByTempleteId">
+    <sqlserver>
+      <![CDATA[  select '' as Id, '' as AnalysisModelId, 
+                 expConfig.Id as ExpressionConfigId,
+                 exp.Id as ExpressionId, 
+                 expConfig.ParameterId, 
+                 expConfig.FactorId, '' as PointId
+                 from KJ_AnalysisTemplate tmpl 
+								 left join KJ_AnalysisTemplateConfig templateConfig on tmpl.Id = templateConfig.TempleteId				 
+                 left join KJ_AnalyticalExpression exp on templateConfig.ExpressionId = exp.Id
+                 left join KJ_ExpressionConfig expConfig on exp.Id = expConfig.ExpressionId
+                 where tmpl.Id = '{0}']]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[  select '' as Id, '' as AnalysisModelId, 
+                 expConfig.Id as ExpressionConfigId,
+                 exp.Id as ExpressionId, 
+                 expConfig.ParameterId, 
+                 expConfig.FactorId, '' as PointId
+                 from KJ_AnalysisTemplate tmpl 
+								 left join KJ_AnalysisTemplateConfig templateConfig on tmpl.Id = templateConfig.TempleteId				 
+                 left join KJ_AnalyticalExpression exp on templateConfig.ExpressionId = exp.Id
+                 left join KJ_ExpressionConfig expConfig on exp.Id = expConfig.ExpressionId
+                 where tmpl.Id = '{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 大数据分析模块，获取新增表达式测点的模板.-->
+  <cmd name="dataAnalysis_GetCustomizationAddAnalysisModelPointRecordInfoByTempleteId">
+    <sqlserver>
+      <![CDATA[select newid() as Id, '' as AnalysisModelId, 
+                 expConfig.Id as ExpressionConfigId,
+                 exp.Id as ExpressionId, 
+                 expConfig.ParameterId, 
+                 expConfig.FactorId, '' as PointId, '' as Point,
+								 '' as AnalysisModelName,
+								 exp.Expresstion,
+                 exp.ExpresstionText,
+                 exp.ContinueTime,
+                 exp.MaxContinueTime,
+								 param.[Name] as ParameterName,
+								 factor.[Name] as FactorName,
+                 factor.CallMethodName,
+                 factor.[Type] as DevicePropertyId
+                 from KJ_AnalysisTemplate tmpl 
+								 left join KJ_AnalysisTemplateConfig templateConfig on tmpl.Id = templateConfig.TempleteId				 
+                 left join KJ_AnalyticalExpression exp on templateConfig.ExpressionId = exp.Id
+                 left join KJ_ExpressionConfig expConfig on exp.Id = expConfig.ExpressionId
+								 left join KJ_Para param on expConfig.ParameterId = param.Id
+								 left join KJ_Factor factor on expConfig.FactorId = factor.Id
+                 where tmpl.Id = '{0}']]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[  select uuid() as Id, '' as AnalysisModelId, 
+                 expConfig.Id as ExpressionConfigId,
+                 exp.Id as ExpressionId, 
+                 expConfig.ParameterId, 
+                 expConfig.FactorId, '' as PointId, '' as Point,
+								 '' as AnalysisModelName,
+								 exp.Expresstion,
+                 exp.ExpresstionText,
+                 exp.ContinueTime,
+                 exp.MaxContinueTime,
+								 param.`Name` as ParameterName,
+								 factor.`Name` as FactorName,
+                 factor.CallMethodName,
+                 factor.`Type` as DevicePropertyId
+                 from KJ_AnalysisTemplate tmpl 
+								 left join KJ_AnalysisTemplateConfig templateConfig on tmpl.Id = templateConfig.TempleteId				 
+                 left join KJ_AnalyticalExpression exp on templateConfig.ExpressionId = exp.Id
+                 left join KJ_ExpressionConfig expConfig on exp.Id = expConfig.ExpressionId
+								 left join KJ_Para param on expConfig.ParameterId = param.Id
+								 left join KJ_Factor factor on expConfig.FactorId = factor.Id
+                 where tmpl.Id = '{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 大数据分析模块，获取和模型相关的友好的编辑表达式测点信息.-->
+  <cmd name="dataAnalysis_GetCustomizationEditAnalysisModelPointRecordInfoByModelId">
+    <sqlserver>
+      <![CDATA[select pointMapping.Id, pointMapping.AnalysisModelId, 
+                 expConfig.Id as ExpressionConfigId,
+                 pointMapping.ExpressionId, 
+                 pointMapping.ParameterId, 
+                 pointMapping.FactorId, pointMapping.PointId,
+                 def.point as Point,
+                 def.[activity] as PointActivity,
+								 model.[Name] as AnalysisModelName,
+								 exp.Expresstion,
+                 exp.ExpresstionText,
+                 exp.ContinueTime,
+								 param.[Name] as ParameterName,
+								 factor.[Name] as FactorName,
+                 factor.CallMethodName,
+                 factor.[Type] as DevicePropertyId,
+                 pointMapping.DevTypeId,
+                 pointMapping.DevTypeName
+                 from KJ_LargedataAnalysisConfig model
+								 left join KJ_AnalysisTemplate tmpl on model.TempleteId = tmpl.Id
+								 left join KJ_AnalysisTemplateConfig templateConfig on tmpl.Id = templateConfig.TempleteId				 
+                 left join KJ_AnalyticalExpression exp on templateConfig.ExpressionId = exp.Id
+                 left join KJ_ExpressionConfig expConfig on exp.Id = expConfig.ExpressionId
+								 left join KJ_Para param on expConfig.ParameterId = param.Id
+								 left join KJ_Factor factor on expConfig.FactorId = factor.Id
+								 left join KJ_SetAnalysisModelPointRecord pointMapping on pointMapping.AnalysisModelId = model.Id and pointMapping.ExpressionConfigId = expConfig.Id
+														and pointMapping.ExpressionId = templateConfig.ExpressionId
+														and pointMapping.ParameterId = expConfig.ParameterId
+														and pointMapping.FactorId = expConfig.FactorId
+                 left join KJ_DeviceDefInfo def on pointMapping.PointId = def.PointID
+                 where model.Id = '{0}']]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[  select pointMapping.Id, pointMapping.AnalysisModelId, 
+                 expConfig.Id as ExpressionConfigId,
+                 pointMapping.ExpressionId, 
+                 pointMapping.ParameterId, 
+                 pointMapping.FactorId, pointMapping.PointId,
+                 def.point as Point,
+                 def.`activity` as PointActivity,
+								 model.`Name` as AnalysisModelName,
+								 exp.Expresstion,
+                 exp.ExpresstionText,
+                 exp.ContinueTime,
+								 param.`Name` as ParameterName,
+								 factor.`Name` as FactorName,
+                 factor.CallMethodName,
+                 factor.`Type` as DevicePropertyId,
+                 pointMapping.DevTypeId,
+                 pointMapping.DevTypeName
+                 from KJ_LargedataAnalysisConfig model
+								 left join KJ_AnalysisTemplate tmpl on model.TempleteId = tmpl.Id
+								 left join KJ_AnalysisTemplateConfig templateConfig on tmpl.Id = templateConfig.TempleteId				 
+                 left join KJ_AnalyticalExpression exp on templateConfig.ExpressionId = exp.Id
+                 left join KJ_ExpressionConfig expConfig on exp.Id = expConfig.ExpressionId
+								 left join KJ_Para param on expConfig.ParameterId = param.Id
+								 left join KJ_Factor factor on expConfig.FactorId = factor.Id
+								 left join KJ_SetAnalysisModelPointRecord pointMapping on pointMapping.AnalysisModelId = model.Id and pointMapping.ExpressionConfigId = expConfig.Id
+														and pointMapping.ExpressionId = templateConfig.ExpressionId
+														and pointMapping.ParameterId = expConfig.ParameterId
+														and pointMapping.FactorId = expConfig.FactorId
+                 left join KJ_DeviceDefInfo def on pointMapping.PointId = def.PointID
+                 where model.Id = '{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-25 大数据分析模块，获取和模型相关的友好的表达式测点信息.-->
+  <cmd name="dataAnalysis_GetCustomizationAnalysisModelPointRecordInfoByModelId">
+    <sqlserver>
+      <![CDATA[select pointMapping.Id, pointMapping.AnalysisModelId, 
+                 pointMapping.ExpressionConfigId,
+                 pointMapping.ExpressionId, 
+                 pointMapping.ParameterId, 
+                 pointMapping.FactorId, pointMapping.PointId,
+                 def.Point,
+                 wz.wz as Wz,
+								 model.[Name] as AnalysisModelName,
+								 exp.Expresstion,
+                 exp.ExpresstionText,
+                 exp.ContinueTime,
+                 exp.MaxContinueTime,
+								 param.[Name] as ParameterName,
+								 factor.[Name] as FactorName,
+                 factor.CallMethodName,
+                 factor.[Type] as DevicePropertyId,
+                 pointMapping.DevTypeId,
+                 pointMapping.DevTypeName
+                 from KJ_LargedataAnalysisConfig model
+								 left join KJ_SetAnalysisModelPointRecord pointMapping on model.Id =  pointMapping.AnalysisModelId
+                 left join KJ_DeviceDefInfo def on pointMapping.PointId = def.PointID
+                 left join KJ_DeviceAddress wz on def.wzid = wz.wzID
+                 left join KJ_AnalyticalExpression exp on pointMapping.ExpressionId = exp.Id
+								 left join KJ_Para param on pointMapping.ParameterId = param.Id
+								 left join KJ_Factor factor on pointMapping.FactorId = factor.Id
+								 where model.Id = '{0}']]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[  select pointMapping.Id, pointMapping.AnalysisModelId, 
+                 pointMapping.ExpressionConfigId,
+                 pointMapping.ExpressionId, 
+                 pointMapping.ParameterId, 
+                 pointMapping.FactorId, pointMapping.PointId,
+                 def.Point,
+                 wz.wz as Wz,
+								 model.`Name` as AnalysisModelName,
+								 exp.Expresstion,
+								 exp.ExpresstionText,
+                 exp.ContinueTime,
+                 exp.MaxContinueTime,
+								 param.`Name` as ParameterName,
+								 factor.`Name` as FactorName,
+								 factor.CallMethodName,
+                 factor.`Type` as DevicePropertyId,
+                 pointMapping.DevTypeId,
+                 pointMapping.DevTypeName
+                 from KJ_LargedataAnalysisConfig model
+								 left join KJ_SetAnalysisModelPointRecord pointMapping on model.Id =  pointMapping.AnalysisModelId
+                 left join KJ_DeviceDefInfo def on pointMapping.PointId = def.PointID
+                 left join KJ_DeviceAddress wz on def.wzid = wz.wzID
+                 left join KJ_AnalyticalExpression exp on pointMapping.ExpressionId = exp.Id
+								 left join KJ_Para param on pointMapping.ParameterId = param.Id
+								 left join KJ_Factor factor on pointMapping.FactorId = factor.Id
+								 where model.Id = '{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-23 获取没有关联报警通知的分析模型.-->
+  <cmd name="GetLargeDataAnalysisConfigWithoutAlarmConfigList">
+    <sqlserver>
+      <![CDATA[select ac.* from KJ_LargedataAnalysisConfig ac left join KJ_AlarmNotificationPersonnelConfig apc on ac.Id = apc.AnalysisModelId
+                where apc.AnalysisModelId is null and ac.IsDeleted = 1 and ac.IsEnabled = 1]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select ac.* from KJ_LargedataAnalysisConfig ac left join KJ_AlarmNotificationPersonnelConfig apc on ac.Id = apc.AnalysisModelId
+                where apc.AnalysisModelId is null and ac.IsDeleted = 1 and ac.IsEnabled = 1]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-26 获取关联应急联动的分析模型.-->
+  <cmd name="GetLargeDataAnalysisConfigWithRegionOutage">
+    <sqlserver>
+      <![CDATA[select ac.* from KJ_LargedataAnalysisConfig ac 
+                where exists(select Id from KJ_RegionOutageConfig where AnalysisModelId = ac.Id)
+                and ac.IsDeleted = 1 and ac.IsEnabled = 1 {0}]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select ac.* from KJ_LargedataAnalysisConfig ac 
+                where exists(select Id from KJ_RegionOutageConfig where AnalysisModelId = ac.Id)
+                and ac.IsDeleted = 1 and ac.IsEnabled = 1 {0}]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-26 获取没有关联应急联动的分析模型.-->
+  <cmd name="GetLargeDataAnalysisConfigWithoutRegionOutage">
+    <sqlserver>
+      <![CDATA[select ac.* from KJ_LargedataAnalysisConfig ac 
+                where not exists(select Id from KJ_RegionOutageConfig where AnalysisModelId = ac.Id)
+                and ac.IsDeleted = 1 and ac.IsEnabled = 1]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select ac.* from KJ_LargedataAnalysisConfig ac 
+                where not exists(select Id from KJ_RegionOutageConfig where AnalysisModelId = ac.Id)
+                and ac.IsDeleted = 1 and ac.IsEnabled = 1]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!--关闭未关闭的报警处理记录-->
+  <cmd name="CloseUnclosedAlarmHandle">
+    <sqlserver>
+      <![CDATA[update KJ_AlarmHandle set EndTime = GETDATE() where EndTime = '1900-01-01 00:00:00']]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[update KJ_AlarmHandle set EndTime = NOW() where EndTime = '1900-01-01 00:00:00']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 大数据曲线查询可查看的模型-->
+  <cmd name="GetLargeDataAnalysisConfigListForCurve">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from KJ_LargedataAnalysisConfig ac where exists(
+                select AnalysisModelId from KJ_LargedataAnalysisLog where ac.Id = AnalysisModelId and DATE(AnalysisTime) = DATE('{0}')
+                ) order by ac.`Name`]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-07-06 检查断电控制是否存在解控-->
+  <cmd name="IsRegionOutageControlHasReleaseControl">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select DISTINCT chk.AnalysisModelId, model.`Name` from KJ_RegionOutageConfig chk left join KJ_LargedataAnalysisConfig model
+                on chk.AnalysisModelId = model.Id
+                where chk.ControlStatus = 0 and chk.RemoveModelId = '{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-07-07 检查分析模型配置的控制点是否存在解控-->
+  <cmd name="IsRegionOutageControlPointHasReleaseControl">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select DISTINCT chk.AnalysisModelId, model.`Name` from KJ_RegionOutageConfig chk left join KJ_LargedataAnalysisConfig model
+                on chk.AnalysisModelId = model.Id
+                where chk.ControlStatus = 0 and chk.RemoveModelId = '{0}' and chk.PointId = '{1}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-07-12 检查表是否存在-->
+  <cmd name="dataAnalysis_QueryTableExists">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT `TABLE_NAME` FROM `information_schema`.`TABLES` where `TABLE_SCHEMA` = '{0}' and TABLE_NAME = '{1}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-07-12 查询周平均值.-->
+  <cmd name="dataAnalysis_WeekAverageValue">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select ROUND(IFNULL(AVG(d.pjz),0.00),2) as WeekAverageValue
+               from KJ_Day d where d.PointID = '{0}' and d.Timer >= date_add(date_add(CURRENT_DATE(), interval -1 day), interval -1 WEEK)]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-08-18 查询所有报警通知人员配置列表-->
+  <cmd name="dataAnalysis_AlarmNotificationPersonnelConfigAllList">
+    <sqlserver>
+      <![CDATA[select an.* from KJ_AlarmNotificationPersonnelConfig an left join KJ_LargedataAnalysisConfig ac
+                on an.AnalysisModelId = ac.Id
+                where ac.IsEnabled = 1 and ac.IsDeleted = 1
+                order by an.AnalysisModelId]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select an.* from KJ_AlarmNotificationPersonnelConfig an left join KJ_LargedataAnalysisConfig ac
+                on an.AnalysisModelId = ac.Id
+                where ac.IsEnabled = 1 and ac.IsDeleted = 1
+                order by an.AnalysisModelId]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-08-18 查询所有应急联动配置列表-->
+  <cmd name="dataAnalysis_EmergencyLinkageConfigAllList">
+    <sqlserver>
+      <![CDATA[select el.* from KJ_EmergencyLinkageConfig el left join KJ_LargedataAnalysisConfig la
+                on el.AnalysisModelId = la.Id
+                where la.IsDeleted = 1 and la.IsEnabled = 1
+                order by el.AnalysisModelId]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select el.* from KJ_EmergencyLinkageConfig el left join KJ_LargedataAnalysisConfig la
+                on el.AnalysisModelId = la.Id
+                where la.IsDeleted = 1 and la.IsEnabled = 1
+                order by el.AnalysisModelId]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-08-18 查询所有区域断电配置列表-->
+  <cmd name="dataAnalysis_RegionOutageConfigAllList">
+    <sqlserver>
+      <![CDATA[select ro.*, def.Point 
+                from KJ_RegionOutageConfig ro left join KJ_LargedataAnalysisConfig la on ro.AnalysisModelId = la.Id
+                left join KJ_DeviceDefInfo def on ro.PointId = def.PointID
+                where la.IsDeleted = 1 and la.IsEnabled = 1
+                order by ro.AnalysisModelId]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select ro.*, def.Point 
+                from KJ_RegionOutageConfig ro left join KJ_LargedataAnalysisConfig la on ro.AnalysisModelId = la.Id
+                left join KJ_DeviceDefInfo def on ro.PointId = def.PointID
+                where la.IsDeleted = 1 and la.IsEnabled = 1
+                order by ro.AnalysisModelId]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-08-23 获取所有模拟量历史数据(如月平均值、周平均值、日最大值、日平均值、5分钟最大值、5分钟平均值)-->
+  <cmd name="dataAnalysis_GetPointHistoryData">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select 
+                a.PointID, 
+                a.Point, 
+                a.Wz, 
+                a.MonthAverageValue, 
+                a.WeekAverageValue,
+                b.DayMaxValue,
+                b.DayAverageValue,
+                c.FiveMinutesMaxValue,
+                c.FiveMinutesAverageValue
+                from
+                (
+                /*周，月平均值*/
+                select def.PointID as PointId,
+                def.point as Point,
+                wz.wz as Wz,
+                ROUND(AVG(IFNULL(d.pjz,0.00)),2) as MonthAverageValue,
+                ROUND(IFNULL((
+                SUM(CASE WHEN d.Timer >= date_add(date_add(CURRENT_DATE(), interval -1 day), interval -1 week) then d.pjz else 0 END) 
+                /
+                IFNULL(SUM(CASE WHEN d.Timer >= date_add(date_add(CURRENT_DATE(), interval -1 day), interval -1 week) then 1 else 0 END),1)
+                ),0.00),2)
+                as WeekAverageValue
+                from KJ_DeviceDefInfo def LEFT JOIN KJ_DeviceAddress wz on def.wzid = wz.wzID
+                left join KJ_Day d on def.PointID = d.PointID and d.Timer >= date_add(date_add(CURRENT_DATE(), interval -1 day), interval -1 month)
+                where def.activity = 1 and def.point like '%A%'
+                group by def.PointID, def.point, wz.wz
+                ) a
+                left join
+                (
+                /*日最大，日平均值*/
+                select def.PointID as PointId,
+                ROUND(MAX(IFNULL(source.zdz, 0.00)),2) as DayMaxValue,
+                ROUND(AVG(IFNULL(source.pjz, 0.00)),2) as DayAverageValue
+                from KJ_DeviceDefInfo def
+                LEFT JOIN (
+                  {0}
+                ) source on def.PointID = source.PointID and source.Timer >= date_add(NOW(), interval -1 day) and source.Timer <= NOW()
+                where def.activity = 1 and def.point like '%A%'
+                group by def.PointID
+                ) b on a.PointId = b.PointId
+                left JOIN
+                (
+                /*5分钟最大，平均值*/
+                select def.PointID as PointId,
+                ROUND(MAX(IFNULL(m.zdz,0.00)),2) as FiveMinutesMaxValue,
+                ROUND(AVG(IFNULL(m.pjz,0.00)),2) as FiveMinutesAverageValue
+                from KJ_DeviceDefInfo def
+                left join KJ_StaFiveMinute{1} m on def.PointID = m.pointID and m.timer >= '{2}' and m.timer < '{3}'
+                where def.activity = 1 and def.point like '%A%'
+                group by def.PointID
+                ) c on b.PointId = c.PointId
+                order by a.Point]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-05-27 入库模块 判断数据库是否连接正常-->
+  <cmd name="DataToDb_GetDbServerIsNormal">
+    <sqlserver>
+      <![CDATA[select sysdatetime()]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select sysdate()]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-01 建表存储过程调用 -->
+  <cmd name="CreateDateTable">
+    <sqlserver>
+      <![CDATA[EXEC DateTableCreate('{0}')]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[CALL DateTableCreate('{0}')]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-01 查询所有模板详情 -->
+  <cmd name="global_AnalysisTemplateService_GetAnalysisTemplateListDetail">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[ select a.*,b.ExpressionId,c.Expresstion,c.ExpresstionText,c.ContinueTime from KJ_AnalysisTemplate a left JOIN
+                KJ_AnalysisTemplateConfig b on a.Id=b.TempleteId
+               left join KJ_AnalyticalExpression c on b.ExpressionId=c.Id
+                where a.IsDeleted=1  ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-02 查询所有正在报警的数据 -->
+  <cmd name="global_AlarmModelService_GetAlarmDataList">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[ select * from KJ_DataAlarm{0} where Etime is null or Etime = '' or Etime='1900-01-01 00:00:00'  ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-02 查询人员定位所有正在报警的数据 -->
+  <cmd name="global_AlarmModelService_GetR_AlarmDataList">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[ select * from PE_DataAlarm{0} where Etime is null or Etime = '' or Etime='1900-01-01 00:00:00'  ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-02 根据模板ID 查询表达式信息 -->
+  <cmd name="global_AnalyticalExpressionService_GetAnalyticalExpressionListByTempleteId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[ select a.* from KJ_AnalyticalExpression a JOIN
+                KJ_AnalysisTemplateConfig b on a.Id=b.ExpressionId
+                where b.TempleteId='{0}' ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-02 根据模板ID 查询表达式配置信息-->
+  <cmd name="global_JC_ExpressionConfigService_GetJC_ExpressionConfigListByTempleteId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[ select c.* from KJ_AnalyticalExpression a JOIN
+              KJ_AnalysisTemplateConfig b on a.Id=b.ExpressionId JOIN
+              KJ_ExpressionConfig c on a.Id=c.ExpressionId
+              where b.TempleteId='{0}' ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-05 查询日最大值 -->
+  <!-- 2017-07-04 查询日最大值 修改(为空返回结果0.00, where条件)-->
+  <cmd name="global_FactorCalculateService_DayMaxValue">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[ select ROUND(MAX(IFNULL(source.zdz, 0.00)),2) as DayMaxValue from ({0}) source
+                where source.PointID = '{1}' and source.Timer >= date_add(NOW(), interval -1 day) and source.Timer <= NOW()  ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-05 查询日平均值 -->
+  <!-- 2017-07-04 查询日平均值 修改(为空返回结果0.00, where条件)-->
+  <cmd name="global_FactorCalculateService_DayAverageValue">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[ select ROUND(IFNULL(AVG(source.pjz), 0.00), 2) as DayAverageValue from ({0}) source
+                where  source.PointID = '{1}' and source.Timer >= date_add(NOW(), interval -1 day) and source.Timer <= NOW() ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-05 查询月平均值 -->
+  <!-- 2017-07-04 查询月平均值 修改(为空返回结果0.00, where条件)-->
+  <cmd name="global_FactorCalculateService_MonthAverageValue">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[ select 
+                ROUND(IFNULL(AVG(d.pjz),0.00),2) as MonthAverageValue
+                from KJ_Day d 
+                where d.PointID = '{0}' and d.Timer >= date_add(date_add(CURRENT_DATE(), interval -1 day), interval -1 month)  ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-06 根据模型ID查询报警推送人员配置信息  新增的时候显示人员列表使用-->
+  <cmd name="global_AlarmNotificationPersonnelService_GetAlarmNotificationPersonnelByAnalysisModelId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT c.UserID,c.UserCode,c.UserName from 
+                (select * from KJ_AlarmNotificationPersonnelConfig WHERE AnalysisModelId='{0}') 
+                a
+                 JOIN KJ_AlarmNotificationPersonnel b
+                on b.AlarmConfigId=a.Id
+                 JOIN BFT_User c on b.PersonId=c.UserID
+                ORDER BY UserName  ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-07 根据模型ID查询报警推配置信息  修改的时候配置信息-->
+  <cmd name="global_AlarmNotificationPersonnelService_GetAlarmNotificationPersonnelListByAnalysisModelId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select a.Id,a.AlarmConfigId,a.PersonId from KJ_AlarmNotificationPersonnel a
+              join KJ_AlarmNotificationPersonnelConfig b
+              on a.AlarmConfigId=b.Id
+              where b.AnalysisModelId='{0}' ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-08 根据模型ID查询模型详细信息(包括表达式)-->
+  <cmd name="global_LargedataAnalysisConfigService_GetLargedataAnalysisConfigDetailById">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select  a.id,c.Expresstion,c.ContinueTime,a.TrueDescription,a.FalseDescription,a.AnalysisInterval
+              from   
+              (select f.Id,f.TrueDescription,f.TempleteId,f.FalseDescription,f.AnalysisInterval from KJ_LargedataAnalysisConfig f
+              where f.IsDeleted=1 and f.Id='{0}') a 
+              join KJ_AnalysisTemplateConfig b  on a.TempleteId=b.TempleteId
+              join KJ_AnalyticalExpression c on b.ExpressionId=c.Id ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-08 根据模型ID查询模型配置的测点信息(包括表达式)-->
+  <cmd name="global_SetAnalysisModelPointRecordService_GetSetAnalysisModelPointRecordByLargedataAnalysisConfigId">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select  a.id as LargedataAnalysisConfigId,c.Expresstion,b.ExpressionConfigId,b.PointId, def.Point, d.`Name` as FactorName
+              from 
+              (select f.Id,f.`Name`,f.TrueDescription,f.TempleteId,f.FalseDescription,f.AnalysisInterval from KJ_LargedataAnalysisConfig f
+              where f.IsDeleted=1 and f.Id='{0}') a 
+             join KJ_SetAnalysisModelPointRecord b on a.Id=b.AnalysisModelId
+             left  join KJ_DeviceDefInfo def on b.PointId = def.PointID
+             left  join KJ_AnalyticalExpression c on b.ExpressionId=c.Id
+             left  join KJ_Factor d on b.FactorId=d.Id ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-09 根据日期查询日期报警表记录 -->
+  <cmd name="global_GetAlarmRecordByStime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT b.ID,b.ID as AlarmId,b.point,b.stime,b.etime,b.ssz,b.cs,b.remark,b.bz1,b.bz2, wz.wz,dev.`name`,ec.strEnumDisplay from {0} b
+LEFT JOIN KJ_DeviceAddress wz  on  b.wzid=wz.wzID
+LEFT JOIN KJ_DeviceType dev on b.devid=dev.devid
+LEFT JOIN BFT_EnumCode ec ON b.type=ec.lngEnumValue
+WHERE ((b.stime<'{1}' and b.etime>'{2}') OR (b.stime >= '{3}' AND b.stime<'{4}' AND b.etime='1900-01-01 00:00:00')) and ec.EnumTypeID=4 and b.isalarm>0]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2018-10-02 根据日期查询日期报警表记录 -->
+  <cmd name="global_GetStationInterruptAlarmRecordByStime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT b.ID,b.ID as AlarmId,b.point,b.stime,b.etime,b.ssz,b.cs,b.remark,b.bz1,b.bz2, wz.wz,dev.`name`,ec.strEnumDisplay from {0} b
+LEFT JOIN KJ_DeviceAddress wz  on  b.wzid=wz.wzID
+LEFT JOIN KJ_DeviceType dev on b.devid=dev.devid
+LEFT JOIN BFT_EnumCode ec ON b.type=ec.lngEnumValue
+WHERE (b.stime<='{1}' and b.etime>='{2}') and ec.EnumTypeID=4 and b.type=0]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2018-10-02 根据日期分站历史补传记录 -->
+  <cmd name="global_GetStationHistoryRecordByStime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT * from kj_staionhistorydata 
+where SaveTime>='{0}' and SaveTime<='{1}' and fzh={2}]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2018-10-02 根据日期分站历史补传记录 -->
+  <cmd name="global_GetMcRecordByStime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[SELECT * from {0} 
+where timer='{1}' and point='{2}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-09 根据Id查询日期报警表记录 -->
+  <cmd name="global_GetDateAlarmRecordById">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from {0} where id='{1}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017-06-09 根据Id查询日期报警表记录 -->
+  <cmd name="global_GetAlarmRecordByPointIdAndType">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from {0} where pointid='{1}' and type='{2}' and stime='{3}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-09 根据KdId查询日期报警表记录 -->
+  <cmd name="global_GetAlarmRecordByKdid">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from {0} where kdid like '{1}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2018-05-22 根据Id查询日期运行表记录 -->
+  <cmd name="global_GetDateRunRecordById">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from {0} where id='{1}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  
+  <!-- 2017-06-12 查询模型和配置ID的列表 -->
+  <cmd name="global_SetAnalysisModelPointRecordService_GetAllAnalysisModelPointList">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select b.`Name` as AnalysisModelName,a.AnalysisModelId,a.PointId, def.Point from KJ_SetAnalysisModelPointRecord a   
+              join KJ_LargedataAnalysisConfig b on b.Id=a.AnalysisModelId
+              left join KJ_DeviceDefInfo def on a.PointId = def.PointID
+              order by b.`Name`]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-12 根据模型ID查询模型和配置ID的列表 -->
+  <!-- 2017-06-30-->
+  <cmd name="global_RegionOutageConfigService_GetAllRegionOutageConfigListByAnalysisModelId">
+    <sqlserver>
+      <![CDATA[select a.*, ISNULL(b.[Name],'') as RemoveModelName, def.Point
+                from KJ_RegionOutageConfig a left join KJ_LargedataAnalysisConfig b on a.RemoveModelId = b.Id
+                left join KJ_DeviceDefInfo def on a.PointId = def.PointID
+                where a.AnalysisModelId='{0}']]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select a.*, IFNULL(b.`Name`,'') as RemoveModelName, def.Point
+                from KJ_RegionOutageConfig a left join KJ_LargedataAnalysisConfig b on a.RemoveModelId = b.Id
+                left join KJ_DeviceDefInfo def on a.PointId = def.PointID
+                where a.AnalysisModelId='{0}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-09 根据时间和测点编号查询累积量记录 -->
+  <cmd name="global_GetAccumulationDataByPointIdAndTime">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select * from {0} where pointId='{1}' and timer='{2}']]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-15  App获取报警断电记录 -->
+  <cmd name="global_AppGetAlarmPowerOffInfo">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select {0} .*,KJ_DeviceType.name,KJ_DeviceType.xs1 as xs1,KJ_DeviceAddress.wz  from {1} left join KJ_DeviceType on {2} .devid=KJ_DeviceType.devid left join KJ_DeviceAddress on {3} .wzid=KJ_DeviceAddress.wzid  {4} order by stime desc limit 0, {5}]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-15  App获取报警记录 -->
+  <cmd name="global_AppGetRunInfo">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[select {0} .*,KJ_DeviceType.name,KJ_DeviceType.xs1,KJ_DeviceAddress.wz  from {1} left join KJ_DeviceType on {2} .devid=KJ_DeviceType.devid left join KJ_DeviceAddress on {3} .wzid=KJ_DeviceAddress.wzid {4} ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-21  根据模型名称模糊查询报警推送配置信息 -->
+  <cmd name="global_AlarmNotificationPersonnelService_GetAlarmNotificationPersonnelListByAnalysisModeName">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+        select b.`Name` as AnalysisModeName,a.Id,a.AnalysisModelId,a.AlarmType,a.AlarmColor,a.CreatedTime,a.UpdatedTime 
+        from KJ_AlarmNotificationPersonnelConfig a join 
+        KJ_LargedataAnalysisConfig b on a.AnalysisModelId=b.Id 
+        where b.IsDeleted = 1 and b.IsEnabled = 1 {0}  ORDER BY a.UpdatedTime desc
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-27  根据用户编码获取用户菜单信息 -->
+  <cmd name="global_GetWebmenuListByUserCode">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select BFT_WEBMenu.* from BFT_WEBMenu
+left join BFT_RoleWEBMenu on BFT_Rolewebmenu.ModuleID=BFT_WEBMenu.ModuleID
+left join BFT_Role on BFT_RoleWEBMenu.RoleID=BFT_Role.RoleID
+left join BFT_UserRole on BFT_UserRole.RoleID=BFT_Role.RoleID
+left join BFT_User on BFT_User.UserID=BFT_UserRole.UserID
+where BFT_User.UserCode='{0}' and BFT_WEBMenu.ModuleFlag='1' order by BFT_WEBMenu.ModuleSort
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-28  获取报表方案集合 -->
+  <cmd name="global_Report_GetListData">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select * from BFT_ListDataEx where listid = {0} order by blnDefault desc,lngRowIndex
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-28  得到报表需要显示的栏目 -->
+  <cmd name="global_Report_Getlistdisplayex">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select BFT_ListDisplayEx.ListDisplayID,BFT_ListDisplayEx.ListDataID,BFT_ListDisplayEx.strListDisplayFieldName,BFT_ListDisplayEx.strListDisplayFieldNameCHS,
+                        BFT_ListDisplayEx.lngRowIndex,BFT_ListDisplayEx.lngDisplayWidth,BFT_ListMetaData.blnFreCondition,BFT_ListMetaData.lngFreConIndex,BFT_ListMetaData.strFkCode,BFT_ListDisplayEx.lngProivtType,strFieldType,lngFKType,blnSummary 
+                       from BFT_ListMetaData  left join BFT_ListDisplayEx on BFT_ListMetaData.MetaDataFieldName = BFT_ListDisplayEx.strListDisplayFieldName and BFT_ListMetaData.ListDataID=BFT_ListDisplayEx.ListDataID
+                       where BFT_ListMetaData.ListDataID=(select ListDataID from BFT_ListDataEx where ListID= {0} LIMIT 0,1 )
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-28  Web得到报表需要显示的栏目 -->
+  <cmd name="global_Report_WebGetlistdisplayex">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select BFT_ListDisplayEx.ListDisplayID,BFT_ListDisplayEx.ListDataID,BFT_ListDisplayEx.strListDisplayFieldName,BFT_ListDisplayEx.strListDisplayFieldNameCHS,
+                        BFT_ListDisplayEx.lngRowIndex,BFT_ListDisplayEx.lngDisplayWidth,BFT_ListMetaData.blnFreCondition,BFT_ListMetaData.lngFreConIndex,BFT_ListMetaData.strFkCode,BFT_ListDisplayEx.lngProivtType,strFieldType,lngFKType,blnSummary,blnPrintFreCondition,StrConditionFormat,StrBluerCondition,LngApplyType,strSummaryDisplayFormat
+                       from BFT_ListMetaData  left join BFT_ListDisplayEx on BFT_ListMetaData.MetaDataFieldName = BFT_ListDisplayEx.strListDisplayFieldName and BFT_ListMetaData.ListDataID=BFT_ListDisplayEx.ListDataID
+                       where BFT_ListMetaData.ListDataID=(select ListDataID from BFT_ListDataEx where ListID= {0} and ListDataID= {1} LIMIT 0,1 )
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-28  根据监测站fzh得到此监测站的参数设备 -->
+  <cmd name="global_Report_GetPointParameter">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select * from KJ_DeviceType  where type = 1 and  devid in(select devid from KJ_DeviceDefInfo where fzh= {0} and kh <> 0) order by bz1
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-28  根据监测站fzh得到此监测站的参数设备 -->
+  <cmd name="global_Report_GetFKDataByHashTable1">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select * from BFT_FKLib where strFKCode='{0}'
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-28  获取报表MetaData -->
+  <cmd name="global_Report_GetCBFMetaData">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select * from BFT_MetaData where ID=(select MainMetaDataID from BFT_ListEx where ListID= {0} )
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-28  获取报表TableName -->
+  <cmd name="global_Report_GetCBFMetaData">
+    <sqlserver>
+      <![CDATA[
+select name as TABLE_NAME,text as Text from sys.views  left join syscomments on sys.views.object_id=syscomments.id where name in({0})
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+SELECT TABLE_NAME,VIEW_DEFINITION as Text FROM information_schema.VIEWS where TABLE_NAME in({0}) and TABLE_SCHEMA='{1}'
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-29  查询是否存在表 -->
+  <cmd name="global_Report_ExistsTable">
+    <sqlserver>
+      <![CDATA[
+select object_id as oid,name from sys.objects where name='{0}'
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select TABLE_CATALOG as oid ,table_name as name from information_schema.tables where table_name='{0}' and TABLE_SCHEMA='{1}'
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017-06-29  查询是否存在表 -->
+  <cmd name="global_Report_GetListDataLayoutData">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select * from BFT_ListDataLayount where  ListDataID= {0}  and  StrDate<='{1}'order by StrDate desc
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017.7.26  倍数报警新增入库 -->
+  <cmd name="global_RatioAlarm_AddItem">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+Insert into {0}(Id,PointID,fzh,kh,dzh,devid,wzid,point,type,bstj,bsz,stime,etime,ssz,pjz) values({1}) 
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017.7.26  倍数报警更新入库 -->
+  <cmd name="global_RatioAlarm_UpdateItem">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+Update {0} set zdz = '{1}',zdzs = '{2}' ,etime = '{3}' where point = '{4}' and stime = '{5}' and type = '{6}'
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017.7.26  倍数报警更新入库 -->
+  <cmd name="global_RatioAlarm_ClearItem">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+Update {0} set etime = '{1}' ,zdz = ssz ,zdzs = stime where etime <= '1900-01-01 00:00:00'
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017.7.26  倍数报警查询指定时间段内数据 -->
+  <cmd name="global_GetHour_Data">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+Select * from {0} where timer >= '{1}' and timer <= '{2}' and point in({3})
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017.7.26  根据区域ID删除区域规则 -->
+  <cmd name="global_DeleteAreaRulesByAreaID_Data">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+Delete from kj_devicearearule where Areaid ={0}
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017.9.1  查询指定时间范围内的传感器标校记录 -->
+  <cmd name="global_GetCalibrationRecordByTimer">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select * from KJ_EffectEx where stime>='{0}' and stime<='{1}' 
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!--2017.12.18 by 更新标校记录状态为已完成 -->
+  <cmd name="global_UpdateCalibrationRecordByTimer">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+      update KJ_EffectEx Set bxzt = '{0}',cs='{1}' where id = '{2}' 
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017.12.1  向呼叫记录表R_PHJ201712表中添加对应的呼叫记录 -->
+  <cmd name="global_R_PhjService_AddPhjToDB">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+insert into PE_CallHistory{0}(Id,hjlx,bh,Yid,pointId,CallTime,tsycs,state,type,Card,username,ip,timer,flag,sysflag,upflag,By2)
+values('{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}')
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2018.03.12  向呼叫记录人员明细表PE_CallHistoryPersonDetail201803中添加对应的记录 -->
+  <cmd name="global_R_PhjService_AddPhjPersonDetailToDB">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+insert into PE_CallHistoryPersonDetail{0}(Id,PhjId,Yid) values('{1}','{2}','{3}')
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2018.03.12  向呼叫记录设备明细表PE_CallHistoryPointDetail201803中添加对应的记录 -->
+  <cmd name="global_R_PhjService_AddPhjPointDetailToDB">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+insert into PE_CallHistoryPointDetail{0}(Id,PhjId,PointId) values('{1}','{2}','{3}')
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017.12.1  查询轨迹表记录 -->
+  <cmd name="global_R_PhistoryService_QueryR_PhistoryFromDB">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select * from  PE_Trajectory{0} where Yid='{1}' order by timer desc LIMIT 1
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!-- 2017.12.1  根据条件 查询轨迹表记录 -->
+  <cmd name="global_R_PhistoryService_QueryR_PhistoryByPar">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select * from  PE_Trajectory{0} where Yid='{1}' and PointId='{2}' and Rtime='{3}' order by timer desc LIMIT 1
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017.12.14 查询所有正在报警的数据 -->
+  <cmd name="global_R_PBModelService_GetR_PBDataList">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[ select * from PE_PersonAlarm{0} where endtime is null or endtime = '' or endtime='1900-01-01 00:00:00'  ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017.12.14 根据时间查询井下人员呼叫信息 -->
+  <cmd name="global_R_PHJModelService_GetRealR_PHJDataList">
+    <sqlserver>
+      <![CDATA[]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[ select DISTINCT bh,Yid from PE_CallHistory{0} where timer>='{1}' and hjlx='0' ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2017.12.14  根据条件 查询轨迹表记录 -->
+  <cmd name="global_R_PhistoryService_QueryR_PhistoryByTimer">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select PE_Trajectory{0}.id,PE_Trajectory{0}.bh,PE_PersonArchive.`name`,rtime,timer,
+case 
+when flag=0 then '正常采集'
+when flag=1 then '补传采集'
+when flag=2 then '人工编辑'
+when flag=3 then '正常入井'
+when flag=4 then '补传入井'
+when flag=5 then '人工编辑入井'
+when flag=6 then '正常出井'
+when flag=7 then '补传出井'
+when flag=8 then '人工编辑出井'
+END
+as flag
+from PE_Trajectory{0}
+left join PE_PersonArchive on PE_PersonArchive.Yid=PE_Trajectory{0}.Yid where timer>'{1}' order by timer asc
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+
+  <!-- 2018.1.24  查询指定分站、交换机的历史放电记录 -->
+  <cmd name="global_GetPowerBoxChargeByFzhOrMac">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select * from KJ_PowerBoxChargeHistory where fzh='{0}' or mac='{1}'
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!--  根据时间查询指定分站、交换机的历史放电记录 -->
+  <cmd name="global_GetPowerBoxChargeByStime">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+select * from KJ_PowerBoxChargeHistory where stime>='{0}' and (DischargeStime='1900-01-01 00:00:00' or DischargeEtime='1900-01-01 00:00:00')
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <!--2018.3.15 by 启动系统时删除除交叉控制外的所有控制 -->
+  <cmd name="global_DeleteOthreManualCrossControl">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+Delete from KJ_ManualControl where (type != 0 and type != 12);Update KJ_ManualControl Set upflag = 0 where type = 12;
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+  <cmd name="global_DeleteRDef">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+  Delete from R_Def where id = '{0}';
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
+</cmds>

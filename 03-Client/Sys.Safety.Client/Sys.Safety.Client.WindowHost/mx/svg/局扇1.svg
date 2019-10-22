@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 148 148" width="148" height="148" hape-rendering="geometricPrecision" xmlns:a="http://www.adobe.com/svg10-extensions" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <desc>600</desc>
+ 
+  <defs>
+    <radialGradient id="56_0_0_0_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(0,196,0)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(39,123,0)" stop-opacity="1.0"/>
+    </radialGradient>
+    <radialGradient id="56_0_0_1_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(0,196,0)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(39,123,0)" stop-opacity="1.0"/>
+    </radialGradient>
+    <radialGradient id="56_0_0_2_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(0,196,0)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(39,123,0)" stop-opacity="1.0"/>
+    </radialGradient>
+    <radialGradient id="57_0_1_1_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(255,255,0)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(39,123,0)" stop-opacity="1.0"/>
+    </radialGradient>
+  </defs>
+  <g id="0">
+    <g id="0_0">
+      <g id="0_0_0" fill="url(#56_0_0_0_radialgradient)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_0" d="M 38 39 C 38 52 53 50 67 58 75 64 74 74 74 74 74 74 85 64 89 58 92 54 102 43 99 31 97 25 83 13 52 26 45 28 37 32 38 39 L 38 39 Z"/>
+      </g>
+      <g id="0_0_1" fill="url(#56_0_0_1_radialgradient)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_1" d="M 62 123 C 73 116 64 105 64 89 64 77 74 74 74 74 74 74 60 70 53 69 47 68 33 66 24 74 20 78 16 95 44 118 49 122 57 127 62 123 L 62 123 Z"/>
+      </g>
+      <g id="0_0_2" fill="url(#56_0_0_2_radialgradient)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_2" d="M 122 60 C 111 55 106 68 92 75 82 80 74 74 74 74 74 74 77 89 79 95 82 100 87 114 99 117 104 119 121 113 127 78 128 73 129 63 122 60 L 122 60 Z"/>
+      </g>
+      <text id="Text_0_0" x="74.500000" text-anchor="start" y="149" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+      <animateTransform id="Rotate_1" fill="freeze" type="rotate" repeatCount="indefinite" calcMode="linear" attributeType="XML" attributeName="transform" additive="replace" accumulate="none" from="0.000000,74,72" to="360.000000,74,72" begin="indefinite" end="indefinite" dur="1.000000s" restart="whenNotActive"/>
+    </g>
+    <g id="0_1">
+      <g id="0_1_0" fill="rgb(18,123,0)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_1_0" d="M 74 148 C 33 148 0 114 0 74 0 34 33 0 74 0 114 0 148 34 148 74 148 114 114 148 74 148 L 74 148 Z M 74 9 C 38 9 9 38 9 74 9 110 38 139 74 139 110 139 139 110 139 74 139 38 110 9 74 9 L 74 9 Z"/>
+        <text id="Text_0_1_0" x="74" text-anchor="middle" y="79" vertical-align="middle" font-family="Times New Roman" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="0_1_1" fill="url(#57_0_1_1_radialgradient)" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_1_1" d="M 74 92 L 74 92 C 65 92 56 83 56 74 L 56 74 C 56 65 65 56 74 56 L 74 56 C 83 56 92 65 92 74 L 92 74 C 92 83 83 92 74 92 L 74 92 Z"/>
+        <text id="Text_0_1_1" x="60.000000" text-anchor="start" y="67.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_0_1" x="74.500000" text-anchor="start" y="173" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <text id="Text_0" x="74.500000" text-anchor="start" y="173" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+  </g>
+</svg>

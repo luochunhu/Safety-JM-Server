@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 238 84" width="238" height="84" hape-rendering="geometricPrecision" xmlns:a="http://www.adobe.com/svg10-extensions" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <desc>600</desc>
+  
+  <defs/>
+  <g id="0">
+    <g id="0_0" RefCenter="37,6">
+      <g id="0_0_0" fill="rgb(43,122,202)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_0" d="M 184 68 C 184 70 183 72 180 72 L 87 72 C 85 72 83 70 83 68 L 83 54 C 83 51 85 50 87 50 L 180 50 C 183 50 184 51 184 54 L 184 68 184 68 Z"/>
+      </g>
+      <g id="0_0_1" fill="rgb(13,69,108)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_1" d="M 214 38 C 215 40 216 41 216 42 L 189 68 C 188 69 187 68 185 66 L 185 66 C 183 65 183 63 183 62 L 209 36 C 210 36 211 37 213 38 L 214 38 214 38 Z"/>
+      </g>
+      <g id="0_0_2" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_2" d="M 113 78 L 94 78 85 68 120 68 113 78 Z"/>
+      </g>
+      <g id="0_0_3" fill="rgb(2,83,138)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_3" d="M 101 77 L 109 77 109 80 101 80 101 77 Z"/>
+      </g>
+      <g id="0_0_4" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_4" d="M 98 80 L 112 80 112 84 98 84 98 80 Z"/>
+      </g>
+      <g id="0_0_5" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_5" d="M 181 78 L 162 78 153 68 187 68 181 78 Z"/>
+      </g>
+      <g id="0_0_6" fill="rgb(2,83,138)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_6" d="M 169 77 L 177 77 177 80 169 80 169 77 Z"/>
+      </g>
+      <g id="0_0_7" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_7" d="M 167 80 L 180 80 180 84 167 84 167 80 Z"/>
+      </g>
+      <g id="0_0_8" fill="rgb(13,69,108)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_8" d="M 210 60 C 210 60 209 60 209 60 L 72 60 C 70 60 68 62 68 65 L 68 65 C 68 67 70 69 72 69 L 83 69 83 72 202 72 C 204 75 207 78 210 78 215 78 219 74 219 69 219 64 215 60 210 60 L 210 60 Z"/>
+      </g>
+      <g id="0_0_9" fill="rgb(157,187,97)" stroke="rgb(64,64,64)" stroke-width="2" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_9" d="M 238 29 L 231 19 236 18 C 236 18 236 18 235 18 L 225 13 228 10 C 228 10 228 10 228 10 L 216 11 218 6 C 217 6 217 6 217 6 L 208 13 207 8 C 206 8 206 9 206 9 L 201 19 198 15 C 198 15 198 16 198 16 L 199 27 194 26 C 194 26 194 26 194 26 L 201 36 196 37 C 196 37 197 37 197 37 L 207 42 204 45 C 204 45 204 45 204 45 L 216 44 214 49 C 215 49 215 49 215 49 L 224 42 225 47 C 226 47 226 47 226 46 L 230 36 234 40 C 234 40 234 40 234 39 L 233 28 238 29 C 238 29 238 29 238 29 L 238 29 Z"/>
+        <text id="Text_0_0_9" x="216" text-anchor="middle" y="33" vertical-align="middle" font-family="Times New Roman" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+        <animateTransform id="Rotate_3" fill="freeze" type="rotate" repeatCount="indefinite" calcMode="linear" attributeType="XML" attributeName="transform" additive="replace" accumulate="none" from="0.000000,216,27" to="360.000000,216,27" begin="indefinite" end="indefinite" dur="2.000000s" restart="whenNotActive"/>
+      </g>
+      <g id="0_0_10" fill="rgb(181,203,133)" stroke="rgb(86,123,0)" stroke-width="2" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_10" d="M 216 39 L 216 39 C 210 39 205 34 205 28 L 205 27 C 205 21 210 16 216 16 L 216 16 C 222 16 227 21 227 27 L 227 28 C 227 34 222 39 216 39 L 216 39 Z"/>
+        <text id="Text_0_0_10" x="209.000000" text-anchor="start" y="27.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="0_0_11" fill="rgb(202,255,14)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_11" d="M 216 33 L 216 33 C 213 33 210 31 210 27 L 210 27 C 210 24 213 21 216 21 L 216 21 C 219 21 222 24 222 27 L 222 27 C 222 31 219 33 216 33 L 216 33 Z"/>
+        <text id="Text_0_0_11" x="214.000000" text-anchor="start" y="32.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="0_0_12" fill="rgb(157,187,97)" stroke="rgb(64,64,64)" stroke-width="2" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_12" d="M 76 62 L 70 54 75 53 C 75 53 75 53 74 53 L 65 48 68 45 C 68 45 67 45 67 45 L 57 46 58 42 C 58 42 58 42 58 42 L 49 48 48 44 C 48 44 48 44 48 44 L 44 53 40 50 C 40 50 40 51 40 51 L 41 61 37 60 C 37 60 37 60 37 60 L 43 68 39 69 C 39 70 39 70 39 70 L 49 74 46 77 C 46 77 46 77 46 77 L 57 76 55 81 C 56 81 56 81 56 81 L 64 75 65 79 C 66 79 66 79 66 78 L 70 69 73 72 C 73 72 73 72 73 72 L 72 61 76 63 C 76 63 76 62 76 62 L 76 62 Z"/>
+        <text id="Text_0_0_12" x="57" text-anchor="middle" y="66" vertical-align="middle" font-family="Times New Roman" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+        <animateTransform id="Rotate_2" fill="freeze" type="rotate" repeatCount="indefinite" calcMode="linear" attributeType="XML" attributeName="transform" additive="replace" accumulate="none" from="0.000000,56,61" to="360.000000,56,61" begin="indefinite" end="indefinite" dur="2.000000s" restart="whenNotActive"/>
+      </g>
+      <g id="0_0_13" fill="rgb(181,203,133)" stroke="rgb(86,123,0)" stroke-width="2" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_13" d="M 57 71 L 57 71 C 51 71 47 67 47 61 L 47 61 C 47 56 51 51 57 51 L 57 51 C 62 51 66 56 66 61 L 66 61 C 66 67 62 71 57 71 L 57 71 Z"/>
+        <text id="Text_0_0_13" x="51.000000" text-anchor="start" y="62.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="0_0_14" fill="rgb(202,255,14)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_14" d="M 57 67 L 57 67 C 54 67 51 64 51 61 L 51 61 C 51 58 54 56 57 56 L 57 56 C 60 56 62 58 62 61 L 62 61 C 62 64 60 67 57 67 L 57 67 Z"/>
+        <text id="Text_0_0_14" x="55.000000" text-anchor="start" y="67.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_0_0" x="137.500000" text-anchor="start" y="109" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+      <animateMotion id="Rotate_None" begin="indefinite" end="indefinite" attributeName="transform" attributeType="XML" type="translate" path="M 0 6 L 50 6 z" dur="10.000000s" additive="replace" fill="freeze" accumulate="none" restart="whenNotActive" repeatCount="indefinite"/>
+    </g>
+    <text id="Text_0" x="119.500000" text-anchor="start" y="109" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+  </g>
+</svg>

@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F22AFCFA-155F-44A9-8202-480194DBF0FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sys.Safety.Client.Chart</RootNamespace>
+    <AssemblyName>Sys.Safety.Client.Chart</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Sys.Safety.Client.WindowHost\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Basic.Framework">
+      <HintPath>..\..\..\01-Library\Framework\Basic.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Tutorials.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2.UI, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2.Wizard, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\01-Library\Framework\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\01-Library\Framework\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChartDemo\Frm_KglBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_KglBar.Designer.cs">
+      <DependentUpon>Frm_KglBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_KglLineChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_KglLineChart.Designer.cs">
+      <DependentUpon>Frm_KglLineChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_KglLineWithScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_KglLineWithScreen.Designer.cs">
+      <DependentUpon>Frm_KglLineWithScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_KglStateChg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_KglStateChg.Designer.cs">
+      <DependentUpon>Frm_KglStateChg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_LineChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_LineChart.Designer.cs">
+      <DependentUpon>Frm_LineChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_BarAndLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_BarAndLine.Designer.cs">
+      <DependentUpon>Frm_BarAndLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_LineCoordinate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_LineCoordinate.Designer.cs">
+      <DependentUpon>Frm_LineCoordinate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_MnlLineWithScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_MnlLineWithScreen.Designer.cs">
+      <DependentUpon>Frm_MnlLineWithScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_MnlMcChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_MnlMcChart.Designer.cs">
+      <DependentUpon>Frm_MnlMcChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_SSZChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartDemo\Frm_SSZChart.Designer.cs">
+      <DependentUpon>Frm_SSZChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartPrint\ChartPrint.cs" />
+    <Compile Include="ChartSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartSetting.Designer.cs">
+      <DependentUpon>ChartSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MnlAndKzl_LineWithScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MnlAndKzl_LineWithScreen.Designer.cs">
+      <DependentUpon>MnlAndKzl_LineWithScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mnl_DdLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mnl_DdLine.Designer.cs">
+      <DependentUpon>Mnl_DdLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mnl_BjLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mnl_BjLine.Designer.cs">
+      <DependentUpon>Mnl_BjLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MnlKglKzl_LineWithScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MnlKglKzl_LineWithScreen.Designer.cs">
+      <DependentUpon>MnlKglKzl_LineWithScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mnl_McBigDataLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mnl_McBigDataLine.designer.cs">
+      <DependentUpon>Mnl_McBigDataLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mnl_McData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mnl_McData.Designer.cs">
+      <DependentUpon>Mnl_McData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mnl_SSZChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mnl_SSZChart.Designer.cs">
+      <DependentUpon>Mnl_SSZChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kgl_StateChg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kgl_StateChg.Designer.cs">
+      <DependentUpon>Kgl_StateChg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueryClass\InterfaceClass.cs" />
+    <Compile Include="QueryClass\FiveMiniteLineQueryClass.cs" />
+    <Compile Include="QueryClass\KglStateChgQueryClass.cs" />
+    <Compile Include="QueryClass\KglStateLineBarQueryClass.cs" />
+    <Compile Include="QueryClass\MthBarAndLineQueryClass.cs" />
+    <Compile Include="QueryClass\PubOptClass.cs" />
+    <Compile Include="QueryClass\QueryConditions.cs" />
+    <Compile Include="QueryClass\QueryPubClass.cs" />
+    <Compile Include="QueryClass\McLineQueryClass.cs" />
+    <Compile Include="Mnl_LineWithScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mnl_LineWithScreen.Designer.cs">
+      <DependentUpon>Mnl_LineWithScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mnl_McLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mnl_McLine.Designer.cs">
+      <DependentUpon>Mnl_McLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mnl_MthBarAndLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mnl_MthBarAndLine.Designer.cs">
+      <DependentUpon>Mnl_MthBarAndLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mnl_FiveMiniteLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mnl_FiveMiniteLine.Designer.cs">
+      <DependentUpon>Mnl_FiveMiniteLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Mnl_LineWithCoordinate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mnl_LineWithCoordinate.Designer.cs">
+      <DependentUpon>Mnl_LineWithCoordinate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kgl_StateLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kgl_StateLine.Designer.cs">
+      <DependentUpon>Kgl_StateLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kgl_StateBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kgl_StateBar.Designer.cs">
+      <DependentUpon>Kgl_StateBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kgl_StateLineWidthScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kgl_StateLineWidthScreen.Designer.cs">
+      <DependentUpon>Kgl_StateLineWidthScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MnlAndKgl_LineWithScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MnlAndKgl_LineWithScreen.Designer.cs">
+      <DependentUpon>MnlAndKgl_LineWithScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mnl_DayZdzLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mnl_DayZdzLine.Designer.cs">
+      <DependentUpon>Mnl_DayZdzLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChartDemo\Frm_KglBar.resx">
+      <DependentUpon>Frm_KglBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartDemo\Frm_KglLineChart.resx">
+      <DependentUpon>Frm_KglLineChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartDemo\Frm_KglLineWithScreen.resx">
+      <DependentUpon>Frm_KglLineWithScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartDemo\Frm_KglStateChg.resx">
+      <DependentUpon>Frm_KglStateChg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartDemo\Frm_LineChart.resx">
+      <DependentUpon>Frm_LineChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartDemo\Frm_BarAndLine.resx">
+      <DependentUpon>Frm_BarAndLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartDemo\Frm_LineCoordinate.resx">
+      <DependentUpon>Frm_LineCoordinate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartDemo\Frm_MnlLineWithScreen.resx">
+      <DependentUpon>Frm_MnlLineWithScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartDemo\Frm_MnlMcChart.resx">
+      <DependentUpon>Frm_MnlMcChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartDemo\Frm_SSZChart.resx">
+      <DependentUpon>Frm_SSZChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartSetting.resx">
+      <DependentUpon>ChartSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MnlAndKzl_LineWithScreen.resx">
+      <DependentUpon>MnlAndKzl_LineWithScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mnl_DdLine.resx">
+      <DependentUpon>Mnl_DdLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mnl_BjLine.resx">
+      <DependentUpon>Mnl_BjLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MnlKglKzl_LineWithScreen.resx">
+      <DependentUpon>MnlKglKzl_LineWithScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mnl_McBigDataLine.resx">
+      <DependentUpon>Mnl_McBigDataLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mnl_McData.resx">
+      <DependentUpon>Mnl_McData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mnl_SSZChart.resx">
+      <DependentUpon>Mnl_SSZChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kgl_StateChg.resx">
+      <DependentUpon>Kgl_StateChg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mnl_LineWithScreen.resx">
+      <DependentUpon>Mnl_LineWithScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mnl_McLine.resx">
+      <DependentUpon>Mnl_McLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mnl_MthBarAndLine.resx">
+      <DependentUpon>Mnl_MthBarAndLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mnl_FiveMiniteLine.resx">
+      <DependentUpon>Mnl_FiveMiniteLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mnl_LineWithCoordinate.resx">
+      <DependentUpon>Mnl_LineWithCoordinate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kgl_StateLine.resx">
+      <DependentUpon>Kgl_StateLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kgl_StateBar.resx">
+      <DependentUpon>Kgl_StateBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kgl_StateLineWidthScreen.resx">
+      <DependentUpon>Kgl_StateLineWidthScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MnlAndKgl_LineWithScreen.resx">
+      <DependentUpon>MnlAndKgl_LineWithScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mnl_DayZdzLine.resx">
+      <DependentUpon>Mnl_DayZdzLine.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\Log4netConfig.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.DataContract\Sys.Safety.DataContract.csproj">
+      <Project>{bb6fbb99-66e9-4d1e-b1d1-d585a0151505}</Project>
+      <Name>Sys.Safety.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.Request\Sys.Safety.Request.csproj">
+      <Project>{c17815bf-001e-4872-a45e-0e6e48a59f0f}</Project>
+      <Name>Sys.Safety.Request</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.ServiceContract\Sys.Safety.ServiceContract.csproj">
+      <Project>{f723137b-dc93-4e92-b3a3-c02281b46e0f}</Project>
+      <Name>Sys.Safety.ServiceContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.WebApiAgent\Sys.Safety.WebApiAgent.csproj">
+      <Project>{79cb4602-86f9-4a51-b2e6-df627d960341}</Project>
+      <Name>Sys.Safety.WebApiAgent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sys.Safety.ClientFramework\Sys.Safety.ClientFramework\Sys.Safety.ClientFramework.csproj">
+      <Project>{5d3ad7d1-bed1-4507-be4b-febcc7170589}</Project>
+      <Name>Sys.Safety.ClientFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,167 @@
+﻿.search
+{
+    background: url(../Images/Button/serch.png) no-repeat center left !important;
+}
+.search_tigger
+{
+    background: url(../Images/Button/search_tigger.jpg) no-repeat center left !important;
+}
+.list
+{
+    background: url(../Images/Button/icon-list.gif) no-repeat center left !important;
+}
+.use
+{
+    background: url(../Images/Button/icon-folder-new.gif) no-repeat center left !important;
+}
+.nouse
+{
+    background: url(../Images/Button/icon-folder-delete.gif) no-repeat center left !important;
+}
+.del
+{
+    background: url(../Images/Button/delete.png) no-repeat center left !important;
+}
+.post
+{
+    background: url(../Images/Button/icon-by-category.gif) no-repeat center left !important;
+}
+.copy
+{
+    background: url(../Images/Button/collapse-all.gif) no-repeat center left !important;
+}
+.add
+{
+    background: url(../Images/Button/comment_add.png) no-repeat center left !important;
+}
+.write
+{
+    background: url(../Images/Button/page_edit_1.png) no-repeat center left !important;
+}
+.edit
+{
+    background: url(../Images/Button/icon-mark-complete.gif) no-repeat center left !important;
+}
+.save
+{
+    background: url(../Images/Button/save.gif) no-repeat center left !important;
+}
+.cancel
+{
+    background: url(../Images/Button/system-log-out.png) no-repeat center left !important;
+}
+.look
+{
+    background: url(../Images/Button/icon-list.gif) no-repeat center left !important;
+}
+.sort
+{
+    background: url(../Images/Button/collapse-all.gif) no-repeat center left !important;
+}
+.refresh
+{
+    background: url(../Images/Button/refresh.png) no-repeat center left !important;
+}
+.print
+{
+    background: url(../Images/Button/printer.png) no-repeat center left !important;
+}
+.excel
+{
+    background: url(../Images/Button/excel.gif) no-repeat center left !important;
+}
+.confrim
+{
+    background: url(../Images/Button/Confirm.png) no-repeat center left !important;
+}
+/*-------------------------------------危险源----------------------------------*/
+.agree, .ok, .yes
+{
+    background-image: url("../Images/Button/accept.png") !important;
+}
+.b_prev
+{
+    background: url(../Images/Button/b_prev.png) no-repeat center left !important;
+}
+.b_next
+{
+    background: url(../Images/Button/b_next.png) no-repeat center left !important;
+}
+.clear
+{
+    background: url(../Images/Button/delete.gif) no-repeat center left !important; /*yan 2012-8-6*/
+}
+.disagree, .no
+{
+    background-image: url("../Images/Button/no.png") !important;
+}
+.exit32
+{
+    background: url(../Images/Button/exit32.png) no-repeat center left !important;
+}
+.filter
+{
+    background-image: url("../Images/Button/icon-filter.gif") !important;
+}
+.info
+{
+    background-image: url("../Images/Button/information.png") !important;
+}
+.reset
+{
+    background: url(../Images/Button/reset.png) no-repeat center left !important;
+}
+.shOk
+{
+    background: url(../Images/Button/accepted_48.png) no-repeat center left !important;
+}
+.shErr
+{
+    background: url(../Images/Button/badge-cancel.png) no-repeat center left !important;
+}
+.reset2
+{
+    background-image: url("../Images/Button/undo.png") !important;
+}
+.tabitem
+{
+    background: url(../Images/Button/list-items.gif) no-repeat center left !important;
+}
+.zoom_in
+{
+    background: url(../Images/Button/zoom_in.png) no-repeat center left !important;
+}
+.zoom_out
+{
+    background: url(../Images/Button/zoom_out.png) no-repeat center left !important;
+}
+.zoom_fit
+{
+    background: url(../Images/Button/fit.png) no-repeat center left !important;
+}
+/*-------------------------------------危险源----------------------------------*/
+
+
+/*-----------------------------------门户网站---------------------------------*/
+.upload-icon
+{
+    background: url(../Images/Button/image_add.png) no-repeat center left !important;
+}
+
+/*-----------------------------------门户网站---------------------------------*/
+
+/*-----------------------------------综合自动化-------------------------------*/
+
+/*收缩按钮*/
+.expand1
+{
+    background: url(../Images/Button/expand.png) no-repeat center left !important;
+}
+/*收缩按钮*/
+/*收缩按钮*/
+.select1
+{
+    background: url(../Images/Button/select.png) no-repeat center left !important;
+}
+/*收缩按钮*/
+/*-----------------------------------综合自动化-------------------------------*/

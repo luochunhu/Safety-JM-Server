@@ -1,0 +1,696 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0085D351-DDC5-48C5-A214-1A1AB023AE16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sys.Safety.Reports</RootNamespace>
+    <AssemblyName>Sys.Safety.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Basic.Framework">
+      <HintPath>..\..\..\01-Library\Framework\Basic.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.Designer.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v13.2.UI, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.2.UI, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2.Extensions, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2.UI, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2.Wizard, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2.Extensions, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI, Version=1.2.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CellDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CellDetail.Designer.cs">
+      <DependentUpon>CellDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\frmGenericRef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmGenericRef.designer.cs">
+      <DependentUpon>frmGenericRef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LookUpUtil.cs" />
+    <Compile Include="Controls\UCBoolean.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCBoolean.designer.cs">
+      <DependentUpon>UCBoolean.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCCombo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCCombo.designer.cs">
+      <DependentUpon>UCCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCDateTimeOne.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCDateTimeOne.designer.cs">
+      <DependentUpon>UCDateTimeOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCDateTimeTwo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCDateTimeTwo.designer.cs">
+      <DependentUpon>UCDateTimeTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCInt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCInt.designer.cs">
+      <DependentUpon>UCInt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCNumber.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCNumber.designer.cs">
+      <DependentUpon>UCNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCRef.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCRef.designer.cs">
+      <DependentUpon>UCRef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCString.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCString.designer.cs">
+      <DependentUpon>UCString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCText.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCText.designer.cs">
+      <DependentUpon>UCText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCTextTwo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCTextTwo.designer.cs">
+      <DependentUpon>UCTextTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCDateTimeClass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCDateTimeClass.designer.cs">
+      <DependentUpon>UCDateTimeClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCGridLookUp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCGridLookUp.designer.cs">
+      <DependentUpon>UCGridLookUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCDateTimeShiFen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCDateTimeShiFen.designer.cs">
+      <DependentUpon>UCDateTimeShiFen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCDateTimeMonth.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCDateTimeMonth.designer.cs">
+      <DependentUpon>UCDateTimeMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCDateTimeYear.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCDateTimeYear.designer.cs">
+      <DependentUpon>UCDateTimeYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConTextCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConTextCondition.designer.cs">
+      <DependentUpon>frmConTextCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDataSortSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDataSortSet.Designer.cs">
+      <DependentUpon>frmDataSortSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDataSortSetEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDataSortSetEdit.Designer.cs">
+      <DependentUpon>frmDataSortSetEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListDirName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListDirName.Designer.cs">
+      <DependentUpon>frmListDirName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListEdit.designer.cs">
+      <DependentUpon>frmListEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmList.Designer.cs">
+      <DependentUpon>frmList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListExSFC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListExSFC.designer.cs">
+      <DependentUpon>frmListExSFC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListParameterSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListParameterSet.Designer.cs">
+      <DependentUpon>frmListParameterSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMetaDataSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMetaDataSelect.designer.cs">
+      <DependentUpon>frmMetaDataSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportDesign.Designer.cs">
+      <DependentUpon>frmReportDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchemaAddCalc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSchemaAddCalc.designer.cs">
+      <DependentUpon>frmSchemaAddCalc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchemaCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSchemaCondition.Designer.cs">
+      <DependentUpon>frmSchemaCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchemaDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSchemaDesign.designer.cs">
+      <DependentUpon>frmSchemaDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchemaName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSchemaName.Designer.cs">
+      <DependentUpon>frmSchemaName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSet.Designer.cs">
+      <DependentUpon>frmSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CbfSettingRequest.cs" />
+    <Compile Include="Model\ClientCacheModel.cs" />
+    <Compile Include="Model\ListExModel.cs" />
+    <Compile Include="Model\ListTempleModel.cs" />
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PubClass\BulidConditionUtil.cs" />
+    <Compile Include="PubClass\DateTimeManager.cs" />
+    <Compile Include="PubClass\DateTimeUtil.cs" />
+    <Compile Include="PubClass\MessageShowUtil.cs" />
+    <Compile Include="PubClass\PermissionManager.cs" />
+    <Compile Include="PubClass\RequestUtil.cs" />
+    <Compile Include="PubClass\ResourceManager.cs" />
+    <Compile Include="PubClass\TypeUtil.cs" />
+    <Compile Include="ServiceRequest\EnumRequest.cs" />
+    <Compile Include="ServiceRequest\PointRequest.cs" />
+    <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReportTemple.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReportTemple.designer.cs">
+      <DependentUpon>XtraReportTemple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBluerCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBluerCondition.designer.cs">
+      <DependentUpon>frmBluerCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInputDesc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputDesc.Designer.cs">
+      <DependentUpon>frmInputDesc.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CellDetail.resx">
+      <DependentUpon>CellDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmGenericRef.resx">
+      <DependentUpon>frmGenericRef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCBoolean.resx">
+      <DependentUpon>UCBoolean.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCCombo.resx">
+      <DependentUpon>UCCombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCDateTimeOne.resx">
+      <DependentUpon>UCDateTimeOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCDateTimeTwo.resx">
+      <DependentUpon>UCDateTimeTwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCInt.resx">
+      <DependentUpon>UCInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCNumber.resx">
+      <DependentUpon>UCNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCRef.resx">
+      <DependentUpon>UCRef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCString.resx">
+      <DependentUpon>UCString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCText.resx">
+      <DependentUpon>UCText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCTextTwo.resx">
+      <DependentUpon>UCTextTwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCDateTimeClass.resx">
+      <DependentUpon>UCDateTimeClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCGridLookUp.resx">
+      <DependentUpon>UCGridLookUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCDateTimeShiFen.resx">
+      <DependentUpon>UCDateTimeShiFen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCDateTimeMonth.resx">
+      <DependentUpon>UCDateTimeMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCDateTimeYear.resx">
+      <DependentUpon>UCDateTimeYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConTextCondition.resx">
+      <DependentUpon>frmConTextCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDataSortSet.resx">
+      <DependentUpon>frmDataSortSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDataSortSetEdit.resx">
+      <DependentUpon>frmDataSortSetEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListDirName.resx">
+      <DependentUpon>frmListDirName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListEdit.resx">
+      <DependentUpon>frmListEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmList.resx">
+      <DependentUpon>frmList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListExSFC.resx">
+      <DependentUpon>frmListExSFC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListParameterSet.resx">
+      <DependentUpon>frmListParameterSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMetaDataSelect.resx">
+      <DependentUpon>frmMetaDataSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportDesign.resx">
+      <DependentUpon>frmReportDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSchemaAddCalc.resx">
+      <DependentUpon>frmSchemaAddCalc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSchemaCondition.resx">
+      <DependentUpon>frmSchemaCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSchemaDesign.resx">
+      <DependentUpon>frmSchemaDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSchemaName.resx">
+      <DependentUpon>frmSchemaName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSet.resx">
+      <DependentUpon>frmSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRDesignRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XRDesignRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReportTemple.resx">
+      <DependentUpon>XtraReportTemple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBluerCondition.resx">
+      <DependentUpon>frmBluerCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputDesc.resx">
+      <DependentUpon>frmInputDesc.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recurrence_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletelist_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addgroupheader_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editcontact_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveas_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveas_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\build_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\build_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customization_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customization_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh2_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagesetup_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagesetup_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\CreateView.sql" />
+    <Content Include="Config\listStyle.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Lib\NPOI.dll" />
+    <None Include="Resources\importimage_32x32.png" />
+    <None Include="Resources\importimage_16x16.png" />
+    <None Include="Resources\metadataexport.png" />
+    <None Include="Resources\metadataimport.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\wizard_32x32.png" />
+    <None Include="Resources\wizard_16x16.png" />
+    <None Include="Resources\exporttohtml_32x32.png" />
+    <None Include="Resources\exporttohtml_16x16.png" />
+    <None Include="Resources\export_32x321.png" />
+    <None Include="Resources\export_16x16.png" />
+    <None Include="Resources\export_32x32.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\DeleteDir.png" />
+    <None Include="Resources\contact_32x32.png" />
+    <None Include="Resources\contact_16x16.png" />
+    <None Include="Resources\find_16x16.png" />
+    <None Include="Resources\Search.ico" />
+    <None Include="Resources\cancel_32x32.png" />
+    <None Include="Resources\cancel_16x16.png" />
+    <None Include="Resources\apply_32x32.png" />
+    <None Include="Resources\apply_16x16.png" />
+    <None Include="Resources\editcontact_32x32.png" />
+    <None Include="Resources\editcontact_16x161.png" />
+    <None Include="Resources\forward_32x32.png" />
+    <None Include="Resources\forward_16x16.png" />
+    <None Include="Resources\Goto.ico" />
+    <None Include="Resources\doublelast_32x32.png" />
+    <None Include="Resources\doublelast_16x16.png" />
+    <None Include="Resources\next_32x32.png" />
+    <None Include="Resources\next_16x16.png" />
+    <None Include="Resources\prev_32x32.png" />
+    <None Include="Resources\prev_16x16.png" />
+    <None Include="Resources\doublefirst_32x32.png" />
+    <None Include="Resources\doublefirst_16x16.png" />
+    <None Include="Resources\chart_32x32.png" />
+    <None Include="Resources\chart_16x16.png" />
+    <None Include="Resources\report_32x32.png" />
+    <None Include="Resources\report_16x16.png" />
+    <None Include="Resources\pagesetup_32x321.png" />
+    <None Include="Resources\pagesetup_16x161.png" />
+    <None Include="Resources\listbullets_32x32.png" />
+    <None Include="Resources\listbullets_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.DataContract\Sys.Safety.DataContract.csproj">
+      <Project>{bb6fbb99-66e9-4d1e-b1d1-d585a0151505}</Project>
+      <Name>Sys.Safety.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.Request\Sys.Safety.Request.csproj">
+      <Project>{c17815bf-001e-4872-a45e-0e6e48a59f0f}</Project>
+      <Name>Sys.Safety.Request</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.ServiceContract\Sys.Safety.ServiceContract.csproj">
+      <Project>{f723137b-dc93-4e92-b3a3-c02281b46e0f}</Project>
+      <Name>Sys.Safety.ServiceContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sys.Safety.ClientFramework\Sys.Safety.ClientFramework\Sys.Safety.ClientFramework.csproj">
+      <Project>{5d3ad7d1-bed1-4507-be4b-febcc7170589}</Project>
+      <Name>Sys.Safety.ClientFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

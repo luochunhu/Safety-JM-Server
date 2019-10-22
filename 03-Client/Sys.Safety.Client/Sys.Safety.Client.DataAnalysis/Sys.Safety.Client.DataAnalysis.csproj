@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E296DC69-03A5-4A14-8D96-09709658D8A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sys.Safety.Client.DataAnalysis</RootNamespace>
+    <AssemblyName>Sys.Safety.Client.DataAnalysis</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\..\01-Library\Framework\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.metamap2dLib">
+      <HintPath>..\..\..\01-Library\MetaMap\AxInterop.metamap2dLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Basic.Framework">
+      <HintPath>..\..\..\01-Library\Framework\Basic.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v13.2.UI, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v13.2.Wizard, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EnvDTE80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Extensibility, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.metamap2dLib">
+      <HintPath>..\..\..\01-Library\MetaMap\Interop.metamap2dLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\01-Library\Framework\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAS.KJ73N.Client._Main\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="VSLangProj80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddAnalysisTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAnalysisTemplate.Designer.cs">
+      <DependentUpon>AddAnalysisTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddLargedataAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddLargedataAnalysis.Designer.cs">
+      <DependentUpon>AddLargedataAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisResultsInRealtime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalysisResultsInRealtime.Designer.cs">
+      <DependentUpon>AnalysisResultsInRealtime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisTemplateManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalysisTemplateManage.Designer.cs">
+      <DependentUpon>AnalysisTemplateManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BigDataAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BigDataAnalysisForm.Designer.cs">
+      <DependentUpon>BigDataAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessModel\AlarmNotificationPersonnelConfigBusinessModel.cs" />
+    <Compile Include="BusinessModel\AnalysisTemplateBusinessModel.cs" />
+    <Compile Include="BusinessModel\CrossControlItem.cs" />
+    <Compile Include="BusinessModel\EmergencyLinkageConfigBusinessModel.cs" />
+    <Compile Include="BusinessModel\LargedataAnalysisConfigBusinessModel.cs" />
+    <Compile Include="BusinessModel\RegionOutageBusinessModel.cs" />
+    <Compile Include="BusinessModel\SetAnalysisModelPointRecordBusinessModel.cs" />
+    <Compile Include="Business\AlarmNotificationPersonnelBusiness.cs" />
+    <Compile Include="Business\AnalysisResultsInRealtimeBusiness.cs" />
+    <Compile Include="Business\AnalysisTemplateConfigBusiness.cs" />
+    <Compile Include="Business\EmergencyLinkageBusiness.cs" />
+    <Compile Include="Business\LargedataAnalysisConfigBusiness.cs" />
+    <Compile Include="Business\LargedataAnalysisLogBusiness.cs" />
+    <Compile Include="Business\PointDefineBusiness.cs" />
+    <Compile Include="Business\RegionOutageBusiness.cs" />
+    <Compile Include="Business\SetAnalysisModelPointRecordBusiness.cs" />
+    <Compile Include="Common\ChartPrint.cs" />
+    <Compile Include="Common\ExpressionResolution.cs" />
+    <Compile Include="Common\InterfaceClass.cs" />
+    <Compile Include="Common\ModifyWay.cs" />
+    <Compile Include="Common\OperateLogHelper.cs" />
+    <Compile Include="Common\QueryPubClass.cs" />
+    <Compile Include="CurvilinearQuery .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurvilinearQuery .Designer.cs">
+      <DependentUpon>CurvilinearQuery .cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceAlarmLevelSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceAlarmLevelSetting.Designer.cs">
+      <DependentUpon>DeviceAlarmLevelSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LargedataAnalysisDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LargedataAnalysisDetail.Designer.cs">
+      <DependentUpon>LargedataAnalysisDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LargedataAnalysisManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LargedataAnalysisManage.Designer.cs">
+      <DependentUpon>LargedataAnalysisManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetAlarmNotificationPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetAlarmNotificationPersonnel.Designer.cs">
+      <DependentUpon>SetAlarmNotificationPersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetAlarmNotificationPersonnelManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetAlarmNotificationPersonnelManage.Designer.cs">
+      <DependentUpon>SetAlarmNotificationPersonnelManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetAnalysisModelPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetAnalysisModelPoint.Designer.cs">
+      <DependentUpon>SetAnalysisModelPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetEmergencyLinkage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetEmergencyLinkage.Designer.cs">
+      <DependentUpon>SetEmergencyLinkage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetEmergencyLinkageDelayTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetEmergencyLinkageDelayTime.Designer.cs">
+      <DependentUpon>SetEmergencyLinkageDelayTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetEmergencyLinkageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetEmergencyLinkageList.Designer.cs">
+      <DependentUpon>SetEmergencyLinkageList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetPoint.Designer.cs">
+      <DependentUpon>SetPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetRegionOutage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetRegionOutage.Designer.cs">
+      <DependentUpon>SetRegionOutage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetRegionOutageManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetRegionOutageManage.Designer.cs">
+      <DependentUpon>SetRegionOutageManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaticClass.cs" />
+    <Compile Include="SysEmergencyLinkageRealtime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysEmergencyLinkageRealtime.Designer.cs">
+      <DependentUpon>SysEmergencyLinkageRealtime.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddAnalysisTemplate.resx">
+      <DependentUpon>AddAnalysisTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddLargedataAnalysis.resx">
+      <DependentUpon>AddLargedataAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalysisResultsInRealtime.resx">
+      <DependentUpon>AnalysisResultsInRealtime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalysisTemplateManage.resx">
+      <DependentUpon>AnalysisTemplateManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BigDataAnalysisForm.resx">
+      <DependentUpon>BigDataAnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurvilinearQuery .resx">
+      <DependentUpon>CurvilinearQuery .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceAlarmLevelSetting.resx">
+      <DependentUpon>DeviceAlarmLevelSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LargedataAnalysisDetail.resx">
+      <DependentUpon>LargedataAnalysisDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LargedataAnalysisManage.resx">
+      <DependentUpon>LargedataAnalysisManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysEmergencyLinkageRealtime.resx">
+      <DependentUpon>SysEmergencyLinkageRealtime.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="SetEmergencyLinkageDelayTime.resx">
+      <DependentUpon>SetEmergencyLinkageDelayTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetRegionOutageManage.resx">
+      <DependentUpon>SetRegionOutageManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SetAlarmNotificationPersonnel.resx">
+      <DependentUpon>SetAlarmNotificationPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetAlarmNotificationPersonnelManage.resx">
+      <DependentUpon>SetAlarmNotificationPersonnelManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetAnalysisModelPoint.resx">
+      <DependentUpon>SetAnalysisModelPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetEmergencyLinkage.resx">
+      <DependentUpon>SetEmergencyLinkage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetEmergencyLinkageList.resx">
+      <DependentUpon>SetEmergencyLinkageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPoint.resx">
+      <DependentUpon>SetPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetRegionOutage.resx">
+      <DependentUpon>SetRegionOutage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.DataContract\Sys.Safety.DataContract.csproj">
+      <Project>{bb6fbb99-66e9-4d1e-b1d1-d585a0151505}</Project>
+      <Name>Sys.Safety.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.Services\Sys.Safety.Services.csproj">
+      <Project>{E7FA650F-88C2-4417-A349-CF9E0CBEF6FF}</Project>
+      <Name>Sys.Safety.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.Enums\Sys.Safety.Enums.csproj">
+      <Project>{59d5703e-ea5e-4836-b557-1b99e80754e4}</Project>
+      <Name>Sys.Safety.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.Request\Sys.Safety.Request.csproj">
+      <Project>{C17815BF-001E-4872-A45E-0E6E48A59F0F}</Project>
+      <Name>Sys.Safety.Request</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.ServiceContract\Sys.Safety.ServiceContract.csproj">
+      <Project>{f723137b-dc93-4e92-b3a3-c02281b46e0f}</Project>
+      <Name>Sys.Safety.ServiceContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.WebApiAgent\Sys.Safety.WebApiAgent.csproj">
+      <Project>{79cb4602-86f9-4a51-b2e6-df627d960341}</Project>
+      <Name>Sys.Safety.WebApiAgent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.WebApi\Sys.Safety.WebApi.csproj">
+      <Project>{fdc68bd2-0361-49d4-8d65-bd766c0ec872}</Project>
+      <Name>Sys.Safety.WebApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sys.Safety.Reports\Sys.Safety.Reports\Sys.Safety.Reports.csproj">
+      <Project>{0085d351-ddc5-48c5-a214-1a1ab023ae16}</Project>
+      <Name>Sys.Safety.Reports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Client.Graphic\Sys.Safety.Client.Graphic.csproj">
+      <Project>{3da04827-7479-4f84-b8fd-0d0ed8e06eb0}</Project>
+      <Name>Sys.Safety.Client.Graphic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Client.Display\Sys.Safety.Client.Display.csproj">
+      <Project>{73378b61-2955-4908-9e10-a992141ee07a}</Project>
+      <Name>Sys.Safety.Client.Display</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

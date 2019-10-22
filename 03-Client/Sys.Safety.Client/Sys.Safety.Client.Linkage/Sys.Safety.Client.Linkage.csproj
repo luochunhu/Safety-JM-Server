@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3E580A37-CA9B-432E-89ED-570F4DC31C1B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sys.Safety.Client.Linkage</RootNamespace>
+    <AssemblyName>Sys.Safety.Client.Linkage</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Basic.Framework">
+      <HintPath>..\..\..\01-Library\Framework\Basic.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Handlers\AreaHandler.cs" />
+    <Compile Include="Handlers\BigDataHandler.cs" />
+    <Compile Include="Handlers\EnumHandler.cs" />
+    <Compile Include="Handlers\EquipmentTypeHandler.cs" />
+    <Compile Include="Handlers\GasContentAnalyze.cs" />
+    <Compile Include="Handlers\LinkageHandler.cs" />
+    <Compile Include="Handlers\PersonHandler.cs" />
+    <Compile Include="Handlers\PointHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SetAppAlarmType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetAppAlarmType.designer.cs">
+      <DependentUpon>SetAppAlarmType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GasContentAnalyze\GasContentAnalyzeConfigEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GasContentAnalyze\GasContentAnalyzeConfigEdit.Designer.cs">
+      <DependentUpon>GasContentAnalyzeConfigEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GasContentAnalyze\GasContentAnalyzeConfigList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GasContentAnalyze\GasContentAnalyzeConfigList.Designer.cs">
+      <DependentUpon>GasContentAnalyzeConfigList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LinkageDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LinkageDefinition.Designer.cs">
+      <DependentUpon>LinkageDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LinkageDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LinkageDetail.Designer.cs">
+      <DependentUpon>LinkageDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LinkageDetailAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LinkageDetailAll.Designer.cs">
+      <DependentUpon>LinkageDetailAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LinkageItemSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LinkageItemSelect.Designer.cs">
+      <DependentUpon>LinkageItemSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LinkageQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LinkageQuery.Designer.cs">
+      <DependentUpon>LinkageQuery.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetAppAlarmType.resx">
+      <DependentUpon>SetAppAlarmType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GasContentAnalyze\GasContentAnalyzeConfigEdit.resx">
+      <DependentUpon>GasContentAnalyzeConfigEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GasContentAnalyze\GasContentAnalyzeConfigList.resx">
+      <DependentUpon>GasContentAnalyzeConfigList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LinkageDefinition.resx">
+      <DependentUpon>LinkageDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LinkageDetail.resx">
+      <DependentUpon>LinkageDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LinkageDetailAll.resx">
+      <DependentUpon>LinkageDetailAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LinkageItemSelect.resx">
+      <DependentUpon>LinkageItemSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LinkageQuery.resx">
+      <DependentUpon>LinkageQuery.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.DataContract\Sys.Safety.DataContract.csproj">
+      <Project>{bb6fbb99-66e9-4d1e-b1d1-d585a0151505}</Project>
+      <Name>Sys.Safety.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.Enums\Sys.Safety.Enums.csproj">
+      <Project>{59d5703e-ea5e-4836-b557-1b99e80754e4}</Project>
+      <Name>Sys.Safety.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.Request\Sys.Safety.Request.csproj">
+      <Project>{c17815bf-001e-4872-a45e-0e6e48a59f0f}</Project>
+      <Name>Sys.Safety.Request</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.ServiceContract\Sys.Safety.ServiceContract.csproj">
+      <Project>{f723137b-dc93-4e92-b3a3-c02281b46e0f}</Project>
+      <Name>Sys.Safety.ServiceContract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 100 30" width="100" height="30" hape-rendering="geometricPrecision" xmlns:a="http://www.adobe.com/svg10-extensions" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <desc>30</desc>
+  <rect id="CHINPMC_BGK" width="100" height="30" fill="rgb(217,217,217)" stroke-width="0" stroke="none"/>
+  <defs/>
+  <g id="0" fill="none">
+    <path id="PMC_TEXT_BGK_0" d="M 0 2 L 61 2 61 27 0 27 0 2 Z" fill="none" stroke="none" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"/>
+    <text id="Text_0" x="31" text-anchor="middle" y="24" vertical-align="middle" font-family="SimSun" font-size="18.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve">TEST</text>
+  </g>
+</svg>

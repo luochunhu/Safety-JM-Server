@@ -1,0 +1,2 @@
+1、先安装dotnetframework目录下的dotnetfx45_full_x86_x64（.net4.5框架）。
+2、双击运行“Mas.Safety.Setup”，进行安装。详细的安装说明参见系统帮助文档。

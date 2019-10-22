@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B9FF2E1-F240-4BB3-A116-5976892A2301}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sys.Safety.Model</RootNamespace>
+    <AssemblyName>Sys.Safety.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Basic.Framework">
+      <HintPath>..\..\01-Library\Framework\Basic.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IRepository\AlarmModule\IAlarmRepository.cs" />
+    <Compile Include="IRepository\IAlarmHandleRepository.Build.cs" />
+    <Compile Include="IRepository\IAlarmNotificationPersonnelConfigRepository.Build.cs" />
+    <Compile Include="IRepository\IAlarmNotificationPersonnelRepository.Build.cs" />
+    <Compile Include="IRepository\IAnalysistemplatealarmlevelRepository.Build.cs" />
+    <Compile Include="IRepository\IAnalysisTemplateConfigRepository.Build.cs" />
+    <Compile Include="IRepository\IAnalysisTemplateRepository.Build.cs" />
+    <Compile Include="IRepository\IAnalyticalExpressionRepository.Build.cs" />
+    <Compile Include="IRepository\IB_BroadcastplanpointlistRepository.Build.cs" />
+    <Compile Include="IRepository\IB_BroadcastplanRepository.Build.cs" />
+    <Compile Include="IRepository\IB_CallhistorypointlistRepository.Build.cs" />
+    <Compile Include="IRepository\IB_CallhistoryRepository.Build.cs" />
+    <Compile Include="IRepository\IB_CallpointlistRepository.Build.cs" />
+    <Compile Include="IRepository\IB_CallRepository.Build.cs" />
+    <Compile Include="IRepository\IB_DefRepository.Build.cs" />
+    <Compile Include="IRepository\IB_MusicfilesRepository.Build.cs" />
+    <Compile Include="IRepository\IB_PlaylistmusiclinkRepository.Build.cs" />
+    <Compile Include="IRepository\IB_PlaylistRepository.Build.cs" />
+    <Compile Include="IRepository\IEmergencyLinkageHistoryMasterPointAssRepository.Build.cs" />
+    <Compile Include="IRepository\IEmergencyLinkHistoryRepository.Build.cs" />
+    <Compile Include="IRepository\IGascontentanalyzeconfigRepository.Build.cs" />
+    <Compile Include="IRepository\IKJ_AddresstypeRepository.Build.cs" />
+    <Compile Include="IRepository\IKJ_AddresstyperuleRepository.Build.cs" />
+    <Compile Include="IRepository\IPowerboxchargehistoryRepository.Build.cs" />
+    <Compile Include="IRepository\IR_AreaAlarmRepository.Build.cs" />
+    <Compile Include="IRepository\IAreaRepository.Build.cs" />
+    <Compile Include="IRepository\IR_ArearestrictedpersonRepository.Build.cs" />
+    <Compile Include="IRepository\IAreaRuleRepository.Build.cs" />
+    <Compile Include="IRepository\IClassRepository.Build.cs" />
+    <Compile Include="IRepository\IConfigRepository.Build.cs" />
+    <Compile Include="IRepository\IDataexchangesettingRepository.Build.cs" />
+    <Compile Include="IRepository\IDatarightRepository.Build.cs" />
+    <Compile Include="IRepository\IDeletecheckRepository.Build.cs" />
+    <Compile Include="IRepository\IDeptinfRepository.Build.cs" />
+    <Compile Include="IRepository\IEmergencyLinkageMasterAreaAssRepository.Build.cs" />
+    <Compile Include="IRepository\IEmergencyLinkageMasterDevTypeAssRepository.Build.cs" />
+    <Compile Include="IRepository\IEmergencyLinkageMasterPointAssRepository.Build.cs" />
+    <Compile Include="IRepository\IEmergencyLinkageMasterTriDataStateAssRepository.Build.cs" />
+    <Compile Include="IRepository\IEmergencyLinkagePassiveAreaAssRepository.Build.cs" />
+    <Compile Include="IRepository\IEmergencyLinkagePassivePersonAssRepository.Build.cs" />
+    <Compile Include="IRepository\IEmergencyLinkagePassivePointAssRepository.Build.cs" />
+    <Compile Include="IRepository\IR_KqbcRepository.Build.cs" />
+    <Compile Include="IRepository\IR_PbRepository.Build.cs" />
+    <Compile Include="IRepository\IR_CallRepository.Build.cs" />
+    <Compile Include="IRepository\IR_DefRepository.Build.cs" />
+    <Compile Include="IRepository\IR_DeptRepository.Build.cs" />
+    <Compile Include="IRepository\IEmergencyLinkageConfigRepository.Build.cs" />
+    <Compile Include="IRepository\IEnumcodeRepository.Build.cs" />
+    <Compile Include="IRepository\IEnumtypeRepository.Build.cs" />
+    <Compile Include="IRepository\IExpressionConfigRepository.Build.cs" />
+    <Compile Include="IRepository\IFactorRepository.Build.cs" />
+    <Compile Include="IRepository\IFklibRepository.Build.cs" />
+    <Compile Include="IRepository\IFlagRepository.Build.cs" />
+    <Compile Include="IRepository\IGraphicsbaseinfRepository.Build.cs" />
+    <Compile Include="IRepository\IGraphicspointsinfRepository.Build.cs" />
+    <Compile Include="IRepository\IGraphicsrouteinfRepository.Build.cs" />
+    <Compile Include="IRepository\IAlarmRecordRepository.Build.cs" />
+    <Compile Include="IRepository\ICalibrationStatisticsRepository.Build.cs" />
+    <Compile Include="IRepository\ICalibrationDefRepository.Build.cs" />
+    <Compile Include="IRepository\IJc_BzRepository.Build.cs" />
+    <Compile Include="IRepository\IJc_CsRepository.Build.cs" />
+    <Compile Include="IRepository\IJc_DayRepository.Build.cs" />
+    <Compile Include="IRepository\IAccumulationDayRepository.Build.cs" />
+    <Compile Include="IRepository\IAccumulationHourRepository.Build.cs" />
+    <Compile Include="IRepository\IAccumulationMonthRepository.Build.cs" />
+    <Compile Include="IRepository\IAccumulationYearRepository.Build.cs" />
+    <Compile Include="IRepository\ILargedataAnalysisConfigRepository.Build.cs" />
+    <Compile Include="IRepository\ILargedataAnalysisLogRepository.Build.cs" />
+    <Compile Include="IRepository\IJC_MbRepository.Build.cs" />
+    <Compile Include="IRepository\IJC_MultiplesettingRepository.Build.cs" />
+    <Compile Include="IRepository\IListdataremarkRepository.Build.cs" />
+    <Compile Include="IRepository\IMsgLogRepository.Build.cs" />
+    <Compile Include="IRepository\IMsgRuleRepository.Build.cs" />
+    <Compile Include="IRepository\IMsgUserRuleRepository.Build.cs" />
+    <Compile Include="IRepository\IParameterRepository.Build.cs" />
+    <Compile Include="IRepository\IR_PersoninfRepository.Build.cs" />
+    <Compile Include="IRepository\IR_PhistoryRepository.Build.cs" />
+    <Compile Include="IRepository\IPointDefineRepository.Build.cs" />
+    <Compile Include="IRepository\IDeviceKoriyasuRepository.Build.cs" />
+    <Compile Include="IRepository\IDeviceDefineRepository.Build.cs" />
+    <Compile Include="IRepository\IJc_HourRepository.Build.cs" />
+    <Compile Include="IRepository\IManualCrossControlRepository.Build.cs" />
+    <Compile Include="IRepository\IJc_KdRepository.Build.cs" />
+    <Compile Include="IRepository\IJc_LlRepository.Build.cs" />
+    <Compile Include="IRepository\IEmissionDayRepository.Build.cs" />
+    <Compile Include="IRepository\IEmissionHourRepository.Build.cs" />
+    <Compile Include="IRepository\IEmissionMonthRepository.Build.cs" />
+    <Compile Include="IRepository\IEmissionYearRepository.Build.cs" />
+    <Compile Include="IRepository\INetworkModuleRepository.Build.cs" />
+    <Compile Include="IRepository\IJc_McRepository.Build.cs" />
+    <Compile Include="IRepository\IJc_MonthRepository.Build.cs" />
+    <Compile Include="IRepository\IJc_MRepository.Build.cs" />
+    <Compile Include="IRepository\IJc_PointhisRepository.Build.cs" />
+    <Compile Include="IRepository\IJc_RemarkRepository.Build.cs" />
+    <Compile Include="IRepository\IJc_RRepository.Build.cs" />
+    <Compile Include="IRepository\IJc_SeasonRepository.Build.cs" />
+    <Compile Include="IRepository\IJc_ShowRepository.Build.cs" />
+    <Compile Include="IRepository\IPositionRepository.Build.cs" />
+    <Compile Include="IRepository\IJc_YearRepository.Build.cs" />
+    <Compile Include="IRepository\ILighthistoryRepository.Build.cs" />
+    <Compile Include="IRepository\IListcommandexRepository.Build.cs" />
+    <Compile Include="IRepository\IListdataexRepository.Build.cs" />
+    <Compile Include="IRepository\IListdatalayountRepository.Build.cs" />
+    <Compile Include="IRepository\IListdisplayexRepository.Build.cs" />
+    <Compile Include="IRepository\IListexRepository.Build.cs" />
+    <Compile Include="IRepository\IListmetadataRepository.Build.cs" />
+    <Compile Include="IRepository\IListtempleRepository.Build.cs" />
+    <Compile Include="IRepository\IMenuRepository.Build.cs" />
+    <Compile Include="IRepository\IMetadatafieldsRepository.Build.cs" />
+    <Compile Include="IRepository\IMetadataRepository.Build.cs" />
+    <Compile Include="IRepository\IOperatelogRepository.Build.cs" />
+    <Compile Include="IRepository\IR_PhjRepository.Build.cs" />
+    <Compile Include="IRepository\IR_PrealRepository.Build.cs" />
+    <Compile Include="IRepository\IRegionOutageConfigRepository.Build.cs" />
+    <Compile Include="IRepository\IRequestRepository.Build.cs" />
+    <Compile Include="IRepository\IRightRepository.Build.cs" />
+    <Compile Include="IRepository\IRoledatarightRepository.Build.cs" />
+    <Compile Include="IRepository\IRolefieldsRepository.Build.cs" />
+    <Compile Include="IRepository\IRoleRepository.Build.cs" />
+    <Compile Include="IRepository\IRolerightRepository.Build.cs" />
+    <Compile Include="IRepository\IRolewebmenuauthRepository.Build.cs" />
+    <Compile Include="IRepository\IRolewebmenuRepository.Build.cs" />
+    <Compile Include="IRepository\IRunlogRepository.Build.cs" />
+    <Compile Include="IRepository\IR_RestrictedpersonRepository.Build.cs" />
+    <Compile Include="IRepository\ISetAnalysisModelPointRecordRepository.Build.cs" />
+    <Compile Include="IRepository\ISettingRepository.Build.cs" />
+    <Compile Include="IRepository\IShortCutMenuRepository.Build.cs" />
+    <Compile Include="IRepository\IStaionControlHistoryDataRepository.Build.cs" />
+    <Compile Include="IRepository\IStaionHistoryDataRepository.Build.cs" />
+    <Compile Include="IRepository\ISyncLocalRepository.Build.cs" />
+    <Compile Include="IRepository\ISysEmergencyLinkageRepository.Build.cs" />
+    <Compile Include="IRepository\ISysinfRepository.Build.cs" />
+    <Compile Include="IRepository\IR_UndefinedDefRepository.Build.cs" />
+    <Compile Include="IRepository\IUserRepository.Build.cs" />
+    <Compile Include="IRepository\IUserrightRepository.Build.cs" />
+    <Compile Include="IRepository\IUserroleRepository.Build.cs" />
+    <Compile Include="IRepository\IV_DefRepository.Build.cs" />
+    <Compile Include="IRepository\IWebauthorityRepository.Build.cs" />
+    <Compile Include="IRepository\IWebmenuauthRepository.Build.cs" />
+    <Compile Include="IRepository\IWebmenuRepository.Build.cs" />
+    <Compile Include="IRepository\RealModule\ICalibrationRepository.cs" />
+    <Compile Include="IRepository\RealModule\IRealMessageRepository.cs" />
+    <Compile Include="Model\AlarmModule\AlarmModel.cs" />
+    <Compile Include="Model\Jc_AnalysistemplatealarmlevelModel.Build.cs" />
+    <Compile Include="Model\B_BroadcastplanModel.Build.cs" />
+    <Compile Include="Model\B_BroadcastplanpointlistModel.Build.cs" />
+    <Compile Include="Model\B_CallhistoryModel.Build.cs" />
+    <Compile Include="Model\B_CallhistorypointlistModel.Build.cs" />
+    <Compile Include="Model\B_CallModel.Build.cs" />
+    <Compile Include="Model\B_CallpointlistModel.Build.cs" />
+    <Compile Include="Model\B_DefModel.Build.cs" />
+    <Compile Include="Model\B_MusicfilesModel.Build.cs" />
+    <Compile Include="Model\B_PlaylistModel.Build.cs" />
+    <Compile Include="Model\B_PlaylistmusiclinkModel.Build.cs" />
+    <Compile Include="Model\EmergencyLinkHistoryModel.Build.cs" />
+    <Compile Include="Model\GascontentanalyzeconfigModel.Build.cs" />
+    <Compile Include="Model\KJ_AddresstypeModel.Build.cs" />
+    <Compile Include="Model\KJ_AddresstyperuleModel.Build.cs" />
+    <Compile Include="Model\PowerboxchargehistoryModel.Build.cs" />
+    <Compile Include="Model\R_AreaAlarmModel.Build.cs" />
+    <Compile Include="Model\AreaModel.Build.cs" />
+    <Compile Include="Model\R_ArearestrictedpersonModel.Build.cs" />
+    <Compile Include="Model\AreaRuleModel.Build.cs" />
+    <Compile Include="Model\ClassModel.Build.cs" />
+    <Compile Include="Model\CommonConfig\ClassCommonConfigModel.cs" />
+    <Compile Include="Model\CommonConfig\SettingCommonConfigModel.cs" />
+    <Compile Include="Model\ConfigModel.Build.cs" />
+    <Compile Include="Model\DataexchangesettingModel.Build.cs" />
+    <Compile Include="Model\DatarightModel.Build.cs" />
+    <Compile Include="Model\DeletecheckModel.Build.cs" />
+    <Compile Include="Model\DeptinfModel.Build.cs" />
+    <Compile Include="Model\EmergencyLinkageMasterAreaAssModel.Build.cs" />
+    <Compile Include="Model\EmergencyLinkageMasterDevTypeAssModel.Build.cs" />
+    <Compile Include="Model\EmergencyLinkageMasterPointAssModel.Build.cs" />
+    <Compile Include="Model\EmergencyLinkageMasterTriDataStateAssModel.Build.cs" />
+    <Compile Include="Model\EmergencyLinkagePassiveAreaAssModel.Build.cs" />
+    <Compile Include="Model\EmergencyLinkagePassivePersonAssModel.Build.cs" />
+    <Compile Include="Model\EmergencyLinkagePassivePointAssModel.Build.cs" />
+    <Compile Include="Model\R_KqbcModel.Build.cs" />
+    <Compile Include="Model\R_PbModel.Build.cs" />
+    <Compile Include="Model\R_CallModel.Build.cs" />
+    <Compile Include="Model\R_DefModel.Build.cs" />
+    <Compile Include="Model\R_DeptModel.Build.cs" />
+    <Compile Include="Model\EnumcodeModel.Build.cs" />
+    <Compile Include="Model\EnumtypeModel.Build.cs" />
+    <Compile Include="Model\FklibModel.Build.cs" />
+    <Compile Include="Model\FlagModel.Build.cs" />
+    <Compile Include="Model\GraphicsbaseinfModel.Build.cs" />
+    <Compile Include="Model\GraphicspointsinfModel.Build.cs" />
+    <Compile Include="Model\GraphicsrouteinfModel.Build.cs" />
+    <Compile Include="Model\JC_AlarmHandleModel.Build.cs" />
+    <Compile Include="Model\JC_AlarmnotificationpersonnelconfigModel.Build.cs" />
+    <Compile Include="Model\JC_AlarmNotificationPersonnelModel.Build.cs" />
+    <Compile Include="Model\JC_AnalysistemplateconfigModel.Build.cs" />
+    <Compile Include="Model\JC_AnalysistemplateModel.Build.cs" />
+    <Compile Include="Model\JC_AnalyticalexpressionModel.Build.cs" />
+    <Compile Include="Model\Jc_BModel.Build.cs" />
+    <Compile Include="Model\Jc_BxexModel.Build.cs" />
+    <Compile Include="Model\Jc_BxModel.Build.cs" />
+    <Compile Include="Model\Jc_BzModel.Build.cs" />
+    <Compile Include="Model\Jc_CsModel.Build.cs" />
+    <Compile Include="Model\Jc_DayModel.Build.cs" />
+    <Compile Include="Model\Jc_DefModel.Build.cs" />
+    <Compile Include="Model\Jc_DefwbModel.Build.cs" />
+    <Compile Include="Model\Jc_DevModel.Build.cs" />
+    <Compile Include="Model\JC_EmergencylinkageconfigModel.Build.cs" />
+    <Compile Include="Model\JC_ExpressionconfigModel.Build.cs" />
+    <Compile Include="Model\JC_FactorModel.Build.cs" />
+    <Compile Include="Model\Jc_HourModel.Build.cs" />
+    <Compile Include="Model\Jc_JcsdkzModel.Build.cs" />
+    <Compile Include="Model\Jc_KdModel.Build.cs" />
+    <Compile Include="Model\JC_LargedataanalysisconfigModel.Build.cs" />
+    <Compile Include="Model\JC_LargedataanalysislogModel.Build.cs" />
+    <Compile Include="Model\Jc_LlModel.Build.cs" />
+    <Compile Include="Model\Jc_Ll_DModel.Build.cs" />
+    <Compile Include="Model\Jc_Ll_HModel.Build.cs" />
+    <Compile Include="Model\Jc_Ll_MModel.Build.cs" />
+    <Compile Include="Model\Jc_Ll_YModel.Build.cs" />
+    <Compile Include="Model\Jc_MacModel.Build.cs" />
+    <Compile Include="Model\Jc_McModel.Build.cs" />
+    <Compile Include="Model\Jc_MModel.Build.cs" />
+    <Compile Include="Model\Jc_MonthModel.Build.cs" />
+    <Compile Include="Model\JC_ParameterModel.Build.cs" />
+    <Compile Include="Model\Jc_PointhisModel.Build.cs" />
+    <Compile Include="Model\JC_RegionoutageconfigModel.Build.cs" />
+    <Compile Include="Model\Jc_RemarkModel.Build.cs" />
+    <Compile Include="Model\Jc_RModel.Build.cs" />
+    <Compile Include="Model\Jc_SeasonModel.Build.cs" />
+    <Compile Include="Model\JC_SetanalysismodelpointrecordModel.Build.cs" />
+    <Compile Include="Model\Jc_ShowModel.Build.cs" />
+    <Compile Include="Model\Jc_WzModel.Build.cs" />
+    <Compile Include="Model\Jc_YearModel.Build.cs" />
+    <Compile Include="Model\LighthistoryModel.Build.cs" />
+    <Compile Include="Model\ListcommandexModel.Build.cs" />
+    <Compile Include="Model\ListdataexModel.Build.cs" />
+    <Compile Include="Model\ListdatalayountModel.Build.cs" />
+    <Compile Include="Model\ListdataremarkModel.Build.cs" />
+    <Compile Include="Model\ListdisplayexModel.Build.cs" />
+    <Compile Include="Model\ListexModel.Build.cs" />
+    <Compile Include="Model\ListmetadataModel.Build.cs" />
+    <Compile Include="Model\ListtempleModel.Build.cs" />
+    <Compile Include="Model\JC_MbModel.Build.cs" />
+    <Compile Include="Model\MenuModel.Build.cs" />
+    <Compile Include="Model\MetadatafieldsModel.Build.cs" />
+    <Compile Include="Model\MetadataModel.Build.cs" />
+    <Compile Include="Model\JC_MultiplesettingModel.Build.cs" />
+    <Compile Include="Model\MsgLogModel.Build.cs" />
+    <Compile Include="Model\MsgRuleModel.Build.cs" />
+    <Compile Include="Model\MsgUserRuleModel.Build.cs" />
+    <Compile Include="Model\OperatelogModel.Build.cs" />
+    <Compile Include="Model\R_PersoninfModel.Build.cs" />
+    <Compile Include="Model\R_PhistoryModel.Build.cs" />
+    <Compile Include="Model\R_PhjModel.Build.cs" />
+    <Compile Include="Model\R_PrealModel.Build.cs" />
+    <Compile Include="Model\RealModule\CalibrationModel.cs" />
+    <Compile Include="Model\RealModule\RealMessageModel.cs" />
+    <Compile Include="Model\RequestModel.Build.cs" />
+    <Compile Include="Model\RightModel.Build.cs" />
+    <Compile Include="Model\RoledatarightModel.Build.cs" />
+    <Compile Include="Model\RolefieldsModel.Build.cs" />
+    <Compile Include="Model\RoleModel.Build.cs" />
+    <Compile Include="Model\RolerightModel.Build.cs" />
+    <Compile Include="Model\RolewebmenuauthModel.Build.cs" />
+    <Compile Include="Model\RolewebmenuModel.Build.cs" />
+    <Compile Include="Model\RunlogModel.Build.cs" />
+    <Compile Include="Model\R_RestrictedpersonModel.Build.cs" />
+    <Compile Include="Model\SettingModel.Build.cs" />
+    <Compile Include="Model\ShortCutMenuModel.Build.cs" />
+    <Compile Include="Model\StaionControlHistoryDataModel.Build.cs" />
+    <Compile Include="Model\StaionHistoryDataModel.Build.cs" />
+    <Compile Include="Model\R_SyncLocalModel.Build.cs" />
+    <Compile Include="Model\SysEmergencyLinkageModel.Build.cs" />
+    <Compile Include="Model\SysinfModel.Build.cs" />
+    <Compile Include="Model\R_UndefinedDefModel.Build.cs" />
+    <Compile Include="Model\UserModel.Build.cs" />
+    <Compile Include="Model\UserrightModel.Build.cs" />
+    <Compile Include="Model\UserroleModel.Build.cs" />
+    <Compile Include="Model\V_DefModel.Build.cs" />
+    <Compile Include="Model\WebauthorityModel.Build.cs" />
+    <Compile Include="Model\WebmenuauthModel.Build.cs" />
+    <Compile Include="Model\WebmenuModel.Build.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sys.Safety.Enums\Sys.Safety.Enums.csproj">
+      <Project>{59d5703e-ea5e-4836-b557-1b99e80754e4}</Project>
+      <Name>Sys.Safety.Enums</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IRepository\ListReport\" />
+    <Folder Include="IRepository\UserRoleAuthorize\" />
+    <Folder Include="Model\ListReport\" />
+    <Folder Include="Model\UserRoleAuthorize\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\EmergencyLinkageHistoryMasterPointAssModel.Build.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

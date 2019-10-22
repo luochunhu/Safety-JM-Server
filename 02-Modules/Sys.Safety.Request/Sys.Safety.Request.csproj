@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C17815BF-001E-4872-A45E-0E6E48A59F0F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sys.Safety.Request</RootNamespace>
+    <AssemblyName>Sys.Safety.Request</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Sys.Safety.Request.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Basic.Framework">
+      <HintPath>..\..\01-Library\Framework\Basic.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Sys.DataCollection.Common">
+      <HintPath>..\..\01-Library\Framework\Sys.DataCollection.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccumulationRequest.cs" />
+    <Compile Include="AlarmHandleRequest.Build.cs" />
+    <Compile Include="AlarmModule\AlarmRequest.cs" />
+    <Compile Include="AlarmNotificationPersonnelConfigRequest.Build.cs" />
+    <Compile Include="AlarmNotificationPersonnelRequest.Build.cs" />
+    <Compile Include="AnalysistemplatealarmlevelRequest.Build.cs" />
+    <Compile Include="AnalysisTemplateConfigRequest.Build.cs" />
+    <Compile Include="AnalysisTemplateRequest.Build.cs" />
+    <Compile Include="AnalyticalExpressionRequest.Build.cs" />
+    <Compile Include="App\KJ73NAppRequest.cs" />
+    <Compile Include="B_BroadcastplanpointlistRequest.Build.cs" />
+    <Compile Include="B_BroadcastplanRequest.Build.cs" />
+    <Compile Include="B_CallhistorypointlistRequest.Build.cs" />
+    <Compile Include="B_CallhistoryRequest.Build.cs" />
+    <Compile Include="B_CallpointlistRequest.Build.cs" />
+    <Compile Include="B_CallRequest.Build.cs" />
+    <Compile Include="B_DefRequest.Build.cs" />
+    <Compile Include="B_CallCacheRequest.cs" />
+    <Compile Include="B_DefCacheRequest.cs" />
+    <Compile Include="B_MusicfilesRequest.Build.cs" />
+    <Compile Include="B_PlaylistmusiclinkRequest.Build.cs" />
+    <Compile Include="B_PlaylistRequest.Build.cs" />
+    <Compile Include="Cache\AnalysisTemplateAlarmLevelCacheRequest.cs" />
+    <Compile Include="Cache\GasContentAlarmCacheRequest.cs" />
+    <Compile Include="Cache\GasContentAnalyzeConfigCacheRequest.cs" />
+    <Compile Include="Cache\R_PBCacheRequest.cs" />
+    <Compile Include="Cache\EmergencyLinkageConfigCacheRequest.cs" />
+    <Compile Include="EmergencyLinkageHistoryMasterPointAssRequest.Build.cs" />
+    <Compile Include="GascontentanalyzeconfigRequest.Build.cs" />
+    <Compile Include="KJ_AddresstypeRequest.Build.cs" />
+    <Compile Include="KJ_AddresstyperuleRequest.Build.cs" />
+    <Compile Include="PowerboxchargehistoryRequest.Build.cs" />
+    <Compile Include="R_SyncLocalRequest.Build.cs" />
+    <Compile Include="V_DefCacheRequest.cs" />
+    <Compile Include="EmergencyLinkHistoryRequest.Build.cs" />
+    <Compile Include="PersonCache\AreaCacheRequest.cs" />
+    <Compile Include="R_AreaAlarmRequest.Build.cs" />
+    <Compile Include="AreaRequest.Build.cs" />
+    <Compile Include="R_ArearestrictedpersonRequest.Build.cs" />
+    <Compile Include="AreaRuleRequest.Build.cs" />
+    <Compile Include="Cache\RatioAlarmCacheRequest.cs" />
+    <Compile Include="Cache\AlarmCacheRequest.cs" />
+    <Compile Include="Cache\ConfigCacheRequest.cs" />
+    <Compile Include="Cache\DeviceClassCacheServiceRequest.cs" />
+    <Compile Include="Cache\DeviceDefineCacheRequest.cs" />
+    <Compile Include="Cache\DevicePropertyCacheRequest.cs" />
+    <Compile Include="Cache\DeviceTypeCacheRequest.cs" />
+    <Compile Include="Cache\LargedataAnalysisConfigCacheRequest.cs" />
+    <Compile Include="Cache\ManualCrossControlCacheRequest.cs" />
+    <Compile Include="Cache\NetworkModuleCacheRequest.cs" />
+    <Compile Include="Cache\PointDefineCacheRequest.cs" />
+    <Compile Include="Cache\PositionCacheRequest.cs" />
+    <Compile Include="Cache\AutomaticArticulatedDeviceCacheRequest.cs" />
+    <Compile Include="Cache\RunLogCacheRequest.cs" />
+    <Compile Include="Cache\SettingCacheRequest.cs" />
+    <Compile Include="ClientFramework\RemoteStateRequest.cs" />
+    <Compile Include="Chart\ChartRequest.cs" />
+    <Compile Include="Chart\ChartResponse.cs" />
+    <Compile Include="ClassRequest.Build.cs" />
+    <Compile Include="ConfigRequest.Build.cs" />
+    <Compile Include="DataexchangesettingRequest.Build.cs" />
+    <Compile Include="DatarightRequest.Build.cs" />
+    <Compile Include="DataToDb\DataToDbRequest.cs" />
+    <Compile Include="DeletecheckRequest.Build.cs" />
+    <Compile Include="DeptinfRequest.Build.cs" />
+    <Compile Include="EmergencyLinkageMasterAreaAssRequest.Build.cs" />
+    <Compile Include="EmergencyLinkageMasterDevTypeAssRequest.Build.cs" />
+    <Compile Include="EmergencyLinkageMasterPointAssRequest.Build.cs" />
+    <Compile Include="EmergencyLinkageMasterTriDataStateAssRequest.Build.cs" />
+    <Compile Include="EmergencyLinkagePassiveAreaAssRequest.Build.cs" />
+    <Compile Include="EmergencyLinkagePassivePersonAssRequest.Build.cs" />
+    <Compile Include="EmergencyLinkagePassivePointAssRequest.Build.cs" />
+    <Compile Include="PersonCache\RPersoninfCacheRequest.cs" />
+    <Compile Include="PersonCache\R_UndefinedDefCacheRequest.cs" />
+    <Compile Include="PersonCache\R_KqbcCacheRequest.cs" />
+    <Compile Include="PersonCache\R_CallCacheRequest.cs" />
+    <Compile Include="PersonCache\R_PointDefineCacheRequest.cs" />
+    <Compile Include="PersonCache\R_PrealCacheRequest.cs" />
+    <Compile Include="PersonCache\R_SyncLocalCacheRequest.cs" />
+    <Compile Include="R_KqbcRequest.Build.cs" />
+    <Compile Include="R_PbRequest.Build.cs" />
+    <Compile Include="R_CallRequest.Build.cs" />
+    <Compile Include="R_DefRequest.Build.cs" />
+    <Compile Include="R_DeptRequest.Build.cs" />
+    <Compile Include="Driver\DriverManualCrossControlRequest.cs" />
+    <Compile Include="EmergencyLinkageConfigRequest.Build.cs" />
+    <Compile Include="EnumcodeRequest.Build.cs" />
+    <Compile Include="EnumtypeRequest.Build.cs" />
+    <Compile Include="ExpressionConfigRequest.Build.cs" />
+    <Compile Include="FactorRequest.Build.cs" />
+    <Compile Include="FactorValueGetRequest.cs" />
+    <Compile Include="FklibRequest.Build.cs" />
+    <Compile Include="FlagRequest.Build.cs" />
+    <Compile Include="GraphicsbaseinfRequest.Build.cs" />
+    <Compile Include="GraphicspointsinfRequest.Build.cs" />
+    <Compile Include="GraphicsrouteinfRequest.Build.cs" />
+    <Compile Include="AlarmRecordRequest.Build.cs" />
+    <Compile Include="Jc_BxexRequest.Build.cs" />
+    <Compile Include="Jc_BxRequest.Build.cs" />
+    <Compile Include="Jc_BzRequest.Build.cs" />
+    <Compile Include="Jc_CsRequest.Build.cs" />
+    <Compile Include="Jc_DayRequest.Build.cs" />
+    <Compile Include="Jc_DefRequest.Build.cs" />
+    <Compile Include="Jc_DefwbRequest.Build.cs" />
+    <Compile Include="DeviceDefineRequest.Build.cs" />
+    <Compile Include="Jc_HourRequest.Build.cs" />
+    <Compile Include="LargeDataAnalysisCacheClientRequest.cs" />
+    <Compile Include="LargeDataAnalysisLastChangedRequest.cs" />
+    <Compile Include="ListdataremarkRequest.Build.cs" />
+    <Compile Include="ManualCrossControlRequest.Build.cs" />
+    <Compile Include="Jc_KdRequest.Build.cs" />
+    <Compile Include="Jc_LlRequest.Build.cs" />
+    <Compile Include="Jc_Ll_DRequest.Build.cs" />
+    <Compile Include="Jc_Ll_HRequest.Build.cs" />
+    <Compile Include="Jc_Ll_MRequest.Build.cs" />
+    <Compile Include="Jc_Ll_YRequest.Build.cs" />
+    <Compile Include="JC_MbRequest.Build.cs" />
+    <Compile Include="JC_MultiplesettingRequest.Build.cs" />
+    <Compile Include="MsgLogRequest.Build.cs" />
+    <Compile Include="MsgRuleRequest.Build.cs" />
+    <Compile Include="MsgUserRuleRequest.Build.cs" />
+    <Compile Include="NetworkModuleRequest.Build.cs" />
+    <Compile Include="Jc_McRequest.Build.cs" />
+    <Compile Include="Jc_MonthRequest.Build.cs" />
+    <Compile Include="Jc_MRequest.Build.cs" />
+    <Compile Include="Jc_PointhisRequest.Build.cs" />
+    <Compile Include="Jc_RemarkRequest.Build.cs" />
+    <Compile Include="Jc_RRequest.Build.cs" />
+    <Compile Include="Jc_SeasonRequest.Build.cs" />
+    <Compile Include="Jc_ShowRequest.Build.cs" />
+    <Compile Include="R_PersoninfRequest.Build.cs" />
+    <Compile Include="R_PhistoryRequest.Build.cs" />
+    <Compile Include="R_PhjRequest.Build.cs" />
+    <Compile Include="R_PrealRequest.Build.cs" />
+    <Compile Include="R_RestrictedpersonRequest.Build.cs" />
+    <Compile Include="StationUpdateRequest.Build.cs" />
+    <Compile Include="PositionRequest.Build.cs" />
+    <Compile Include="Jc_YearRequest.Build.cs" />
+    <Compile Include="LargedataAnalysisConfigRequest.Build.cs" />
+    <Compile Include="LargedataAnalysisLogRequest.Build.cs" />
+    <Compile Include="LighthistoryRequest.Build.cs" />
+    <Compile Include="ListcommandexRequest.Build.cs" />
+    <Compile Include="ListdataexRequest.Build.cs" />
+    <Compile Include="ListdatalayountRequest.Build.cs" />
+    <Compile Include="ListdisplayexRequest.Build.cs" />
+    <Compile Include="ListexRequest.Build.cs" />
+    <Compile Include="ListmetadataRequest.Build.cs" />
+    <Compile Include="ParameterRequest.Build.cs" />
+    <Compile Include="RealModule\CalibrationRequest.cs" />
+    <Compile Include="ListtempleRequest.Build.cs" />
+    <Compile Include="MenuRequest.Build.cs" />
+    <Compile Include="MetadatafieldsRequest.Build.cs" />
+    <Compile Include="MetadataRequest.Build.cs" />
+    <Compile Include="OperatelogRequest.Build.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealModule\RealMessageRequest.cs" />
+    <Compile Include="RegionOutageConfigRequest.Build.cs" />
+    <Compile Include="ReportRequest.cs" />
+    <Compile Include="RequestRequest.Build.cs" />
+    <Compile Include="RightRequest.Build.cs" />
+    <Compile Include="RoledatarightRequest.Build.cs" />
+    <Compile Include="RolefieldsRequest.Build.cs" />
+    <Compile Include="RoleRequest.Build.cs" />
+    <Compile Include="RolerightRequest.Build.cs" />
+    <Compile Include="RolewebmenuauthRequest.Build.cs" />
+    <Compile Include="RolewebmenuRequest.Build.cs" />
+    <Compile Include="RunlogRequest.Build.cs" />
+    <Compile Include="SetAnalysisModelPointRecordRequest.Build.cs" />
+    <Compile Include="SettingRequest.Build.cs" />
+    <Compile Include="ShortCutMenuRequest.Build.cs" />
+    <Compile Include="StaionControlHistoryDataRequest.Build.cs" />
+    <Compile Include="StaionHistoryDataRequest.Build.cs" />
+    <Compile Include="SysEmergencyLinkageRequest.Build.cs" />
+    <Compile Include="SysinfRequest.Build.cs" />
+    <Compile Include="R_UndefinedDefRequest.Build.cs" />
+    <Compile Include="UserRequest.Build.cs" />
+    <Compile Include="UserrightRequest.Build.cs" />
+    <Compile Include="UserRoleAuthorize\LoginRequest.cs" />
+    <Compile Include="UserroleRequest.Build.cs" />
+    <Compile Include="V_DefRequest.Build.cs" />
+    <Compile Include="WebauthorityRequest.Build.cs" />
+    <Compile Include="WebmenuauthRequest.Build.cs" />
+    <Compile Include="WebmenuRequest.Build.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sys.Safety.DataContract\Sys.Safety.DataContract.csproj">
+      <Project>{bb6fbb99-66e9-4d1e-b1d1-d585a0151505}</Project>
+      <Name>Sys.Safety.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Enums\Sys.Safety.Enums.csproj">
+      <Project>{59d5703e-ea5e-4836-b557-1b99e80754e4}</Project>
+      <Name>Sys.Safety.Enums</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ListReport\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

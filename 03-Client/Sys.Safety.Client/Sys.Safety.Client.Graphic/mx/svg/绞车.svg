@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 240 218" width="240" height="218" hape-rendering="geometricPrecision" xmlns:a="http://www.adobe.com/svg10-extensions" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <desc>600</desc>
+  
+  <defs>
+    <radialGradient id="56_0_1_1_0_0_1_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(40,112,130)" stop-opacity="1.0"/>
+    </radialGradient>
+    <radialGradient id="56_0_1_1_0_1_1_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(40,112,130)" stop-opacity="1.0"/>
+    </radialGradient>
+    <linearGradient id="43_0_1_1_0_8_1_linearGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.00" stop-color="rgb(38,38,38)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(64,64,64)" stop-opacity="1.0"/>
+    </linearGradient>
+    <radialGradient id="56_0_1_1_1_0_1_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(40,112,130)" stop-opacity="1.0"/>
+    </radialGradient>
+    <radialGradient id="56_0_1_1_1_1_1_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(40,112,130)" stop-opacity="1.0"/>
+    </radialGradient>
+    <linearGradient id="43_0_1_1_1_8_1_linearGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.00" stop-color="rgb(38,38,38)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(64,64,64)" stop-opacity="1.0"/>
+    </linearGradient>
+    <radialGradient id="56_0_1_1_2_0_1_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(40,112,130)" stop-opacity="1.0"/>
+    </radialGradient>
+    <radialGradient id="56_0_1_1_2_1_1_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(40,112,130)" stop-opacity="1.0"/>
+    </radialGradient>
+    <linearGradient id="43_0_1_1_2_8_1_linearGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.00" stop-color="rgb(38,38,38)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(64,64,64)" stop-opacity="1.0"/>
+    </linearGradient>
+    <radialGradient id="56_0_1_3_0_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(0,196,0)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(39,123,0)" stop-opacity="1.0"/>
+    </radialGradient>
+    <radialGradient id="56_0_1_3_1_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(0,196,0)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(39,123,0)" stop-opacity="1.0"/>
+    </radialGradient>
+    <radialGradient id="56_0_1_3_2_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(0,196,0)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(39,123,0)" stop-opacity="1.0"/>
+    </radialGradient>
+  </defs>
+  <g id="0">
+    <g id="0_0">
+      <g id="0_0_0" fill="rgb(104,128,55)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_0" d="M 188 63 L 228 63 228 68 188 68 188 63 Z"/>
+        <text id="Text_0_0_0" x="192.000000" text-anchor="start" y="74.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="0_0_1" fill="rgb(104,128,55)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_1" d="M 194 41 L 175 82 191 82 200 44 194 41 Z"/>
+        <text id="Text_0_0_1" x="179.000000" text-anchor="start" y="52.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <g id="0_0_2" fill="rgb(104,128,55)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_2" d="M 224 41 L 243 82 228 82 218 44 224 41 Z"/>
+        <text id="Text_0_0_2" x="221.000000" text-anchor="start" y="51.000000" vertical-align="top" transform="rotate(180.00 231.00 62.00)" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_0_0" x="209.500000" text-anchor="start" y="107" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <g id="0_1">
+      <g id="0_1_0">
+        <g id="0_1_0_0" fill="rgb(104,128,55)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+          <path id="path_0_1_0_0" d="M 210 61 L 210 61 C 193 61 179 47 179 30 L 179 30 C 179 14 193 0 210 0 L 210 0 C 226 0 240 14 240 30 L 240 30 C 240 47 226 61 210 61 L 210 61 Z"/>
+          <text id="Text_0_1_0_0" x="183.000000" text-anchor="start" y="11.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+        </g>
+        <g id="0_1_0_1" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+          <path id="path_0_1_0_1" d="M 235 30 C 235 16 223 5 209 5 195 5 184 16 184 30 184 44 195 56 209 56 223 56 235 44 235 30 Z"/>
+        </g>
+        <g id="0_1_0_2" fill="rgb(22,58,111)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+          <path id="path_0_1_0_2" d="M 1 216 L 191 26 194 28 4 218 1 216 Z"/>
+        </g>
+        <g id="0_1_0_3" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+          <path id="path_0_1_0_3" d="M 87 121 L 187 21"/>
+          <text id="Text_0_1_0_3" x="91.000000" text-anchor="start" y="32.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+        </g>
+        <text id="Text_0_1_0" x="121.500000" text-anchor="start" y="243" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+      </g>
+      <g id="0_1_1" RefCenter="115,85">
+        <g id="0_1_1_0">
+          <g id="0_1_1_0_0">
+            <g id="0_1_1_0_0_0" fill="rgb(192,255,224)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_0_0_0" d="M 36 178 C 34 177 32 177 31 178 30 180 30 182 31 183 32 184 34 184 36 183 37 182 37 180 36 178 Z"/>
+            </g>
+            <g id="0_1_1_0_0_1" fill="url(#56_0_1_1_0_0_1_radialgradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_0_0_1" d="M 35 179 C 34 179 33 179 32 179 31 180 31 181 32 182 33 183 34 183 35 182 35 181 35 180 35 179 Z"/>
+            </g>
+            <text id="Text_0_1_1_0_0" x="33.500000" text-anchor="start" y="209" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+          </g>
+          <g id="0_1_1_0_1">
+            <g id="0_1_1_0_1_0" fill="rgb(192,255,224)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_0_1_0" d="M 46 168 C 44 167 42 167 41 168 40 170 40 172 41 173 42 174 44 174 46 173 47 172 47 170 46 168 Z"/>
+            </g>
+            <g id="0_1_1_0_1_1" fill="url(#56_0_1_1_0_1_1_radialgradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_0_1_1" d="M 45 169 C 44 169 43 169 42 169 41 170 41 171 42 172 43 173 44 173 45 172 45 171 45 170 45 169 Z"/>
+            </g>
+            <text id="Text_0_1_1_0_1" x="43.500000" text-anchor="start" y="199" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+          </g>
+          <g id="0_1_1_0_2" fill="rgb(40,112,130)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_0_2" d="M 45 163 L 49 159 51 159 46 164 45 163 Z"/>
+          </g>
+          <g id="0_1_1_0_3" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_0_3" d="M 10 173 L 19 182 C 22 185 26 185 29 182 L 45 166 C 48 163 48 159 46 156 L 37 147 10 173 10 173 Z"/>
+          </g>
+          <g id="0_1_1_0_4" fill="rgb(38,38,38)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_0_4" d="M 15 179 L 19 182 C 22 185 26 185 29 182 L 45 166 C 48 163 48 159 46 156 L 42 152 15 179 15 179 Z"/>
+          </g>
+          <g id="0_1_1_0_5" fill="rgb(89,89,89)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_0_5" d="M 11 174 L 37 148 42 153 16 179 11 174 Z"/>
+          </g>
+          <g id="0_1_1_0_6" fill="rgb(40,112,130)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_0_6" d="M 22 187 L 53 156 54 157 23 188 22 187 Z"/>
+          </g>
+          <g id="0_1_1_0_7" fill="rgb(40,112,130)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_0_7" d="M 37 148 L 10 175 C 10 175 10 175 10 175 10 175 9 175 9 174 L 37 147 C 37 147 37 148 37 148 L 37 148 Z"/>
+          </g>
+          <g id="0_1_1_0_8">
+            <g id="0_1_1_0_8_0" fill="rgb(0,0,0)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_0_8_0" d="M 38 146 C 37 145 34 148 34 148 L 26 148 C 26 148 23 149 22 152 22 155 21 153 16 156 14 157 14 160 14 160 14 160 13 161 11 166 9 170 9 173 9 173 9 173 9 174 9 174 L 38 146 38 146 Z"/>
+            </g>
+            <g id="0_1_1_0_8_1" fill="url(#43_0_1_1_0_8_1_linearGradient)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_0_8_1" d="M 27 149 C 27 149 24 150 23 152 23 155 22 154 17 156 15 158 15 161 15 161 15 161 14 163 13 164 13 165 11 170 11 172 L 11 172 C 11 170 12 168 13 166 14 163 16 161 16 161 16 161 16 158 18 157 24 154 24 155 24 152 25 150 28 149 28 149 L 35 148 27 149 27 149 Z"/>
+            </g>
+            <text id="Text_0_1_1_0_8" x="23.500000" text-anchor="start" y="199" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+          </g>
+          <text id="Text_0_1_1_0" x="32.500000" text-anchor="start" y="213" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+        </g>
+        <g id="0_1_1_1">
+          <g id="0_1_1_1_0">
+            <g id="0_1_1_1_0_0" fill="rgb(192,255,224)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_1_0_0" d="M 65 149 C 64 147 62 147 60 149 59 150 59 152 60 153 62 155 64 155 65 153 66 152 66 150 65 149 Z"/>
+            </g>
+            <g id="0_1_1_1_0_1" fill="url(#56_0_1_1_1_0_1_radialgradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_1_0_1" d="M 64 150 C 63 149 62 149 61 150 60 150 60 152 61 152 62 153 63 153 64 152 65 152 65 150 64 150 Z"/>
+            </g>
+            <text id="Text_0_1_1_1_0" x="63.500000" text-anchor="start" y="179" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+          </g>
+          <g id="0_1_1_1_1">
+            <g id="0_1_1_1_1_0" fill="rgb(192,255,224)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_1_1_0" d="M 75 139 C 74 137 72 137 70 139 69 140 69 142 70 143 72 145 74 145 75 143 76 142 76 140 75 139 Z"/>
+            </g>
+            <g id="0_1_1_1_1_1" fill="url(#56_0_1_1_1_1_1_radialgradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_1_1_1" d="M 74 140 C 73 139 72 139 71 140 70 140 70 142 71 142 72 143 73 143 74 142 75 142 75 140 74 140 Z"/>
+            </g>
+            <text id="Text_0_1_1_1_1" x="73.500000" text-anchor="start" y="169" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+          </g>
+          <g id="0_1_1_1_2" fill="rgb(40,112,130)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_1_2" d="M 74 133 L 78 129 80 129 75 134 74 133 Z"/>
+          </g>
+          <g id="0_1_1_1_3" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_1_3" d="M 39 144 L 49 153 C 51 155 55 155 58 152 L 74 136 C 77 133 77 129 75 127 L 66 118 39 144 39 144 Z"/>
+          </g>
+          <g id="0_1_1_1_4" fill="rgb(38,38,38)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_1_4" d="M 45 149 L 49 153 C 51 155 55 155 58 152 L 74 136 C 77 133 77 129 75 127 L 71 123 45 149 45 149 Z"/>
+          </g>
+          <g id="0_1_1_1_5" fill="rgb(89,89,89)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_1_5" d="M 40 144 L 66 118 71 123 45 149 40 144 Z"/>
+          </g>
+          <g id="0_1_1_1_6" fill="rgb(40,112,130)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_1_6" d="M 52 157 L 83 127 84 128 53 158 52 157 Z"/>
+          </g>
+          <g id="0_1_1_1_7" fill="rgb(40,112,130)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_1_7" d="M 67 119 L 40 145 C 40 145 40 145 39 145 39 145 38 145 38 145 L 66 117 C 66 117 67 118 67 119 L 67 119 Z"/>
+          </g>
+          <g id="0_1_1_1_8">
+            <g id="0_1_1_1_8_0" fill="rgb(0,0,0)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_1_8_0" d="M 67 116 C 66 116 63 118 63 118 L 55 119 C 55 119 52 120 52 122 51 125 51 124 45 127 43 128 43 130 43 130 43 130 42 131 41 136 39 141 38 143 38 143 38 143 38 144 39 144 L 67 116 67 116 Z"/>
+            </g>
+            <g id="0_1_1_1_8_1" fill="url(#43_0_1_1_1_8_1_linearGradient)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_1_8_1" d="M 56 119 C 56 119 53 120 53 123 52 125 51 124 46 127 44 128 44 131 44 131 44 131 43 134 43 134 42 136 40 140 40 142 L 41 143 C 40 140 42 138 42 136 43 133 45 131 45 131 45 131 46 128 47 127 53 124 53 125 53 123 54 120 57 119 57 119 L 64 118 56 119 56 119 Z"/>
+            </g>
+            <text id="Text_0_1_1_1_8" x="53.500000" text-anchor="start" y="169" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+          </g>
+          <text id="Text_0_1_1_1" x="61.500000" text-anchor="start" y="183" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+        </g>
+        <g id="0_1_1_2">
+          <g id="0_1_1_2_0">
+            <g id="0_1_1_2_0_0" fill="rgb(192,255,224)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_2_0_0" d="M 96 118 C 95 116 93 116 91 118 90 119 90 121 91 123 93 124 95 124 96 123 97 121 97 119 96 118 Z"/>
+            </g>
+            <g id="0_1_1_2_0_1" fill="url(#56_0_1_1_2_0_1_radialgradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_2_0_1" d="M 95 119 C 94 118 93 118 92 119 92 120 92 121 92 122 93 122 94 122 95 122 96 121 96 120 95 119 Z"/>
+            </g>
+            <text id="Text_0_1_1_2_0" x="94.500000" text-anchor="start" y="148" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+          </g>
+          <g id="0_1_1_2_1">
+            <g id="0_1_1_2_1_0" fill="rgb(192,255,224)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_2_1_0" d="M 106 108 C 105 107 103 107 101 108 100 109 100 111 101 113 103 114 105 114 106 113 107 111 107 109 106 108 Z"/>
+            </g>
+            <g id="0_1_1_2_1_1" fill="url(#56_0_1_1_2_1_1_radialgradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_2_1_1" d="M 105 109 C 104 108 103 108 102 109 102 110 102 111 102 112 103 112 104 112 105 112 106 111 106 110 105 109 Z"/>
+            </g>
+            <text id="Text_0_1_1_2_1" x="104.500000" text-anchor="start" y="138" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+          </g>
+          <g id="0_1_1_2_2" fill="rgb(40,112,130)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_2_2" d="M 105 102 L 109 98 112 98 106 104 105 102 Z"/>
+          </g>
+          <g id="0_1_1_2_3" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_2_3" d="M 71 113 L 80 122 C 82 124 87 124 89 121 L 105 105 C 108 103 108 98 106 96 L 97 87 71 113 71 113 Z"/>
+          </g>
+          <g id="0_1_1_2_4" fill="rgb(38,38,38)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_2_4" d="M 76 118 L 80 122 C 82 124 87 124 89 121 L 105 105 C 108 103 108 98 106 96 L 102 92 76 118 76 118 Z"/>
+          </g>
+          <g id="0_1_1_2_5" fill="rgb(89,89,89)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_2_5" d="M 71 113 L 97 88 102 93 76 118 71 113 Z"/>
+          </g>
+          <g id="0_1_1_2_6" fill="rgb(40,112,130)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_2_6" d="M 83 127 L 114 96 115 97 84 128 83 127 Z"/>
+          </g>
+          <g id="0_1_1_2_7" fill="rgb(40,112,130)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+            <path id="path_0_1_1_2_7" d="M 98 88 L 71 114 C 71 114 71 114 71 115 70 114 69 114 69 114 L 97 86 C 97 86 98 88 98 88 L 98 88 Z"/>
+          </g>
+          <g id="0_1_1_2_8">
+            <g id="0_1_1_2_8_0" fill="rgb(0,0,0)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_2_8_0" d="M 99 85 C 97 85 94 87 94 87 L 86 88 C 86 88 83 89 83 91 82 94 82 93 76 96 75 97 74 99 74 99 74 99 73 100 72 105 70 110 69 112 69 112 69 112 69 113 70 114 L 99 85 99 85 Z"/>
+            </g>
+            <g id="0_1_1_2_8_1" fill="url(#43_0_1_1_2_8_1_linearGradient)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+              <path id="path_0_1_1_2_8_1" d="M 87 89 C 87 89 84 90 84 92 83 94 82 93 77 96 75 97 75 100 75 100 75 100 74 103 74 103 73 105 71 109 71 111 L 72 112 C 71 110 73 107 73 106 74 102 76 100 76 100 76 100 77 97 79 96 84 93 84 94 85 92 85 90 88 88 88 88 L 95 88 87 89 87 89 Z"/>
+            </g>
+            <text id="Text_0_1_1_2_8" x="84.500000" text-anchor="start" y="139" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+          </g>
+          <text id="Text_0_1_1_2" x="92.500000" text-anchor="start" y="153" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+        </g>
+        <text id="Text_0_1_1" x="62.500000" text-anchor="start" y="213" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+        <animateMotion id="Rotate_2" begin="indefinite" end="indefinite" attributeName="transform" attributeType="XML" type="translate" path="M -15 15 L 15 -15 z" dur="3.000000s" additive="replace" fill="freeze" accumulate="none" restart="whenNotActive" repeatCount="indefinite"/>
+      </g>
+      <g id="0_1_3">
+        <g id="0_1_3_0" fill="url(#56_0_1_3_0_radialgradient)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+          <path id="path_0_1_3_0" d="M 196 17 C 196 22 201 21 207 24 210 26 209 30 209 30 209 30 214 26 216 24 217 23 221 18 219 14 219 12 213 7 201 12 198 13 195 14 196 17 L 196 17 Z"/>
+        </g>
+        <g id="0_1_3_1" fill="url(#56_0_1_3_1_radialgradient)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+          <path id="path_0_1_3_1" d="M 205 48 C 209 46 206 42 206 36 206 31 209 30 209 30 209 30 204 28 201 28 199 28 194 27 190 30 189 32 187 38 198 47 200 48 203 50 205 48 L 205 48 Z"/>
+        </g>
+        <g id="0_1_3_2" fill="url(#56_0_1_3_2_radialgradient)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+          <path id="path_0_1_3_2" d="M 228 25 C 224 23 222 28 217 31 213 33 209 30 209 30 209 30 211 36 212 38 213 40 215 45 219 46 221 47 228 45 230 32 230 30 231 26 228 25 L 228 25 Z"/>
+        </g>
+        <text id="Text_0_1_3" x="209.500000" text-anchor="start" y="73" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+        <animateTransform id="Rotate_1" fill="freeze" type="rotate" repeatCount="indefinite" calcMode="linear" attributeType="XML" attributeName="transform" additive="replace" accumulate="none" from="0.000000,209,28" to="360.000000,209,28" begin="indefinite" end="indefinite" dur="3.000000s" restart="whenNotActive"/>
+      </g>
+      <g id="0_1_4" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_1_4" d="M 210 35 L 210 35 C 207 35 205 33 205 30 L 205 30 C 205 27 207 25 210 25 L 210 25 C 213 25 215 27 215 30 L 215 30 C 215 33 213 35 210 35 L 210 35 Z"/>
+        <text id="Text_0_1_4" x="209.000000" text-anchor="start" y="36.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+      </g>
+      <text id="Text_0_1" x="121.500000" text-anchor="start" y="243" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <text id="Text_0" x="122.500000" text-anchor="start" y="243" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+  </g>
+</svg>

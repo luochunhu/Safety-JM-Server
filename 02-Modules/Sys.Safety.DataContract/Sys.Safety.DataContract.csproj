@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB6FBB99-66E9-4D1E-B1D1-D585A0151505}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sys.Safety.DataContract</RootNamespace>
+    <AssemblyName>Sys.Safety.DataContract</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Basic.Cache">
+      <HintPath>..\..\01-Library\Framework\Basic.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="Basic.Framework">
+      <HintPath>..\..\01-Library\Framework\Basic.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\..\01-Library\Framework\MongoDb\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="Sys.DataCollection.Common">
+      <HintPath>..\..\01-Library\Framework\Sys.DataCollection.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbnormalFeedItem.cs" />
+    <Compile Include="AlarmModule\ShowDataContract.cs" />
+    <Compile Include="AlarmProcessInfo.cs" />
+    <Compile Include="App\MnlDayReportDataContract.cs" />
+    <Compile Include="App\DerailChartStateLineDataContract.cs" />
+    <Compile Include="App\PointInfoDataContract.cs" />
+    <Compile Include="CommunicateExtend\DeviceInfoMation.cs" />
+    <Compile Include="Jc_AnalysistemplatealarmlevelDataContract.Build.cs" />
+    <Compile Include="App\AlarmPowerOffAppDataContract.cs" />
+    <Compile Include="App\BaseDataAppDataContract.cs" />
+    <Compile Include="App\DerailChartAppDataContract.cs" />
+    <Compile Include="App\GetJCMCDataResponse.cs" />
+    <Compile Include="App\GetJCRDataResponse.cs" />
+    <Compile Include="App\GetKGLBJDataResponse.cs" />
+    <Compile Include="App\GetKGLDDDataResponse.cs" />
+    <Compile Include="App\GetMLLBJDataResponse.cs" />
+    <Compile Include="App\GetMLLDDDataResponse.cs" />
+    <Compile Include="App\LinkPointDetailAppDataContract.cs" />
+    <Compile Include="App\AnalogChartAppDataContract.cs" />
+    <Compile Include="App\NetworkModuleAppDataContract.cs" />
+    <Compile Include="App\RealDataAppDataContract.cs" />
+    <Compile Include="App\RunLogAppDataContract.cs" />
+    <Compile Include="App\SwitcheAppDataContract.cs" />
+    <Compile Include="AreaDataContract.cs" />
+    <Compile Include="B_BroadcastplanDataContract.Build.cs" />
+    <Compile Include="B_BroadcastplanpointlistDataContract.Build.cs" />
+    <Compile Include="B_CallDataContract.Build.cs" />
+    <Compile Include="B_CallhistoryDataContract.Build.cs" />
+    <Compile Include="B_CallhistorypointlistDataContract.Build.cs" />
+    <Compile Include="B_CallpointlistDataContract.Build.cs" />
+    <Compile Include="B_DefDataContract.cs" />
+    <Compile Include="B_MusicfilesDataContract.Build.cs" />
+    <Compile Include="B_PlaylistDataContract.Build.cs" />
+    <Compile Include="B_PlaylistmusiclinkDataContract.Build.cs" />
+    <Compile Include="CommunicateExtend\BatteryPowerConsumption.cs" />
+    <Compile Include="CommunicateExtend\GradingAlarmItem.cs" />
+    <Compile Include="Custom\GasContentAlarmInfo.cs" />
+    <Compile Include="Custom\Kvp.cs" />
+    <Compile Include="Custom\PointInfo.cs" />
+    <Compile Include="EmergencyLinkageHistoryMasterPointAssDataContract.Build.cs" />
+    <Compile Include="EmergencyLinkHistoryDataContract.Build.cs" />
+    <Compile Include="GascontentanalyzeconfigDataContract.Build.cs" />
+    <Compile Include="GascontentanalyzeconfigDataContract.cs" />
+    <Compile Include="BroadcastTransferDataContract.cs" />
+    <Compile Include="KJ_AddresstypeDataContract.Build.cs" />
+    <Compile Include="KJ_AddresstyperuleDataContract.Build.cs" />
+    <Compile Include="PersonnelTransferDataContract.cs" />
+    <Compile Include="PowerboxchargehistoryDataContract.Build.cs" />
+    <Compile Include="RealDataDataContract.cs" />
+    <Compile Include="R_PhistoryDataContract.cs" />
+    <Compile Include="R_RDataContract.Build.cs" />
+    <Compile Include="R_BDataContract.Build.cs" />
+    <Compile Include="R_AreaAlarmDataContract.Build.cs" />
+    <Compile Include="AreaDataContract.Build.cs" />
+    <Compile Include="R_ArearestrictedpersonDataContract.Build.cs" />
+    <Compile Include="AreaRuleInfo.Build.cs" />
+    <Compile Include="ClientFramework\ClientItem.cs" />
+    <Compile Include="ClassDataContract.Build.cs" />
+    <Compile Include="CommunicateExtend\AlarmProperty.cs" />
+    <Compile Include="CommunicateExtend\AutomaticArticulatedDeviceInfo.cs" />
+    <Compile Include="CommunicateExtend\BatteryItem.cs" />
+    <Compile Include="CommunicateExtend\CommProperty.cs" />
+    <Compile Include="CommunicateExtend\ControlRemote.cs" />
+    <Compile Include="CommunicateExtend\DeviceControlItem.cs" />
+    <Compile Include="CommunicateExtend\EditDeviceAddressItem.cs" />
+    <Compile Include="CommunicateExtend\FiveMinData.cs" />
+    <Compile Include="CommunicateExtend\GlobalConfigInfo.cs" />
+    <Compile Include="ConfigDataContract.Build.cs" />
+    <Compile Include="Custom\CheckInfo.cs" />
+    <Compile Include="DataAnalysisHistoryDataInfo.cs" />
+    <Compile Include="DataexchangesettingDataContract.Build.cs" />
+    <Compile Include="DatarightDataContract.Build.cs" />
+    <Compile Include="DeletecheckDataContract.Build.cs" />
+    <Compile Include="EmergencyLinkageMasterAreaAssDataContract.Build.cs" />
+    <Compile Include="EmergencyLinkageMasterDevTypeAssDataContract.Build.cs" />
+    <Compile Include="EmergencyLinkageMasterPointAssDataContract.Build.cs" />
+    <Compile Include="EmergencyLinkageMasterTriDataStateAssDataContract.Build.cs" />
+    <Compile Include="EmergencyLinkagePassiveAreaAssDataContract.Build.cs" />
+    <Compile Include="EmergencyLinkagePassivePersonAssDataContract.Build.cs" />
+    <Compile Include="EmergencyLinkagePassivePointAssDataContract.Build.cs" />
+    <Compile Include="R_CallDataContract.cs" />
+    <Compile Include="R_KqbcDataContract.Build.cs" />
+    <Compile Include="R_PbDataContract.Build.cs" />
+    <Compile Include="R_DefDataContract.cs" />
+    <Compile Include="R_CallDataContract.Build.cs" />
+    <Compile Include="R_DeptDataContract.Build.cs" />
+    <Compile Include="DeptinfDataContract.Build.cs" />
+    <Compile Include="EnumcodeDataContract.Build.cs" />
+    <Compile Include="EnumtypeDataContract.Build.cs" />
+    <Compile Include="FactorValueInfo.cs" />
+    <Compile Include="FklibDataContract.Build.cs" />
+    <Compile Include="FlagDataContract.Build.cs" />
+    <Compile Include="GraphicsbaseinfDataContract.Build.cs" />
+    <Compile Include="GraphicspointsinfDataContract.Build.cs" />
+    <Compile Include="GraphicsrouteinfDataContract.Build.cs" />
+    <Compile Include="JC_AlarmHandleDataContract.Build.cs" />
+    <Compile Include="JC_AlarmHandleDataContract.cs" />
+    <Compile Include="JC_AlarmNotificationPersonnelConfigDataContract.Build.cs" />
+    <Compile Include="JC_AlarmNotificationPersonnelConfigDataContract.cs" />
+    <Compile Include="JC_AlarmNotificationPersonnelDataContract.Build.cs" />
+    <Compile Include="JC_AnalysisTemplateConfigDataContract.Build.cs" />
+    <Compile Include="JC_AnalysisTemplateDataContract.Build.cs" />
+    <Compile Include="JC_AnalysisTemplateDataContract.cs" />
+    <Compile Include="JC_AnalyticalExpressionDataContract.Build.cs" />
+    <Compile Include="JC_AnalyticalExpressionDataContract.cs" />
+    <Compile Include="Jc_BDataContract.Build.cs" />
+    <Compile Include="Jc_BxDataContract.Build.cs" />
+    <Compile Include="Jc_BxexDataContract.Build.cs" />
+    <Compile Include="Jc_BzDataContract.Build.cs" />
+    <Compile Include="Jc_CsDataContract.Build.cs" />
+    <Compile Include="Jc_DayDataContract.Build.cs" />
+    <Compile Include="Jc_DefDataContract.Build.cs" />
+    <Compile Include="Jc_DefDataContract.cs" />
+    <Compile Include="Jc_DefwbDataContract.Build.cs" />
+    <Compile Include="Jc_DevDataContract.Build.cs" />
+    <Compile Include="Jc_DevDataContract.cs" />
+    <Compile Include="JC_EmergencyLinkageConfigDataContract.Build.cs" />
+    <Compile Include="JC_ExpressionConfigDataContract.Build.cs" />
+    <Compile Include="JC_FactorDataContract.Build.cs" />
+    <Compile Include="Jc_HourDataContract.Build.cs" />
+    <Compile Include="Jc_JcsdkzDataContract.Build.cs" />
+    <Compile Include="Jc_JcsdkzDataContract.cs" />
+    <Compile Include="Jc_KdDataContract.Build.cs" />
+    <Compile Include="JC_LargedataAnalysisConfigDataContract.Build.cs" />
+    <Compile Include="JC_LargedataAnalysisConfigDataContract.cs" />
+    <Compile Include="JC_LargedataAnalysisLogDataContract.Build.cs" />
+    <Compile Include="Jc_LlDataContract.Build.cs" />
+    <Compile Include="Jc_Ll_DDataContract.Build.cs" />
+    <Compile Include="Jc_Ll_HDataContract.Build.cs" />
+    <Compile Include="Jc_Ll_MDataContract.Build.cs" />
+    <Compile Include="Jc_Ll_YDataContract.Build.cs" />
+    <Compile Include="Jc_MacDataContract.cs" />
+    <Compile Include="Jc_MacDataContract.Build.cs" />
+    <Compile Include="Jc_McDataContract.Build.cs" />
+    <Compile Include="Jc_MDataContract.Build.cs" />
+    <Compile Include="Jc_MonthDataContract.Build.cs" />
+    <Compile Include="JC_ParameterDataContract.Build.cs" />
+    <Compile Include="Jc_PointhisDataContract.Build.cs" />
+    <Compile Include="Jc_RDataContract.Build.cs" />
+    <Compile Include="Jc_RDataContract.cs" />
+    <Compile Include="JC_RegionOutageConfigDataContract.Build.cs" />
+    <Compile Include="JC_RegionOutageConfigDataContract.cs" />
+    <Compile Include="Jc_RemarkDataContract.Build.cs" />
+    <Compile Include="Jc_SeasonDataContract.Build.cs" />
+    <Compile Include="JC_SetAnalysisModelPointRecordDataContract.Build.cs" />
+    <Compile Include="JC_SetAnalysisModelPointRecordDataContract.cs" />
+    <Compile Include="Jc_ShowDataContract.Build.cs" />
+    <Compile Include="Jc_WzDataContract.Build.cs" />
+    <Compile Include="Jc_WzDataContract.cs" />
+    <Compile Include="Jc_YearDataContract.Build.cs" />
+    <Compile Include="LighthistoryDataContract.Build.cs" />
+    <Compile Include="ListcommandexDataContract.Build.cs" />
+    <Compile Include="ListdataexDataContract.Build.cs" />
+    <Compile Include="ListdataexDataContract.Extend.cs" />
+    <Compile Include="ListdatalayountDataContract.Build.cs" />
+    <Compile Include="ListdataremarkInfo.Build.cs" />
+    <Compile Include="ListdisplayexDataContract.Build.cs" />
+    <Compile Include="ListexDataContract.Build.cs" />
+    <Compile Include="ListexDataContract.Extend.cs" />
+    <Compile Include="ListmetadataDataContract.Build.cs" />
+    <Compile Include="ListtempleDataContract.Build.cs" />
+    <Compile Include="JC_MbDataContract.Build.cs" />
+    <Compile Include="MenuDataContract.Build.cs" />
+    <Compile Include="MenuDataContract.cs" />
+    <Compile Include="MetadataDataContract.Build.cs" />
+    <Compile Include="MetadatafieldsDataContract.Build.cs" />
+    <Compile Include="JC_MultiplesettingDataContract.Build.cs" />
+    <Compile Include="MsgLogInfo.Build.cs" />
+    <Compile Include="MsgRuleInfo.Build.cs" />
+    <Compile Include="MsgUserRuleInfo.Build.cs" />
+    <Compile Include="OperatelogDataContract.Build.cs" />
+    <Compile Include="R_DeptDataContract.cs" />
+    <Compile Include="R_PersoninfDataContract.cs" />
+    <Compile Include="R_PersoninfDataContract.Build.cs" />
+    <Compile Include="R_PhistoryDataContract.Build.cs" />
+    <Compile Include="R_PhjDataContract.Build.cs" />
+    <Compile Include="R_PrealDataContract.cs" />
+    <Compile Include="R_PrealDataContract.Build.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestDataContract.Build.cs" />
+    <Compile Include="RightDataContract.Build.cs" />
+    <Compile Include="RoleDataContract.Build.cs" />
+    <Compile Include="RoledatarightDataContract.Build.cs" />
+    <Compile Include="RolefieldsDataContract.Build.cs" />
+    <Compile Include="RolerightDataContract.Build.cs" />
+    <Compile Include="RolewebmenuauthDataContract.Build.cs" />
+    <Compile Include="RolewebmenuDataContract.Build.cs" />
+    <Compile Include="RunlogDataContract.cs" />
+    <Compile Include="RunlogDataContract.Build.cs" />
+    <Compile Include="RunningInfo.cs" />
+    <Compile Include="R_RestrictedpersonDataContract.Build.cs" />
+    <Compile Include="R_SyncLocalDataContract.Build.cs" />
+    <Compile Include="SettingDataContract.Build.cs" />
+    <Compile Include="ShortCutMenuInfo.Build.cs" />
+    <Compile Include="ShortCutMenuInfo.cs" />
+    <Compile Include="StaionControlHistoryDataDataContract.Build.cs" />
+    <Compile Include="StaionHistoryDataDataContract.Build.cs" />
+    <Compile Include="StationItem.cs" />
+    <Compile Include="SysEmergencyLinkageDataContract.Build.cs" />
+    <Compile Include="SysEmergencyLinkageDataContract.cs" />
+    <Compile Include="SysinfDataContract.Build.cs" />
+    <Compile Include="R_UndefinedDefDataContract.Build.cs" />
+    <Compile Include="UserDataContract.Build.cs" />
+    <Compile Include="UserDataContract.cs" />
+    <Compile Include="UserrightDataContract.Build.cs" />
+    <Compile Include="UserRoleAuthorize\KeyConst.cs" />
+    <Compile Include="UserRoleAuthorize\RightItem.cs" />
+    <Compile Include="UserroleDataContract.Build.cs" />
+    <Compile Include="V_DefDataContract.Build.cs" />
+    <Compile Include="WebauthorityDataContract.Build.cs" />
+    <Compile Include="WebmenuauthDataContract.Build.cs" />
+    <Compile Include="WebmenuDataContract.cs" />
+    <Compile Include="WebmenuDataContract.Build.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sys.Safety.Enums\Sys.Safety.Enums.csproj">
+      <Project>{59d5703e-ea5e-4836-b557-1b99e80754e4}</Project>
+      <Name>Sys.Safety.Enums</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ListReport\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

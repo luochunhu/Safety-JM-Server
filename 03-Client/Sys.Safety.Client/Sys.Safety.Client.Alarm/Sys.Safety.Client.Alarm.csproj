@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9455BAF4-2232-4D52-A422-5A082B2E8261}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sys.Safety.Client.Alarm</RootNamespace>
+    <AssemblyName>Sys.Safety.Client.Alarm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Basic.Framework">
+      <HintPath>..\..\..\01-Library\Framework\Basic.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\01-Library\Framework\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientAlarmConfig.cs" />
+    <Compile Include="ClientAlarmConfigCache.cs" />
+    <Compile Include="ClientAlarmItems.cs" />
+    <Compile Include="ClientAlarmModle.cs" />
+    <Compile Include="ClientAlarmServer.cs" />
+    <Compile Include="frmAlarmCfg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlarmCfg.Designer.cs">
+      <DependentUpon>frmAlarmCfg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlarmProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlarmProcess.Designer.cs">
+      <DependentUpon>frmAlarmProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlarmProcessDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlarmProcessDetail.Designer.cs">
+      <DependentUpon>frmAlarmProcessDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGraph.Designer.cs">
+      <DependentUpon>frmGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlarmBgd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlarmBgd.Designer.cs">
+      <DependentUpon>frmAlarmBgd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPopupAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPopupAlert.Designer.cs">
+      <DependentUpon>frmPopupAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSound.designer.cs">
+      <DependentUpon>frmSound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSoundLight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSoundLight.designer.cs">
+      <DependentUpon>frmSoundLight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewAnalysisAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewAnalysisAlarm.Designer.cs">
+      <DependentUpon>frmViewAnalysisAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultipleSetting\MultipleSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultipleSetting\MultipleSetting.Designer.cs">
+      <DependentUpon>MultipleSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultipleSetting\MultipleSettingEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultipleSetting\MultipleSettingEdit.Designer.cs">
+      <DependentUpon>MultipleSettingEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="OvertermService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OvertermService.Designer.cs">
+      <DependentUpon>OvertermService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensorDefineError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SensorDefineError.Designer.cs">
+      <DependentUpon>SensorDefineError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensorCalibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SensorCalibration.Designer.cs">
+      <DependentUpon>SensorCalibration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OvertermServiceInfo.cs" />
+    <Compile Include="SensorCalibrationDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SensorCalibrationDetail.Designer.cs">
+      <DependentUpon>SensorCalibrationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensorCalibrationInfo.cs" />
+    <Compile Include="SmartReadAPI.cs" />
+    <Compile Include="SmartReader.cs" />
+    <Compile Include="WebDisFromMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebDisFromMonitor.Designer.cs">
+      <DependentUpon>WebDisFromMonitor.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAlarmCfg.resx">
+      <DependentUpon>frmAlarmCfg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlarmProcess.resx">
+      <DependentUpon>frmAlarmProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlarmProcessDetail.resx">
+      <DependentUpon>frmAlarmProcessDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGraph.resx">
+      <DependentUpon>frmGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlarmBgd.resx">
+      <DependentUpon>frmAlarmBgd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPopupAlert.resx">
+      <DependentUpon>frmPopupAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSound.resx">
+      <DependentUpon>frmSound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSoundLight.resx">
+      <DependentUpon>frmSoundLight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewAnalysisAlarm.resx">
+      <DependentUpon>frmViewAnalysisAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultipleSetting\MultipleSetting.resx">
+      <DependentUpon>MultipleSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultipleSetting\MultipleSettingEdit.resx">
+      <DependentUpon>MultipleSettingEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OvertermService.resx">
+      <DependentUpon>OvertermService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SensorDefineError.resx">
+      <DependentUpon>SensorDefineError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SensorCalibration.resx">
+      <DependentUpon>SensorCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SensorCalibrationDetail.resx">
+      <DependentUpon>SensorCalibrationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebDisFromMonitor.resx">
+      <DependentUpon>WebDisFromMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertGif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.Common\Sys.Safety.Common.csproj">
+      <Project>{8e5d494d-95b5-46ae-9642-92d04410a5f9}</Project>
+      <Name>Sys.Safety.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.DataContract\Sys.Safety.DataContract.csproj">
+      <Project>{bb6fbb99-66e9-4d1e-b1d1-d585a0151505}</Project>
+      <Name>Sys.Safety.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.Enums\Sys.Safety.Enums.csproj">
+      <Project>{59d5703e-ea5e-4836-b557-1b99e80754e4}</Project>
+      <Name>Sys.Safety.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.Request\Sys.Safety.Request.csproj">
+      <Project>{c17815bf-001e-4872-a45e-0e6e48a59f0f}</Project>
+      <Name>Sys.Safety.Request</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.ServiceContract\Sys.Safety.ServiceContract.csproj">
+      <Project>{f723137b-dc93-4e92-b3a3-c02281b46e0f}</Project>
+      <Name>Sys.Safety.ServiceContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sys.Safety.ClientFramework\Sys.Safety.ClientFramework\Sys.Safety.ClientFramework.csproj">
+      <Project>{5d3ad7d1-bed1-4507-be4b-febcc7170589}</Project>
+      <Name>Sys.Safety.ClientFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

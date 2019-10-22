@@ -1,0 +1,607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85DC5FD0-E028-442F-829D-9AE36B3B79ED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sys.Safety.Client.Define</RootNamespace>
+    <AssemblyName>Sys.Safety.Client.Define</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Sys.Safety.Client.WindowHost\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\MAS.KJ73N.Client.PointMrg.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\MAS.KJ73N.Client.PointMrg.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\01-Library\Framework\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.metamap2dLib">
+      <HintPath>..\..\..\01-Library\MetaMap\AxInterop.metamap2dLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Basic.Framework, Version=2.0.0.60, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\01-Library\Framework\Basic.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files (x86)\DevExpress 13.2\Components\Bin\Framework\DevExpress.Utils.v13.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2.UI, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files (x86)\DevExpress 13.2\Components\Bin\Framework\DevExpress.XtraEditors.v13.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files (x86)\DevExpress 13.2\Components\Bin\Framework\DevExpress.XtraNavBar.v13.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2.Extensions, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files (x86)\DevExpress 13.2\Components\Bin\Framework\DevExpress.XtraTreeList.v13.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.metamap2dLib">
+      <HintPath>..\..\..\01-Library\MetaMap\Interop.metamap2dLib.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\01-Library\Framework\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\01-Library\Framework\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sys.DataCollection.Common, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\01-Library\Framework\Sys.DataCollection.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Area\Frm_AddressTypeDefine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Area\Frm_AddressTypeDefine.Designer.cs">
+      <DependentUpon>Frm_AddressTypeDefine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Area\Frm_AreaDefine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Area\Frm_AreaDefine.Designer.cs">
+      <DependentUpon>Frm_AreaDefine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Area\Frm_AddressTypeManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Area\Frm_AddressTypeManage.Designer.cs">
+      <DependentUpon>Frm_AddressTypeManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Area\Frm_CheckArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Area\Frm_CheckArea.Designer.cs">
+      <DependentUpon>Frm_CheckArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFPointMrgFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CFPointMrgFrame.designer.cs">
+      <DependentUpon>CFPointMrgFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommCfg\CFCOMCfg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommCfg\CFCOMCfg.Designer.cs">
+      <DependentUpon>CFCOMCfg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommCfg\CFIPModules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommCfg\CFIPModules.designer.cs">
+      <DependentUpon>CFIPModules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlLogic\CFControlLogic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlLogic\CFControlLogic.designer.cs">
+      <DependentUpon>CFControlLogic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlLogic\CFControlEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlLogic\CFControlEdit.designer.cs">
+      <DependentUpon>CFControlEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CuNavigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CuNavigation.Designer.cs">
+      <DependentUpon>CuNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefineChansfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefineChansfer.Designer.cs">
+      <DependentUpon>DefineChansfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AddStationTopologyDefineLineObject.cs" />
+    <Compile Include="Model\BigDataHandle.cs" />
+    <Compile Include="Model\CustomGridLookUpEdit .cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\DefinePublicClass.cs" />
+    <Compile Include="Model\DevAdapter.cs" />
+    <Compile Include="Model\EnumHandler.cs" />
+    <Compile Include="Model\GridDataSourceMrg.cs" />
+    <Compile Include="Model\PersonInfoHandle.cs" />
+    <Compile Include="Model\StaionInitInfo.cs" />
+    <Compile Include="Model\_PointMrgModels.cs" />
+    <Compile Include="Model\TreeDataSourceMrg.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor\CuAnalog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensor\CuAnalog.Designer.cs">
+      <DependentUpon>CuAnalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor\CuAnalogType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensor\CuAnalogType.Designer.cs">
+      <DependentUpon>CuAnalogType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor\CuBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensor\CuBase.Designer.cs">
+      <DependentUpon>CuBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor\CuBaseType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensor\CuBaseType.Designer.cs">
+      <DependentUpon>CuBaseType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor\CuCumulative.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensor\CuCumulative.Designer.cs">
+      <DependentUpon>CuCumulative.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor\CuControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensor\CuControl.Designer.cs">
+      <DependentUpon>CuControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor\CuControlType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensor\CuControlType.Designer.cs">
+      <DependentUpon>CuControlType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor\CuDerail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensor\CuDerail.designer.cs">
+      <DependentUpon>CuDerail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor\CuDerailType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensor\CuDerailType.Designer.cs">
+      <DependentUpon>CuDerailType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor\CFCMSensor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sensor\CFCMSensor.designer.cs">
+      <DependentUpon>CFCMSensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor\CFCMSensorType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sensor\CFCMSensorType.designer.cs">
+      <DependentUpon>CFCMSensorType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor\DeviceChanelNumberEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sensor\DeviceChanelNumberEdit.Designer.cs">
+      <DependentUpon>DeviceChanelNumberEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor\MultiSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sensor\MultiSelect.Designer.cs">
+      <DependentUpon>MultiSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor\PersonSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sensor\PersonSetForm.Designer.cs">
+      <DependentUpon>PersonSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sensor\RecognizerExtendProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sensor\RecognizerExtendProperty.Designer.cs">
+      <DependentUpon>RecognizerExtendProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceManager.cs" />
+    <Compile Include="Station\BroadcastStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Station\BroadcastStation.Designer.cs">
+      <DependentUpon>BroadcastStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Station\CFStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Station\CFStation.Designer.cs">
+      <DependentUpon>CFStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CuGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CuGrid.Designer.cs">
+      <DependentUpon>CuGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Station\CFStationType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Station\CFStationType.designer.cs">
+      <DependentUpon>CFStationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Station\CFWindBreakCfg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Station\CFWindBreakCfg.designer.cs">
+      <DependentUpon>CFWindBreakCfg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Station\CFWLogicBreakCfg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Station\CFWLogicBreakCfg.designer.cs">
+      <DependentUpon>CFWLogicBreakCfg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Station\CF_Fz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Station\CF_Fz.Designer.cs">
+      <DependentUpon>CF_Fz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Station\StationIPSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Station\StationIPSet.Designer.cs">
+      <DependentUpon>StationIPSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Station\StationWindPowerLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Station\StationWindPowerLock.Designer.cs">
+      <DependentUpon>StationWindPowerLock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Station\WindPowerLockPointBind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Station\WindPowerLockPointBind.Designer.cs">
+      <DependentUpon>WindPowerLockPointBind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WZMgr\CFWZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WZMgr\CFWZ.Designer.cs">
+      <DependentUpon>CFWZ.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Area\Frm_AddressTypeDefine.resx">
+      <DependentUpon>Frm_AddressTypeDefine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Area\Frm_AreaDefine.resx">
+      <DependentUpon>Frm_AreaDefine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Area\Frm_AddressTypeManage.resx">
+      <DependentUpon>Frm_AddressTypeManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Area\Frm_CheckArea.resx">
+      <DependentUpon>Frm_CheckArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CFPointMrgFrame.resx">
+      <DependentUpon>CFPointMrgFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommCfg\CFCOMCfg.resx">
+      <DependentUpon>CFCOMCfg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommCfg\CFIPModules.resx">
+      <DependentUpon>CFIPModules.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlLogic\CFControlLogic.resx">
+      <DependentUpon>CFControlLogic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlLogic\CFControlEdit.resx">
+      <DependentUpon>CFControlEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CuNavigation.resx">
+      <DependentUpon>CuNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefineChansfer.resx">
+      <DependentUpon>DefineChansfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\CustomGridLookUpEdit .resx">
+      <DependentUpon>CustomGridLookUpEdit .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor\CuAnalog.resx">
+      <DependentUpon>CuAnalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor\CuAnalogType.resx">
+      <DependentUpon>CuAnalogType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor\CuBase.resx">
+      <DependentUpon>CuBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor\CuBaseType.resx">
+      <DependentUpon>CuBaseType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor\CuCumulative.resx">
+      <DependentUpon>CuCumulative.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor\CuControl.resx">
+      <DependentUpon>CuControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor\CuControlType.resx">
+      <DependentUpon>CuControlType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor\CuDerail.resx">
+      <DependentUpon>CuDerail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor\CFCMSensor.resx">
+      <DependentUpon>CFCMSensor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor\CFCMSensorType.resx">
+      <DependentUpon>CFCMSensorType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor\CuDerailType.resx">
+      <DependentUpon>CuDerailType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor\DeviceChanelNumberEdit.resx">
+      <DependentUpon>DeviceChanelNumberEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor\MultiSelect.resx">
+      <DependentUpon>MultiSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor\PersonSetForm.resx">
+      <DependentUpon>PersonSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sensor\RecognizerExtendProperty.resx">
+      <DependentUpon>RecognizerExtendProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Station\BroadcastStation.resx">
+      <DependentUpon>BroadcastStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Station\CFStation.resx">
+      <DependentUpon>CFStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CuGrid.resx">
+      <DependentUpon>CuGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Station\CFStationType.resx">
+      <DependentUpon>CFStationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Station\CFWindBreakCfg.resx">
+      <DependentUpon>CFWindBreakCfg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Station\CFWLogicBreakCfg.resx">
+      <DependentUpon>CFWLogicBreakCfg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Station\CF_Fz.resx">
+      <DependentUpon>CF_Fz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Station\StationIPSet.resx">
+      <DependentUpon>StationIPSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Station\StationWindPowerLock.resx">
+      <DependentUpon>StationWindPowerLock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Station\WindPowerLockPointBind.resx">
+      <DependentUpon>WindPowerLockPointBind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WZMgr\CFWZ.resx">
+      <DependentUpon>CFWZ.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.DataContract\Sys.Safety.DataContract.csproj">
+      <Project>{bb6fbb99-66e9-4d1e-b1d1-d585a0151505}</Project>
+      <Name>Sys.Safety.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.Enums\Sys.Safety.Enums.csproj">
+      <Project>{59d5703e-ea5e-4836-b557-1b99e80754e4}</Project>
+      <Name>Sys.Safety.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.Request\Sys.Safety.Request.csproj">
+      <Project>{c17815bf-001e-4872-a45e-0e6e48a59f0f}</Project>
+      <Name>Sys.Safety.Request</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.ServiceContract\Sys.Safety.ServiceContract.csproj">
+      <Project>{f723137b-dc93-4e92-b3a3-c02281b46e0f}</Project>
+      <Name>Sys.Safety.ServiceContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02-Modules\Sys.Safety.WebApiAgent\Sys.Safety.WebApiAgent.csproj">
+      <Project>{79cb4602-86f9-4a51-b2e6-df627d960341}</Project>
+      <Name>Sys.Safety.WebApiAgent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sys.Safety.ClientFramework\Sys.Safety.ClientFramework\Sys.Safety.ClientFramework.csproj">
+      <Project>{5d3ad7d1-bed1-4507-be4b-febcc7170589}</Project>
+      <Name>Sys.Safety.ClientFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Client.GraphDefine\Sys.Safety.Client.GraphDefine.csproj">
+      <Project>{d3aa3033-cf89-4652-98fa-ae78e985a264}</Project>
+      <Name>Sys.Safety.Client.GraphDefine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\Log4netConfig.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

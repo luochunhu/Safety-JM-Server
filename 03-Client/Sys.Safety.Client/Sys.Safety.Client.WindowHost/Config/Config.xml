@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<appSettings>
+    <!-- 客户等相关信息配置 -->
+    <add key="CompanyName" value="有限公司"/> 
+		<add key="SoftName" value="ZhzSoft"/>
+		<add key="SoftFullName" value="煤矿安全监控系统"/>
+    <add key="Version" value="V1.0" />
+    <!-- 判断是否自动登录，0需要用户名和密码 1默认管理员登录 -->
+    <add key="AutoLogoIn" value="0"/>
+    <add key="AutoLogoUser" value="admin"/>
+    <add key="AutoLogoPass" value="123456"/>
+    <!-- 当前菜单类型（0：实用菜单，1：AQ菜单） -->
+    <add key="MenuType" value="1"/>
+    <!-- 是否采用GIS图形定义界面（0：不采用，1：采用） 20180314-->
+    <add key="GraphicDefine" value="0"/>
+ 	</appSettings>
+</configuration>

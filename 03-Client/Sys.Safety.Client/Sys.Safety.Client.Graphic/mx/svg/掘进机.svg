@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 274 148" width="274" height="148" hape-rendering="geometricPrecision" xmlns:a="http://www.adobe.com/svg10-extensions" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <desc>600</desc>
+ 
+  <defs>
+    <linearGradient id="49_0_0_1_linearGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.00" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+      <stop offset="0.5" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+    </linearGradient>
+    <linearGradient id="48_0_0_6_linearGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.00" stop-color="rgb(104,128,55)" stop-opacity="1.0"/>
+      <stop offset="0.5" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1" stop-color="rgb(104,128,55)" stop-opacity="1.0"/>
+    </linearGradient>
+    <linearGradient id="48_0_0_7_linearGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.00" stop-color="rgb(104,128,55)" stop-opacity="1.0"/>
+      <stop offset="0.5" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1" stop-color="rgb(104,128,55)" stop-opacity="1.0"/>
+    </linearGradient>
+    <radialGradient id="57_0_0_8_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(242,242,242)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+    </radialGradient>
+    <linearGradient id="48_0_0_9_linearGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.00" stop-color="rgb(104,128,55)" stop-opacity="1.0"/>
+      <stop offset="0.5" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1" stop-color="rgb(104,128,55)" stop-opacity="1.0"/>
+    </linearGradient>
+    <linearGradient id="49_0_0_54_linearGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.00" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+      <stop offset="0.5" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+    </linearGradient>
+    <linearGradient id="43_0_0_55_linearGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.00" stop-color="rgb(104,128,55)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(133,164,70)" stop-opacity="1.0"/>
+    </linearGradient>
+    <radialGradient id="57_0_0_56_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(242,242,242)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+    </radialGradient>
+    <radialGradient id="57_0_0_57_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(242,242,242)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+    </radialGradient>
+    <linearGradient id="49_0_0_58_linearGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.00" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+      <stop offset="0.5" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+    </linearGradient>
+    <linearGradient id="49_0_0_59_linearGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.00" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+      <stop offset="0.5" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+    </linearGradient>
+    <linearGradient id="49_0_0_61_linearGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.00" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+      <stop offset="0.5" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+    </linearGradient>
+    <linearGradient id="49_0_0_69_linearGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.00" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+      <stop offset="0.5" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+    </linearGradient>
+    <radialGradient id="57_0_0_94_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(242,242,242)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+    </radialGradient>
+    <radialGradient id="57_0_0_96_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(242,242,242)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+    </radialGradient>
+    <radialGradient id="57_0_0_97_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(242,242,242)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+    </radialGradient>
+    <radialGradient id="57_0_0_98_radialgradient" fx="0.5" fy="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.00" stop-color="rgb(242,242,242)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(217,217,217)" stop-opacity="1.0"/>
+    </radialGradient>
+    <linearGradient id="43_0_0_99_linearGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.00" stop-color="rgb(104,128,55)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(133,164,70)" stop-opacity="1.0"/>
+    </linearGradient>
+  </defs>
+  <g id="0">
+    <g id="0_0">
+      <g id="0_0_0" fill="rgb(96,93,92)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_0" d="M 121 139 L 137 137 142 133 C 142 133 145 130 144 126 144 123 143 118 141 117 139 115 139 114 129 112 121 111 98 112 98 112 L 121 139 Z"/>
+      </g>
+      <g id="0_0_1" fill="url(#49_0_0_1_linearGradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_1" d="M 84 78 L 99 78 121 79 128 75 188 41 194 52 C 194 52 186 56 184 56 183 56 177 52 177 52 L 155 65 152 85 144 89 146 93 153 94 159 99 159 102 143 103 135 98 105 99 98 98 93 81 84 81 84 78 84 78 Z"/>
+      </g>
+      <g id="0_0_2" fill="rgb(169,168,167)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_2" d="M 40 110 C 32 111 33 121 33 121 33 121 33 129 40 132 48 136 110 139 110 139 110 139 115 139 123 138 131 137 134 134 135 130 135 126 135 122 133 120 131 118 118 113 114 113 110 113 40 110 40 110 Z"/>
+      </g>
+      <g id="0_0_3" fill="rgb(59,55,52)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_3" d="M 44 126 L 126 131 C 126 131 125 135 121 136 118 137 113 136 113 136 L 47 132 C 47 132 46 131 44 131 44 130 44 126 44 126 Z"/>
+      </g>
+      <g id="0_0_4" fill="rgb(169,168,167)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_4" d="M 116 118 L 124 118 128 120 131 122 132 125 132 129 131 132 127 132 117 131 115 129 116 118 Z"/>
+      </g>
+      <g id="0_0_5" fill="rgb(192,192,192)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_5" d="M 230 130 L 200 145 187 148 173 139 C 173 139 159 132 152 127 145 122 142 120 142 117 142 113 147 106 147 106 L 160 104 C 160 104 168 103 172 102 175 102 177 102 177 102 177 102 190 102 196 104 202 106 219 114 219 114 L 217 120 221 121 C 221 121 226 124 228 127 230 130 230 130 230 130 Z"/>
+      </g>
+      <g id="0_0_6" fill="url(#48_0_0_6_linearGradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_6" d="M 143 87 L 172 87 180 104 140 106 143 87 Z"/>
+      </g>
+      <g id="0_0_7" fill="url(#48_0_0_7_linearGradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_7" d="M 205 59 L 221 61 171 89 151 89 205 59 Z"/>
+      </g>
+      <g id="0_0_8" fill="url(#57_0_0_8_radialgradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_8" d="M 143 63 L 195 35 205 59 151 89 144 90 143 63 Z"/>
+      </g>
+      <g id="0_0_9" fill="url(#48_0_0_9_linearGradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_9" d="M 209 38 L 195 36 205 61 219 62 209 38 Z"/>
+      </g>
+      <g id="0_0_10" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_10" d="M 34 121 C 34 121 34 121 34 121 L 33 121 C 33 121 33 121 33 121 L 34 121"/>
+      </g>
+      <g id="0_0_11" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_11" d="M 34 121 L 33 121 34 121"/>
+      </g>
+      <g id="0_0_12" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_12" d="M 110 138 L 110 139 110 138"/>
+      </g>
+      <g id="0_0_13" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_13" d="M 123 137 L 123 139 123 137"/>
+      </g>
+      <g id="0_0_14" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_14" d="M 123 137 C 124 137 125 137 126 137 L 126 138 C 125 138 124 138 123 139 L 123 137"/>
+      </g>
+      <g id="0_0_15" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_15" d="M 126 137 C 127 136 128 136 129 136 L 129 137 C 128 137 127 138 126 138 L 126 137"/>
+      </g>
+      <g id="0_0_16" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_16" d="M 129 136 C 132 134 134 132 134 130 L 135 130 C 135 132 133 135 129 137 L 129 136"/>
+      </g>
+      <g id="0_0_17" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_17" d="M 135 130 L 135 130 135 130"/>
+      </g>
+      <g id="0_0_18" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_18" d="M 134 130 L 135 130 134 130"/>
+      </g>
+      <g id="0_0_19" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_19" d="M 135 130 L 135 130 135 130"/>
+      </g>
+      <g id="0_0_20" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_20" d="M 134 130 C 134 129 134 129 134 128 L 136 128 C 136 129 136 129 135 130 L 134 130"/>
+      </g>
+      <g id="0_0_21" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_21" d="M 134 128 C 134 128 134 128 134 127 L 136 126 C 136 128 136 128 136 128 L 134 128"/>
+      </g>
+      <g id="0_0_22" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_22" d="M 134 127 C 134 124 134 122 132 120 L 133 120 C 135 121 136 124 136 126 L 134 127"/>
+      </g>
+      <g id="0_0_23" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_23" d="M 133 120 L 133 120 133 120"/>
+      </g>
+      <g id="0_0_24" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_24" d="M 132 120 L 133 120 132 120"/>
+      </g>
+      <g id="0_0_25" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_25" d="M 132 120 L 133 120 132 120"/>
+      </g>
+      <g id="0_0_26" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_26" d="M 132 120 C 132 120 131 120 131 120 L 131 118 C 132 118 133 119 133 120 L 132 120"/>
+      </g>
+      <g id="0_0_27" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_27" d="M 131 120 C 131 119 130 118 129 118 L 129 117 C 130 118 131 118 131 118 L 131 120"/>
+      </g>
+      <g id="0_0_28" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_28" d="M 129 118 C 124 116 117 114 114 114 L 114 112 C 117 112 124 115 129 117 L 129 118"/>
+      </g>
+      <g id="0_0_29" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_29" d="M 40 109 L 41 109 40 110 40 109"/>
+      </g>
+      <g id="0_0_30" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_30" d="M 126 130 L 126 130 126 131 126 131 126 130"/>
+      </g>
+      <g id="0_0_31" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_31" d="M 113 136 L 113 136 113 136"/>
+      </g>
+      <g id="0_0_32" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_32" d="M 47 132 L 47 132 47 132"/>
+      </g>
+      <g id="0_0_33" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_33" d="M 43 126 L 43 125 44 125 44 126 43 126"/>
+      </g>
+      <g id="0_0_34" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_34" d="M 116 114 L 128 112"/>
+      </g>
+      <g id="0_0_35" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_35" d="M 122 115 L 135 114"/>
+      </g>
+      <g id="0_0_36" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_36" d="M 129 118 L 140 116"/>
+      </g>
+      <g id="0_0_37" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_37" d="M 134 122 L 143 120"/>
+      </g>
+      <g id="0_0_38" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_38" d="M 135 126 L 143 124"/>
+      </g>
+      <g id="0_0_39" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_39" d="M 135 130 L 143 128"/>
+      </g>
+      <g id="0_0_40" fill="none" stroke="rgb(36,33,29)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_40" d="M 133 134 L 142 132"/>
+      </g>
+      <g id="0_0_41" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_41" d="M 130 137 L 140 134"/>
+      </g>
+      <g id="0_0_42" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_42" d="M 148 112 L 159 110 175 108 C 175 108 178 107 184 107 190 107 194 109 195 110 197 110 217 120 217 120"/>
+      </g>
+      <g id="0_0_43" fill="none" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_43" d="M 118 103 L 137 103 140 110 117 110 118 103"/>
+      </g>
+      <g id="0_0_44" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_44" d="M 21 106 L 28 120"/>
+      </g>
+      <g id="0_0_45" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_45" d="M 41 126 L 41 128 41 126"/>
+      </g>
+      <g id="0_0_46" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_46" d="M 44 120 L 46 120 44 120"/>
+      </g>
+      <g id="0_0_47" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_47" d="M 44 120 L 46 120 44 120"/>
+      </g>
+      <g id="0_0_48" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_48" d="M 44 116 C 43 115 42 115 41 115 L 41 114 C 43 114 44 114 44 116 L 44 116"/>
+      </g>
+      <g id="0_0_49" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_49" d="M 41 115 L 41 114 41 115"/>
+      </g>
+      <g id="0_0_50" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_50" d="M 41 115 L 41 114 41 115"/>
+      </g>
+      <g id="0_0_51" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_51" d="M 38 120 L 38 120 38 120"/>
+      </g>
+      <g id="0_0_52" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_52" d="M 38 120 L 38 120 38 120"/>
+      </g>
+      <g id="0_0_53" fill="none" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_53" d="M 147 106 C 147 112 148 112 148 112 L 169 126 168 136 159 131 153 128 146 123 144 121 C 144 121 143 120 143 120 142 119 142 117 142 117 L 143 114 145 110 146 107 147 106 147 106"/>
+      </g>
+      <g id="0_0_54" fill="url(#49_0_0_54_linearGradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_54" d="M 25 103 L 13 111 5 111 0 113 5 120 11 122 17 121 30 118 32 118 35 118 37 105 36 103 25 103 Z"/>
+      </g>
+      <g id="0_0_55" fill="url(#43_0_0_55_linearGradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_55" d="M 41 69 L 143 65 143 69 41 73 41 69 Z"/>
+      </g>
+      <g id="0_0_56" fill="url(#57_0_0_56_radialgradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_56" d="M 42 81 L 45 81 45 75 42 75 42 81 Z"/>
+      </g>
+      <g id="0_0_57" fill="url(#57_0_0_57_radialgradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_57" d="M 79 81 L 84 81 84 72 79 72 79 81 Z"/>
+      </g>
+      <g id="0_0_58" fill="url(#49_0_0_58_linearGradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_58" d="M 200 71 L 194 66 175 93 181 97 200 71 Z"/>
+      </g>
+      <g id="0_0_59" fill="url(#49_0_0_59_linearGradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_59" d="M 180 70 L 174 65 153 94 159 99 180 70 Z"/>
+      </g>
+      <g id="0_0_60" fill="rgb(255,255,0)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_60" d="M 180 55 L 160 67 156 86 160 67 180 55 Z"/>
+      </g>
+      <g id="0_0_61" fill="url(#49_0_0_61_linearGradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_61" d="M 181 98 L 174 102 161 98 165 93 176 92 181 98 Z"/>
+      </g>
+      <g id="0_0_62" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_62" d="M 120 103 L 122 103 122 98 120 98 120 103 Z"/>
+      </g>
+      <g id="0_0_63" fill="rgb(160,160,160)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_63" d="M 141 134 C 141 134 160 141 163 142 166 144 172 143 174 144 176 145 187 148 187 148 L 168 136 142 119 141 134 Z"/>
+      </g>
+      <g id="0_0_64" fill="rgb(36,33,29)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_64" d="M 34 121 C 34 122 34 129 41 132 L 40 133 C 33 129 33 122 33 121 L 34 121 Z"/>
+      </g>
+      <g id="0_0_65" fill="rgb(96,93,92)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_65" d="M 113 137 L 47 132 47 131 113 136 113 137 Z"/>
+      </g>
+      <g id="0_0_66" fill="rgb(36,33,29)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_66" d="M 41 111 C 33 112 34 120 34 121 L 33 121 C 33 120 32 111 40 109 L 41 111 Z"/>
+      </g>
+      <g id="0_0_67" fill="rgb(78,75,73)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_67" d="M 42 114 L 128 117 128 118 42 115 42 114 Z"/>
+      </g>
+      <g id="0_0_68" fill="rgb(36,33,29)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_68" d="M 114 114 C 110 114 41 111 40 111 L 41 109 C 41 109 110 112 114 112 L 114 114 Z"/>
+      </g>
+      <g id="0_0_69" fill="url(#49_0_0_69_linearGradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_69" d="M 37 105 L 38 110 51 116 51 123 55 123 55 111 57 109 83 109 85 111 85 124 89 124 89 118 90 117 93 117 93 105 37 105 37 105 Z"/>
+      </g>
+      <g id="0_0_70" fill="rgb(78,75,73)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_70" d="M 41 115 C 41 115 40 115 39 116 L 38 116 C 39 114 40 114 41 114 L 41 115 Z"/>
+      </g>
+      <g id="0_0_71" fill="rgb(96,93,92)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_71" d="M 113 131 L 111 137 110 136 112 130 113 131 Z"/>
+      </g>
+      <g id="0_0_72" fill="rgb(96,93,92)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_72" d="M 126 131 C 126 131 125 136 122 137 L 121 135 C 124 135 125 131 125 131 L 126 131 Z"/>
+      </g>
+      <g id="0_0_73" fill="rgb(96,93,92)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_73" d="M 122 137 C 118 137 113 137 113 137 L 113 136 C 113 136 118 136 121 135 L 122 137 Z"/>
+      </g>
+      <g id="0_0_74" fill="rgb(36,33,29)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_74" d="M 110 138 C 110 138 115 139 123 137 L 123 139 C 115 140 110 139 110 139 L 110 138 Z"/>
+      </g>
+      <g id="0_0_75" fill="rgb(36,33,29)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_75" d="M 41 132 C 48 135 110 138 110 138 L 110 139 C 110 139 47 136 40 133 L 41 132 Z"/>
+      </g>
+      <g id="0_0_76" fill="rgb(96,93,92)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_76" d="M 99 129 L 98 135 96 135 98 129 99 129 Z"/>
+      </g>
+      <g id="0_0_77" fill="rgb(96,93,92)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_77" d="M 87 128 L 86 134 85 134 85 128 87 128 Z"/>
+      </g>
+      <g id="0_0_78" fill="rgb(96,93,92)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_78" d="M 74 128 L 73 134 72 134 73 128 74 128 Z"/>
+      </g>
+      <g id="0_0_79" fill="rgb(96,93,92)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_79" d="M 59 126 L 59 132 58 132 58 127 59 126 Z"/>
+      </g>
+      <g id="0_0_80" fill="rgb(96,93,92)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_80" d="M 44 125 L 126 130 126 131 44 126 44 125 Z"/>
+      </g>
+      <g id="0_0_81" fill="rgb(96,93,92)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_81" d="M 47 132 C 47 132 45 132 44 131 L 45 130 C 46 131 47 131 47 131 L 47 132 Z"/>
+      </g>
+      <g id="0_0_82" fill="rgb(96,93,92)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_82" d="M 44 131 C 43 130 43 126 43 126 L 44 126 C 44 126 44 129 45 130 L 44 131 Z"/>
+      </g>
+      <g id="0_0_83" fill="rgb(78,75,73)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_83" d="M 44 120 C 44 119 44 118 44 116 L 44 116 C 45 117 46 118 46 120 L 44 120 Z"/>
+      </g>
+      <g id="0_0_84" fill="rgb(78,75,73)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_84" d="M 44 125 C 44 124 44 122 44 120 L 46 120 C 46 122 45 124 44 125 L 44 125 Z"/>
+      </g>
+      <g id="0_0_85" fill="rgb(78,75,73)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_85" d="M 39 116 C 39 118 38 119 38 120 L 38 120 C 38 118 38 117 38 116 L 39 116 Z"/>
+      </g>
+      <g id="0_0_86" fill="rgb(78,75,73)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_86" d="M 39 125 C 40 126 41 126 41 126 L 41 128 C 40 128 39 126 38 125 L 39 125 Z"/>
+      </g>
+      <g id="0_0_87" fill="rgb(169,168,167)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_87" d="M 41 126 C 44 126 45 124 45 120 45 117 44 114 41 114 39 114 38 117 38 120 38 124 39 126 41 126 Z"/>
+      </g>
+      <g id="0_0_88" fill="rgb(78,75,73)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_88" d="M 41 126 L 41 128 41 126 Z"/>
+      </g>
+      <g id="0_0_89" fill="rgb(78,75,73)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_89" d="M 38 120 C 38 122 39 124 39 125 L 38 125 C 38 124 38 122 38 120 L 38 120 Z"/>
+      </g>
+      <g id="0_0_90" fill="rgb(128,128,128)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_90" d="M 221 122 L 219 124 211 123 211 125 217 129 216 130 200 120 183 121 183 120 190 116 178 109 178 108 221 122 Z"/>
+      </g>
+      <g id="0_0_91" fill="rgb(104,128,55)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_91" d="M 183 120 L 201 119 217 129 209 121 221 122 205 116 197 110 195 112 178 107 192 115 183 120 Z"/>
+      </g>
+      <g id="0_0_92" fill="rgb(78,75,73)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_92" d="M 41 126 C 42 126 43 126 44 125 L 44 125 C 44 126 43 128 41 128 L 41 126 Z"/>
+      </g>
+      <g id="0_0_93" fill="rgb(128,128,128)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_93" d="M 202 136 L 201 138 180 129 175 137 168 125 153 119 163 120 159 114 159 112 202 136 Z"/>
+      </g>
+      <g id="0_0_94" fill="url(#57_0_0_94_radialgradient)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_94" d="M 200 114 C 203 115 205 117 205 118 204 118 201 118 198 118 195 117 192 115 192 114 193 113 196 113 200 114 Z"/>
+      </g>
+      <g id="0_0_95" fill="rgb(104,128,55)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_95" d="M 176 135 L 182 128 202 136 186 126 192 122 180 121 159 112 165 118 153 118 169 123 176 135 Z"/>
+      </g>
+      <g id="0_0_96" fill="url(#57_0_0_96_radialgradient)" stroke="none" stroke-width="0" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_96" d="M 178 121 C 182 123 184 125 184 126 184 128 180 128 177 126 173 125 170 122 170 121 171 120 174 120 178 121 Z"/>
+      </g>
+      <g id="0_0_97" fill="url(#57_0_0_97_radialgradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_97" d="M 202 39 C 202 39 201 42 204 48 206 53 209 56 211 57 214 58 216 59 216 59 L 233 48 C 233 48 231 47 228 44 225 41 222 37 222 34 221 32 221 29 221 29 L 202 39 Z"/>
+      </g>
+      <g id="0_0_98" fill="url(#57_0_0_98_radialgradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_98" d="M 235 24 C 235 24 236 28 239 32 241 37 244 39 244 39 L 242 40 237 42 232 49 229 47 225 42 222 37 220 31 221 29 229 28 235 24 Z"/>
+      </g>
+      <g id="0_0_99" fill="url(#43_0_0_99_linearGradient)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_0_99" d="M 8 105 L 8 81 94 81 98 98 105 98 136 98 143 103 144 105 142 106 139 111 97 109 94 105 8 105 Z"/>
+      </g>
+      <text id="Text_0_0" x="122.500000" text-anchor="start" y="173" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <g id="0_1">
+      <g id="0_1_0" fill="rgb(157,187,97)" stroke="rgb(64,64,64)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+        <path id="path_0_1_0" d="M 274 28 L 266 16 271 15 C 271 15 271 14 271 14 L 258 9 263 5 C 263 4 262 4 262 4 L 248 6 250 0 C 250 0 250 0 250 0 L 238 8 237 3 C 236 3 236 3 236 3 L 231 16 226 11 C 226 11 226 12 226 12 L 228 26 222 24 C 222 24 222 24 222 24 L 230 36 224 37 C 224 38 225 38 225 38 L 238 43 233 48 C 233 48 234 48 234 48 L 248 46 246 52 C 246 52 246 52 246 52 L 258 44 259 49 C 260 49 260 49 260 49 L 265 36 270 41 C 270 41 270 41 270 40 L 268 26 274 28 C 274 28 274 28 274 28 L 274 28 Z"/>
+        <text id="Text_0_1_0" x="248" text-anchor="middle" y="31" vertical-align="middle" font-family="Times New Roman" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+        <animateTransform id="Rotate_1" fill="freeze" type="rotate" repeatCount="indefinite" calcMode="linear" attributeType="XML" attributeName="transform" additive="replace" accumulate="none" from="0.000000,248,26" to="360.000000,248,26" begin="indefinite" end="indefinite" dur="2.000000s" restart="whenNotActive"/>
+      </g>
+      <g id="0_1_1">
+        <g id="0_1_1_0" fill="rgb(181,203,133)" stroke="rgb(86,123,0)" stroke-width="2" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+          <path id="path_0_1_1_0" d="M 249 39 L 249 39 C 242 39 235 33 235 26 L 235 26 C 235 19 242 13 249 13 L 249 13 C 256 13 262 19 262 26 L 262 26 C 262 33 256 39 249 39 L 249 39 Z"/>
+          <text id="Text_0_1_1_0" x="239.000000" text-anchor="start" y="24.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+        </g>
+        <g id="0_1_1_1" fill="rgb(202,255,14)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+          <path id="path_0_1_1_1" d="M 249 33 L 249 33 C 245 33 242 30 242 26 L 242 26 C 242 22 245 19 249 19 L 249 19 C 253 19 256 22 256 26 L 256 26 C 256 30 253 33 249 33 L 249 33 Z"/>
+          <text id="Text_0_1_1_1" x="246.000000" text-anchor="start" y="30.000000" vertical-align="top" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"> </text>
+        </g>
+        <text id="Text_0_1_1" x="248.500000" text-anchor="start" y="65" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+      </g>
+      <text id="Text_0_1" x="248.500000" text-anchor="start" y="77" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+    </g>
+    <text id="Text_0" x="137.500000" text-anchor="start" y="173" font-family="SimSun" font-size="9.000000pt" fill="rgb(0,0,0)" stroke="none" stextLength="0" font-weight="400" xml:space="preserve"/>
+  </g>
+</svg>

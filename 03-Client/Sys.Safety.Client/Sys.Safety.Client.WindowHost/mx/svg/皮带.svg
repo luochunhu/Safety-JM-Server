@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 870 100" width="870" height="100" hape-rendering="geometricPrecision" xmlns:a="http://www.adobe.com/svg10-extensions" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <desc>100</desc>
+  <rect id="CHINPMC_BGK" width="870" height="100" fill="rgb(217,217,217)" stroke-width="0" stroke="none"/>
+  <defs>
+    <linearGradient id="42_0_linearGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.00" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+    </linearGradient>
+    <linearGradient id="42_1_linearGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.00" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+    </linearGradient>
+    <linearGradient id="42_16_linearGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.00" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+    </linearGradient>
+    <linearGradient id="42_17_linearGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.00" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+      <stop offset="1.00" stop-color="rgb(255,255,255)" stop-opacity="1.0"/>
+    </linearGradient>
+  </defs>
+  <g id="0" fill="url(#42_0_linearGradient)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_0" d="M 123 97 C 123 97 122 98 120 98 L 26 98 C 25 98 23 97 23 97 L 23 87 C 23 87 25 86 26 86 L 120 86 C 122 86 123 87 123 87 L 123 97 123 97 Z"/>
+  </g>
+  <g id="1" fill="url(#42_1_linearGradient)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_1" d="M 123 13 C 123 13 122 14 120 14 L 26 14 C 25 14 23 13 23 13 L 23 3 C 23 2 25 2 26 2 L 120 2 C 122 2 123 2 123 3 L 123 13 123 13 Z"/>
+  </g>
+  <g id="2" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_2" d="M 194 15 C 194 16 194 16 193 16 L 184 16 C 184 16 184 16 184 15 L 184 5 C 184 5 184 4 184 4 L 193 4 C 194 4 194 5 194 5 L 194 15 194 15 Z"/>
+  </g>
+  <g id="3" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_3" d="M 194 94 C 194 94 194 95 193 95 L 184 95 C 184 95 184 94 184 94 L 184 84 C 184 83 184 83 184 83 L 193 83 C 194 83 194 83 194 84 L 194 94 194 94 Z"/>
+  </g>
+  <g id="4" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_4" d="M 276 15 C 276 16 276 16 276 16 L 267 16 C 266 16 266 16 266 15 L 266 5 C 266 5 266 4 267 4 L 276 4 C 276 4 276 5 276 5 L 276 15 276 15 Z"/>
+  </g>
+  <g id="5" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_5" d="M 276 94 C 276 94 276 95 276 95 L 267 95 C 266 95 266 94 266 94 L 266 84 C 266 83 266 83 267 83 L 276 83 C 276 83 276 83 276 84 L 276 94 276 94 Z"/>
+  </g>
+  <g id="6" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_6" d="M 359 15 C 359 16 359 16 359 16 L 349 16 C 349 16 349 16 349 15 L 349 5 C 349 5 349 4 349 4 L 359 4 C 359 4 359 5 359 5 L 359 15 359 15 Z"/>
+  </g>
+  <g id="7" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_7" d="M 359 94 C 359 94 359 95 359 95 L 349 95 C 349 95 349 94 349 94 L 349 84 C 349 83 349 83 349 83 L 359 83 C 359 83 359 83 359 84 L 359 94 359 94 Z"/>
+  </g>
+  <g id="8" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_8" d="M 442 15 C 442 16 442 16 442 16 L 432 16 C 432 16 432 16 432 15 L 432 5 C 432 5 432 4 432 4 L 442 4 C 442 4 442 5 442 5 L 442 15 442 15 Z"/>
+  </g>
+  <g id="9" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_9" d="M 442 94 C 442 94 442 95 442 95 L 432 95 C 432 95 432 94 432 94 L 432 84 C 432 83 432 83 432 83 L 442 83 C 442 83 442 83 442 84 L 442 94 442 94 Z"/>
+  </g>
+  <g id="10" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_10" d="M 525 15 C 525 16 524 16 524 16 L 515 16 C 515 16 514 16 514 15 L 514 5 C 514 5 515 4 515 4 L 524 4 C 524 4 525 5 525 5 L 525 15 525 15 Z"/>
+  </g>
+  <g id="11" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_11" d="M 525 94 C 525 94 524 95 524 95 L 515 95 C 515 95 514 94 514 94 L 514 84 C 514 83 515 83 515 83 L 524 83 C 524 83 525 83 525 84 L 525 94 525 94 Z"/>
+  </g>
+  <g id="12" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_12" d="M 607 15 C 607 16 607 16 607 16 L 597 16 C 597 16 597 16 597 15 L 597 5 C 597 5 597 4 597 4 L 607 4 C 607 4 607 5 607 5 L 607 15 607 15 Z"/>
+  </g>
+  <g id="13" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_13" d="M 607 94 C 607 94 607 95 607 95 L 597 95 C 597 95 597 94 597 94 L 597 84 C 597 83 597 83 597 83 L 607 83 C 607 83 607 83 607 84 L 607 94 607 94 Z"/>
+  </g>
+  <g id="14" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_14" d="M 690 15 C 690 16 690 16 690 16 L 680 16 C 680 16 680 16 680 15 L 680 5 C 680 5 680 4 680 4 L 690 4 C 690 4 690 5 690 5 L 690 15 690 15 Z"/>
+  </g>
+  <g id="15" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_15" d="M 690 94 C 690 94 690 95 690 95 L 680 95 C 680 95 680 94 680 94 L 680 84 C 680 83 680 83 680 83 L 690 83 C 690 83 690 83 690 84 L 690 94 690 94 Z"/>
+  </g>
+  <g id="16" fill="url(#42_16_linearGradient)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_16" d="M 848 97 C 848 97 847 98 845 98 L 752 98 C 750 98 749 97 749 97 L 749 87 C 749 87 750 86 752 86 L 845 86 C 847 86 848 87 848 87 L 848 97 848 97 Z"/>
+  </g>
+  <g id="17" fill="url(#42_17_linearGradient)" stroke="rgb(0,0,0)" stroke-width="3" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_17" d="M 848 13 C 848 13 847 14 845 14 L 752 14 C 750 14 749 13 749 13 L 749 3 C 749 2 750 2 752 2 L 845 2 C 847 2 848 2 848 3 L 848 13 848 13 Z"/>
+  </g>
+  <g id="18" fill="rgb(43,122,202)" stroke="rgb(0,0,0)" stroke-width="2" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_18" d="M 867 81 C 867 83 866 84 864 84 L 4 84 C 2 84 1 83 1 81 L 1 18 C 1 17 2 15 4 15 L 864 15 C 866 15 867 17 867 18 L 867 81 867 81 Z"/>
+  </g>
+  <g id="19" fill="rgb(247,255,139)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" RefCenter="21,34">
+    <path id="path_19" d="M 21 45 L 48 45 37 34 51 34 67 50 51 66 37 66 48 54 21 54 21 45 Z"/>
+    <animateMotion id="Rotate_1" begin="indefinite" end="indefinite" attributeName="transform" attributeType="XML" type="translate" path="M 67 0 L 867 0" dur="3.000000s" additive="replace" fill="freeze" accumulate="none" repeatCount="indefinite"/>
+  </g>
+  <g id="20" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_20" d="M 108 45 L 135 45 124 34 138 34 154 50 138 66 124 66 135 54 108 54 108 45 Z"/>
+  </g>
+  <g id="21" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_21" d="M 195 45 L 223 45 211 34 225 34 241 50 225 66 211 66 223 54 195 54 195 45 Z"/>
+  </g>
+  <g id="22" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_22" d="M 282 45 L 310 45 299 34 312 34 328 50 312 66 299 66 310 54 282 54 282 45 Z"/>
+  </g>
+  <g id="23" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_23" d="M 369 45 L 397 45 386 34 399 34 415 50 399 66 386 66 397 54 369 54 369 45 Z"/>
+  </g>
+  <g id="24" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_24" d="M 456 45 L 484 45 473 34 486 34 502 50 486 66 473 66 484 54 456 54 456 45 Z"/>
+  </g>
+  <g id="25" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_25" d="M 544 45 L 571 45 560 34 573 34 589 50 573 66 560 66 571 54 544 54 544 45 Z"/>
+  </g>
+  <g id="26" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_26" d="M 631 45 L 658 45 647 34 661 34 676 50 661 66 647 66 658 54 631 54 631 45 Z"/>
+  </g>
+  <g id="27" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_27" d="M 718 45 L 745 45 734 34 748 34 764 50 748 66 734 66 745 54 718 54 718 45 Z"/>
+  </g>
+  <g id="28" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path id="path_28" d="M 805 45 L 832 45 821 34 835 34 851 50 835 66 821 66 832 54 805 54 805 45 Z"/>
+  </g>
+</svg>

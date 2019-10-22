@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FDEE6F92-8D6D-4627-808E-D6B83BF55DEF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sys.Safety.Processing</RootNamespace>
+    <AssemblyName>Sys.Safety.Processing</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\01-Library\Framework\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\..\01-Library\Framework\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Basic.Framework">
+      <HintPath>..\..\01-Library\Framework\Basic.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="DataAnalysis.Script">
+      <HintPath>..\..\01-Library\Framework\DataAnalysis.Script.dll</HintPath>
+    </Reference>
+    <Reference Include="LuaInterface, Version=2.0.0.29971, Culture=neutral, PublicKeyToken=1e1fb15b02227b8a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\01-Library\Framework\LuaInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="Sys.DataCollection.Common">
+      <HintPath>..\..\01-Library\Framework\Sys.DataCollection.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache\AlarmCacheCleanTask.cs" />
+    <Compile Include="Cache\RunLogCacheCleanTask.cs" />
+    <Compile Include="DataAnalysis\DataAnalysisNotificationService.cs" />
+    <Compile Include="DataAnalysis\DataAnalysisService.cs" />
+    <Compile Include="DataAnalysis\FactorCalculateService.cs" />
+    <Compile Include="DataAnalysis\FactorLuaService.cs" />
+    <Compile Include="DataAnalysis\Notification\AnalysisModelChangeNotification.cs" />
+    <Compile Include="DataAnalysis\Notification\HistoryDataCacheNotification.cs" />
+    <Compile Include="DataAnalysis\Notification\OutPutConfigChangeNotification.cs" />
+    <Compile Include="DataAnalysis\Notification\PointChangeNotification.cs" />
+    <Compile Include="DataProcessing\CacheDataHelper.cs" />
+    <Compile Include="DataProcessing\DataProcHandle.cs" />
+    <Compile Include="DataProcessing\DriverTransferInterface.cs" />
+    <Compile Include="DataProcessing\CrossDayAndFiveMiniteHandle.cs" />
+    <Compile Include="DataProcessing\DriverItem.cs" />
+    <Compile Include="DataProcessing\DriverHandle.cs" />
+    <Compile Include="DataProcessing\GlobleStaticVariable.cs" />
+    <Compile Include="DataProcessing\KJ237\PersonDataProcHandle.cs" />
+    <Compile Include="DataProcessing\PowerboxchargeManage.cs" />
+    <Compile Include="DataProcessing\RatioAlarmProcHandle.cs" />
+    <Compile Include="DataToDb\AccumulationDayDataToDb.cs" />
+    <Compile Include="DataToDb\AccumulationHourDataToDb.cs" />
+    <Compile Include="DataToDb\AccumulationMonthDataToDb.cs" />
+    <Compile Include="DataToDb\AccumulationYearDataToDb.cs" />
+    <Compile Include="DataToDb\R_AlarmDataInsertToDb.cs" />
+    <Compile Include="DataToDb\AlarmDataInsertToDb.cs" />
+    <Compile Include="DataToDb\DataToDbManager.cs" />
+    <Compile Include="DataToDb\FeedDataInsertToDb.cs" />
+    <Compile Include="DataToDb\FiveMinDataInsertToDb.cs" />
+    <Compile Include="DataToDb\InitialDataInsertToDb.cs" />
+    <Compile Include="DataToDb\R_RunLogDataInsertToDb.cs" />
+    <Compile Include="DataToDb\RunLogDataInsertToDb.cs" />
+    <Compile Include="DataToDb\R_PbDataToDb.cs" />
+    <Compile Include="DataToDb\R_PHistoryDataToDb.cs" />
+    <Compile Include="DataToDb\R_AreaAlarmDataToDb.cs" />
+    <Compile Include="DataToDb\R_PhjDataToDb.cs" />
+    <Compile Include="DataProcessing\KJ237\KJ237CacheHelper.cs" />
+    <Compile Include="Linkage\LinkageToMonitor\IRLService.cs" />
+    <Compile Include="Linkage\LinkageToMonitor\RealDevice.cs" />
+    <Compile Include="Linkage\LinkageToMonitor\WcfChannelFactory.cs" />
+    <Compile Include="Linkage\LinkageToMonitor\LinkageToMonitor.cs" />
+    <Compile Include="Linkage\LinkageAnalyze.cs" />
+    <Compile Include="LocalDataToDb\AccumulationDayLocalDataToDbTask.cs" />
+    <Compile Include="LocalDataToDb\AccumulationHourLocalDataToDbTask.cs" />
+    <Compile Include="LocalDataToDb\AccumulationMonthLocalDataToDbTask.cs" />
+    <Compile Include="LocalDataToDb\AccumulationYearLocalDataToDbTask.cs" />
+    <Compile Include="LocalDataToDb\AlarmLocalDataToDbTask.cs" />
+    <Compile Include="LocalDataToDb\FeedLocalDataToDbTask.cs" />
+    <Compile Include="LocalDataToDb\FiveMinLocalDataToDbTask.cs" />
+    <Compile Include="LocalDataToDb\InitialLocalDataToDbTask.cs" />
+    <Compile Include="LocalDataToDb\LocalDataToDbManager.cs" />
+    <Compile Include="LocalDataToDb\RunLogLocalDataToDbTask.cs" />
+    <Compile Include="ProcessDataToDb\AccumulationDayDataToDbTask.cs" />
+    <Compile Include="ProcessDataToDb\AccumulationHourDataToDbTask.cs" />
+    <Compile Include="ProcessDataToDb\AccumulationMonthDataToDbTask.cs" />
+    <Compile Include="ProcessDataToDb\AccumulationYearDataToDbTask.cs" />
+    <Compile Include="ProcessDataToDb\AlarmDataToDbTask.cs" />
+    <Compile Include="ProcessDataToDb\FeedDataToDbTask.cs" />
+    <Compile Include="ProcessDataToDb\FiveMinDataToDbTask.cs" />
+    <Compile Include="ProcessDataToDb\InitialDataToDbTask.cs" />
+    <Compile Include="ProcessDataToDb\ProcessDataToDbManager.cs" />
+    <Compile Include="ProcessDataToDb\RunLogDataToDbTask.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryCacheData\QueryCacheDataToGateway.cs" />
+    <Compile Include="Rpc\RpcService.cs" />
+    <Compile Include="SpecialDataAnalyze\GasContentAnalyze.cs" />
+    <Compile Include="Statistics\Calibration.cs" />
+    <Compile Include="Statistics\DataStatistics.cs" />
+    <Compile Include="Statistics\ElectricityStatistics.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\06-Drivers\Sys.Safety.Interface\Sys.Safety.Interface.csproj">
+      <Project>{b43ed9fa-12ac-43e5-9f7e-ef3a5d043299}</Project>
+      <Name>Sys.Safety.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Cache\Sys.Safety.Cache.csproj">
+      <Project>{43505E0C-55A1-4BF5-A89F-989D19A846DC}</Project>
+      <Name>Sys.Safety.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Common\Sys.Safety.Common.csproj">
+      <Project>{8e5d494d-95b5-46ae-9642-92d04410a5f9}</Project>
+      <Name>Sys.Safety.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.DataContract\Sys.Safety.DataContract.csproj">
+      <Project>{bb6fbb99-66e9-4d1e-b1d1-d585a0151505}</Project>
+      <Name>Sys.Safety.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Model\Sys.Safety.Model.csproj">
+      <Project>{3b9ff2e1-f240-4bb3-a116-5976892a2301}</Project>
+      <Name>Sys.Safety.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Enums\Sys.Safety.Enums.csproj">
+      <Project>{59d5703e-ea5e-4836-b557-1b99e80754e4}</Project>
+      <Name>Sys.Safety.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Request\Sys.Safety.Request.csproj">
+      <Project>{c17815bf-001e-4872-a45e-0e6e48a59f0f}</Project>
+      <Name>Sys.Safety.Request</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.ServiceContract\Sys.Safety.ServiceContract.csproj">
+      <Project>{f723137b-dc93-4e92-b3a3-c02281b46e0f}</Project>
+      <Name>Sys.Safety.ServiceContract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Chart\" />
+    <Folder Include="ClientFramework\" />
+    <Folder Include="ListReport\" />
+    <Folder Include="UserRoleAuthorize\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79CB4602-86F9-4A51-B2E6-DF627D960341}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sys.Safety.WebApiAgent</RootNamespace>
+    <AssemblyName>Sys.Safety.WebApiAgent</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Basic.Framework">
+      <HintPath>..\..\01-Library\Framework\Basic.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Sys.DataCollection.Common">
+      <HintPath>..\..\01-Library\Framework\Sys.DataCollection.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalysisTemplateAlarmLevelControllerProxy.cs" />
+    <Compile Include="AreaControllerProxy.cs" />
+    <Compile Include="AreaRuleControllerProxy.cs" />
+    <Compile Include="BroadCastPointDefineControllerProxy.cs" />
+    <Compile Include="B_CallControllerProxy.cs" />
+    <Compile Include="B_MusicfilesControllerProxy.cs" />
+    <Compile Include="EmergencyLinkHistoryControllerProxy.cs" />
+    <Compile Include="GascontentanalyzeconfigControllerProxy.cs" />
+    <Compile Include="GasContentControllerProxy.cs" />
+    <Compile Include="Jc_RControllerProxy.cs" />
+    <Compile Include="KJ_AddresstyperuleControllerProxy.cs" />
+    <Compile Include="LargeDataAnalysisConfigCacheControllerProxy.cs" />
+    <Compile Include="LargeDataAnalysisLastChangedControllerProxy.cs" />
+    <Compile Include="ListdataremarkControllerProxy.cs" />
+    <Compile Include="Message\MsgLogControllerProxy.cs" />
+    <Compile Include="Message\MsgRuleControllerProxy.cs" />
+    <Compile Include="Message\MsgUserRuleControllerProxy.cs" />
+    <Compile Include="MultiplesettingControllerProxy.cs" />
+    <Compile Include="AlarmHandleControllerProxy.cs" />
+    <Compile Include="AlarmModule\RatioAlarmCacheServiceControllerProxy.cs" />
+    <Compile Include="AlarmModule\AlarmServiceControllerProxy.cs" />
+    <Compile Include="AlarmNotificationPersonnelConfigControllerProxy.cs" />
+    <Compile Include="AlarmNotificationPersonnelControllerProxy.cs" />
+    <Compile Include="AlarmRecordControllerProxy.cs" />
+    <Compile Include="AnalysisTemplateConfigControllerProxy.cs" />
+    <Compile Include="AnalysisTemplateControllerProxy.cs" />
+    <Compile Include="AnalyticalExpressionControllerProxy.cs" />
+    <Compile Include="App\KJ73NAppControllerProxy.cs" />
+    <Compile Include="BaseProxy.cs" />
+    <Compile Include="CalibrationDefControllerProxy.cs" />
+    <Compile Include="CalibrationStatisticsControllerProxy.cs" />
+    <Compile Include="Chart\ChartControllerProxy.cs" />
+    <Compile Include="ClassControllerProxy.cs" />
+    <Compile Include="ClientFramework\ConfigControllerProxy.cs" />
+    <Compile Include="ClientFramework\EnumcodeControllerProxy.cs" />
+    <Compile Include="ClientFramework\EnumtypeControllerProxy.cs" />
+    <Compile Include="ClientFramework\OperatelogControllerProxy.cs" />
+    <Compile Include="ClientFramework\RemoteStateControllerProxy.cs" />
+    <Compile Include="ClientFramework\RunlogControllerProxy.cs" />
+    <Compile Include="ClientFramework\SettingControllerProxy.cs" />
+    <Compile Include="Control\ControlControllerProxy.cs" />
+    <Compile Include="EmergencyLinkageConfigControllerProxy.cs" />
+    <Compile Include="GraphicsbaseinfControllerProxy.cs" />
+    <Compile Include="GraphicspointsinfControllerProxy.cs" />
+    <Compile Include="GraphicsrouteinfControllerProxy.cs" />
+    <Compile Include="HourServiceControllerProxy.cs" />
+    <Compile Include="LargeDataAnalysisCacheClientControllerProxy.cs" />
+    <Compile Include="NetworkModuleControllerProxy.cs" />
+    <Compile Include="ManualCrossControlControllerProxy.cs" />
+    <Compile Include="DeviceDefineControllerProxy.cs" />
+    <Compile Include="PersonPointDefineControllerProxy.cs" />
+    <Compile Include="AllSystemPointDefineControllerProxy.cs" />
+    <Compile Include="PowerboxchargehistoryControllerProxy.cs" />
+    <Compile Include="RolewebmenuControllerProxy.cs" />
+    <Compile Include="R_PhistoryControllerProxy.cs" />
+    <Compile Include="R_PhjControllerProxy.cs" />
+    <Compile Include="R_DeptControllerProxy.cs" />
+    <Compile Include="R_KqbcControllerProxy.cs" />
+    <Compile Include="R_CallControllerProxy.cs" />
+    <Compile Include="R_UndefinedDefControllerProxy.cs" />
+    <Compile Include="R_PrealControllerProxy.cs" />
+    <Compile Include="R_PersoninfControllerProxy.cs" />
+    <Compile Include="StationUpdateControllerProxy.cs" />
+    <Compile Include="PointDefineControllerProxy.cs" />
+    <Compile Include="ExpressionConfigControllerProxy.cs" />
+    <Compile Include="FactorControllerProxy.cs" />
+    <Compile Include="RealModule\DeviceKoriyasuControllerProxy.cs" />
+    <Compile Include="ReportControllerProxy.cs" />
+    <Compile Include="ShortCutMenuControllerProxy.cs" />
+    <Compile Include="StaionControlHistoryDataController.cs" />
+    <Compile Include="StaionHistoryDataController.cs" />
+    <Compile Include="PositionControllerProxy.cs" />
+    <Compile Include="LargedataAnalysisConfigControllerProxy.cs" />
+    <Compile Include="LargedataAnalysisLogControllerProxy.cs" />
+    <Compile Include="ListcommandexControllerProxy.cs" />
+    <Compile Include="ListdataexControllerProxy.cs" />
+    <Compile Include="ListdatalayountControllerProxy.cs" />
+    <Compile Include="ListdisplayexControllerProxy.cs" />
+    <Compile Include="ListexControllerProxy.cs" />
+    <Compile Include="ListmetadataControllerProxy.cs" />
+    <Compile Include="ListReport\SqlControllerProxy.cs" />
+    <Compile Include="ListtempleControllerProxy.cs" />
+    <Compile Include="MetadataControllerProxy.cs" />
+    <Compile Include="MetadatafieldsControllerProxy.cs" />
+    <Compile Include="ParameterControllerProxy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealModule\CalibrationControllerProxy.cs" />
+    <Compile Include="RealModule\RealMessageControllerProxy.cs" />
+    <Compile Include="RegionOutageConfigControllerProxy.cs" />
+    <Compile Include="SetAnalysisModelPointRecordControllerProxy.cs" />
+    <Compile Include="SysEmergencyLinkageControllerProxy.cs" />
+    <Compile Include="UserRoleAuthorize\LoginControllerProxy.cs" />
+    <Compile Include="UserRoleAuthorize\MenuControllerProxy.cs" />
+    <Compile Include="UserRoleAuthorize\RequestControllerProxy.cs" />
+    <Compile Include="UserRoleAuthorize\RightControllerProxy.cs" />
+    <Compile Include="UserRoleAuthorize\RoleControllerProxy.cs" />
+    <Compile Include="UserRoleAuthorize\RolerightControllerProxy.cs" />
+    <Compile Include="UserRoleAuthorize\UserControllerProxy.cs" />
+    <Compile Include="UserRoleAuthorize\UserroleControllerProxy.cs" />
+    <Compile Include="KJ_AddresstypeControllerProxy.cs" />
+    <Compile Include="V_DefControllerProxy.cs" />
+    <Compile Include="WebmenuControllerProxy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sys.Safety.DataContract\Sys.Safety.DataContract.csproj">
+      <Project>{bb6fbb99-66e9-4d1e-b1d1-d585a0151505}</Project>
+      <Name>Sys.Safety.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Request\Sys.Safety.Request.csproj">
+      <Project>{c17815bf-001e-4872-a45e-0e6e48a59f0f}</Project>
+      <Name>Sys.Safety.Request</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.ServiceContract\Sys.Safety.ServiceContract.csproj">
+      <Project>{f723137b-dc93-4e92-b3a3-c02281b46e0f}</Project>
+      <Name>Sys.Safety.ServiceContract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

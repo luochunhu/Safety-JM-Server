@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.0" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="220px" height="220px"
+	 viewBox="0 0 220 220" xml:space="preserve">
+<g>
+	<path fill="#001322" d="M34.1,111.1V16.5c0,0-1.8-7.7,11-7.7s138.2,0,138.2,0S191,7,191,19.1s0,91.3,0,91.3L34.1,111.1z"/>
+	<rect x="41.8" y="18" fill="#777D80" width="140.8" height="85.1"/>
+	<polygon fill="#001322" points="34.1,110.7 0.4,129.8 0.4,140.1 220.4,140.1 220.4,128.7 191.4,110 	"/>
+	<polygon fill="#777D80" points="1.8,129.8 219.6,129.8 216.7,126.9 6.2,126.9 	"/>
+	<polygon fill="#413D3C" points="97.9,132.7 97.9,137.1 126.9,137.1 126.9,132.7 	"/>
+	<g>
+		<rect x="37.4" y="114.4" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="52.1" y="114.4" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="66.7" y="114.4" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="81.4" y="114.4" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="96.1" y="114.4" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="110.7" y="114.4" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="125.4" y="114.4" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="141.2" y="114.4" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="156.6" y="114.4" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="171.2" y="114.4" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="31.5" y="118.1" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="46.6" y="118.1" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="61.6" y="118.1" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="77" y="118.1" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="92" y="118.1" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="107.4" y="118.1" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="122.5" y="118.1" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="137.5" y="118.1" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="152.9" y="118.1" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="167.9" y="118.1" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="183.3" y="118.1" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="26" y="121.7" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="42.2" y="121.7" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="58.3" y="121.7" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="74.1" y="121.7" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="90.2" y="121.7" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="106.3" y="121.7" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="122.1" y="121.7" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="138.2" y="121.7" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="154.4" y="121.7" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="170.1" y="121.7" fill="#545252" width="11.7" height="2.2"/>
+		<rect x="186.3" y="121.7" fill="#545252" width="11.7" height="2.2"/>
+	</g>
+	
+		<radialGradient id="SVGID_1_" cx="88.7818" cy="145.3182" r="15.292" gradientTransform="matrix(3.6667 0 0 -3.6667 -213.3333 593.3334)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#DEF1FB"/>
+		<stop  offset="1" style="stop-color:#A3DAF6"/>
+	</radialGradient>
+	<rect x="44.4" y="19.4" fill="url(#SVGID_1_)" width="135.7" height="82.1"/>
+</g>
+</svg>
