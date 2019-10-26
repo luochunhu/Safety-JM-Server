@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43505E0C-55A1-4BF5-A89F-989D19A846DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sys.Safety.Cache</RootNamespace>
+    <AssemblyName>Sys.Safety.Cache</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\01-Library\Framework\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Basic.Cache">
+      <HintPath>..\..\01-Library\Framework\Basic.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="Basic.Framework">
+      <HintPath>..\..\01-Library\Framework\Basic.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Sys.DataCollection.Common">
+      <HintPath>..\..\01-Library\Framework\Sys.DataCollection.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\B_CallCache.cs" />
+    <Compile Include="Audio\B_DefCache.cs" />
+    <Compile Include="BigDataAnalysis\AlarmConfigCache.cs" />
+    <Compile Include="BigDataAnalysis\AnalysisModelCache.cs" />
+    <Compile Include="BigDataAnalysis\EmergencyLinkageConfigCache.cs" />
+    <Compile Include="BigDataAnalysis\ExpressionRealTimeResultCache.cs" />
+    <Compile Include="BigDataAnalysis\HistoryDataCache.cs" />
+    <Compile Include="BigDataAnalysis\PointCache.cs" />
+    <Compile Include="BigDataAnalysis\RegionOutageConfigCache.cs" />
+    <Compile Include="BigDataAnalysis\SysEmergencyLinkageCache.cs" />
+    <Compile Include="ICacheManager.cs" />
+    <Compile Include="Person\KJ237CacheHelper.cs" />
+    <Compile Include="Person\AreaCache.cs" />
+    <Compile Include="Person\RUndefinedDefCache.cs" />
+    <Compile Include="Person\RKqbcCache.cs" />
+    <Compile Include="Person\RCallCache.cs" />
+    <Compile Include="Person\RPersoninfCache.cs" />
+    <Compile Include="Person\RPointDefineCache.cs" />
+    <Compile Include="Person\RPRealCache.cs" />
+    <Compile Include="Person\R_PBCache.cs" />
+    <Compile Include="Safety\AnalysisTemplateAlarmLevelCache.cs" />
+    <Compile Include="Safety\GasContentAlarmCache.cs" />
+    <Compile Include="Safety\GasContentAnalyzeConfigCache.cs" />
+    <Compile Include="Safety\RatioAlarmCache.cs" />
+    <Compile Include="Safety\AlarmCache.cs" />
+    <Compile Include="CacheExtendHelper.cs" />
+    <Compile Include="Safety\DeviceClassCache.cs" />
+    <Compile Include="Safety\DeviceDefineCache.cs" />
+    <Compile Include="Safety\DevicePropertyCache.cs" />
+    <Compile Include="Safety\DeviceTypeCache.cs" />
+    <Compile Include="Safety\LargeDataAnalysisConfigCache.cs" />
+    <Compile Include="Safety\ManualCrossControlCache.cs" />
+    <Compile Include="Safety\NetworkModuleCache.cs" />
+    <Compile Include="Safety\PointDefineCache.cs" />
+    <Compile Include="Safety\PositionCache.cs" />
+    <Compile Include="Safety\AutomaticArticulatedDeviceCache.cs" />
+    <Compile Include="Safety\RunLogCache.cs" />
+    <Compile Include="Safety\SettingCache.cs" />
+    <Compile Include="Safety\ConfigCache.cs" />
+    <Compile Include="Safety\KJ73NCacheManager.cs" />
+    <Compile Include="Safety\StationUpdateCache.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Video\V_DefCache.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sys.Safety.DataContract\Sys.Safety.DataContract.csproj">
+      <Project>{bb6fbb99-66e9-4d1e-b1d1-d585a0151505}</Project>
+      <Name>Sys.Safety.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Enums\Sys.Safety.Enums.csproj">
+      <Project>{59d5703e-ea5e-4836-b557-1b99e80754e4}</Project>
+      <Name>Sys.Safety.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.Request\Sys.Safety.Request.csproj">
+      <Project>{c17815bf-001e-4872-a45e-0e6e48a59f0f}</Project>
+      <Name>Sys.Safety.Request</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sys.Safety.ServiceContract\Sys.Safety.ServiceContract.csproj">
+      <Project>{f723137b-dc93-4e92-b3a3-c02281b46e0f}</Project>
+      <Name>Sys.Safety.ServiceContract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
