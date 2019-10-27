@@ -3209,4 +3209,21 @@ Delete from KJ_ManualControl where (type != 0 and type != 12);Update KJ_ManualCo
       <![CDATA[]]>
     </sqlite>
   </cmd>
+  <cmd name="global_DeleteJCAlarmForStimeEtime">
+    <sqlserver>
+      <![CDATA[
+      ]]>
+    </sqlserver>
+    <mysql>
+      <![CDATA[
+  Delete from kj_dataalarm{0} where stime=etime;
+    ]]>
+    </mysql>
+    <oracle>
+      <![CDATA[]]>
+    </oracle>
+    <sqlite>
+      <![CDATA[]]>
+    </sqlite>
+  </cmd>
 </cmds>

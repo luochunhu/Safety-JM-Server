@@ -28,22 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mnl_LineWithCoordinate));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY1 = new DevExpress.XtraCharts.SecondaryAxisY();
             DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY2 = new DevExpress.XtraCharts.SecondaryAxisY();
+            DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY3 = new DevExpress.XtraCharts.SecondaryAxisY();
+            DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY4 = new DevExpress.XtraCharts.SecondaryAxisY();
+            DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY5 = new DevExpress.XtraCharts.SecondaryAxisY();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
             DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
             DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView4 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView5 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.Series series6 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView6 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView7 = new DevExpress.XtraCharts.LineSeriesView();
             DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mnl_LineWithCoordinate));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.comboBoxEdit6 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxEdit5 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxEdit4 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmb_lc = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.checkEdit10 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit9 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit8 = new DevExpress.XtraEditors.CheckEdit();
@@ -62,8 +77,6 @@
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -86,12 +99,17 @@
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.checkEdit13 = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmb_lc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit10.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit9.Properties)).BeginInit();
@@ -115,28 +133,45 @@
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(secondaryAxisY1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(secondaryAxisY2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit13.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.checkEdit13);
+            this.panelControl1.Controls.Add(this.comboBoxEdit6);
+            this.panelControl1.Controls.Add(this.comboBoxEdit5);
+            this.panelControl1.Controls.Add(this.comboBoxEdit4);
+            this.panelControl1.Controls.Add(this.cmb_lc);
+            this.panelControl1.Controls.Add(this.labelControl8);
             this.panelControl1.Controls.Add(this.simpleButton5);
             this.panelControl1.Controls.Add(this.simpleButton3);
             this.panelControl1.Controls.Add(this.radioGroup1);
+            this.panelControl1.Controls.Add(this.labelControl5);
             this.panelControl1.Controls.Add(this.checkEdit10);
             this.panelControl1.Controls.Add(this.checkEdit9);
             this.panelControl1.Controls.Add(this.checkEdit8);
@@ -155,52 +190,112 @@
             this.panelControl1.Controls.Add(this.comboBoxEdit1);
             this.panelControl1.Controls.Add(this.dateEdit2);
             this.panelControl1.Controls.Add(this.dateEdit1);
-            this.panelControl1.Controls.Add(this.labelControl5);
-            this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.labelControl4);
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Location = new System.Drawing.Point(2, 2);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1010, 99);
+            this.panelControl1.Size = new System.Drawing.Size(1010, 148);
             this.panelControl1.TabIndex = 12;
+            // 
+            // comboBoxEdit6
+            // 
+            this.comboBoxEdit6.Location = new System.Drawing.Point(641, 67);
+            this.comboBoxEdit6.Name = "comboBoxEdit6";
+            this.comboBoxEdit6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit6.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxEdit6.Size = new System.Drawing.Size(283, 20);
+            this.comboBoxEdit6.TabIndex = 117;
+            // 
+            // comboBoxEdit5
+            // 
+            this.comboBoxEdit5.Location = new System.Drawing.Point(345, 67);
+            this.comboBoxEdit5.Name = "comboBoxEdit5";
+            this.comboBoxEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit5.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxEdit5.Size = new System.Drawing.Size(290, 20);
+            this.comboBoxEdit5.TabIndex = 118;
+            // 
+            // comboBoxEdit4
+            // 
+            this.comboBoxEdit4.Location = new System.Drawing.Point(68, 67);
+            this.comboBoxEdit4.Name = "comboBoxEdit4";
+            this.comboBoxEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit4.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxEdit4.Size = new System.Drawing.Size(272, 20);
+            this.comboBoxEdit4.TabIndex = 119;
+            // 
+            // cmb_lc
+            // 
+            this.cmb_lc.EditValue = "自动";
+            this.cmb_lc.Location = new System.Drawing.Point(352, 11);
+            this.cmb_lc.Name = "cmb_lc";
+            this.cmb_lc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmb_lc.Properties.Items.AddRange(new object[] {
+            "自动",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cmb_lc.Size = new System.Drawing.Size(46, 20);
+            this.cmb_lc.TabIndex = 115;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(318, 14);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(36, 14);
+            this.labelControl8.TabIndex = 114;
+            this.labelControl8.Text = "量程：";
             // 
             // simpleButton5
             // 
-            this.simpleButton5.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(941, 5);
+            this.simpleButton5.Location = new System.Drawing.Point(567, 10);
             this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(64, 30);
+            this.simpleButton5.Size = new System.Drawing.Size(64, 23);
             this.simpleButton5.TabIndex = 109;
-            this.simpleButton5.Text = "向后";
+            this.simpleButton5.Text = "后一天";
             this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(869, 5);
+            this.simpleButton3.Location = new System.Drawing.Point(495, 10);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(64, 30);
+            this.simpleButton3.Size = new System.Drawing.Size(64, 23);
             this.simpleButton3.TabIndex = 110;
-            this.simpleButton3.Text = "向前";
+            this.simpleButton3.Text = "前一天";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // radioGroup1
             // 
-            this.radioGroup1.Location = new System.Drawing.Point(604, 10);
+            this.radioGroup1.Location = new System.Drawing.Point(793, 10);
             this.radioGroup1.Name = "radioGroup1";
             this.radioGroup1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.radioGroup1.Properties.Appearance.Options.UseBackColor = true;
             this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "活动测点"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "所有测点")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "已定义测点"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "已存储测点")});
             this.radioGroup1.Size = new System.Drawing.Size(183, 23);
             this.radioGroup1.TabIndex = 101;
             this.radioGroup1.SelectedIndexChanged += new System.EventHandler(this.radioGroup1_SelectedIndexChanged);
             // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Gray;
+            this.labelControl5.Location = new System.Drawing.Point(5, 119);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(292, 14);
+            this.labelControl5.TabIndex = 15;
+            this.labelControl5.Text = "操作提示:双击曲线显示详情，鼠标滚轮全局放大或缩小";
+            // 
             // checkEdit10
             // 
-            this.checkEdit10.Location = new System.Drawing.Point(656, 73);
+            this.checkEdit10.Location = new System.Drawing.Point(663, 94);
             this.checkEdit10.Name = "checkEdit10";
             this.checkEdit10.Properties.Caption = "复电值";
             this.checkEdit10.Size = new System.Drawing.Size(75, 19);
@@ -210,7 +305,7 @@
             // checkEdit9
             // 
             this.checkEdit9.EditValue = true;
-            this.checkEdit9.Location = new System.Drawing.Point(599, 73);
+            this.checkEdit9.Location = new System.Drawing.Point(601, 94);
             this.checkEdit9.Name = "checkEdit9";
             this.checkEdit9.Properties.Caption = "断电值";
             this.checkEdit9.Size = new System.Drawing.Size(75, 19);
@@ -220,7 +315,7 @@
             // checkEdit8
             // 
             this.checkEdit8.EditValue = true;
-            this.checkEdit8.Location = new System.Drawing.Point(538, 72);
+            this.checkEdit8.Location = new System.Drawing.Point(540, 95);
             this.checkEdit8.Name = "checkEdit8";
             this.checkEdit8.Properties.Caption = "报警值";
             this.checkEdit8.Size = new System.Drawing.Size(75, 19);
@@ -229,7 +324,7 @@
             // 
             // checkEdit11
             // 
-            this.checkEdit11.Location = new System.Drawing.Point(476, 72);
+            this.checkEdit11.Location = new System.Drawing.Point(478, 95);
             this.checkEdit11.Name = "checkEdit11";
             this.checkEdit11.Properties.Caption = "预警值";
             this.checkEdit11.Size = new System.Drawing.Size(75, 19);
@@ -238,7 +333,7 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(417, 74);
+            this.labelControl6.Location = new System.Drawing.Point(419, 97);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(60, 14);
             this.labelControl6.TabIndex = 22;
@@ -246,7 +341,7 @@
             // 
             // checkEdit4
             // 
-            this.checkEdit4.Location = new System.Drawing.Point(209, 70);
+            this.checkEdit4.Location = new System.Drawing.Point(207, 94);
             this.checkEdit4.Name = "checkEdit4";
             this.checkEdit4.Properties.Caption = "最小值";
             this.checkEdit4.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
@@ -256,7 +351,7 @@
             // 
             // checkEdit7
             // 
-            this.checkEdit7.Location = new System.Drawing.Point(354, 71);
+            this.checkEdit7.Location = new System.Drawing.Point(352, 94);
             this.checkEdit7.Name = "checkEdit7";
             this.checkEdit7.Properties.Caption = "移动值";
             this.checkEdit7.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
@@ -266,7 +361,7 @@
             // 
             // checkEdit2
             // 
-            this.checkEdit2.Location = new System.Drawing.Point(66, 70);
+            this.checkEdit2.Location = new System.Drawing.Point(64, 94);
             this.checkEdit2.Name = "checkEdit2";
             this.checkEdit2.Properties.Caption = "监测值";
             this.checkEdit2.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
@@ -276,17 +371,16 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(882, 39);
+            this.simpleButton2.Location = new System.Drawing.Point(721, 10);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(83, 30);
+            this.simpleButton2.Size = new System.Drawing.Size(67, 23);
             this.simpleButton2.TabIndex = 3;
             this.simpleButton2.Text = "导出图片";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // checkEdit5
             // 
-            this.checkEdit5.Location = new System.Drawing.Point(282, 71);
+            this.checkEdit5.Location = new System.Drawing.Point(279, 94);
             this.checkEdit5.Name = "checkEdit5";
             this.checkEdit5.Properties.Caption = "平均值";
             this.checkEdit5.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
@@ -296,18 +390,17 @@
             // 
             // simpleButton4
             // 
-            this.simpleButton4.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(794, 39);
+            this.simpleButton4.Location = new System.Drawing.Point(644, 10);
             this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(82, 30);
+            this.simpleButton4.Size = new System.Drawing.Size(71, 23);
             this.simpleButton4.TabIndex = 3;
-            this.simpleButton4.Text = "打印";
+            this.simpleButton4.Text = "打印曲线";
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // checkEdit3
             // 
             this.checkEdit3.EditValue = true;
-            this.checkEdit3.Location = new System.Drawing.Point(138, 70);
+            this.checkEdit3.Location = new System.Drawing.Point(136, 94);
             this.checkEdit3.Name = "checkEdit3";
             this.checkEdit3.Properties.Caption = "最大值";
             this.checkEdit3.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
@@ -317,99 +410,82 @@
             // 
             // simpleButton7
             // 
-            this.simpleButton7.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton7.Image")));
-            this.simpleButton7.Location = new System.Drawing.Point(793, 5);
+            this.simpleButton7.Location = new System.Drawing.Point(419, 10);
             this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(68, 30);
+            this.simpleButton7.Size = new System.Drawing.Size(68, 23);
             this.simpleButton7.TabIndex = 3;
             this.simpleButton7.Text = "查询";
             this.simpleButton7.Click += new System.EventHandler(this.simpleButton7_Click);
             // 
             // comboBoxEdit3
             // 
-            this.comboBoxEdit3.Location = new System.Drawing.Point(383, 38);
+            this.comboBoxEdit3.Location = new System.Drawing.Point(641, 41);
             this.comboBoxEdit3.Name = "comboBoxEdit3";
             this.comboBoxEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.comboBoxEdit3.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit3.Size = new System.Drawing.Size(215, 20);
+            this.comboBoxEdit3.Size = new System.Drawing.Size(283, 20);
             this.comboBoxEdit3.TabIndex = 2;
             // 
             // comboBoxEdit2
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(382, 10);
+            this.comboBoxEdit2.Location = new System.Drawing.Point(345, 41);
             this.comboBoxEdit2.Name = "comboBoxEdit2";
             this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.comboBoxEdit2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit2.Size = new System.Drawing.Size(216, 20);
+            this.comboBoxEdit2.Size = new System.Drawing.Size(290, 20);
             this.comboBoxEdit2.TabIndex = 2;
             // 
             // comboBoxEdit1
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(71, 41);
+            this.comboBoxEdit1.Location = new System.Drawing.Point(68, 41);
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit1.Size = new System.Drawing.Size(242, 20);
+            this.comboBoxEdit1.Size = new System.Drawing.Size(272, 20);
             this.comboBoxEdit1.TabIndex = 2;
             // 
             // dateEdit2
             // 
             this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(192, 11);
+            this.dateEdit2.Location = new System.Drawing.Point(187, 11);
             this.dateEdit2.Name = "dateEdit2";
             this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.dateEdit2.Size = new System.Drawing.Size(121, 20);
+            this.dateEdit2.Size = new System.Drawing.Size(123, 20);
             this.dateEdit2.TabIndex = 1;
             this.dateEdit2.EditValueChanged += new System.EventHandler(this.dateEdit2_EditValueChanged);
             // 
             // dateEdit1
             // 
             this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(71, 11);
+            this.dateEdit1.Location = new System.Drawing.Point(69, 11);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.dateEdit1.Size = new System.Drawing.Size(115, 20);
+            this.dateEdit1.Size = new System.Drawing.Size(107, 20);
             this.dateEdit1.TabIndex = 1;
             this.dateEdit1.EditValueChanged += new System.EventHandler(this.dateEdit1_EditValueChanged);
             // 
-            // labelControl5
-            // 
-            this.labelControl5.Location = new System.Drawing.Point(316, 41);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(67, 14);
-            this.labelControl5.TabIndex = 0;
-            this.labelControl5.Text = "选择测点3：";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(316, 13);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(67, 14);
-            this.labelControl2.TabIndex = 0;
-            this.labelControl2.Text = "选择测点2：";
-            // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(5, 44);
+            this.labelControl3.Location = new System.Drawing.Point(7, 44);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(67, 14);
+            this.labelControl3.Size = new System.Drawing.Size(60, 14);
             this.labelControl3.TabIndex = 0;
-            this.labelControl3.Text = "选择测点1：";
+            this.labelControl3.Text = "选择测点：";
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(7, 73);
+            this.labelControl4.Location = new System.Drawing.Point(5, 97);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(60, 14);
             this.labelControl4.TabIndex = 0;
@@ -417,7 +493,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(9, 13);
+            this.labelControl1.Location = new System.Drawing.Point(7, 14);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(60, 14);
             this.labelControl1.TabIndex = 0;
@@ -431,7 +507,6 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(586, 253, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(1014, 741);
             this.layoutControl1.TabIndex = 13;
@@ -447,6 +522,7 @@
             xyDiagram1.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second;
             xyDiagram1.AxisX.Label.DateTimeOptions.AutoFormat = false;
             xyDiagram1.AxisX.Label.DateTimeOptions.Format = DevExpress.XtraCharts.DateTimeFormat.Custom;
+            xyDiagram1.AxisX.Label.DateTimeOptions.FormatString = "MM-dd HH:mm";
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.Color = System.Drawing.Color.Green;
             xyDiagram1.AxisY.Label.NumericOptions.Format = DevExpress.XtraCharts.NumericFormat.Number;
@@ -483,6 +559,7 @@
             secondaryAxisY2.AxisID = 1;
             secondaryAxisY2.Color = System.Drawing.Color.Purple;
             secondaryAxisY2.Name = "中学 AxisY2";
+            secondaryAxisY2.Visible = false;
             secondaryAxisY2.VisibleInPanesSerializable = "-1";
             secondaryAxisY2.VisualRange.Auto = false;
             secondaryAxisY2.VisualRange.AutoSideMargins = false;
@@ -494,15 +571,66 @@
             secondaryAxisY2.WholeRange.MaxValueSerializable = "10";
             secondaryAxisY2.WholeRange.MinValueSerializable = "0";
             secondaryAxisY2.WholeRange.SideMarginsValue = 0D;
+            secondaryAxisY3.Alignment = DevExpress.XtraCharts.AxisAlignment.Near;
+            secondaryAxisY3.AxisID = 2;
+            secondaryAxisY3.Color = System.Drawing.Color.Green;
+            secondaryAxisY3.Name = "中学 AxisY3";
+            secondaryAxisY3.Visible = false;
+            secondaryAxisY3.VisibleInPanesSerializable = "-1";
+            secondaryAxisY3.VisualRange.Auto = false;
+            secondaryAxisY3.VisualRange.AutoSideMargins = false;
+            secondaryAxisY3.VisualRange.MaxValueSerializable = "9.9";
+            secondaryAxisY3.VisualRange.MinValueSerializable = "0";
+            secondaryAxisY3.VisualRange.SideMarginsValue = 0D;
+            secondaryAxisY3.WholeRange.Auto = false;
+            secondaryAxisY3.WholeRange.AutoSideMargins = false;
+            secondaryAxisY3.WholeRange.MaxValueSerializable = "10";
+            secondaryAxisY3.WholeRange.MinValueSerializable = "0";
+            secondaryAxisY3.WholeRange.SideMarginsValue = 0D;
+            secondaryAxisY4.Alignment = DevExpress.XtraCharts.AxisAlignment.Near;
+            secondaryAxisY4.AxisID = 3;
+            secondaryAxisY4.Color = System.Drawing.Color.Black;
+            secondaryAxisY4.Name = "中学 AxisY4";
+            secondaryAxisY4.Visible = false;
+            secondaryAxisY4.VisibleInPanesSerializable = "-1";
+            secondaryAxisY4.VisualRange.Auto = false;
+            secondaryAxisY4.VisualRange.AutoSideMargins = false;
+            secondaryAxisY4.VisualRange.MaxValueSerializable = "9.9";
+            secondaryAxisY4.VisualRange.MinValueSerializable = "0";
+            secondaryAxisY4.VisualRange.SideMarginsValue = 0D;
+            secondaryAxisY4.WholeRange.Auto = false;
+            secondaryAxisY4.WholeRange.AutoSideMargins = false;
+            secondaryAxisY4.WholeRange.MaxValueSerializable = "10";
+            secondaryAxisY4.WholeRange.MinValueSerializable = "0";
+            secondaryAxisY4.WholeRange.SideMarginsValue = 0D;
+            secondaryAxisY5.Alignment = DevExpress.XtraCharts.AxisAlignment.Near;
+            secondaryAxisY5.AxisID = 4;
+            secondaryAxisY5.Color = System.Drawing.Color.Red;
+            secondaryAxisY5.Name = "中学 AxisY5";
+            secondaryAxisY5.Visible = false;
+            secondaryAxisY5.VisibleInPanesSerializable = "-1";
+            secondaryAxisY5.VisualRange.Auto = false;
+            secondaryAxisY5.VisualRange.AutoSideMargins = false;
+            secondaryAxisY5.VisualRange.MaxValueSerializable = "9.9";
+            secondaryAxisY5.VisualRange.MinValueSerializable = "0";
+            secondaryAxisY5.VisualRange.SideMarginsValue = 0D;
+            secondaryAxisY5.WholeRange.Auto = false;
+            secondaryAxisY5.WholeRange.AutoSideMargins = false;
+            secondaryAxisY5.WholeRange.MaxValueSerializable = "10";
+            secondaryAxisY5.WholeRange.MinValueSerializable = "0";
+            secondaryAxisY5.WholeRange.SideMarginsValue = 0D;
             xyDiagram1.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
             secondaryAxisY1,
-            secondaryAxisY2});
+            secondaryAxisY2,
+            secondaryAxisY3,
+            secondaryAxisY4,
+            secondaryAxisY5});
             this.chart.Diagram = xyDiagram1;
             this.chart.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
             this.chart.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.BottomOutside;
             this.chart.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
             this.chart.Legend.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.chart.Location = new System.Drawing.Point(3, 195);
+            this.chart.Location = new System.Drawing.Point(3, 283);
             this.chart.Name = "chart";
             series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
             series1.CrosshairLabelPattern = "{S} : {V:F2}";
@@ -524,12 +652,36 @@
             lineSeriesView3.Color = System.Drawing.Color.Purple;
             lineSeriesView3.LineStyle.Thickness = 1;
             series3.View = lineSeriesView3;
+            series4.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
+            series4.CrosshairLabelPattern = "{S} : {V:F2}";
+            series4.Name = "测点4";
+            lineSeriesView4.AxisYName = "中学 AxisY3";
+            lineSeriesView4.Color = System.Drawing.Color.Green;
+            lineSeriesView4.LineStyle.Thickness = 1;
+            series4.View = lineSeriesView4;
+            series5.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
+            series5.CrosshairLabelPattern = "{S} : {V:F2}";
+            series5.Name = "测点5";
+            lineSeriesView5.AxisYName = "中学 AxisY4";
+            lineSeriesView5.Color = System.Drawing.Color.Black;
+            lineSeriesView5.LineStyle.Thickness = 1;
+            series5.View = lineSeriesView5;
+            series6.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
+            series6.CrosshairLabelPattern = "{S} : {V:F2}";
+            series6.Name = "测点6";
+            lineSeriesView6.AxisYName = "中学 AxisY5";
+            lineSeriesView6.Color = System.Drawing.Color.Red;
+            lineSeriesView6.LineStyle.Thickness = 1;
+            series6.View = lineSeriesView6;
             this.chart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
         series2,
-        series3};
-            this.chart.SeriesTemplate.View = lineSeriesView4;
-            this.chart.Size = new System.Drawing.Size(1008, 543);
+        series3,
+        series4,
+        series5,
+        series6};
+            this.chart.SeriesTemplate.View = lineSeriesView7;
+            this.chart.Size = new System.Drawing.Size(1008, 455);
             this.chart.TabIndex = 15;
             chartTitle1.Font = new System.Drawing.Font("Tahoma", 10F);
             chartTitle1.Text = "模拟量曲线(同坐标)";
@@ -543,10 +695,10 @@
             // 
             this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControl1.Location = new System.Drawing.Point(3, 104);
+            this.gridControl1.Location = new System.Drawing.Point(3, 153);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1008, 87);
+            this.gridControl1.Size = new System.Drawing.Size(1008, 126);
             this.gridControl1.TabIndex = 13;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -577,7 +729,7 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "位置/类型";
+            this.gridColumn1.Caption = "名称及类型";
             this.gridColumn1.FieldName = "名称及类型";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
@@ -589,7 +741,7 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "报警值";
+            this.gridColumn2.Caption = "报警值(上|下限)";
             this.gridColumn2.FieldName = "报警值";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
@@ -601,7 +753,7 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "断电值";
+            this.gridColumn3.Caption = "断电值(上|下限)";
             this.gridColumn3.FieldName = "断电值";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
@@ -613,7 +765,7 @@
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "复电值";
+            this.gridColumn4.Caption = "复电值(上|下限)";
             this.gridColumn4.FieldName = "复电值";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
@@ -625,7 +777,7 @@
             // 
             // gridColumn14
             // 
-            this.gridColumn14.Caption = "当前状态";
+            this.gridColumn14.Caption = "设备状态";
             this.gridColumn14.FieldName = "设备状态";
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.OptionsColumn.AllowEdit = false;
@@ -637,7 +789,7 @@
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "断电区域";
+            this.gridColumn5.Caption = "断电范围";
             this.gridColumn5.FieldName = "断电范围";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
@@ -649,7 +801,7 @@
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "当前时刻";
+            this.gridColumn6.Caption = "读值时刻";
             this.gridColumn6.FieldName = "读值时刻";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
@@ -721,7 +873,7 @@
             // 
             // gridColumn12
             // 
-            this.gridColumn12.Caption = "馈电状态";
+            this.gridColumn12.Caption = "馈电状态(异常)";
             this.gridColumn12.FieldName = "馈电状态";
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.OptionsColumn.AllowEdit = false;
@@ -733,7 +885,7 @@
             // 
             // gridColumn13
             // 
-            this.gridColumn13.Caption = "措施/时刻";
+            this.gridColumn13.Caption = "措施及时刻";
             this.gridColumn13.FieldName = "措施及时刻";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.AllowEdit = false;
@@ -749,9 +901,9 @@
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
             this.layoutControlItem3,
-            this.layoutControlItem2,
-            this.layoutControlItem1});
+            this.layoutControlItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
@@ -759,13 +911,26 @@
             this.layoutControlGroup1.Text = "layoutControlGroup1";
             this.layoutControlGroup1.TextVisible = false;
             // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.panelControl1;
+            this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1012, 150);
+            this.layoutControlItem1.Text = "layoutControlItem1";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextToControlDistance = 0;
+            this.layoutControlItem1.TextVisible = false;
+            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.gridControl1;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 101);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 150);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(1012, 91);
+            this.layoutControlItem3.Size = new System.Drawing.Size(1012, 130);
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;
@@ -775,30 +940,26 @@
             // 
             this.layoutControlItem2.Control = this.chart;
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 192);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 280);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1012, 547);
+            this.layoutControlItem2.Size = new System.Drawing.Size(1012, 459);
             this.layoutControlItem2.Text = "layoutControlItem2";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextToControlDistance = 0;
             this.layoutControlItem2.TextVisible = false;
             // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.panelControl1;
-            this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
-            this.layoutControlItem1.Size = new System.Drawing.Size(1012, 101);
-            this.layoutControlItem1.Text = "layoutControlItem1";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextToControlDistance = 0;
-            this.layoutControlItem1.TextVisible = false;
-            // 
             // saveFileDialog1
             // 
             this.saveFileDialog1.Filter = "图片文件|*.png";
+            // 
+            // checkEdit13
+            // 
+            this.checkEdit13.Location = new System.Drawing.Point(729, 94);
+            this.checkEdit13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkEdit13.Name = "checkEdit13";
+            this.checkEdit13.Properties.Caption = "未知显示0";
+            this.checkEdit13.Size = new System.Drawing.Size(80, 19);
+            this.checkEdit13.TabIndex = 116;
             // 
             // Mnl_LineWithCoordinate
             // 
@@ -813,6 +974,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmb_lc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit10.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit9.Properties)).EndInit();
@@ -834,6 +999,9 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(secondaryAxisY1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(secondaryAxisY2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
@@ -842,13 +1010,20 @@
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit13.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -884,11 +1059,13 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraCharts.ChartControl chart;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.CheckEdit checkEdit4;
         private DevExpress.XtraEditors.CheckEdit checkEdit7;
         private DevExpress.XtraEditors.CheckEdit checkEdit2;
@@ -902,8 +1079,11 @@
         private DevExpress.XtraEditors.RadioGroup radioGroup1;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraEditors.ComboBoxEdit cmb_lc;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit6;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit5;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit4;
+        private DevExpress.XtraEditors.CheckEdit checkEdit13;
     }
 }

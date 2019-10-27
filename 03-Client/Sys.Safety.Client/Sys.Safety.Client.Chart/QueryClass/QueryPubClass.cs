@@ -81,15 +81,44 @@ namespace Sys.Safety.Client.Chart
         /// <param name="dt"></param>
         /// <param name="ColumnName"></param>
         /// <returns></returns>
-        public float getMaxBv(DataTable dt, string ColumnName)
+       public float getMaxBv(DataTable dt, string ColumnName)
         {
             float MaxValue = -9999;
             try
             {
                 foreach (DataRow dr in dt.Rows)
+                {
                     if (!string.IsNullOrEmpty(dr[ColumnName].ToString()))
-                        if (float.Parse(dr[ColumnName].ToString()) > MaxValue  && dr[ColumnName].ToString() != "0.00001")
+                    {
+                        if (float.Parse(dr[ColumnName].ToString()) > MaxValue && !dr[ColumnName].ToString().Contains(".00001"))
+                        {
+                            MaxValue = float.Parse(dr[ColumnName].ToString());                           
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error("QueryPubClass_getMaxBv" + ex.Message + ex.StackTrace);
+            }
+            return MaxValue;
+        }
+        public float getMaxBv(DataTable dt, string ColumnName, ref string zdzTime)
+        {
+            float MaxValue = -9999;
+            try
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    if (!string.IsNullOrEmpty(dr[ColumnName].ToString()))
+                    {
+                        if (float.Parse(dr[ColumnName].ToString()) > MaxValue && !dr[ColumnName].ToString().Contains(".00001"))
+                        {
                             MaxValue = float.Parse(dr[ColumnName].ToString());
+                            zdzTime = dr["Timer"].ToString();
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {

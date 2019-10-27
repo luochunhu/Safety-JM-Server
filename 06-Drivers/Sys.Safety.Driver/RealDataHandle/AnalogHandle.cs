@@ -1335,29 +1335,36 @@ namespace Sys.Safety.Driver.RealDataHandle
                         //20190119--todo,加入低于量程判断
                         if (value > item.LC) value = item.LC;
                         decimal ChangeRate = 0.02m;
-                        if (item.LC2 > 0) //如果有中间量程
+                        if (item.Name.Contains("风速"))
                         {
-                            if (value < item.LC2)
+                            ChangeRate = item.LC2 * 0.03M;
+                        }
+                        else
+                        {
+                            if (item.LC2 > 0) //如果有中间量程
                             {
-                                ChangeRate = item.LC2 * 0.01M;
+                                if (value < item.LC2)
+                                {
+                                    ChangeRate = item.LC2 * 0.01M;
+                                }
+                                else
+                                {
+                                    ChangeRate = item.LC * 0.01M;
+                                }
                             }
                             else
                             {
                                 ChangeRate = item.LC * 0.01M;
                             }
-                        }
-                        else
-                        {
-                            ChangeRate = item.LC * 0.01M;
-                        }
 
-                        if (value > PointDefineInfo.ClsFiveMinObj.m_nMaxVal || value < PointDefineInfo.ClsFiveMinObj.m_nMinVal || Math.Abs(value - Convert.ToDecimal(PointDefineInfo.Ssz)) >= ChangeRate)
-                        {
-                            flag = true;
-                        }
-                        else
-                        {
-                            flag = false;
+                            if (value > PointDefineInfo.ClsFiveMinObj.m_nMaxVal || value < PointDefineInfo.ClsFiveMinObj.m_nMinVal || Math.Abs(value - Convert.ToDecimal(PointDefineInfo.Ssz)) >= ChangeRate)
+                            {
+                                flag = true;
+                            }
+                            else
+                            {
+                                flag = false;
+                            }
                         }
                     }
                 }

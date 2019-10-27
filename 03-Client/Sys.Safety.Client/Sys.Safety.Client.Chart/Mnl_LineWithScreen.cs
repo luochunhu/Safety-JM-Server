@@ -29,6 +29,21 @@ namespace Sys.Safety.Client.Chart
         ///     测点3 当前设备类型ID
         /// </summary>
         private string CurrentDevid3 = "0";
+        /// <summary>
+        ///     测点4 当前设备类型ID
+        /// </summary>
+        private string CurrentDevid4 = "0";
+
+        /// <summary>
+        ///     测点5 当前设备类型ID
+        /// </summary>
+        private string CurrentDevid5 = "0";
+
+        /// <summary>
+        ///     测点6 当前设备类型ID
+        /// </summary>
+        private string CurrentDevid6 = "0";
+
 
         /// <summary>
         ///     测点1 当前测点ID
@@ -44,6 +59,20 @@ namespace Sys.Safety.Client.Chart
         ///     测点3 当前测点ID
         /// </summary>
         private string CurrentPointID3 = "0";
+        /// <summary>
+        ///     测点4 当前测点ID
+        /// </summary>
+        private string CurrentPointID4 = "0";
+
+        /// <summary>
+        ///     测点5 当前测点ID
+        /// </summary>
+        private string CurrentPointID5 = "0";
+
+        /// <summary>
+        ///     测点6 当前测点ID
+        /// </summary>
+        private string CurrentPointID6 = "0";
 
         /// <summary>
         ///     测点1 当前位置ID
@@ -59,6 +88,20 @@ namespace Sys.Safety.Client.Chart
         ///     测点3 当前位置ID
         /// </summary>
         private string CurrentWzid3 = "0";
+        /// <summary>
+        ///     测点4 当前位置ID
+        /// </summary>
+        private string CurrentWzid4 = "0";
+
+        /// <summary>
+        ///     测点5 当前位置ID
+        /// </summary>
+        private string CurrentWzid5 = "0";
+
+        /// <summary>
+        ///     测点6 当前位置ID
+        /// </summary>
+        private string CurrentWzid6 = "0";
 
         /// <summary>
         ///     设备类型ID列表
@@ -79,6 +122,20 @@ namespace Sys.Safety.Client.Chart
         ///     曲线3数据源
         /// </summary>
         private DataTable dt_line2 = new DataTable();
+        /// <summary>
+        ///     曲线4数据源
+        /// </summary>
+        private DataTable dt_line4 = new DataTable();
+
+        /// <summary>
+        ///     曲线5数据源
+        /// </summary>
+        private DataTable dt_line5 = new DataTable();
+
+        /// <summary>
+        ///     曲线6数据源
+        /// </summary>
+        private DataTable dt_line6= new DataTable();
 
         /// <summary>
         /// 曲线颜色设置
@@ -99,6 +156,20 @@ namespace Sys.Safety.Client.Chart
         /// 测点3阈值
         /// </summary>
         private List<float> threshold3 = new List<float>();
+        /// <summary>
+        /// 测点4阈值
+        /// </summary>
+        private List<float> threshold4 = new List<float>();
+
+        /// <summary>
+        /// 测点5阈值
+        /// </summary>
+        private List<float> threshold5 = new List<float>();
+
+        /// <summary>
+        /// 测点6阈值
+        /// </summary>
+        private List<float> threshold6 = new List<float>();
 
         private int IscheckDate;
 
@@ -133,6 +204,20 @@ namespace Sys.Safety.Client.Chart
         ///     测点3 测点单位
         /// </summary>
         private string PointDw3 = "";
+        /// <summary>
+        ///     测点4 测点单位
+        /// </summary>
+        private string PointDw4 = "";
+
+        /// <summary>
+        ///     测点5 测点单位
+        /// </summary>
+        private string PointDw5 = "";
+
+        /// <summary>
+        ///     测点6 测点单位
+        /// </summary>
+        private string PointDw6 = "";
 
         /// <summary>
         ///     测点ID列表
@@ -143,15 +228,20 @@ namespace Sys.Safety.Client.Chart
         /// <summary>
         ///     测点号列表
         /// </summary>
-        private  string[] PointIDs = new string[3] { "", "", "" };
+        private  string[] PointIDs = new string[6] { "", "", "", "", "", "" };
 
-        private string pointName1 = "", pointName2 = "", pointName3 = "";
+        private string pointName1 = "", pointName2 = "", pointName3 = "", pointName4 = "", pointName5 = "", pointName6 = "";
         private  SecondaryAxisY tempsecondaryAxisY1;
         private  SecondaryAxisY tempsecondaryAxisY2;
-
+        private SecondaryAxisY tempsecondaryAxisY3;
+        private SecondaryAxisY tempsecondaryAxisY4;
+        private SecondaryAxisY tempsecondaryAxisY5;
 
         private  XYDiagramPane tempxyDiagramPane1;
         private  XYDiagramPane tempxyDiagramPane2;
+        private XYDiagramPane tempxyDiagramPane3;
+        private XYDiagramPane tempxyDiagramPane4;
+        private XYDiagramPane tempxyDiagramPane5;
 
         /// <summary>
         ///     安装位置ID列表
@@ -164,8 +254,14 @@ namespace Sys.Safety.Client.Chart
 
             tempxyDiagramPane1 = Diagram.Panes[0];
             tempxyDiagramPane2 = Diagram.Panes[1];
+            tempxyDiagramPane3 = Diagram.Panes[2];
+            tempxyDiagramPane4 = Diagram.Panes[3];
+            tempxyDiagramPane5 = Diagram.Panes[4];
             tempsecondaryAxisY1 = Diagram.SecondaryAxesY[0];
             tempsecondaryAxisY2 = Diagram.SecondaryAxesY[1];
+            tempsecondaryAxisY3 = Diagram.SecondaryAxesY[2];
+            tempsecondaryAxisY4 = Diagram.SecondaryAxesY[3];
+            tempsecondaryAxisY5 = Diagram.SecondaryAxesY[4];
         }
 
         public Mnl_LineWithScreen(Dictionary<string, string> param)
@@ -173,8 +269,14 @@ namespace Sys.Safety.Client.Chart
             InitializeComponent();
             tempxyDiagramPane1 = Diagram.Panes[0];
             tempxyDiagramPane2 = Diagram.Panes[1];
+            tempxyDiagramPane3 = Diagram.Panes[2];
+            tempxyDiagramPane4 = Diagram.Panes[3];
+            tempxyDiagramPane5 = Diagram.Panes[4];
             tempsecondaryAxisY1 = Diagram.SecondaryAxesY[0];
             tempsecondaryAxisY2 = Diagram.SecondaryAxesY[1];
+            tempsecondaryAxisY3 = Diagram.SecondaryAxesY[2];
+            tempsecondaryAxisY4 = Diagram.SecondaryAxesY[3];
+            tempsecondaryAxisY5 = Diagram.SecondaryAxesY[4];
             if ((param != null) && (param.Count > 0))
                 try
                 {
@@ -193,9 +295,15 @@ namespace Sys.Safety.Client.Chart
         {
             tempxyDiagramPane1 = Diagram.Panes[0];
             tempxyDiagramPane2 = Diagram.Panes[1];
+            tempxyDiagramPane3 = Diagram.Panes[2];
+            tempxyDiagramPane4 = Diagram.Panes[3];
+            tempxyDiagramPane5 = Diagram.Panes[4];
             tempsecondaryAxisY1 = Diagram.SecondaryAxesY[0];
             tempsecondaryAxisY2 = Diagram.SecondaryAxesY[1];
-            PointIDs = new string[3] { "", "", "" };
+            tempsecondaryAxisY3 = Diagram.SecondaryAxesY[2];
+            tempsecondaryAxisY4 = Diagram.SecondaryAxesY[3];
+            tempsecondaryAxisY5 = Diagram.SecondaryAxesY[4];
+            PointIDs = new string[6] { "", "", "", "", "", "" };
             if ((param != null) && (param.Count > 0))
                 try
                 {
@@ -254,6 +362,29 @@ namespace Sys.Safety.Client.Chart
         }
 
         /// <summary>
+        ///     Y4坐标
+        /// </summary>
+        private AxisBase AxisY4
+        {
+            get { return Diagram != null ? Diagram.SecondaryAxesY[2] : null; }
+        }
+
+        /// <summary>
+        ///     Y5坐标
+        /// </summary>
+        private AxisBase AxisY5
+        {
+            get { return Diagram != null ? Diagram.SecondaryAxesY[3] : null; }
+        }
+        /// <summary>
+        ///     Y6坐标
+        /// </summary>
+        private AxisBase AxisY6
+        {
+            get { return Diagram != null ? Diagram.SecondaryAxesY[4] : null; }
+        }
+
+        /// <summary>
         ///     测点1 监测值曲线
         /// </summary>
         private Series Series1_1
@@ -275,6 +406,30 @@ namespace Sys.Safety.Client.Chart
         private Series Series3_1
         {
             get { return chart.Series[2]; }
+        }
+
+        /// <summary>
+        ///     测点4 监测值曲线
+        /// </summary>
+        private Series Series4_1
+        {
+            get { return chart.Series[3]; }
+        }
+
+        /// <summary>
+        ///     测点5 监测值曲线
+        /// </summary>
+        private Series Series5_1
+        {
+            get { return chart.Series[4]; }
+        }
+
+        /// <summary>
+        ///     测点6 监测值曲线
+        /// </summary>
+        private Series Series6_1
+        {
+            get { return chart.Series[5]; }
         }
 
         /// <summary>
@@ -339,25 +494,27 @@ namespace Sys.Safety.Client.Chart
                 Left = Convert.ToInt32(Screen.GetWorkingArea(this).Width * 0.1 / 2);
                 Top = Convert.ToInt32(Screen.GetWorkingArea(this).Height * 0.1 / 2);
 
-                //设置左边查询条件宽度
-                layoutControlItem1.Width = 320;
-
                 //初始化控件值
                 dateEdit1.DateTime = DateTime.Now;
                 dateEdit2.DateTime = DateTime.Now;
                 Series1_1.Points.Clear();
                 Series2_1.Points.Clear();
-                Series3_1.Points.Clear();                
+                Series3_1.Points.Clear();
+                Series4_1.Points.Clear();
+                Series5_1.Points.Clear();
+                Series6_1.Points.Clear();
                 gridControl1.DataSource = null;
               
 
-                #region//加载曲线颜色 
+                #region//加载曲线颜色 luochUP
 
                 InterfaceClass.QueryPubClass_.SetChartColor(Series1_1, "Chart_ZdzColor");
                 InterfaceClass.QueryPubClass_.SetChartColor(Series2_1, "Chart_ZdzColor");
                 InterfaceClass.QueryPubClass_.SetChartColor(Series3_1, "Chart_ZdzColor");
+                InterfaceClass.QueryPubClass_.SetChartColor(Series4_1, "Chart_ZdzColor");
+                InterfaceClass.QueryPubClass_.SetChartColor(Series5_1, "Chart_ZdzColor");
+                InterfaceClass.QueryPubClass_.SetChartColor(Series6_1, "Chart_ZdzColor");
                 InterfaceClass.QueryPubClass_.SetChartBgColor(Diagram, "Chart_BgColor");
-
                 chartSetting = InterfaceClass.QueryPubClass_.GetChartColorSetting();
 
                 #endregion
@@ -392,6 +549,9 @@ namespace Sys.Safety.Client.Chart
                 LoadPointSelList1(dateEdit1.DateTime, dateEdit2.DateTime, loadData);
                 LoadPointSelList2(dateEdit1.DateTime, dateEdit2.DateTime, loadData);
                 LoadPointSelList3(dateEdit1.DateTime, dateEdit2.DateTime, loadData);
+                LoadPointSelList4(dateEdit1.DateTime, dateEdit2.DateTime, loadData);
+                LoadPointSelList5(dateEdit1.DateTime, dateEdit2.DateTime, loadData);
+                LoadPointSelList6(dateEdit1.DateTime, dateEdit2.DateTime, loadData);
             }
             catch (Exception ex)
             {
@@ -526,7 +686,6 @@ namespace Sys.Safety.Client.Chart
                 //comboBoxEdit2.BeginInvoke(new Action(() =>
                 //{
                 comboBoxEdit2.Properties.Items.Clear();
-
                 foreach (var PointStr in LoadPointStr)
                     comboBoxEdit2.Properties.Items.Add(PointStr);
                 if (comboBoxEdit2.Properties.Items.Count > 0)
@@ -573,7 +732,7 @@ namespace Sys.Safety.Client.Chart
                 // comboBoxEdit3.BeginInvoke(new Action(() =>
                 //{
                 comboBoxEdit3.Properties.Items.Clear();
-
+                comboBoxEdit3.Properties.Items.Add("");
                 foreach (var PointStr in LoadPointStr)
                     comboBoxEdit3.Properties.Items.Add(PointStr);
                 if (comboBoxEdit3.Properties.Items.Count > 0)
@@ -585,6 +744,147 @@ namespace Sys.Safety.Client.Chart
                 {
                     comboBoxEdit3.Enabled = false;
                     comboBoxEdit3.Text = "没有数据";
+                }
+                LoadPointSer(loadData);
+                //}));
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error("Mnl_LineWithScreen_LoadPointSelList" + ex.Message + ex.StackTrace);
+            }
+        }
+
+        /// <summary>
+        ///     加载测点选择列表 曲线4
+        /// </summary>
+        /// <param name="stime"></param>
+        /// <param name="etime"></param>
+        private void LoadPointSelList4(DateTime stime, DateTime etime, bool loadData)
+        {
+            try
+            {
+                if (LoadPointStr.Count < 1)
+                {
+                    if (radioGroup1.SelectedIndex == 0)//按已定义测点查询
+                    {
+                        LoadPointStr = InterfaceClass.queryConditions_.GetActivePointList(1, ref PointIDList,
+                          ref DevList, ref WzList);
+                    }
+                    else//按已存储测点查询
+                    {
+                        LoadPointStr = InterfaceClass.queryConditions_.GetPointList(stime, etime, 1, ref PointIDList,
+                            ref DevList, ref WzList);
+                    }
+                }
+                // comboBoxEdit3.BeginInvoke(new Action(() =>
+                //{
+                comboBoxEdit4.Properties.Items.Clear();
+                comboBoxEdit4.Properties.Items.Add("");
+                foreach (var PointStr in LoadPointStr)
+                    comboBoxEdit4.Properties.Items.Add(PointStr);
+                if (comboBoxEdit4.Properties.Items.Count > 0)
+                {
+                    comboBoxEdit4.SelectedIndex = 0;
+                    comboBoxEdit4.Enabled = true;
+                }
+                else
+                {
+                    comboBoxEdit4.Enabled = false;
+                    comboBoxEdit4.Text = "没有数据";
+                }
+                LoadPointSer(loadData);
+                //}));
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error("Mnl_LineWithScreen_LoadPointSelList" + ex.Message + ex.StackTrace);
+            }
+        }
+
+        /// <summary>
+        ///     加载测点选择列表 曲线5
+        /// </summary>
+        /// <param name="stime"></param>
+        /// <param name="etime"></param>
+        private void LoadPointSelList5(DateTime stime, DateTime etime, bool loadData)
+        {
+            try
+            {
+                if (LoadPointStr.Count < 1)
+                {
+                    if (radioGroup1.SelectedIndex == 0)//按已定义测点查询
+                    {
+                        LoadPointStr = InterfaceClass.queryConditions_.GetActivePointList(1, ref PointIDList,
+                          ref DevList, ref WzList);
+                    }
+                    else//按已存储测点查询
+                    {
+                        LoadPointStr = InterfaceClass.queryConditions_.GetPointList(stime, etime, 1, ref PointIDList,
+                            ref DevList, ref WzList);
+                    }
+                }
+                // comboBoxEdit3.BeginInvoke(new Action(() =>
+                //{
+                comboBoxEdit5.Properties.Items.Clear();
+                comboBoxEdit5.Properties.Items.Add("");
+                foreach (var PointStr in LoadPointStr)
+                    comboBoxEdit5.Properties.Items.Add(PointStr);
+                if (comboBoxEdit5.Properties.Items.Count > 0)
+                {
+                    comboBoxEdit5.SelectedIndex = 0;
+                    comboBoxEdit5.Enabled = true;
+                }
+                else
+                {
+                    comboBoxEdit5.Enabled = false;
+                    comboBoxEdit5.Text = "没有数据";
+                }
+                LoadPointSer(loadData);
+                //}));
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error("Mnl_LineWithScreen_LoadPointSelList" + ex.Message + ex.StackTrace);
+            }
+        }
+
+        /// <summary>
+        ///     加载测点选择列表 曲线6
+        /// </summary>
+        /// <param name="stime"></param>
+        /// <param name="etime"></param>
+        private void LoadPointSelList6(DateTime stime, DateTime etime, bool loadData)
+        {
+            try
+            {
+                if (LoadPointStr.Count < 1)
+                {
+                    if (radioGroup1.SelectedIndex == 0)//按已定义测点查询
+                    {
+                        LoadPointStr = InterfaceClass.queryConditions_.GetActivePointList(1, ref PointIDList,
+                          ref DevList, ref WzList);
+                    }
+                    else//按已存储测点查询
+                    {
+                        LoadPointStr = InterfaceClass.queryConditions_.GetPointList(stime, etime, 1, ref PointIDList,
+                            ref DevList, ref WzList);
+                    }
+                }
+                // comboBoxEdit3.BeginInvoke(new Action(() =>
+                //{
+                comboBoxEdit6.Properties.Items.Clear();
+                comboBoxEdit6.Properties.Items.Add("");
+                foreach (var PointStr in LoadPointStr)
+                    comboBoxEdit6.Properties.Items.Add(PointStr);
+                if (comboBoxEdit6.Properties.Items.Count > 0)
+                {
+                    comboBoxEdit6.SelectedIndex = 0;
+                    comboBoxEdit6.Enabled = true;
+                }
+                else
+                {
+                    comboBoxEdit6.Enabled = false;
+                    comboBoxEdit6.Text = "没有数据";
                 }
                 LoadPointSer(loadData);
                 //}));
@@ -629,7 +929,7 @@ namespace Sys.Safety.Client.Chart
                             sindex = i;
                             //comboBoxEdit2.BeginInvoke(new Action(() =>
                             //{
-                            comboBoxEdit2.SelectedIndex = sindex;
+                            comboBoxEdit6.SelectedIndex = sindex;
 
                             //}));
                             isLoad = true;
@@ -674,8 +974,8 @@ namespace Sys.Safety.Client.Chart
             try
             {
                 //每次查询删除所有并重新添加阈值线
-                for (var i = chart.Series.Count - 1; i >= 3; i--)
-                    chart.Series.RemoveAt(i);
+                //for (var i = chart.Series.Count - 1; i >= 3; i--)
+                //    chart.Series.RemoveAt(i);
 
                 var SzNameS = dateEdit1.DateTime;
                 var SzNameE = dateEdit2.DateTime;
@@ -699,7 +999,7 @@ namespace Sys.Safety.Client.Chart
                     XtraMessageBox.Show("请选择测点1！");
                     return;
                 }
-                if (comboBoxEdit2.SelectedIndex < 0)
+                if (comboBoxEdit6.SelectedIndex < 0)
                 {
                     if (wdf != null)
                         wdf.Close();
@@ -718,18 +1018,74 @@ namespace Sys.Safety.Client.Chart
                 CurrentPointID1 = PointIDList[comboBoxEdit1.SelectedIndex];
                 CurrentDevid1 = DevList[comboBoxEdit1.SelectedIndex];
                 CurrentWzid1 = WzList[comboBoxEdit1.SelectedIndex];
+                if (string.IsNullOrEmpty(comboBoxEdit6.Text))
+                {
+                    CurrentPointID6 = "";
+                    CurrentDevid6 = "";
+                    CurrentWzid6 = "";
+                }
+                else
+                {
+                    CurrentPointID6 = PointIDList[comboBoxEdit6.SelectedIndex-1];
+                    CurrentDevid6 = DevList[comboBoxEdit6.SelectedIndex-1];
+                    CurrentWzid6 = WzList[comboBoxEdit6.SelectedIndex-1];
+                }
+                if (string.IsNullOrEmpty(comboBoxEdit3.Text))
+                {
+                    CurrentPointID3 = "";
+                    CurrentDevid3 = "";
+                    CurrentWzid3 = "";
+                }
+                else
+                {
+                    CurrentPointID3 = PointIDList[comboBoxEdit3.SelectedIndex-1];
+                    CurrentDevid3 = DevList[comboBoxEdit3.SelectedIndex-1];
+                    CurrentWzid3 = WzList[comboBoxEdit3.SelectedIndex-1];
+                }
 
-                CurrentPointID2 = PointIDList[comboBoxEdit2.SelectedIndex];
-                CurrentDevid2 = DevList[comboBoxEdit2.SelectedIndex];
-                CurrentWzid2 = WzList[comboBoxEdit2.SelectedIndex];
-
-                CurrentPointID3 = PointIDList[comboBoxEdit3.SelectedIndex];
-                CurrentDevid3 = DevList[comboBoxEdit3.SelectedIndex];
-                CurrentWzid3 = WzList[comboBoxEdit3.SelectedIndex];
+                if (string.IsNullOrEmpty(comboBoxEdit4.Text))
+                {
+                    CurrentPointID4 = "";
+                    CurrentDevid4 = "";
+                    CurrentWzid4 = "";
+                }
+                else
+                {
+                    CurrentPointID4 = PointIDList[comboBoxEdit4.SelectedIndex-1];
+                    CurrentDevid4 = DevList[comboBoxEdit4.SelectedIndex-1];
+                    CurrentWzid4 = WzList[comboBoxEdit4.SelectedIndex-1];
+                }
+                if (string.IsNullOrEmpty(comboBoxEdit5.Text))
+                {
+                    CurrentPointID5 = "";
+                    CurrentDevid5 = "";
+                    CurrentWzid5 = "";
+                }
+                else
+                {
+                    CurrentPointID5 = PointIDList[comboBoxEdit5.SelectedIndex-1];
+                    CurrentDevid5 = DevList[comboBoxEdit5.SelectedIndex-1];
+                    CurrentWzid5 = WzList[comboBoxEdit5.SelectedIndex-1];
+                }
+                if (string.IsNullOrEmpty(comboBoxEdit2.Text))
+                {
+                    CurrentPointID2 = "";
+                    CurrentDevid2 = "";
+                    CurrentWzid2 = "";
+                }
+                else
+                {
+                    CurrentPointID2 = PointIDList[comboBoxEdit2.SelectedIndex];
+                    CurrentDevid2 = DevList[comboBoxEdit2.SelectedIndex];
+                    CurrentWzid2 = WzList[comboBoxEdit2.SelectedIndex];
+                }
 
                 PointIDs[0] = CurrentPointID1;
                 PointIDs[1] = CurrentPointID2;
                 PointIDs[2] = CurrentPointID3;
+                PointIDs[3] = CurrentPointID4;
+                PointIDs[4] = CurrentPointID5;
+                PointIDs[5] = CurrentPointID6;
 
                 var ValueType = "";
                 var bindColumn = "";
@@ -767,10 +1123,19 @@ namespace Sys.Safety.Client.Chart
                     XtraMessageBox.Show("请选择至少一条曲线！");
                     return;
                 }
-
+                Diagram.AxisX.SetVisibilityInPane(false , tempxyDiagramPane1);
+                Diagram.AxisX.SetVisibilityInPane(false, tempxyDiagramPane2);
+                Diagram.AxisX.SetVisibilityInPane(false, tempxyDiagramPane3);
+                Diagram.AxisX.SetVisibilityInPane(false, tempxyDiagramPane4);
+                Diagram.AxisX.SetVisibilityInPane(false, tempxyDiagramPane5);
                 //测点1
                 dt_line = InterfaceClass.FiveMiniteLineQueryClass_.getFiveMiniteLine(SzNameS, SzNameE, CurrentPointID1,
                     CurrentDevid1, CurrentWzid1);
+                float tempMinValue = 9999;
+                if (!checkEdit13.Checked)
+                {
+                    tempMinValue = GetOutliersValue(dt_line);
+                }
                 var MaxValue = InterfaceClass.QueryPubClass_.getMaxBv(dt_line, "Bv") * 1.2f;
 
                 threshold1.Clear();
@@ -780,7 +1145,7 @@ namespace Sys.Safety.Client.Chart
                     if (MaxValue < tempMax) //表示当天没值
                         MaxValue = tempMax;
                 if (MaxValue < 0.01)
-                { //如果无数据，则加个默认最大值  20170723
+                { //如果无数据，则加个默认最大值 luochUP 20170723
                     MaxValue = 1;
                 }
 
@@ -794,10 +1159,28 @@ namespace Sys.Safety.Client.Chart
                             MinValue = tempMin;
 
                 MinValue = (float)MinValue - 0.01f;
+                if (tempMinValue < MinValue)
+                {
+                    MinValue = tempMinValue;
+                }
 
                 PointDw1 = InterfaceClass.FiveMiniteLineQueryClass_.getPointDw(CurrentDevid1);
-                AxisY1.WholeRange.SetMinMaxValues(MinValue, MaxValue);
-                AxisY1.VisualRange.SetMinMaxValues(MinValue, MaxValue);
+                //AxisY1.WholeRange.SetMinMaxValues(MinValue, MaxValue);
+                //AxisY1.VisualRange.SetMinMaxValues(MinValue, MaxValue);
+
+
+                //2018.9.12 by AI  增加手动设置量程
+                double lc = 0;
+                if (double.TryParse(cmb_lc.Text, out lc))
+                {
+                    AxisY1.WholeRange.SetMinMaxValues(MinValue, lc);
+                    AxisY1.VisualRange.SetMinMaxValues(MinValue, lc);
+                }
+                else
+                {
+                    AxisY1.WholeRange.SetMinMaxValues(MinValue, MaxValue);
+                    AxisY1.VisualRange.SetMinMaxValues(MinValue, MaxValue);
+                }
 
                 var name = comboBoxEdit1.SelectedItem.ToString();
                 var shortName = name.Substring(0, 7) + "[测点1]";
@@ -835,143 +1218,573 @@ namespace Sys.Safety.Client.Chart
                         }
                     }
 
-                //测点2
-                dt_line1 = InterfaceClass.FiveMiniteLineQueryClass_.getFiveMiniteLine(SzNameS, SzNameE, CurrentPointID2,
-                    CurrentDevid2, CurrentWzid2);
-                threshold2.Clear();
-                threshold2 = InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID2);
-                //tempList = InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID2);
-                MaxValue = InterfaceClass.QueryPubClass_.getMaxBv(dt_line1, "Bv") * 1.2f;
-                foreach (var tempMax in threshold2)
-                    if (MaxValue < tempMax) //表示当天没值
-                        MaxValue = tempMax;
-                if (MaxValue < 0.01)
-                { //如果无数据，则加个默认最大值  20170723
-                    MaxValue = 1;
+                if (string.IsNullOrEmpty(CurrentPointID2))
+                {
+                    tempxyDiagramPane1.Visible = false;
+                    tempsecondaryAxisY1.Visible = false;
+                    Series2_1.ShowInLegend = false;
                 }
-
-                //读取量程低
-                MinValue = InterfaceClass.QueryPubClass_.getMinBv(dt_line1, "Cv");
-                if (MinValue > 0)
-                    MinValue = 0.0f;
                 else
-                    foreach (var tempMin in threshold2)
-                        if (MinValue > tempMin) //表示当天没值
-                            MinValue = tempMin;
-
-                MinValue = (float)MinValue - 0.01f;
-
-                PointDw2 = InterfaceClass.FiveMiniteLineQueryClass_.getPointDw(CurrentDevid2);
-                AxisY2.WholeRange.SetMinMaxValues(MinValue, MaxValue);
-                AxisY2.VisualRange.SetMinMaxValues(MinValue, MaxValue);
-
-                name = comboBoxEdit2.SelectedItem.ToString();
-                shortName = name.Substring(0, 7) + "[测点2]";
-                pointName2 = shortName;
-                InitControls(Series2_1, dt_line1, shortName, ValueType, bindColumn);
-
-                //添加阈值线
-                tempZ = PubOptClass.AddZSeries(dt_line1, InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID2),
-                    tempxyDiagramPane1, tempsecondaryAxisY1);
-                isinchart = false;
-                if (tempZ.Count > 0)
-                    foreach (var serie in tempZ)
+                {
+                    tempxyDiagramPane1.Visible = true ;
+                    tempsecondaryAxisY1.Visible = true ;
+                    Series2_1.ShowInLegend = true ;
+                    //测点2
+                    dt_line1 = InterfaceClass.FiveMiniteLineQueryClass_.getFiveMiniteLine(SzNameS, SzNameE, CurrentPointID2,
+                        CurrentDevid2, CurrentWzid2);
+                    if (!checkEdit13.Checked)
                     {
-                        isinchart = false;
-                        for (var i = chart.Series.Count - 1; i >= 0; i--)
+                        tempMinValue = GetOutliersValue(dt_line1);
+                    }
+                    threshold2.Clear();
+                    threshold2 = InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID2);
+                    //tempList = InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID2);
+                    MaxValue = InterfaceClass.QueryPubClass_.getMaxBv(dt_line1, "Bv") * 1.2f;
+                    foreach (var tempMax in threshold2)
+                        if (MaxValue < tempMax) //表示当天没值
+                            MaxValue = tempMax;
+                    if (MaxValue < 0.01)
+                    { //如果无数据，则加个默认最大值 luochUP 20170723
+                        MaxValue = 1;
+                    }
+
+                    //读取量程低
+                    MinValue = InterfaceClass.QueryPubClass_.getMinBv(dt_line1, "Cv");
+                    if (MinValue > 0)
+                        MinValue = 0.0f;
+                    else
+                        foreach (var tempMin in threshold2)
+                            if (MinValue > tempMin) //表示当天没值
+                                MinValue = tempMin;
+                    if (tempMinValue < MinValue)
+                    {
+                        MinValue = tempMinValue;
+                    }
+                    PointDw2 = InterfaceClass.FiveMiniteLineQueryClass_.getPointDw(CurrentDevid2);
+                    //AxisY2.WholeRange.SetMinMaxValues(MinValue, MaxValue);
+                    //AxisY2.VisualRange.SetMinMaxValues(MinValue, MaxValue);
+
+                    //2018.9.12 by AI  增加手动设置量程
+                    lc = 0;
+                    if (double.TryParse(cmb_lc.Text, out lc))
+                    {
+                        AxisY2.WholeRange.SetMinMaxValues(MinValue, lc);
+                        AxisY2.VisualRange.SetMinMaxValues(MinValue, lc);
+                    }
+                    else
+                    {
+                        AxisY2.WholeRange.SetMinMaxValues(MinValue, MaxValue);
+                        AxisY2.VisualRange.SetMinMaxValues(MinValue, MaxValue);
+                    }
+
+                    name = comboBoxEdit2.SelectedItem.ToString();
+                    shortName = name.Substring(0, 7) + "[测点2]";
+                    pointName2 = shortName;
+                    InitControls(Series2_1, dt_line1, shortName, ValueType, bindColumn);
+
+                    //添加阈值线
+                    tempZ = PubOptClass.AddZSeries(dt_line1, InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID2),
+                        tempxyDiagramPane1, tempsecondaryAxisY1);
+                    isinchart = false;
+                    if (tempZ.Count > 0)
+                        foreach (var serie in tempZ)
                         {
-                            var chartserie = chart.Series[i];
-                            if (chartserie.Name == "测点2" + serie.Name) //如果已存在
+                            isinchart = false;
+                            for (var i = chart.Series.Count - 1; i >= 0; i--)
                             {
-                                //重新添加                               
-                                serie.CheckedInLegend = chartserie.CheckedInLegend;
+                                var chartserie = chart.Series[i];
+                                if (chartserie.Name == "测点2" + serie.Name) //如果已存在
+                                {
+                                    //重新添加                               
+                                    serie.CheckedInLegend = chartserie.CheckedInLegend;
+                                    serie.Name = "测点2" + serie.Name;
+                                    chart.Series[i].Points.Clear();
+                                    chart.Series[i].Points.AddRange(serie.Points.ToArray());
+
+                                    isinchart = true;
+                                    break;
+                                }
+                            }
+                            if (!isinchart)
+                            {
+                                serie.ShowInLegend = false;
                                 serie.Name = "测点2" + serie.Name;
-                                chart.Series[i].Points.Clear();
-                                chart.Series[i].Points.AddRange(serie.Points.ToArray());
-
-                                isinchart = true;
-                                break;
+                                chart.Series.Add(serie);
                             }
                         }
-                        if (!isinchart)
-                        {
-                            serie.ShowInLegend = false;
-                            serie.Name = "测点2" + serie.Name;
-                            chart.Series.Add(serie);
-                        }
-                    }
+                }
                 //测点3
-                dt_line2 = InterfaceClass.FiveMiniteLineQueryClass_.getFiveMiniteLine(SzNameS, SzNameE, CurrentPointID3,
+
+                if (string.IsNullOrEmpty(CurrentPointID3))
+                {
+                    tempxyDiagramPane2.Visible = false;
+                    tempsecondaryAxisY2.Visible = false;
+                    Series3_1.ShowInLegend = false;
+                }
+                else
+                {
+                    tempxyDiagramPane2.Visible = true;
+                    tempsecondaryAxisY2.Visible = true;
+                    Series3_1.ShowInLegend = true ;
+                    dt_line2 = InterfaceClass.FiveMiniteLineQueryClass_.getFiveMiniteLine(SzNameS, SzNameE, CurrentPointID3,
                     CurrentDevid3, CurrentWzid3);
-                threshold3.Clear();
-                threshold3 = InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID2);
-                //tempList = InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID3);
-                MaxValue = InterfaceClass.QueryPubClass_.getMaxBv(dt_line2, "Bv") * 1.2f;
-                foreach (var tempMax in threshold3)
-                    if (MaxValue < tempMax) //表示当天没值
-                        MaxValue = tempMax;
-                if (MaxValue < 0.01)
-                { //如果无数据，则加个默认最大值  20170723
-                    MaxValue = 1;
+                    if (!checkEdit13.Checked)
+                    {
+                        tempMinValue = GetOutliersValue(dt_line2);
+                    }
+                    threshold3.Clear();
+                    threshold3 = InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID2);
+                    //tempList = InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID3);
+                    MaxValue = InterfaceClass.QueryPubClass_.getMaxBv(dt_line2, "Bv") * 1.2f;
+                    foreach (var tempMax in threshold3)
+                        if (MaxValue < tempMax) //表示当天没值
+                            MaxValue = tempMax;
+                    if (MaxValue < 0.01)
+                    { //如果无数据，则加个默认最大值 luochUP 20170723
+                        MaxValue = 1;
+                    }
+
+                    //读取量程低
+                    MinValue = InterfaceClass.QueryPubClass_.getMinBv(dt_line2, "Cv");
+                    if (MinValue > 0)
+                        MinValue = 0.0f;
+                    else
+                        foreach (var tempMin in threshold3)
+                            if (MinValue > tempMin) //表示当天没值
+                                MinValue = tempMin;
+                    if (tempMinValue < MinValue)
+                    {
+                        MinValue = tempMinValue;
+                    }
+                    PointDw3 = InterfaceClass.FiveMiniteLineQueryClass_.getPointDw(CurrentDevid3);
+                    //AxisY3.WholeRange.SetMinMaxValues(MinValue, MaxValue);
+                    //AxisY3.VisualRange.SetMinMaxValues(MinValue, MaxValue);
+
+                    //2018.9.12 by AI  增加手动设置量程
+                    lc = 0;
+                    if (double.TryParse(cmb_lc.Text, out lc))
+                    {
+                        AxisY3.WholeRange.SetMinMaxValues(MinValue, lc);
+                        AxisY3.VisualRange.SetMinMaxValues(MinValue, lc);
+                    }
+                    else
+                    {
+                        AxisY3.WholeRange.SetMinMaxValues(MinValue, MaxValue);
+                        AxisY3.VisualRange.SetMinMaxValues(MinValue, MaxValue);
+                    }
+
+                    name = comboBoxEdit3.SelectedItem.ToString();
+                    shortName = name.Substring(0, 7) + "[测点3]";
+                    pointName3 = shortName;
+                    InitControls(Series3_1, dt_line2, shortName, ValueType, bindColumn);
+
+                    //chart.Titles[0].Text = comboBoxEdit1.SelectedItem + "," + comboBoxEdit6.SelectedItem + "," +
+                    //                       comboBoxEdit3.SelectedItem;
+
+                    AxisX.WholeRange.SetMinMaxValues(_minX, _maxX);
+                    AxisX.VisualRange.SetMinMaxValues(_minX, _maxX);
+
+                    //添加阈值线
+                    tempZ = PubOptClass.AddZSeries(dt_line2, InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID3),
+                        tempxyDiagramPane2, tempsecondaryAxisY2);
+
+                    isinchart = false;
+                    if (tempZ.Count > 0)
+                        foreach (var serie in tempZ)
+                        {
+                            isinchart = false;
+                            for (var i = chart.Series.Count - 1; i >= 0; i--)
+                            {
+                                var chartserie = chart.Series[i];
+                                if (chartserie.Name == "测点3" + serie.Name) //如果已存在
+                                {
+                                    //重新添加                               
+                                    serie.CheckedInLegend = chartserie.CheckedInLegend;
+                                    serie.Name = "测点3" + serie.Name;
+                                    chart.Series[i].Points.Clear();
+                                    chart.Series[i].Points.AddRange(serie.Points.ToArray());
+
+                                    isinchart = true;
+                                    break;
+                                }
+                            }
+                            if (!isinchart)
+                            {
+                                serie.ShowInLegend = false;
+                                serie.Name = "测点3" + serie.Name;
+                                chart.Series.Add(serie);
+                            }
+                        }
+                }
+                #region 测点4
+
+                if (string.IsNullOrEmpty(CurrentPointID4))
+                {
+                    tempxyDiagramPane3.Visible = false;
+                    tempsecondaryAxisY3.Visible = false;
+                    Series4_1.ShowInLegend = false;
+                }
+                else
+                {
+                    tempxyDiagramPane3.Visible = true;
+                    tempsecondaryAxisY3.Visible = true;
+                    Series4_1.ShowInLegend = true ;
+                    //测点4
+                    dt_line4 = InterfaceClass.FiveMiniteLineQueryClass_.getFiveMiniteLine(SzNameS, SzNameE, CurrentPointID4,
+                    CurrentDevid4, CurrentWzid4);
+                    if (!checkEdit13.Checked)
+                    {
+                        tempMinValue = GetOutliersValue(dt_line4);
+                    }
+                    MaxValue = InterfaceClass.QueryPubClass_.getMaxBv(dt_line4, "Bv") * 1.2f;
+
+                    threshold4.Clear();
+                    threshold4 = InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID4);
+                    foreach (var tempMax in threshold4)
+                        if (MaxValue < tempMax) //表示当天没值
+                            MaxValue = tempMax;
+                    if (MaxValue < 0.01)
+                    {
+                        MaxValue = 1;
+                    }
+
+                    //读取量程低
+                    MinValue = InterfaceClass.QueryPubClass_.getMinBv(dt_line4, "Cv");
+                    if (MinValue > 0)
+                        MinValue = 0.0f;
+                    else
+                        foreach (var tempMin in threshold4)
+                            if (MinValue > tempMin) //表示当天没值
+                                MinValue = tempMin;
+
+                    MinValue = (float)MinValue - 0.01f;
+                    if (tempMinValue < MinValue)
+                    {
+                        MinValue = tempMinValue;
+                    }
+                    PointDw4 = InterfaceClass.FiveMiniteLineQueryClass_.getPointDw(CurrentDevid4);
+
+                    lc = 0;
+                    if (double.TryParse(cmb_lc.Text, out lc))
+                    {
+                        AxisY4.WholeRange.SetMinMaxValues(MinValue, lc);
+                        AxisY4.VisualRange.SetMinMaxValues(MinValue, lc);
+                    }
+                    else
+                    {
+                        AxisY4.WholeRange.SetMinMaxValues(MinValue, MaxValue);
+                        AxisY4.VisualRange.SetMinMaxValues(MinValue, MaxValue);
+                    }
+
+                    name = comboBoxEdit4.SelectedItem.ToString();
+                    shortName = name.Substring(0, 7) + "[测点4]";
+                    pointName4 = shortName;
+                    InitControls(Series4_1, dt_line4, shortName, ValueType, bindColumn);
+
+                    //添加阈值线
+                    tempZ = PubOptClass.AddZSeries(dt_line4, InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID4),
+                         tempxyDiagramPane3, tempsecondaryAxisY3);
+                    isinchart = false;
+                    if (tempZ.Count > 0)
+                        foreach (var serie in tempZ)
+                        {
+                            isinchart = false;
+                            for (var i = chart.Series.Count - 1; i >= 0; i--)
+                            {
+                                var chartserie = chart.Series[i];
+                                if (chartserie.Name == "测点4" + serie.Name) //如果已存在
+                                {
+                                    //重新添加                               
+                                    serie.CheckedInLegend = chartserie.CheckedInLegend;
+                                    serie.Name = "测点4" + serie.Name;
+                                    chart.Series[i].Points.Clear();
+                                    chart.Series[i].Points.AddRange(serie.Points.ToArray());
+
+                                    isinchart = true;
+                                    break;
+                                }
+                            }
+                            if (!isinchart)
+                            {
+                                serie.ShowInLegend = false;
+                                serie.Name = "测点4" + serie.Name;
+                                chart.Series.Add(serie);
+                            }
+                        }
+                }
+                #endregion
+
+                #region 测点5
+                //测点5
+                if (string.IsNullOrEmpty(CurrentPointID5))
+                {
+                    tempxyDiagramPane4.Visible = false;
+                    tempsecondaryAxisY4.Visible = false;
+                    Series5_1.ShowInLegend = false;
+                }
+                else
+                {
+                    tempxyDiagramPane4.Visible = true;
+                    tempsecondaryAxisY4.Visible = true;
+                    Series5_1.ShowInLegend = true ;
+                    dt_line5 = InterfaceClass.FiveMiniteLineQueryClass_.getFiveMiniteLine(SzNameS, SzNameE, CurrentPointID5,
+                    CurrentDevid5, CurrentWzid5);
+                    if (!checkEdit13.Checked)
+                    {
+                        tempMinValue = GetOutliersValue(dt_line5);
+                    }
+                    threshold5.Clear();
+                    threshold5 = InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID5);
+                    MaxValue = InterfaceClass.QueryPubClass_.getMaxBv(dt_line5, "Bv") * 1.2f;
+                    foreach (var tempMax in threshold5)
+                        if (MaxValue < tempMax) //表示当天没值
+                            MaxValue = tempMax;
+                    if (MaxValue < 0.01)
+                    { //如果无数据，则加个默认最大值 luochUP 20170723
+                        MaxValue = 1;
+                    }
+
+                    //读取量程低
+                    MinValue = InterfaceClass.QueryPubClass_.getMinBv(dt_line5, "Cv");
+                    if (MinValue > 0)
+                        MinValue = 0.0f;
+                    else
+                        foreach (var tempMin in threshold5)
+                            if (MinValue > tempMin) //表示当天没值
+                                MinValue = tempMin;
+                    if (tempMinValue < MinValue)
+                    {
+                        MinValue = tempMinValue;
+                    }
+                    PointDw5 = InterfaceClass.FiveMiniteLineQueryClass_.getPointDw(CurrentDevid5);
+
+                    lc = 0;
+                    if (double.TryParse(cmb_lc.Text, out lc))
+                    {
+                        AxisY5.WholeRange.SetMinMaxValues(MinValue, lc);
+                        AxisY5.VisualRange.SetMinMaxValues(MinValue, lc);
+                    }
+                    else
+                    {
+                        AxisY5.WholeRange.SetMinMaxValues(MinValue, MaxValue);
+                        AxisY5.VisualRange.SetMinMaxValues(MinValue, MaxValue);
+                    }
+
+                    name = comboBoxEdit5.SelectedItem.ToString();
+                    shortName = name.Substring(0, 7) + "[测点5]";
+                    pointName5 = shortName;
+                    InitControls(Series5_1, dt_line5, shortName, ValueType, bindColumn);
+
+                    //添加阈值线
+                    tempZ = PubOptClass.AddZSeries(dt_line5, InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID5),
+                        tempxyDiagramPane4, tempsecondaryAxisY4);
+                    isinchart = false;
+                    if (tempZ.Count > 0)
+                        foreach (var serie in tempZ)
+                        {
+                            isinchart = false;
+                            for (var i = chart.Series.Count - 1; i >= 0; i--)
+                            {
+                                var chartserie = chart.Series[i];
+                                if (chartserie.Name == "测点5" + serie.Name) //如果已存在
+                                {
+                                    //重新添加                               
+                                    serie.CheckedInLegend = chartserie.CheckedInLegend;
+                                    serie.Name = "测点5" + serie.Name;
+                                    chart.Series[i].Points.Clear();
+                                    chart.Series[i].Points.AddRange(serie.Points.ToArray());
+
+                                    isinchart = true;
+                                    break;
+                                }
+                            }
+                            if (!isinchart)
+                            {
+                                serie.ShowInLegend = false;
+                                serie.Name = "测点5" + serie.Name;
+                                chart.Series.Add(serie);
+                            }
+                        }
                 }
 
-                //读取量程低
-                MinValue = InterfaceClass.QueryPubClass_.getMinBv(dt_line2, "Cv");
-                if (MinValue > 0)
-                    MinValue = 0.0f;
+                #endregion
+
+                #region 测点6
+                if (string.IsNullOrEmpty(CurrentPointID6))
+                {
+                    tempxyDiagramPane5.Visible = false;
+                    tempsecondaryAxisY5.Visible = false;
+                    Series6_1.ShowInLegend = false;
+                }
                 else
-                    foreach (var tempMin in threshold3)
-                        if (MinValue > tempMin) //表示当天没值
-                            MinValue = tempMin;
-
-                MinValue = (float)MinValue - 0.01f;
-
-                PointDw3 = InterfaceClass.FiveMiniteLineQueryClass_.getPointDw(CurrentDevid3);
-                AxisY3.WholeRange.SetMinMaxValues(MinValue, MaxValue);
-                AxisY3.VisualRange.SetMinMaxValues(MinValue, MaxValue);
-
-                name = comboBoxEdit3.SelectedItem.ToString();
-                shortName = name.Substring(0, 7) + "[测点3]";
-                pointName3 = shortName;
-                InitControls(Series3_1, dt_line2, shortName, ValueType, bindColumn);
-
-                chart.Titles[0].Text = comboBoxEdit1.SelectedItem + "," + comboBoxEdit2.SelectedItem + "," +
-                                       comboBoxEdit3.SelectedItem;
-
-                AxisX.WholeRange.SetMinMaxValues(_minX, _maxX);
-                AxisX.VisualRange.SetMinMaxValues(_minX, _maxX);
-
-                //添加阈值线
-                tempZ = PubOptClass.AddZSeries(dt_line2, InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID3),
-                    tempxyDiagramPane2, tempsecondaryAxisY2);
-
-                isinchart = false;
-                if (tempZ.Count > 0)
-                    foreach (var serie in tempZ)
+                {
+                    tempxyDiagramPane5.Visible = true;
+                    tempsecondaryAxisY5.Visible = true;
+                    Series6_1.ShowInLegend = true ;
+                    //测点6
+                    dt_line6 = InterfaceClass.FiveMiniteLineQueryClass_.getFiveMiniteLine(SzNameS, SzNameE, CurrentPointID6,
+                    CurrentDevid6, CurrentWzid6);
+                    if (!checkEdit13.Checked)
                     {
-                        isinchart = false;
-                        for (var i = chart.Series.Count - 1; i >= 0; i--)
-                        {
-                            var chartserie = chart.Series[i];
-                            if (chartserie.Name == "测点3" + serie.Name) //如果已存在
-                            {
-                                //重新添加                               
-                                serie.CheckedInLegend = chartserie.CheckedInLegend;
-                                serie.Name = "测点3" + serie.Name;
-                                chart.Series[i].Points.Clear();
-                                chart.Series[i].Points.AddRange(serie.Points.ToArray());
+                        tempMinValue = GetOutliersValue(dt_line6);
+                    }
+                    threshold6.Clear();
+                    threshold6 = InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID6);
+                    MaxValue = InterfaceClass.QueryPubClass_.getMaxBv(dt_line6, "Bv") * 1.2f;
+                    foreach (var tempMax in threshold6)
+                        if (MaxValue < tempMax) //表示当天没值
+                            MaxValue = tempMax;
+                    if (MaxValue < 0.01)
+                    {
+                        MaxValue = 1;
+                    }
 
-                                isinchart = true;
-                                break;
+                    //读取量程低
+                    MinValue = InterfaceClass.QueryPubClass_.getMinBv(dt_line6, "Cv");
+                    if (MinValue > 0)
+                        MinValue = 0.0f;
+                    else
+                        foreach (var tempMin in threshold6)
+                            if (MinValue > tempMin) //表示当天没值
+                                MinValue = tempMin;
+                    if (tempMinValue < MinValue)
+                    {
+                        MinValue = tempMinValue;
+                    }
+                    PointDw6 = InterfaceClass.FiveMiniteLineQueryClass_.getPointDw(CurrentDevid6);
+
+                    lc = 0;
+                    if (double.TryParse(cmb_lc.Text, out lc))
+                    {
+                        AxisY6.WholeRange.SetMinMaxValues(MinValue, lc);
+                        AxisY6.VisualRange.SetMinMaxValues(MinValue, lc);
+                    }
+                    else
+                    {
+                        AxisY6.WholeRange.SetMinMaxValues(MinValue, MaxValue);
+                        AxisY6.VisualRange.SetMinMaxValues(MinValue, MaxValue);
+                    }
+
+                    name = comboBoxEdit6.SelectedItem.ToString();
+                    shortName = name.Substring(0, 7) + "[测点6]";
+                    pointName6 = shortName;
+                    InitControls(Series6_1, dt_line6, shortName, ValueType, bindColumn);
+
+                    AxisX.WholeRange.SetMinMaxValues(_minX, _maxX);
+                    AxisX.VisualRange.SetMinMaxValues(_minX, _maxX);
+
+                    //添加阈值线
+                    tempZ = PubOptClass.AddZSeries(dt_line6, InterfaceClass.QueryPubClass_.GetZFromTable(CurrentPointID6),
+                        tempxyDiagramPane5, tempsecondaryAxisY5);
+
+                    isinchart = false;
+                    if (tempZ.Count > 0)
+                        foreach (var serie in tempZ)
+                        {
+                            isinchart = false;
+                            for (var i = chart.Series.Count - 1; i >= 0; i--)
+                            {
+                                var chartserie = chart.Series[i];
+                                if (chartserie.Name == "测点6" + serie.Name) //如果已存在
+                                {
+                                    //重新添加                               
+                                    serie.CheckedInLegend = chartserie.CheckedInLegend;
+                                    serie.Name = "测点6" + serie.Name;
+                                    chart.Series[i].Points.Clear();
+                                    chart.Series[i].Points.AddRange(serie.Points.ToArray());
+
+                                    isinchart = true;
+                                    break;
+                                }
+                            }
+                            if (!isinchart)
+                            {
+                                serie.ShowInLegend = false;
+                                serie.Name = "测点6" + serie.Name;
+                                chart.Series.Add(serie);
                             }
                         }
-                        if (!isinchart)
-                        {
-                            serie.ShowInLegend = false;
-                            serie.Name = "测点3" + serie.Name;
-                            chart.Series.Add(serie);
-                        }
-                    }
+                }
+
+                #endregion
+                chart.Titles[0].Text = (comboBoxEdit1.Text == "" ? "" : comboBoxEdit1.SelectedItem) + (comboBoxEdit2.Text == "" ? "" : "," + comboBoxEdit2.SelectedItem) +
+                     (comboBoxEdit3.Text == "" ? "" : "," + comboBoxEdit3.SelectedItem + "\r\n") +
+                     (comboBoxEdit4.Text == "" ? "" : "," +
+                     comboBoxEdit4.SelectedItem)
+                     + (comboBoxEdit5.Text == "" ? "" : "," +
+                     comboBoxEdit5.SelectedItem) + (comboBoxEdit6.Text == "" ? "" : "," +
+                       comboBoxEdit6.SelectedItem);
+                int mvib = 6;
+                if (!string.IsNullOrEmpty(CurrentPointID6))
+                {
+                    mvib = 6;
+                }
+                else if (!string.IsNullOrEmpty(CurrentPointID5))
+                {
+                    mvib = 5;
+                }
+                else if (!string.IsNullOrEmpty(CurrentPointID4))
+                {
+                    mvib = 4;
+                }
+                else if (!string.IsNullOrEmpty(CurrentPointID3))
+                {
+                    mvib = 3;
+                }
+                else if (!string.IsNullOrEmpty(CurrentPointID2))
+                {
+                    mvib = 2;
+                }
+                else if (!string.IsNullOrEmpty(CurrentPointID1))
+                {
+                    mvib = 1;
+                }
+
+                if (mvib==6)
+                {
+                    Diagram.AxisX.SetVisibilityInPane(true, tempxyDiagramPane5);
+                }
+                else
+                {
+                    Diagram.AxisX.SetVisibilityInPane(false , tempxyDiagramPane5);
+                }
+
+                if (mvib == 5)
+                {
+                    Diagram.AxisX.SetVisibilityInPane(true, tempxyDiagramPane4);
+                }
+                else
+                {
+                    Diagram.AxisX.SetVisibilityInPane(false, tempxyDiagramPane4);
+                }
+
+                if (mvib == 4)
+                {
+                    Diagram.AxisX.SetVisibilityInPane(true, tempxyDiagramPane3);
+                }
+                else
+                {
+                    Diagram.AxisX.SetVisibilityInPane(false, tempxyDiagramPane3);
+                }
+
+                if (mvib == 3)
+                {
+                    Diagram.AxisX.SetVisibilityInPane(true, tempxyDiagramPane2);
+                }
+                else
+                {
+                    Diagram.AxisX.SetVisibilityInPane(false, tempxyDiagramPane2);
+                }
+
+                if (mvib == 2)
+                {
+                    Diagram.AxisX.SetVisibilityInPane(true, tempxyDiagramPane1);
+                }
+                else
+                {
+                    Diagram.AxisX.SetVisibilityInPane(false, tempxyDiagramPane1);
+                }
+
 
                 #region//设置曲线显示隐藏
 
@@ -1020,7 +1833,35 @@ namespace Sys.Safety.Client.Chart
             if (wdf != null)
                 wdf.Close();
         }
-
+        private float GetOutliersValue(DataTable dt)
+        {
+            float tempMinValue = 0f;
+            for (int i = 0; i < dt.Rows.Count; i++)//处理异常状态，置成负值
+            {
+                if (dt.Rows[i]["Av"].ToString().Contains("0.0000"))
+                {
+                    if (comboBoxEdit1.SelectedItem.ToString().Contains("风速"))
+                    {
+                        dt.Rows[i]["Av"] = dt.Rows[i]["Av"].ToString().Replace("0.0000", "-15.0000");
+                        dt.Rows[i]["Bv"] = dt.Rows[i]["Bv"].ToString().Replace("0.0000", "-15.0000");
+                        dt.Rows[i]["Cv"] = dt.Rows[i]["Cv"].ToString().Replace("0.0000", "-15.0000");
+                        dt.Rows[i]["Dv"] = dt.Rows[i]["Dv"].ToString().Replace("0.0000", "-15.0000");
+                        dt.Rows[i]["Ev"] = dt.Rows[i]["Ev"].ToString().Replace("0.0000", "-15.0000");
+                        tempMinValue = -15.1f;
+                    }
+                    else
+                    {
+                        dt.Rows[i]["Av"] = dt.Rows[i]["Av"].ToString().Replace("0.0000", "-1.0000");
+                        dt.Rows[i]["Bv"] = dt.Rows[i]["Bv"].ToString().Replace("0.0000", "-1.0000");
+                        dt.Rows[i]["Cv"] = dt.Rows[i]["Cv"].ToString().Replace("0.0000", "-1.0000");
+                        dt.Rows[i]["Dv"] = dt.Rows[i]["Dv"].ToString().Replace("0.0000", "-1.0000");
+                        dt.Rows[i]["Ev"] = dt.Rows[i]["Ev"].ToString().Replace("0.0000", "-1.0000");
+                        tempMinValue = -1.1f;
+                    }
+                }
+            }
+            return tempMinValue;
+        }
         /// <summary>
         ///     曲线鼠标移动获取游标的值
         /// </summary>
@@ -1058,7 +1899,7 @@ namespace Sys.Safety.Client.Chart
                         || element.Series.Name.Contains("平均值")
                     )
                     {
-                        if (element.Series.Name.Contains(pointName1))
+                        if (!string .IsNullOrEmpty (pointName1)&& element.Series.Name.Contains(pointName1))
                         {
                             drs = dt_line.Select("Timer='" + SelTime + "' ");
                             if (drs.Length > 0)
@@ -1066,8 +1907,7 @@ namespace Sys.Safety.Client.Chart
                                     (drs[0]["type"].ToString() == "22") ||
                                     (drs[0]["type"].ToString() == "23") ||
                                     (drs[0]["type"].ToString() == "33") ||
-                                    (drs[0]["type"].ToString() == "34") ||
-                                (drs[0]["type"].ToString() == "46"))
+                                    (drs[0]["type"].ToString() == "34"))
                                 {
                                     if (!element.Series.Name.Contains("移动值"))
                                     {
@@ -1075,7 +1915,7 @@ namespace Sys.Safety.Client.Chart
                                     }
                                     else
                                     {
-                                        if (point.Values[0].ToString() == "1E-05")
+                                        if (point.Values[0].ToString().Contains(".00001"))
                                             ShowText = element.Series.Name + ":" + "未记录";
                                         else
                                             ShowText = element.Series.Name + ":" + point.Values[0].ToString("f2") +
@@ -1084,13 +1924,13 @@ namespace Sys.Safety.Client.Chart
                                 }
                                 else
                                 {
-                                    if (point.Values[0].ToString() == "1E-05")
+                                    if (point.Values[0].ToString().Contains(".00001"))
                                         ShowText = element.Series.Name + ":" + "未记录";
                                     else
                                         ShowText = element.Series.Name + ":" + point.Values[0].ToString("f2") + PointDw1;
                                 }
                         }
-                        if (element.Series.Name.Contains(pointName2))
+                        if (!string.IsNullOrEmpty(pointName2) && element.Series.Name.Contains(pointName2))
                         {
                             drs1 = dt_line1.Select("Timer='" + SelTime + "' ");
                             if (drs1.Length > 0)
@@ -1106,7 +1946,7 @@ namespace Sys.Safety.Client.Chart
                                     }
                                     else
                                     {
-                                        if (point.Values[0].ToString() == "1E-05")
+                                        if (point.Values[0].ToString().Contains(".00001"))
                                             ShowText = element.Series.Name + ":" + "未记录";
                                         else
                                             ShowText = element.Series.Name + ":" + point.Values[0].ToString("f2") +
@@ -1115,13 +1955,13 @@ namespace Sys.Safety.Client.Chart
                                 }
                                 else
                                 {
-                                    if (point.Values[0].ToString() == "1E-05")
+                                    if (point.Values[0].ToString().Contains(".00001"))
                                         ShowText = element.Series.Name + ":" + "未记录";
                                     else
                                         ShowText = element.Series.Name + ":" + point.Values[0].ToString("f2") + PointDw2;
                                 }
                         }
-                        if (element.Series.Name.Contains(pointName3))
+                        if (!string.IsNullOrEmpty(pointName3) && element.Series.Name.Contains(pointName3))
                         {
                             drs2 = dt_line2.Select("Timer='" + SelTime + "' ");
                             if (drs2.Length > 0)
@@ -1137,7 +1977,7 @@ namespace Sys.Safety.Client.Chart
                                     }
                                     else
                                     {
-                                        if (point.Values[0].ToString() == "1E-05")
+                                        if (point.Values[0].ToString().Contains(".00001"))
                                             ShowText = element.Series.Name + ":" + "未记录";
                                         else
                                             ShowText = element.Series.Name + ":" + point.Values[0].ToString("f2") +
@@ -1146,12 +1986,108 @@ namespace Sys.Safety.Client.Chart
                                 }
                                 else
                                 {
-                                    if (point.Values[0].ToString() == "1E-05")
+                                    if (point.Values[0].ToString().Contains(".00001"))
                                         ShowText = element.Series.Name + ":" + "未记录";
                                     else
                                         ShowText = element.Series.Name + ":" + point.Values[0].ToString("f2") + PointDw3;
                                 }
                         }
+
+                        #region 4-6
+                        if (!string.IsNullOrEmpty(pointName4) && element.Series.Name.Contains(pointName4))
+                        {
+                            drs2 = dt_line4.Select("Timer='" + SelTime + "' ");
+                            if (drs2.Length > 0)
+                                if ((drs2[0]["type"].ToString() == "20") ||
+                                    (drs2[0]["type"].ToString() == "22") ||
+                                    (drs2[0]["type"].ToString() == "23") ||
+                                    (drs2[0]["type"].ToString() == "33") ||
+                                    (drs2[0]["type"].ToString() == "34"))
+                                {
+                                    if (!element.Series.Name.Contains("移动值"))
+                                    {
+                                        ShowText = element.Series.Name + ":" + drs2[0]["typetext"];
+                                    }
+                                    else
+                                    {
+                                        if (point.Values[0].ToString().Contains(".00001"))
+                                            ShowText = element.Series.Name + ":" + "未记录";
+                                        else
+                                            ShowText = element.Series.Name + ":" + point.Values[0].ToString("f2") +
+                                                       PointDw4;
+                                    }
+                                }
+                                else
+                                {
+                                    if (point.Values[0].ToString().Contains(".00001"))
+                                        ShowText = element.Series.Name + ":" + "未记录";
+                                    else
+                                        ShowText = element.Series.Name + ":" + point.Values[0].ToString("f2") + PointDw4;
+                                }
+                        }
+                        if (!string.IsNullOrEmpty(pointName5) && element.Series.Name.Contains(pointName5))
+                        {
+                            drs2 = dt_line6.Select("Timer='" + SelTime + "' ");
+                            if (drs2.Length > 0)
+                                if ((drs2[0]["type"].ToString() == "20") ||
+                                    (drs2[0]["type"].ToString() == "22") ||
+                                    (drs2[0]["type"].ToString() == "23") ||
+                                    (drs2[0]["type"].ToString() == "33") ||
+                                    (drs2[0]["type"].ToString() == "34"))
+                                {
+                                    if (!element.Series.Name.Contains("移动值"))
+                                    {
+                                        ShowText = element.Series.Name + ":" + drs2[0]["typetext"];
+                                    }
+                                    else
+                                    {
+                                        if (point.Values[0].ToString().Contains(".00001"))
+                                            ShowText = element.Series.Name + ":" + "未记录";
+                                        else
+                                            ShowText = element.Series.Name + ":" + point.Values[0].ToString("f2") +
+                                                       PointDw5;
+                                    }
+                                }
+                                else
+                                {
+                                    if (point.Values[0].ToString().Contains(".00001"))
+                                        ShowText = element.Series.Name + ":" + "未记录";
+                                    else
+                                        ShowText = element.Series.Name + ":" + point.Values[0].ToString("f2") + PointDw5;
+                                }
+                        }
+                        if (!string.IsNullOrEmpty(pointName6) && element.Series.Name.Contains(pointName6))
+                        {
+                            drs2 = dt_line6.Select("Timer='" + SelTime + "' ");
+                            if (drs2.Length > 0)
+                                if ((drs2[0]["type"].ToString() == "20") ||
+                                    (drs2[0]["type"].ToString() == "22") ||
+                                    (drs2[0]["type"].ToString() == "23") ||
+                                    (drs2[0]["type"].ToString() == "33") ||
+                                    (drs2[0]["type"].ToString() == "34"))
+                                {
+                                    if (!element.Series.Name.Contains("移动值"))
+                                    {
+                                        ShowText = element.Series.Name + ":" + drs2[0]["typetext"];
+                                    }
+                                    else
+                                    {
+                                        if (point.Values[0].ToString().Contains(".00001"))
+                                            ShowText = element.Series.Name + ":" + "未记录";
+                                        else
+                                            ShowText = element.Series.Name + ":" + point.Values[0].ToString("f2") +
+                                                       PointDw6;
+                                    }
+                                }
+                                else
+                                {
+                                    if (point.Values[0].ToString().Contains(".00001"))
+                                        ShowText = element.Series.Name + ":" + "未记录";
+                                    else
+                                        ShowText = element.Series.Name + ":" + point.Values[0].ToString("f2") + PointDw6;
+                                }
+                        }
+                        #endregion 
                     }
                     else
                     {
@@ -1204,272 +2140,544 @@ namespace Sys.Safety.Client.Chart
                 int Ihour, SMin, Iminite;
 
                 #region//测点1
-
-                for (var i = 6; i <= 12; i++)
-                    QueryStr[i] = "";
-                SzTableName = "KJ_StaFiveMinute" + SelTime.Year + SelTime.Month.ToString().PadLeft(2, '0') +
-                              SelTime.Day.ToString().PadLeft(2, '0');
-                tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.ShowPointInf(CurrentWzid1, CurrentPointID1);
-                QueryStr[0] = tempPointInf[0];
-                QueryStr[1] = tempPointInf[1];
-                QueryStr[2] = tempPointInf[2];
-                QueryStr[3] = tempPointInf[3];
-                szDate = SelTime.ToString();
-
-
-                QxDate = Convert.ToDateTime(szDate);
-                DtStart = Convert.ToDateTime(QxDate.ToShortDateString());
-
-                DtEnd = Convert.ToDateTime(QxDate.ToShortDateString());
-
-                Ihour = QxDate.Hour;
-                SMin = QxDate.Minute;
-                QueryStr[6] = QxDate.Hour + ":" + QxDate.Minute + ":" + QxDate.Second;
-                QueryStr[5] = "";
-                Iminite = QxDate.Minute % 10;
-
-                if (Iminite > 4)
+                if (!string.IsNullOrEmpty(CurrentPointID1))
                 {
-                    DtStart = DtStart.AddHours(Ihour);
-                    var Ival = 5;
-                    if (SMin / 10 != 0)
-                        Ival = Ival + SMin / 10 * 10;
-                    DtStart = DtStart.AddMinutes(Ival);
+                    for (var i = 6; i <= 12; i++)
+                        QueryStr[i] = "";
+                    SzTableName = "JC_M" + SelTime.Year + SelTime.Month.ToString().PadLeft(2, '0') +
+                                  SelTime.Day.ToString().PadLeft(2, '0');
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.ShowPointInf(CurrentWzid1, CurrentPointID1);
+                    QueryStr[0] = tempPointInf[0];
+                    QueryStr[1] = tempPointInf[1];
+                    QueryStr[2] = tempPointInf[2];
+                    QueryStr[3] = tempPointInf[3];
+                    szDate = SelTime.ToString();
 
-                    Ival = 9;
-                    DtEnd = DtEnd.AddHours(Ihour);
-                    if (SMin / 10 != 0)
-                        Ival = Ival + SMin / 10 * 10;
-                    DtEnd = DtEnd.AddMinutes(Ival);
-                    DtEnd = DtEnd.AddSeconds(59);
-                }
-                else
-                {
-                    DtStart = DtStart.AddHours(Ihour);
-                    var Ival = 0;
-                    if (SMin / 10 != 0)
-                        Ival = Ival + SMin / 10 * 10;
-                    DtStart = DtStart.AddMinutes(Ival);
 
-                    Ival = 4;
-                    DtEnd = DtEnd.AddHours(Ihour);
-                    if (SMin / 10 != 0)
-                        Ival = Ival + SMin / 10 * 10;
-                    DtEnd = DtEnd.AddMinutes(Ival);
-                    DtEnd = DtEnd.AddSeconds(59);
-                }
-                tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetDataVale(QxDate, DtStart, CurrentPointID1,
-                    CurrentDevid1, CurrentWzid1);
-                QueryStr[7] = tempPointInf[6];
-                QueryStr[8] = tempPointInf[7];
-                QueryStr[9] = tempPointInf[8];
-                QueryStr[4] = tempPointInf[13]; //设备状态
+                    QxDate = Convert.ToDateTime(szDate);
+                    DtStart = Convert.ToDateTime(QxDate.ToShortDateString());
 
-                tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetValue(QxDate, DtStart, DtEnd, CurrentPointID1,
-                    CurrentDevid1, CurrentWzid1);
-                if (QueryStr[7] == "未记录")
-                {
+                    DtEnd = Convert.ToDateTime(QxDate.ToShortDateString());
+
+                    Ihour = QxDate.Hour;
+                    SMin = QxDate.Minute;
+                    QueryStr[6] = QxDate.Hour + ":" + QxDate.Minute + ":" + QxDate.Second;
                     QueryStr[5] = "";
-                    QueryStr[10] = "解除";
-                    QueryStr[11] = "复电";
-                    QueryStr[12] = "正常";
-                    QueryStr[13] = "无";
+                    Iminite = QxDate.Minute % 10;
+
+                    if (Iminite > 4)
+                    {
+                        DtStart = DtStart.AddHours(Ihour);
+                        var Ival = 5;
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtStart = DtStart.AddMinutes(Ival);
+
+                        Ival = 9;
+                        DtEnd = DtEnd.AddHours(Ihour);
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtEnd = DtEnd.AddMinutes(Ival);
+                        DtEnd = DtEnd.AddSeconds(59);
+                    }
+                    else
+                    {
+                        DtStart = DtStart.AddHours(Ihour);
+                        var Ival = 0;
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtStart = DtStart.AddMinutes(Ival);
+
+                        Ival = 4;
+                        DtEnd = DtEnd.AddHours(Ihour);
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtEnd = DtEnd.AddMinutes(Ival);
+                        DtEnd = DtEnd.AddSeconds(59);
+                    }
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetDataVale(QxDate, DtStart, CurrentPointID1,
+                        CurrentDevid1, CurrentWzid1);
+                    QueryStr[7] = tempPointInf[6];
+                    QueryStr[8] = tempPointInf[7];
+                    QueryStr[9] = tempPointInf[8];
+                    QueryStr[4] = tempPointInf[13]; //设备状态
+
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetValue(QxDate, DtStart, DtEnd, CurrentPointID1,
+                        CurrentDevid1, CurrentWzid1);
+                    if (QueryStr[7] == "未记录")
+                    {
+                        QueryStr[5] = "";
+                        QueryStr[10] = "解除";
+                        QueryStr[11] = "复电";
+                        QueryStr[12] = "正常";
+                        QueryStr[13] = "无";
+                    }
+                    else
+                    {
+                        QueryStr[5] = tempPointInf[4];
+                        QueryStr[10] = tempPointInf[9];
+                        QueryStr[11] = tempPointInf[10];
+                        QueryStr[12] = tempPointInf[11];
+                        QueryStr[13] = tempPointInf[12];
+                    }
+
+
+                    Dr = DtRefresh.NewRow();
+                    for (var i = 0; i <= 13; i++)
+                        Dr[i] = QueryStr[i];
+                    DtRefresh.Rows.Add(Dr);
                 }
-                else
-                {
-                    QueryStr[5] = tempPointInf[4];
-                    QueryStr[10] = tempPointInf[9];
-                    QueryStr[11] = tempPointInf[10];
-                    QueryStr[12] = tempPointInf[11];
-                    QueryStr[13] = tempPointInf[12];
-                }
-
-
-                Dr = DtRefresh.NewRow();
-                for (var i = 0; i <= 13; i++)
-                    Dr[i] = QueryStr[i];
-                DtRefresh.Rows.Add(Dr);
-
                 #endregion
 
                 #region//测点2
-
-                for (var i = 6; i <= 12; i++)
-                    QueryStr[i] = "";
-                SzTableName = "KJ_StaFiveMinute" + SelTime.Year + SelTime.Month.ToString().PadLeft(2, '0') +
-                              SelTime.Day.ToString().PadLeft(2, '0');
-                tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.ShowPointInf(CurrentWzid2, CurrentPointID2);
-                QueryStr[0] = tempPointInf[0];
-                QueryStr[1] = tempPointInf[1];
-                QueryStr[2] = tempPointInf[2];
-                QueryStr[3] = tempPointInf[3];
-                szDate = SelTime.ToString();
-
-
-                QxDate = Convert.ToDateTime(szDate);
-                DtStart = Convert.ToDateTime(QxDate.ToShortDateString());
-
-                DtEnd = Convert.ToDateTime(QxDate.ToShortDateString());
-
-                Ihour = QxDate.Hour;
-                SMin = QxDate.Minute;
-                QueryStr[6] = QxDate.Hour + ":" + QxDate.Minute + ":" + QxDate.Second;
-                QueryStr[5] = "";
-                Iminite = QxDate.Minute % 10;
-
-                if (Iminite > 4)
+                if (!string.IsNullOrEmpty(CurrentPointID2))
                 {
-                    DtStart = DtStart.AddHours(Ihour);
-                    var Ival = 5;
-                    if (SMin / 10 != 0)
-                        Ival = Ival + SMin / 10 * 10;
-                    DtStart = DtStart.AddMinutes(Ival);
+                    for (var i = 6; i <= 12; i++)
+                        QueryStr[i] = "";
+                    SzTableName = "JC_M" + SelTime.Year + SelTime.Month.ToString().PadLeft(2, '0') +
+                                  SelTime.Day.ToString().PadLeft(2, '0');
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.ShowPointInf(CurrentWzid2, CurrentPointID2);
+                    QueryStr[0] = tempPointInf[0];
+                    QueryStr[1] = tempPointInf[1];
+                    QueryStr[2] = tempPointInf[2];
+                    QueryStr[3] = tempPointInf[3];
+                    szDate = SelTime.ToString();
 
-                    Ival = 9;
-                    DtEnd = DtEnd.AddHours(Ihour);
-                    if (SMin / 10 != 0)
-                        Ival = Ival + SMin / 10 * 10;
-                    DtEnd = DtEnd.AddMinutes(Ival);
-                    DtEnd = DtEnd.AddSeconds(59);
-                }
-                else
-                {
-                    DtStart = DtStart.AddHours(Ihour);
-                    var Ival = 0;
-                    if (SMin / 10 != 0)
-                        Ival = Ival + SMin / 10 * 10;
-                    DtStart = DtStart.AddMinutes(Ival);
 
-                    Ival = 4;
-                    DtEnd = DtEnd.AddHours(Ihour);
-                    if (SMin / 10 != 0)
-                        Ival = Ival + SMin / 10 * 10;
-                    DtEnd = DtEnd.AddMinutes(Ival);
-                    DtEnd = DtEnd.AddSeconds(59);
-                }
-                tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetDataVale(QxDate, DtStart, CurrentPointID2,
-                    CurrentDevid2, CurrentWzid2);
-                QueryStr[7] = tempPointInf[6];
-                QueryStr[8] = tempPointInf[7];
-                QueryStr[9] = tempPointInf[8];
-                QueryStr[4] = tempPointInf[13]; //设备状态
+                    QxDate = Convert.ToDateTime(szDate);
+                    DtStart = Convert.ToDateTime(QxDate.ToShortDateString());
 
-                tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetValue(QxDate, DtStart, DtEnd, CurrentPointID2,
-                    CurrentDevid2, CurrentWzid2);
-                if (QueryStr[7] == "未记录")
-                {
+                    DtEnd = Convert.ToDateTime(QxDate.ToShortDateString());
+
+                    Ihour = QxDate.Hour;
+                    SMin = QxDate.Minute;
+                    QueryStr[6] = QxDate.Hour + ":" + QxDate.Minute + ":" + QxDate.Second;
                     QueryStr[5] = "";
-                    QueryStr[10] = "解除";
-                    QueryStr[11] = "复电";
-                    QueryStr[12] = "正常";
-                    QueryStr[13] = "无";
+                    Iminite = QxDate.Minute % 10;
+
+                    if (Iminite > 4)
+                    {
+                        DtStart = DtStart.AddHours(Ihour);
+                        var Ival = 5;
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtStart = DtStart.AddMinutes(Ival);
+
+                        Ival = 9;
+                        DtEnd = DtEnd.AddHours(Ihour);
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtEnd = DtEnd.AddMinutes(Ival);
+                        DtEnd = DtEnd.AddSeconds(59);
+                    }
+                    else
+                    {
+                        DtStart = DtStart.AddHours(Ihour);
+                        var Ival = 0;
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtStart = DtStart.AddMinutes(Ival);
+
+                        Ival = 4;
+                        DtEnd = DtEnd.AddHours(Ihour);
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtEnd = DtEnd.AddMinutes(Ival);
+                        DtEnd = DtEnd.AddSeconds(59);
+                    }
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetDataVale(QxDate, DtStart, CurrentPointID2,
+                        CurrentDevid2, CurrentWzid2);
+                    QueryStr[7] = tempPointInf[6];
+                    QueryStr[8] = tempPointInf[7];
+                    QueryStr[9] = tempPointInf[8];
+                    QueryStr[4] = tempPointInf[13]; //设备状态
+
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetValue(QxDate, DtStart, DtEnd, CurrentPointID2,
+                        CurrentDevid2, CurrentWzid2);
+                    if (QueryStr[7] == "未记录")
+                    {
+                        QueryStr[5] = "";
+                        QueryStr[10] = "解除";
+                        QueryStr[11] = "复电";
+                        QueryStr[12] = "正常";
+                        QueryStr[13] = "无";
+                    }
+                    else
+                    {
+                        QueryStr[5] = tempPointInf[4];
+                        QueryStr[10] = tempPointInf[9];
+                        QueryStr[11] = tempPointInf[10];
+                        QueryStr[12] = tempPointInf[11];
+                        QueryStr[13] = tempPointInf[12];
+                    }
+
+
+                    Dr = DtRefresh.NewRow();
+                    for (var i = 0; i <= 13; i++)
+                        Dr[i] = QueryStr[i];
+                    DtRefresh.Rows.Add(Dr);
                 }
-                else
-                {
-                    QueryStr[5] = tempPointInf[4];
-                    QueryStr[10] = tempPointInf[9];
-                    QueryStr[11] = tempPointInf[10];
-                    QueryStr[12] = tempPointInf[11];
-                    QueryStr[13] = tempPointInf[12];
-                }
-
-
-                Dr = DtRefresh.NewRow();
-                for (var i = 0; i <= 13; i++)
-                    Dr[i] = QueryStr[i];
-                DtRefresh.Rows.Add(Dr);
-
                 #endregion
 
                 #region//测点3
-
-                for (var i = 6; i <= 12; i++)
-                    QueryStr[i] = "";
-                SzTableName = "KJ_StaFiveMinute" + SelTime.Year + SelTime.Month.ToString().PadLeft(2, '0') +
-                              SelTime.Day.ToString().PadLeft(2, '0');
-                tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.ShowPointInf(CurrentWzid3, CurrentPointID3);
-                QueryStr[0] = tempPointInf[0];
-                QueryStr[1] = tempPointInf[1];
-                QueryStr[2] = tempPointInf[2];
-                QueryStr[3] = tempPointInf[3];
-                szDate = SelTime.ToString();
-
-
-                QxDate = Convert.ToDateTime(szDate);
-                DtStart = Convert.ToDateTime(QxDate.ToShortDateString());
-
-                DtEnd = Convert.ToDateTime(QxDate.ToShortDateString());
-
-                Ihour = QxDate.Hour;
-                SMin = QxDate.Minute;
-                QueryStr[6] = QxDate.Hour + ":" + QxDate.Minute + ":" + QxDate.Second;
-                QueryStr[5] = "";
-                Iminite = QxDate.Minute % 10;
-
-                if (Iminite > 4)
+                if (!string.IsNullOrEmpty(CurrentPointID3))
                 {
-                    DtStart = DtStart.AddHours(Ihour);
-                    var Ival = 5;
-                    if (SMin / 10 != 0)
-                        Ival = Ival + SMin / 10 * 10;
-                    DtStart = DtStart.AddMinutes(Ival);
+                    for (var i = 6; i <= 12; i++)
+                        QueryStr[i] = "";
+                    SzTableName = "JC_M" + SelTime.Year + SelTime.Month.ToString().PadLeft(2, '0') +
+                                  SelTime.Day.ToString().PadLeft(2, '0');
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.ShowPointInf(CurrentWzid3, CurrentPointID3);
+                    QueryStr[0] = tempPointInf[0];
+                    QueryStr[1] = tempPointInf[1];
+                    QueryStr[2] = tempPointInf[2];
+                    QueryStr[3] = tempPointInf[3];
+                    szDate = SelTime.ToString();
 
-                    Ival = 9;
-                    DtEnd = DtEnd.AddHours(Ihour);
-                    if (SMin / 10 != 0)
-                        Ival = Ival + SMin / 10 * 10;
-                    DtEnd = DtEnd.AddMinutes(Ival);
-                    DtEnd = DtEnd.AddSeconds(59);
-                }
-                else
-                {
-                    DtStart = DtStart.AddHours(Ihour);
-                    var Ival = 0;
-                    if (SMin / 10 != 0)
-                        Ival = Ival + SMin / 10 * 10;
-                    DtStart = DtStart.AddMinutes(Ival);
 
-                    Ival = 4;
-                    DtEnd = DtEnd.AddHours(Ihour);
-                    if (SMin / 10 != 0)
-                        Ival = Ival + SMin / 10 * 10;
-                    DtEnd = DtEnd.AddMinutes(Ival);
-                    DtEnd = DtEnd.AddSeconds(59);
-                }
-                tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetDataVale(QxDate, DtStart, CurrentPointID3,
-                    CurrentDevid3, CurrentWzid3);
-                QueryStr[7] = tempPointInf[6];
-                QueryStr[8] = tempPointInf[7];
-                QueryStr[9] = tempPointInf[8];
-                QueryStr[4] = tempPointInf[13]; //设备状态
+                    QxDate = Convert.ToDateTime(szDate);
+                    DtStart = Convert.ToDateTime(QxDate.ToShortDateString());
 
-                tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetValue(QxDate, DtStart, DtEnd, CurrentPointID3,
-                    CurrentDevid3, CurrentWzid3);
-                if (QueryStr[7] == "未记录")
-                {
+                    DtEnd = Convert.ToDateTime(QxDate.ToShortDateString());
+
+                    Ihour = QxDate.Hour;
+                    SMin = QxDate.Minute;
+                    QueryStr[6] = QxDate.Hour + ":" + QxDate.Minute + ":" + QxDate.Second;
                     QueryStr[5] = "";
-                    QueryStr[10] = "解除";
-                    QueryStr[11] = "复电";
-                    QueryStr[12] = "正常";
-                    QueryStr[13] = "无";
+                    Iminite = QxDate.Minute % 10;
+
+                    if (Iminite > 4)
+                    {
+                        DtStart = DtStart.AddHours(Ihour);
+                        var Ival = 5;
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtStart = DtStart.AddMinutes(Ival);
+
+                        Ival = 9;
+                        DtEnd = DtEnd.AddHours(Ihour);
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtEnd = DtEnd.AddMinutes(Ival);
+                        DtEnd = DtEnd.AddSeconds(59);
+                    }
+                    else
+                    {
+                        DtStart = DtStart.AddHours(Ihour);
+                        var Ival = 0;
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtStart = DtStart.AddMinutes(Ival);
+
+                        Ival = 4;
+                        DtEnd = DtEnd.AddHours(Ihour);
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtEnd = DtEnd.AddMinutes(Ival);
+                        DtEnd = DtEnd.AddSeconds(59);
+                    }
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetDataVale(QxDate, DtStart, CurrentPointID3,
+                        CurrentDevid3, CurrentWzid3);
+                    QueryStr[7] = tempPointInf[6];
+                    QueryStr[8] = tempPointInf[7];
+                    QueryStr[9] = tempPointInf[8];
+                    QueryStr[4] = tempPointInf[13]; //设备状态
+
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetValue(QxDate, DtStart, DtEnd, CurrentPointID3,
+                        CurrentDevid3, CurrentWzid3);
+                    if (QueryStr[7] == "未记录")
+                    {
+                        QueryStr[5] = "";
+                        QueryStr[10] = "解除";
+                        QueryStr[11] = "复电";
+                        QueryStr[12] = "正常";
+                        QueryStr[13] = "无";
+                    }
+                    else
+                    {
+                        QueryStr[5] = tempPointInf[4];
+                        QueryStr[10] = tempPointInf[9];
+                        QueryStr[11] = tempPointInf[10];
+                        QueryStr[12] = tempPointInf[11];
+                        QueryStr[13] = tempPointInf[12];
+                    }
+
+
+                    Dr = DtRefresh.NewRow();
+                    for (var i = 0; i <= 13; i++)
+                        Dr[i] = QueryStr[i];
+                    DtRefresh.Rows.Add(Dr);
                 }
-                else
-                {
-                    QueryStr[5] = tempPointInf[4];
-                    QueryStr[10] = tempPointInf[9];
-                    QueryStr[11] = tempPointInf[10];
-                    QueryStr[12] = tempPointInf[11];
-                    QueryStr[13] = tempPointInf[12];
-                }
-
-
-                Dr = DtRefresh.NewRow();
-                for (var i = 0; i <= 13; i++)
-                    Dr[i] = QueryStr[i];
-                DtRefresh.Rows.Add(Dr);
-
                 #endregion
 
+                #region//测点4
+                if (!string.IsNullOrEmpty(CurrentPointID4))
+                {
+                    for (var i = 6; i <= 12; i++)
+                        QueryStr[i] = "";
+                    SzTableName = "JC_M" + SelTime.Year + SelTime.Month.ToString().PadLeft(2, '0') +
+                                  SelTime.Day.ToString().PadLeft(2, '0');
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.ShowPointInf(CurrentWzid4, CurrentPointID4);
+                    QueryStr[0] = tempPointInf[0];
+                    QueryStr[1] = tempPointInf[1];
+                    QueryStr[2] = tempPointInf[2];
+                    QueryStr[3] = tempPointInf[3];
+                    szDate = SelTime.ToString();
+
+
+                    QxDate = Convert.ToDateTime(szDate);
+                    DtStart = Convert.ToDateTime(QxDate.ToShortDateString());
+
+                    DtEnd = Convert.ToDateTime(QxDate.ToShortDateString());
+
+                    Ihour = QxDate.Hour;
+                    SMin = QxDate.Minute;
+                    QueryStr[6] = QxDate.Hour + ":" + QxDate.Minute + ":" + QxDate.Second;
+                    QueryStr[5] = "";
+                    Iminite = QxDate.Minute % 10;
+
+                    if (Iminite > 4)
+                    {
+                        DtStart = DtStart.AddHours(Ihour);
+                        var Ival = 5;
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtStart = DtStart.AddMinutes(Ival);
+
+                        Ival = 9;
+                        DtEnd = DtEnd.AddHours(Ihour);
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtEnd = DtEnd.AddMinutes(Ival);
+                        DtEnd = DtEnd.AddSeconds(59);
+                    }
+                    else
+                    {
+                        DtStart = DtStart.AddHours(Ihour);
+                        var Ival = 0;
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtStart = DtStart.AddMinutes(Ival);
+
+                        Ival = 4;
+                        DtEnd = DtEnd.AddHours(Ihour);
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtEnd = DtEnd.AddMinutes(Ival);
+                        DtEnd = DtEnd.AddSeconds(59);
+                    }
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetDataVale(QxDate, DtStart, CurrentPointID4,
+                        CurrentDevid4, CurrentWzid4);
+                    QueryStr[7] = tempPointInf[6];
+                    QueryStr[8] = tempPointInf[7];
+                    QueryStr[9] = tempPointInf[8];
+                    QueryStr[4] = tempPointInf[13]; //设备状态
+
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetValue(QxDate, DtStart, DtEnd, CurrentPointID4,
+                        CurrentDevid4, CurrentWzid4);
+                    if (QueryStr[7] == "未记录")
+                    {
+                        QueryStr[5] = "";
+                        QueryStr[10] = "解除";
+                        QueryStr[11] = "复电";
+                        QueryStr[12] = "正常";
+                        QueryStr[13] = "无";
+                    }
+                    else
+                    {
+                        QueryStr[5] = tempPointInf[4];
+                        QueryStr[10] = tempPointInf[9];
+                        QueryStr[11] = tempPointInf[10];
+                        QueryStr[12] = tempPointInf[11];
+                        QueryStr[13] = tempPointInf[12];
+                    }
+
+
+                    Dr = DtRefresh.NewRow();
+                    for (var i = 0; i <= 13; i++)
+                        Dr[i] = QueryStr[i];
+                    DtRefresh.Rows.Add(Dr);
+                }
+                #endregion
+
+                #region//测点5
+                if (!string.IsNullOrEmpty(CurrentPointID5))
+                {
+                    for (var i = 6; i <= 12; i++)
+                        QueryStr[i] = "";
+                    SzTableName = "JC_M" + SelTime.Year + SelTime.Month.ToString().PadLeft(2, '0') +
+                                  SelTime.Day.ToString().PadLeft(2, '0');
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.ShowPointInf(CurrentWzid5, CurrentPointID5);
+                    QueryStr[0] = tempPointInf[0];
+                    QueryStr[1] = tempPointInf[1];
+                    QueryStr[2] = tempPointInf[2];
+                    QueryStr[3] = tempPointInf[3];
+                    szDate = SelTime.ToString();
+
+
+                    QxDate = Convert.ToDateTime(szDate);
+                    DtStart = Convert.ToDateTime(QxDate.ToShortDateString());
+
+                    DtEnd = Convert.ToDateTime(QxDate.ToShortDateString());
+
+                    Ihour = QxDate.Hour;
+                    SMin = QxDate.Minute;
+                    QueryStr[6] = QxDate.Hour + ":" + QxDate.Minute + ":" + QxDate.Second;
+                    QueryStr[5] = "";
+                    Iminite = QxDate.Minute % 10;
+
+                    if (Iminite > 4)
+                    {
+                        DtStart = DtStart.AddHours(Ihour);
+                        var Ival = 5;
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtStart = DtStart.AddMinutes(Ival);
+
+                        Ival = 9;
+                        DtEnd = DtEnd.AddHours(Ihour);
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtEnd = DtEnd.AddMinutes(Ival);
+                        DtEnd = DtEnd.AddSeconds(59);
+                    }
+                    else
+                    {
+                        DtStart = DtStart.AddHours(Ihour);
+                        var Ival = 0;
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtStart = DtStart.AddMinutes(Ival);
+
+                        Ival = 4;
+                        DtEnd = DtEnd.AddHours(Ihour);
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtEnd = DtEnd.AddMinutes(Ival);
+                        DtEnd = DtEnd.AddSeconds(59);
+                    }
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetDataVale(QxDate, DtStart, CurrentPointID5,
+                        CurrentDevid5, CurrentWzid5);
+                    QueryStr[7] = tempPointInf[6];
+                    QueryStr[8] = tempPointInf[7];
+                    QueryStr[9] = tempPointInf[8];
+                    QueryStr[4] = tempPointInf[13]; //设备状态
+
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetValue(QxDate, DtStart, DtEnd, CurrentPointID5,
+                        CurrentDevid5, CurrentWzid5);
+                    if (QueryStr[7] == "未记录")
+                    {
+                        QueryStr[5] = "";
+                        QueryStr[10] = "解除";
+                        QueryStr[11] = "复电";
+                        QueryStr[12] = "正常";
+                        QueryStr[13] = "无";
+                    }
+                    else
+                    {
+                        QueryStr[5] = tempPointInf[4];
+                        QueryStr[10] = tempPointInf[9];
+                        QueryStr[11] = tempPointInf[10];
+                        QueryStr[12] = tempPointInf[11];
+                        QueryStr[13] = tempPointInf[12];
+                    }
+
+
+                    Dr = DtRefresh.NewRow();
+                    for (var i = 0; i <= 13; i++)
+                        Dr[i] = QueryStr[i];
+                    DtRefresh.Rows.Add(Dr);
+                }
+                #endregion
+
+                #region//测点6
+                if (!string.IsNullOrEmpty(CurrentPointID6))
+                {
+                    for (var i = 6; i <= 12; i++)
+                        QueryStr[i] = "";
+                    SzTableName = "JC_M" + SelTime.Year + SelTime.Month.ToString().PadLeft(2, '0') +
+                                  SelTime.Day.ToString().PadLeft(2, '0');
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.ShowPointInf(CurrentWzid6, CurrentPointID6);
+                    QueryStr[0] = tempPointInf[0];
+                    QueryStr[1] = tempPointInf[1];
+                    QueryStr[2] = tempPointInf[2];
+                    QueryStr[3] = tempPointInf[3];
+                    szDate = SelTime.ToString();
+
+
+                    QxDate = Convert.ToDateTime(szDate);
+                    DtStart = Convert.ToDateTime(QxDate.ToShortDateString());
+
+                    DtEnd = Convert.ToDateTime(QxDate.ToShortDateString());
+
+                    Ihour = QxDate.Hour;
+                    SMin = QxDate.Minute;
+                    QueryStr[6] = QxDate.Hour + ":" + QxDate.Minute + ":" + QxDate.Second;
+                    QueryStr[5] = "";
+                    Iminite = QxDate.Minute % 10;
+
+                    if (Iminite > 4)
+                    {
+                        DtStart = DtStart.AddHours(Ihour);
+                        var Ival = 5;
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtStart = DtStart.AddMinutes(Ival);
+
+                        Ival = 9;
+                        DtEnd = DtEnd.AddHours(Ihour);
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtEnd = DtEnd.AddMinutes(Ival);
+                        DtEnd = DtEnd.AddSeconds(59);
+                    }
+                    else
+                    {
+                        DtStart = DtStart.AddHours(Ihour);
+                        var Ival = 0;
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtStart = DtStart.AddMinutes(Ival);
+
+                        Ival = 4;
+                        DtEnd = DtEnd.AddHours(Ihour);
+                        if (SMin / 10 != 0)
+                            Ival = Ival + SMin / 10 * 10;
+                        DtEnd = DtEnd.AddMinutes(Ival);
+                        DtEnd = DtEnd.AddSeconds(59);
+                    }
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetDataVale(QxDate, DtStart, CurrentPointID6,
+                        CurrentDevid6, CurrentWzid6);
+                    QueryStr[7] = tempPointInf[6];
+                    QueryStr[8] = tempPointInf[7];
+                    QueryStr[9] = tempPointInf[8];
+                    QueryStr[4] = tempPointInf[13]; //设备状态
+
+                    tempPointInf = InterfaceClass.FiveMiniteLineQueryClass_.GetValue(QxDate, DtStart, DtEnd, CurrentPointID6,
+                        CurrentDevid6, CurrentWzid6);
+                    if (QueryStr[7] == "未记录")
+                    {
+                        QueryStr[5] = "";
+                        QueryStr[10] = "解除";
+                        QueryStr[11] = "复电";
+                        QueryStr[12] = "正常";
+                        QueryStr[13] = "无";
+                    }
+                    else
+                    {
+                        QueryStr[5] = tempPointInf[4];
+                        QueryStr[10] = tempPointInf[9];
+                        QueryStr[11] = tempPointInf[10];
+                        QueryStr[12] = tempPointInf[11];
+                        QueryStr[13] = tempPointInf[12];
+                    }
+
+
+                    Dr = DtRefresh.NewRow();
+                    for (var i = 0; i <= 13; i++)
+                        Dr[i] = QueryStr[i];
+                    DtRefresh.Rows.Add(Dr);
+                }
+                #endregion
                 gridControl1.DataSource = DtRefresh;
             }
             catch (Exception ex)
@@ -1483,7 +2691,7 @@ namespace Sys.Safety.Client.Chart
             try
             {
                 if (chart != null)
-                    ChartPrint.chartPrint(chart, (float)(Width * 0.8));
+                    ChartPrint.chartPrint(chart, Width);
             }
             catch (Exception ex)
             {
@@ -1605,12 +2813,14 @@ namespace Sys.Safety.Client.Chart
                 checkEdit5.Checked = false;
                 checkEdit7.Checked = false;
 
-                #region//加载曲线颜色 
+                #region//加载曲线颜色 luochUP
 
                 InterfaceClass.QueryPubClass_.SetChartColor(Series1_1, "Chart_JczColor");
                 InterfaceClass.QueryPubClass_.SetChartColor(Series2_1, "Chart_JczColor");
                 InterfaceClass.QueryPubClass_.SetChartColor(Series3_1, "Chart_JczColor");
-
+                InterfaceClass.QueryPubClass_.SetChartColor(Series4_1, "Chart_JczColor");
+                InterfaceClass.QueryPubClass_.SetChartColor(Series5_1, "Chart_JczColor");
+                InterfaceClass.QueryPubClass_.SetChartColor(Series6_1, "Chart_JczColor");
                 #endregion
             }
             object sender1 = null;
@@ -1632,12 +2842,14 @@ namespace Sys.Safety.Client.Chart
                 checkEdit5.Checked = false;
                 checkEdit7.Checked = false;
 
-                #region//加载曲线颜色 
+                #region//加载曲线颜色 luochUP
 
                 InterfaceClass.QueryPubClass_.SetChartColor(Series1_1, "Chart_ZdzColor");
                 InterfaceClass.QueryPubClass_.SetChartColor(Series2_1, "Chart_ZdzColor");
                 InterfaceClass.QueryPubClass_.SetChartColor(Series3_1, "Chart_ZdzColor");
-
+                InterfaceClass.QueryPubClass_.SetChartColor(Series4_1, "Chart_ZdzColor");
+                InterfaceClass.QueryPubClass_.SetChartColor(Series5_1, "Chart_ZdzColor");
+                InterfaceClass.QueryPubClass_.SetChartColor(Series6_1, "Chart_ZdzColor");
                 #endregion
             }
             object sender1 = null;
@@ -1659,12 +2871,14 @@ namespace Sys.Safety.Client.Chart
                 checkEdit5.Checked = false;
                 checkEdit7.Checked = false;
 
-                #region//加载曲线颜色 
+                #region//加载曲线颜色 luochUP
 
                 InterfaceClass.QueryPubClass_.SetChartColor(Series1_1, "Chart_ZxzColor");
                 InterfaceClass.QueryPubClass_.SetChartColor(Series2_1, "Chart_ZxzColor");
                 InterfaceClass.QueryPubClass_.SetChartColor(Series3_1, "Chart_ZxzColor");
-
+                InterfaceClass.QueryPubClass_.SetChartColor(Series4_1, "Chart_ZxzColor");
+                InterfaceClass.QueryPubClass_.SetChartColor(Series5_1, "Chart_ZxzColor");
+                InterfaceClass.QueryPubClass_.SetChartColor(Series6_1, "Chart_ZxzColor");
                 #endregion
             }
             object sender1 = null;
@@ -1686,12 +2900,14 @@ namespace Sys.Safety.Client.Chart
                 checkEdit2.Checked = false;
                 checkEdit7.Checked = false;
 
-                #region//加载曲线颜色 
+                #region//加载曲线颜色 luochUP
 
                 InterfaceClass.QueryPubClass_.SetChartColor(Series1_1, "Chart_PjzColor");
                 InterfaceClass.QueryPubClass_.SetChartColor(Series2_1, "Chart_PjzColor");
                 InterfaceClass.QueryPubClass_.SetChartColor(Series3_1, "Chart_PjzColor");
-
+                InterfaceClass.QueryPubClass_.SetChartColor(Series4_1, "Chart_PjzColor");
+                InterfaceClass.QueryPubClass_.SetChartColor(Series5_1, "Chart_PjzColor");
+                InterfaceClass.QueryPubClass_.SetChartColor(Series6_1, "Chart_PjzColor");
                 #endregion
             }
             object sender1 = null;
@@ -1713,12 +2929,14 @@ namespace Sys.Safety.Client.Chart
                 checkEdit5.Checked = false;
                 checkEdit2.Checked = false;
 
-                #region//加载曲线颜色 
+                #region//加载曲线颜色 luochUP
 
                 InterfaceClass.QueryPubClass_.SetChartColor(Series1_1, "Chart_YdzColor");
                 InterfaceClass.QueryPubClass_.SetChartColor(Series2_1, "Chart_YdzColor");
                 InterfaceClass.QueryPubClass_.SetChartColor(Series3_1, "Chart_YdzColor");
-
+                InterfaceClass.QueryPubClass_.SetChartColor(Series4_1, "Chart_YdzColor");
+                InterfaceClass.QueryPubClass_.SetChartColor(Series5_1, "Chart_YdzColor");
+                InterfaceClass.QueryPubClass_.SetChartColor(Series6_1, "Chart_YdzColor");
                 #endregion
             }
             object sender1 = null;
@@ -1810,6 +3028,18 @@ namespace Sys.Safety.Client.Chart
                 LineSeriesView lineview3 = (LineSeriesView)Series3_1.View;
                 lineview3.MarkerVisibility = DefaultBoolean.True;
                 lineview3.LineMarkerOptions.Size = 10;
+
+                LineSeriesView lineview4 = (LineSeriesView)Series4_1.View;
+                lineview4.MarkerVisibility = DefaultBoolean.True;
+                lineview4.LineMarkerOptions.Size = 10;
+
+                LineSeriesView lineview5 = (LineSeriesView)Series5_1.View;
+                lineview5.MarkerVisibility = DefaultBoolean.True;
+                lineview5.LineMarkerOptions.Size = 10;
+
+                LineSeriesView lineview6 = (LineSeriesView)Series6_1.View;
+                lineview6.MarkerVisibility = DefaultBoolean.True;
+                lineview6.LineMarkerOptions.Size = 10;
             }
             else
             {
@@ -1821,6 +3051,15 @@ namespace Sys.Safety.Client.Chart
 
                 LineSeriesView lineview3 = (LineSeriesView)Series3_1.View;
                 lineview3.MarkerVisibility = DefaultBoolean.False;
+
+                LineSeriesView lineview4 = (LineSeriesView)Series4_1.View;
+                lineview4.MarkerVisibility = DefaultBoolean.False;
+
+                LineSeriesView lineview5 = (LineSeriesView)Series5_1.View;
+                lineview5.MarkerVisibility = DefaultBoolean.False;
+
+                LineSeriesView lineview6 = (LineSeriesView)Series6_1.View;
+                lineview6.MarkerVisibility = DefaultBoolean.False;
             }
         }
 
@@ -1840,6 +3079,18 @@ namespace Sys.Safety.Client.Chart
             else if (e.Series.Name == Series3_1.Name)
             {
                 DisplaySeriesPoint(value, pointtimer, dt_line2, threshold3, e);
+            }
+            else if (e.Series.Name == Series4_1.Name)
+            {
+                DisplaySeriesPoint(value, pointtimer, dt_line4, threshold4, e);
+            }
+            else if (e.Series.Name == Series5_1.Name)
+            {
+                DisplaySeriesPoint(value, pointtimer, dt_line5, threshold5, e);
+            }
+            else if (e.Series.Name == Series6_1.Name)
+            {
+                DisplaySeriesPoint(value, pointtimer, dt_line6, threshold6, e);
             }
         }
 

@@ -1066,7 +1066,8 @@ namespace Sys.Safety.Client.Chart
                 dt_line = InterfaceClass.FiveMiniteLineQueryClass_.getFiveMiniteLine(SzNameS, SzNameE, CurrentPointID,
                     CurrentDevid, CurrentWzid, isQueryByPoint);
 
-                var MaxValueNow = InterfaceClass.QueryPubClass_.getMaxBv(dt_line, "Bv");
+                string zdzTime = "";
+                var MaxValueNow = InterfaceClass.QueryPubClass_.getMaxBv(dt_line, "Bv", ref zdzTime);
 
                 var MaxValue = MaxValueNow * 1.2f;
 
@@ -1105,9 +1106,10 @@ namespace Sys.Safety.Client.Chart
 
                 float avgValue = InterfaceClass.QueryPubClass_.getAvgBv(dt_line, "Dv");
 
-                chart.Titles[0].Text = comboBoxEdit1.SelectedItem.ToString() + "，最大值：" + (((float)MaxValueNow).ToString() == "-9999" ? "-" : ((float)MaxValueNow).ToString("f2"))
-                    + "，最小值：" + (((float)MinValueNow).ToString() == "9999" ? "-" : ((float)MinValueNow).ToString("f2"))
-                    + "，平均值：" + (avgValue.ToString() == "-9999" ? "-" : avgValue.ToString("f2"));
+                chart.Titles[0].Text = comboBoxEdit1.SelectedItem.ToString() + "\r\n最大值：" + (((float)MaxValueNow).ToString() == "-9999" ? "-" : ((float)MaxValueNow).ToString("f2"))
+                     + "，最大值时间：" + (zdzTime == "" ? "-" : zdzTime) + ",最小值：" + (((float)MinValueNow).ToString() == "9999" ? "-" : ((float)MinValueNow).ToString("f2"))
+                     + "，平均值：" + (avgValue.ToString() == "-9999" ? "-" : avgValue.ToString("f2"));
+
                 InitControls(dt_line);
 
                 Series3.Visible = true;

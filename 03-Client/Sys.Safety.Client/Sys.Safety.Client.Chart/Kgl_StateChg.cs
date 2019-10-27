@@ -517,7 +517,7 @@ namespace Sys.Safety.Client.Chart
             try
             {
                 if (chartControl1 != null)
-                    ChartPrint.chartPrint(chartControl1, (float)(Width * 0.75));
+                    ChartPrint.chartPrint(chartControl1, (float)(Width * 0.85));
             }
             catch (Exception ex)
             {

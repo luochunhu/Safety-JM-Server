@@ -5786,6 +5786,7 @@ namespace Sys.Safety.Services.Chart
             var Rvalue = new Dictionary<string, DataTable>();
             double MaxLC2 = -9999;
             double MinLC2 = 9999;
+            string maxValueTime = "";
             var dtR = new DataTable();
             dtR.TableName = "GetMcData";
             var strSql = "";
@@ -5992,7 +5993,10 @@ left outer join KJ_DeviceType on KJ_DeviceType.devid=" + SztB + @".devid"
                             }
                             //修改，在此处计算最大值最小值  20180122
                             if (dCur > MaxLC2)
+                            {
                                 MaxLC2 = dCur;
+                                maxValueTime = DtDay.Rows[i]["timer"].ToString();
+                            }
                             if (dCur < MinLC2)
                                 MinLC2 = dCur;
                         }
@@ -6006,7 +6010,10 @@ left outer join KJ_DeviceType on KJ_DeviceType.devid=" + SztB + @".devid"
                             SzPjz = string.Format("{0:F2}", Dpjz);
 
                             if (Dpjz > MaxLC2)
+                            {
                                 MaxLC2 = Dpjz;
+                                maxValueTime = DtDay.Rows[i]["timer"].ToString();
+                            }
                             if (Dpjz < MinLC2)
                                 MinLC2 = Dpjz;
                         }
@@ -6070,7 +6077,7 @@ left outer join KJ_DeviceType on KJ_DeviceType.devid=" + SztB + @".devid"
                     DtDay.Dispose();
                 }
                 var RString = "";
-                RString = MaxLC2 + "," + MinLC2;
+                RString = MaxLC2 + "," + MinLC2 + "," + maxValueTime;
                 Rvalue.Add(RString, dtR);
             }
             catch (Exception Ex)

@@ -564,7 +564,7 @@ namespace Sys.Safety.Client.Chart
                 values.Clear();
 
                 //设置窗体高度和宽度
-                Width = Convert.ToInt32(Screen.GetWorkingArea(this).Width * 0.7);
+                Width = Convert.ToInt32(Screen.GetWorkingArea(this).Width * 0.8);
                 Height = Convert.ToInt32(Screen.GetWorkingArea(this).Height * 0.7);
                 Left = Convert.ToInt32(Screen.GetWorkingArea(this).Width * 0.3 / 2);
                 Top = Convert.ToInt32(Screen.GetWorkingArea(this).Height * 0.3 / 2);
@@ -618,7 +618,7 @@ namespace Sys.Safety.Client.Chart
             try
             {
                 if (chartControl != null)
-                    ChartPrint.chartPrint(chartControl, (float)(Width * 0.7));
+                    ChartPrint.chartPrint(chartControl, (float)(Width * 0.8));
             }
             catch (Exception ex)
             {

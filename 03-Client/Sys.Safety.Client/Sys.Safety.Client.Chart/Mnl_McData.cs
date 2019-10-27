@@ -640,6 +640,7 @@ namespace Sys.Safety.Client.Chart
 
                 double MaxLC2 = 0;
                 double MinLC2 = 0;
+                string maxValueTime = "";
 
                 CurrentPointID = PointIDList[comboBoxEdit1.SelectedIndex];
                 CurrentDevid = DevList[comboBoxEdit1.SelectedIndex];
@@ -654,7 +655,7 @@ namespace Sys.Safety.Client.Chart
                 }
 
                 dt_line = InterfaceClass.McLineQueryClass_.GetMcData(SzNameS, SzNameE, false, CurrentPointID,
-                    CurrentDevid, CurrentWzid, TimeTick, ref MaxLC2, ref MinLC2, isQueryByPoint);
+                    CurrentDevid, CurrentWzid, TimeTick, ref MaxLC2, ref MinLC2, ref maxValueTime, isQueryByPoint);
 
                 stopwatch.Stop();
                 LogHelper.Debug("查询数据" + dt_line.Rows.Count + "，耗时：" + stopwatch.ElapsedMilliseconds);
@@ -719,8 +720,12 @@ namespace Sys.Safety.Client.Chart
                 var name = comboBoxEdit1.SelectedItem.ToString();
                 var shortName = name.Substring(0, name.IndexOf('.'));
 
-                chart.Titles[0].Text = comboBoxEdit1.SelectedItem.ToString() + "，最大值：" + (((float)MaxLC2).ToString() == "-9999" ? "-" : ((float)MaxLC2).ToString())
-                    + "，最小值：" + (((float)MinLC2).ToString() == "9999" ? "-" : ((float)MinLC2).ToString());
+                //标题最大值最小值保留2位小数
+                string maxvalue = MaxLC2 == -9999 ? "-" : String.Format("{0:F}", MaxLC2);
+                string minvalue = MinLC2 == 9999 ? "-" : String.Format("{0:F}", MinLC2);
+
+                chart.Titles[0].Text = comboBoxEdit1.SelectedItem.ToString() + "\r\n最大值：" + maxvalue + "，最大值时间：" + maxValueTime + "，最小值：" + minvalue;
+
                 InitControls(dt_line, TimeTick);
 
                 //var _minX = DateTime.Parse(SzNameS.ToShortDateString());
@@ -836,8 +841,9 @@ namespace Sys.Safety.Client.Chart
                 tempdt.Columns.Add("Wz");
                 tempdt.Columns.Add("DevName");
                 DataTable tempDt1 = dt_line.Clone();
+                double tempMaxLC2 = 0, tempMinLC2 = 0;
                 tempDt1 = InterfaceClass.McLineQueryClass_.GetMcData(DateTime.Parse(SzNameS.ToShortDateString()), SzNameE, false, CurrentPointID,
-                    CurrentDevid, CurrentWzid, TimeTick, ref MaxLC2, ref MinLC2, isQueryByPoint);
+                  CurrentDevid, CurrentWzid, TimeTick, ref tempMaxLC2, ref tempMinLC2, isQueryByPoint);
                 for (DateTime stime = SzNameS; stime <= SzNameE; stime = stime.AddSeconds(2))
                 {
                     DataRow[] dr = dt_line.Select("Timer<='" + stime.ToString("yyyy-MM-dd HH:mm:ss") + "'", "Timer desc");
@@ -861,6 +867,12 @@ namespace Sys.Safety.Client.Chart
                             obj[8] = wz;
                             obj[9] = devName;
                             tempdt.Rows.Add(obj);
+                            if (string.IsNullOrEmpty(maxValueTime))
+                            {
+                                maxValueTime = stime.ToString("yyyy-MM-dd HH:mm:ss.fff");
+                                MaxLC2 = int.Parse(dr[0][0].ToString());
+                                MinLC2 = int.Parse(dr[0][0].ToString());
+                            }         
                         }
                         else
                         {

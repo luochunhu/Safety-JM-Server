@@ -3,8 +3,8 @@ using Basic.Framework.Configuration;
 using Basic.Framework.Logging;
 using Basic.Framework.Service;
 using Sys.Safety.DataContract;
-
 using Sys.Safety.Model;
+using Sys.Safety.ServiceContract.Cache;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,11 +62,13 @@ namespace Sys.Safety.Processing.DataToDb
                 };
 
         private IAlarmRecordRepository alarmRepository;
+        private IAlarmCacheService alarmCacheService;
 
         public AlarmDataInsertToDb()
         {
             FilePath = ConfigurationManager.FileConfiguration.GetString("FileDataToDbPath", @"C:/LocalDb") + "\\Alarm\\";
             alarmRepository = ServiceFactory.Create<IAlarmRecordRepository>();
+            alarmCacheService = ServiceFactory.Create<IAlarmCacheService>();
         }
 
         protected override string GetFileName(DateTime nowtime)
@@ -143,6 +145,13 @@ namespace Sys.Safety.Processing.DataToDb
                             alarmRepository.Delete(alarmmodel.ID);
                         }
                     }
+
+                    //更新报警数据的同时，删除数据库中开始时间和结束时间一样的记录
+                    List<Jc_BInfo> alarms = alarmCacheService.GetAllAlarmCache(new Request.Cache.AlarmCacheGetAllRequest()).Data.FindAll(a => a.Stime.ToString("yyyy-MM-dd HH:mm:ss") == a.Etime.ToString("yyyy-MM-dd HH:mm:ss"));
+                    Request.Cache.AlarmCacheBatchDeleteRequest request = new Request.Cache.AlarmCacheBatchDeleteRequest();
+                    request.AlarmInfos = alarms;
+                    alarmCacheService.BatchDeleteAlarmCache(request);
+                    alarmRepository.ExecuteNonQuery("global_DeleteJCAlarmForStimeEtime", info.Key);
                 }
                 return true;
             }
