@@ -23,8 +23,6 @@ namespace Sys.Safety.Client.Display
     {
         public RealMnlControl()
         {
-            Control.CheckForIllegalCrossThreadCalls = false;
-            DevExpress.Data.CurrencyDataController.DisableThreadingProblemsDetection = true;           
             InitializeComponent();
         }
 
@@ -60,17 +58,22 @@ namespace Sys.Safety.Client.Display
         /// <summary>
         /// 列表显示名称
         /// </summary>
-        public string[] colname = new string[] { "测点编号","安装位置","设备类型","分站/通道/地址","上/下限报警值","上/下限断电值","当前值","单位","状态","设备状态","预警开始时间","预警持续时间","预警值","最大值","最小值","平均值","结束时间","总数","总值",
-            "id"};//"分站/通道/地址","预警类型","设备状态","预警开始时间","预警持续时间","预警值","最大值","最小值","平均值","结束时间","总数","总值",
-
+        //public string[] colname = new string[] { "测点编号","安装位置","设备类型","分站/通道/地址","上/下限报警值","上/下限断电值","当前值","单位","状态","设备状态","预警开始时间","预警持续时间","预警值","最大值","最小值","平均值","结束时间","总数","总值",
+        //    "id"};//"分站/通道/地址","预警类型","设备状态","预警开始时间","预警持续时间","预警值","最大值","最小值","平均值","结束时间","总数","总值",
+        public string[] colname = new string[] {"地点","名称","单位","设备类型","分站/通道/地址","上/下限报警门限","上/下限断电门限","上/下限复电门限","监测值","状态","设备状态","预警开始时间","预警持续时间","预警值","最近一次统计的最大值","最小值","平均值","结束时间","总数","总值",
+            "最后一次报警或解除报警时刻","最后一次断电或复电时刻","id"};//"分站/通道/地址","预警类型","设备状态","预警开始时间","预警持续时间","预警值","最大值","最小值","平均值","结束时间","总数","总值",
         /// <summary>
         /// 表列头名称
         /// </summary>
-        public string[] tcolname = new string[] {"point","wz","devname","fzh","bjz","ddz",
-            "ssz","dw","state","sbstate", "stime","cxtime","yjz","zdz",
-            "zxz", "pjz","endtime","count","allvalue","id"};
+        //public string[] tcolname = new string[] {"point","wz","devname","fzh","bjz","ddz",
+        //    "ssz","dw","state","sbstate", "stime","cxtime","yjz","zdz",
+        //    "zxz", "pjz","endtime","count","allvalue","id"};
 
-        public int[] colwith = new int[] { 60, 160, 100, 80, 80, 80, 120, 50, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 };
+        public string[] tcolname = new string[] {"wz","point","dw","devname","fzh","bjz","ddz","fdz",
+            "ssz","state","sbstate", "stime","cxtime","yjz","zdz",
+            "zxz", "pjz","endtime","count","allvalue","lastbjtime","lastddtime","id"};
+
+        public int[] colwith = new int[] { 60, 160, 100, 80, 80, 80, 120, 50, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 120, 120, 80 };
 
         /// <summary>
         /// 显示showdt操作对象锁  20170705
@@ -98,10 +101,9 @@ namespace Sys.Safety.Client.Display
                 col.OptionsFilter.AllowFilter = false;
                 col.OptionsFilter.AllowAutoFilter = false;
                 col.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-                if (colname[i] == "设备状态" || colname[i] == "预警类型" || colname[i] == "分站/通道/地址" || 
+                if (colname[i] == "设备状态" || colname[i] == "预警类型" || colname[i] == "分站/通道/地址" ||
                     colname[i] == "预警开始时间" || colname[i] == "预警持续时间" || colname[i] == "预警值" ||
-                    colname[i] == "最大值" || colname[i] == "最小值" || colname[i] == "平均值" ||
-                    colname[i] == "结束时间" || colname[i] == "总数" || colname[i] == "总值" || colname[i] == "id")
+                    colname[i] == "最小值" || colname[i] == "结束时间" || colname[i] == "总数" || colname[i] == "总值" || colname[i] == "id")
                 {
                     col.Visible = false;
                 }
@@ -134,7 +136,7 @@ namespace Sys.Safety.Client.Display
         public void refresh(DateTime nowtime)
         {
             string point = "", ssz1, ssz2;
-            double ssz, zdz, zxz, pjz, allvlaue, count;
+            double ssz, sszcopy, zdz, zxz, pjz, allvlaue, count;
             DataRow[] row;
             DataRow r;
             TimeSpan span;
@@ -232,6 +234,7 @@ namespace Sys.Safety.Client.Display
                                 #region 刷新实时值、最大值、最小值、平均值
                                 point = showdt.Rows[i]["point"].ToString();
                                 ssz2 = showdt.Rows[i]["ssz"].ToString();
+
                                 lock (StaticClass.allPointDtLockObj)
                                 {
                                     row = StaticClass.AllPointDt.Select("point='" + point + "'");
@@ -240,32 +243,92 @@ namespace Sys.Safety.Client.Display
                                         ssz1 = row[0]["ssz"].ToString();
                                         if (ssz1 != ssz2)
                                         {
-                                            if (double.TryParse(ssz1, out ssz))
+                                            if (double.TryParse(ssz1, out ssz) && double.TryParse(ssz2, out sszcopy) && ssz == sszcopy)
                                             {
-                                                zdz = Convert.ToDouble(showdt.Rows[i]["zdz"]);
-                                                zxz = Convert.ToDouble(showdt.Rows[i]["zxz"]);
-                                                pjz = Convert.ToDouble(showdt.Rows[i]["pjz"]);
-                                                count = Convert.ToDouble(showdt.Rows[i]["count"]);
-                                                allvlaue = Convert.ToDouble(showdt.Rows[i]["allvalue"]);
-                                                if (ssz > zdz)
+
+                                            }
+                                            else
+                                            {
+                                                showdt.Rows[i]["state"] = OprFuction.StateChange(row[0]["zt"].ToString());
+                                                showdt.Rows[i]["sbstate"] = OprFuction.StateChange(row[0]["sbzt"].ToString());
+                                                showdt.Rows[i]["stime"] = OprFuction.TimeToString(DateTime.Parse(row[0]["time"].ToString()));
+                                                if (double.TryParse(ssz1, out ssz))
                                                 {
-                                                    zdz = ssz;
-                                                }
-                                                else if (ssz < zxz)
-                                                {
-                                                    zxz = ssz;
-                                                }
-                                                count += 1;
-                                                allvlaue += ssz;
-                                                pjz = Math.Round(allvlaue / count, 2);
-                                                showdt.Rows[i]["zdz"] = zdz;
-                                                showdt.Rows[i]["zxz"] = zxz;
-                                                showdt.Rows[i]["pjz"] = pjz;
-                                                showdt.Rows[i]["ssz"] = ssz;
-                                                showdt.Rows[i]["count"] = count;
-                                                if (showdt.Rows[i].Table.Columns.Contains("allvlaue"))
-                                                {
-                                                    showdt.Rows[i]["allvlaue"] = allvlaue;
+                                                    //zdz = Convert.ToDouble(showdt.Rows[i]["zdz"].ToString());
+                                                    double.TryParse(showdt.Rows[i]["zdz"].ToString(), out zdz);
+                                                    //zxz = Convert.ToDouble(showdt.Rows[i]["zxz"].ToString());
+                                                    double.TryParse(showdt.Rows[i]["zxz"].ToString(), out zxz);
+                                                    //pjz = Convert.ToDouble(showdt.Rows[i]["pjz"].ToString());
+                                                    double.TryParse(showdt.Rows[i]["pjz"].ToString(), out pjz);
+                                                    //count = Convert.ToDouble(showdt.Rows[i]["count"].ToString());
+                                                    double.TryParse(showdt.Rows[i]["count"].ToString(), out count);
+                                                    //allvlaue = Convert.ToDouble(showdt.Rows[i]["allvalue"].ToString());
+                                                    double.TryParse(showdt.Rows[i]["allvalue"].ToString(), out allvlaue);
+                                                    if (ssz > zdz)
+                                                    {
+                                                        zdz = ssz;
+                                                    }
+                                                    else if (ssz < zxz)
+                                                    {
+                                                        zxz = ssz;
+                                                    }
+                                                    count += 1;
+                                                    allvlaue += ssz;
+                                                    pjz = Math.Round(allvlaue / count, 2);
+                                                    showdt.Rows[i]["zdz"] = zdz;
+                                                    showdt.Rows[i]["zxz"] = zxz;
+                                                    showdt.Rows[i]["pjz"] = pjz;
+                                                    showdt.Rows[i]["ssz"] = ssz;
+                                                    showdt.Rows[i]["count"] = count;
+                                                    if (showdt.Rows[i].Table.Columns.Contains("allvlaue"))
+                                                    {
+                                                        showdt.Rows[i]["allvlaue"] = allvlaue;
+                                                    }
+
+                                                    lock (StaticClass.bjobj)
+                                                    {
+                                                        try
+                                                        {
+                                                            var bjobj = StaticClass.jcbdata.Values.Where(pp => pp.Point == showdt.Rows[i]["point"].ToString() && (
+                                                                pp.Type == StaticClass.itemStateToClient.EqpState9 ||
+                                                                pp.Type == StaticClass.itemStateToClient.EqpState19 ||
+                                                                pp.Type == StaticClass.itemStateToClient.EqpState16 ||
+                                                                pp.Type == StaticClass.itemStateToClient.EqpState15)).OrderByDescending(pp => pp.Stime).FirstOrDefault();
+                                                            if (bjobj != null && !string.IsNullOrEmpty(bjobj.Point))
+                                                            {
+                                                                if (OprFuction.IsInitTime(bjobj.Etime))
+                                                                {
+                                                                    showdt.Rows[i]["lastbjtime"] = OprFuction.TimeToString(bjobj.Stime);
+                                                                }
+                                                                else
+                                                                {
+                                                                    showdt.Rows[i]["lastbjtime"] = OprFuction.TimeToString(bjobj.Etime);
+                                                                }
+                                                            }
+
+                                                            bjobj = StaticClass.jcbdata.Values.Where(pp => pp.Point == showdt.Rows[i]["point"].ToString() && (
+                                                              pp.Type == StaticClass.itemStateToClient.EqpState11 ||
+                                                              pp.Type == StaticClass.itemStateToClient.EqpState21)).OrderByDescending(pp => pp.Stime).FirstOrDefault();
+
+                                                            if (bjobj != null && !string.IsNullOrEmpty(bjobj.Point))
+                                                            {
+                                                                if (OprFuction.IsInitTime(bjobj.Etime))
+                                                                {
+                                                                    showdt.Rows[i]["lastddtime"] = OprFuction.TimeToString(bjobj.Stime);
+                                                                }
+                                                                else
+                                                                {
+                                                                    showdt.Rows[i]["lastddtime"] = OprFuction.TimeToString(bjobj.Etime);
+                                                                }
+                                                            }
+
+                                                        }
+                                                        catch (Exception ex)
+                                                        {
+
+                                                            Basic.Framework.Logging.LogHelper.Error(ex);
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
@@ -563,7 +626,7 @@ namespace Sys.Safety.Client.Display
 
                 #region  模拟量信息
                 lock (StaticClass.allPointDtLockObj)
-                {                   
+                {
                     rows = StaticClass.AllPointDt.Select("lx='模拟量' ", "fzh,tdh,dzh");
 
                     //modified by  20170315
@@ -629,8 +692,6 @@ namespace Sys.Safety.Client.Display
                                             showdt.Rows[i]["count"] = count;
 
                                             showdt.Rows[i]["allvalue"] = allvlaue;
-
-
                                         }
                                     }
                                     #endregion
@@ -678,6 +739,7 @@ namespace Sys.Safety.Client.Display
                                 row["cxtime"] = String.Format("{0:D2}:{1:D2}:{2:D2}:{3:D2}", span.Days, span.Hours, span.Minutes, span.Seconds);
                                 row["bjz"] = r["sxbj"] + "/" + r["xxbj"];
                                 row["ddz"] = r["sxdd"] + "/" + r["xxdd"];
+                                row["fdz"] = r["sxfd"] + "/" + r["xxfd"];
                                 row["zdz"] = r["ssz"];
                                 row["zxz"] = r["ssz"];
                                 row["pjz"] = r["ssz"];

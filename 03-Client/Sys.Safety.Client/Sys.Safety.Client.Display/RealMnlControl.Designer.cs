@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RealMnlControl));
             this.mainGrid = new DevExpress.XtraGrid.GridControl();
             this.mainGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.timer1 = new System.Windows.Forms.Timer();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -61,7 +62,7 @@
             // mainGridView
             // 
             this.mainGridView.GridControl = this.mainGrid;
-            this.mainGridView.IndicatorWidth = 40;
+            this.mainGridView.IndicatorWidth = 30;
             this.mainGridView.Name = "mainGridView";
             this.mainGridView.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
             this.mainGridView.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;

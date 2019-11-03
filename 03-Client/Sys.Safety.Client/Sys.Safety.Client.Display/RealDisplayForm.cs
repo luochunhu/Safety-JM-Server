@@ -4454,6 +4454,17 @@ namespace Sys.Safety.Client.Display
 
             }
         }
+        /// <summary>
+        /// 模拟图显示
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void barButtonItem23_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Dictionary<string, string> formParams = new Dictionary<string, string>();
+            bool isSystemDesktop = false;
+            RequestUtil.ExcuteCommand("requestgisedit12", formParams, isSystemDesktop);
+        }
     }
 }
 

@@ -16,6 +16,7 @@ using Sys.Safety.DataContract;
 using Basic.Framework.Service;
 using Sys.Safety.ServiceContract;
 using Basic.Framework.Common;
+using Sys.Safety.Enums;
 
 namespace Sys.Safety.Client.Display
 {
@@ -23,7 +24,6 @@ namespace Sys.Safety.Client.Display
     {
         public RealKglControl()
         {
-            DevExpress.Data.CurrencyDataController.DisableThreadingProblemsDetection = true;
             InitializeComponent();
         }
 
@@ -59,17 +59,21 @@ namespace Sys.Safety.Client.Display
         /// <summary>
         /// 列表显示名称
         /// </summary>
-        public string[] colname = new string[] { "测点编号","安装位置","设备类型","当前值","单位","状态","设备状态","预警开始时间","预警持续时间","预警值","最大值","最小值","平均值","结束时间","总数","总值",
-            "id"};//"分站/通道/地址","预警类型","设备状态","预警开始时间","预警持续时间","预警值","最大值","最小值","平均值","结束时间","总数","总值",
-
+        //public string[] colname = new string[] { "测点编号","安装位置","设备类型","分站/通道/地址","当前值","单位","状态","设备状态","预警开始时间","预警持续时间","预警值","最大值","最小值","平均值","结束时间","总数","总值",
+        //    "id"};//"分站/通道/地址","预警类型","设备状态","预警开始时间","预警持续时间","预警值","最大值","最小值","平均值","结束时间","总数","总值",
+        public string[] colname = new string[] { "地点","名称","设备类型","分站/通道/地址","当前值","单位","设备状态","时刻","设备的状态","预警开始时间","预警持续时间","预警值","最大值","最小值","平均值","结束时间","总数","总值",
+            "报警/断电及时刻","断电区域","馈电状态及时刻","措施及时刻","馈电ID","id"};//"分站/通道/地址","预警类型","设备状态","预警开始时间","预警持续时间","预警值","最大值","最小值","平均值","结束时间","总数","总值",
         /// <summary>
         /// 表列头名称
         /// </summary>
-        public string[] tcolname = new string[] {"point","wz","devname",
-            "ssz","dw","state","sbstate", "stime","cxtime","yjz","zdz",
-            "zxz", "pjz","endtime","count","allvalue","id"};//"fzh",
+        //public string[] tcolname = new string[] {"point","wz","devname","fzh",
+        //    "ssz","dw","state","sbstate", "stime","cxtime","yjz","zdz",
+        //    "zxz", "pjz","endtime","count","allvalue","id"};
+        public string[] tcolname = new string[] {"wz","point","devname","fzh",
+            "ssz","dw","state","time","sbstate", "stime","cxtime","yjz","zdz",
+            "zxz", "pjz","endtime","count","allvalue","bjtime","ddqy","kdtime","cstime","kdid","id"};
 
-        public int[] colwith = new int[] { 60, 160, 100,  120, 50, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80 };
+        public int[] colwith = new int[] { 60, 160, 100, 80, 120, 50, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 120, 120, 120, 120, 80, 80 };
 
         /// <summary>
         /// 显示showdt操作对象锁  20170705
@@ -97,10 +101,10 @@ namespace Sys.Safety.Client.Display
                 col.OptionsFilter.AllowFilter = false;
                 col.OptionsFilter.AllowAutoFilter = false;
                 col.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-                if (colname[i] == "设备状态" || colname[i] == "预警类型" || colname[i] == "分站/通道/地址" || colname[i] == "单位" || 
+                if (colname[i] == "设备的状态" || colname[i] == "预警类型" || colname[i] == "分站/通道/地址" || colname[i] == "单位" ||
                     colname[i] == "预警开始时间" || colname[i] == "预警持续时间" || colname[i] == "预警值" ||
                     colname[i] == "最大值" || colname[i] == "最小值" || colname[i] == "平均值" ||
-                    colname[i] == "结束时间" || colname[i] == "总数" || colname[i] == "总值" || colname[i] == "id")
+                    colname[i] == "结束时间" || colname[i] == "总数" || colname[i] == "总值" || colname[i] == "id" || colname[i] == "馈电ID")
                 {
                     col.Visible = false;
                 }
@@ -557,12 +561,20 @@ namespace Sys.Safety.Client.Display
             DataTable dt = showdt.Clone();
             List<int> fzh;
             int x = -1, y = -1, count = 0, toprowindex = 0;
+            long temp = 0;
+            string[] kdid1;
+            Jc_BInfo tempobj = null;
+            bool updateflag = true;
+            List<Jc_BInfo> endkdlist = new List<Jc_BInfo>();
+            Jc_BInfo lb = new Jc_BInfo();
+            string nt = string.Empty;
+
             try
             {
 
                 #region  模拟量信息
                 lock (StaticClass.allPointDtLockObj)
-                {                   
+                {
                     rows = StaticClass.AllPointDt.Select("lx='开关量' ", "fzh,tdh,dzh");
 
                     //modified by  20170315
@@ -592,10 +604,7 @@ namespace Sys.Safety.Client.Display
                                 if (rows.Length > 0)
                                 {
 
-                                    #region 刷新持续时间
-                                    span = nowtime - Convert.ToDateTime(showdt.Rows[i]["stime"]);
-                                    showdt.Rows[i]["cxtime"] = String.Format("{0:D2}:{1:D2}:{2:D2}:{3:D2}", span.Days, span.Hours, span.Minutes, span.Seconds);
-                                    #endregion
+
 
                                     #region 刷新实时值、最大值、最小值、平均值
                                     point = showdt.Rows[i]["point"].ToString();
@@ -603,37 +612,150 @@ namespace Sys.Safety.Client.Display
                                     ssz1 = rows[0]["ssz"].ToString();
                                     if (ssz1 != ssz2)
                                     {
-                                        if (double.TryParse(ssz1, out ssz))
-                                        {
-                                            zdz = Convert.ToDouble(showdt.Rows[i]["zdz"]);
-                                            zxz = Convert.ToDouble(showdt.Rows[i]["zxz"]);
-                                            pjz = Convert.ToDouble(showdt.Rows[i]["pjz"]);
-                                            count = Convert.ToInt32(showdt.Rows[i]["count"]);
-                                            allvlaue = Convert.ToDouble(showdt.Rows[i]["allvalue"]);
-                                            if (ssz > zdz)
-                                            {
-                                                zdz = ssz;
-                                            }
-                                            else if (ssz < zxz)
-                                            {
-                                                zxz = ssz;
-                                            }
-                                            count += 1;
-                                            allvlaue += ssz;
-                                            pjz = Math.Round(allvlaue / count, 2);
-                                            showdt.Rows[i]["zdz"] = zdz;
-                                            showdt.Rows[i]["zxz"] = zxz;
-                                            showdt.Rows[i]["pjz"] = pjz;
-                                            showdt.Rows[i]["ssz"] = ssz;
-                                            showdt.Rows[i]["count"] = count;
-
-                                            showdt.Rows[i]["allvalue"] = allvlaue;
-
-
-                                        }
+                                        showdt.Rows[i]["ssz"] = ssz1;
+                                        showdt.Rows[i]["state"] = OprFuction.StateChange(rows[0]["zt"].ToString());
+                                        showdt.Rows[i]["sbstate"] = OprFuction.StateChange(rows[0]["sbzt"].ToString());
+                                        showdt.Rows[i]["stime"] = OprFuction.TimeToString(DateTime.Parse(rows[0]["time"].ToString()));
+                                        showdt.Rows[i]["time"] = OprFuction.TimeToString(DateTime.Parse(rows[0]["time"].ToString()));
                                     }
                                     #endregion
 
+                                    lock (StaticClass.bjobj)
+                                    {
+                                        var bjobj = StaticClass.jcbdata.Values.Where(pp => pp.Point == showdt.Rows[i]["point"].ToString() && (
+                                            (OprFuction.KGLisAlarm(pp) || !string.IsNullOrEmpty(pp.Kzk))) && (OprFuction.IsInitTime(pp.Etime))).OrderByDescending(pp => pp.Stime).FirstOrDefault();
+                                        if (bjobj != null && !string.IsNullOrEmpty(bjobj.Point))
+                                        {
+                                            if (OprFuction.KGLisAlarm(bjobj))
+                                            {
+                                                if (showdt.Rows[i]["bjtime"] != null && showdt.Rows[i]["bjtime"].ToString() != "报警/" + OprFuction.TimeToString(bjobj.Etime))
+                                                {
+                                                    showdt.Rows[i]["bjtime"] = "报警/" + OprFuction.TimeToString(bjobj.Stime);
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (showdt.Rows[i]["bjtime"] != null && showdt.Rows[i]["bjtime"].ToString() != "断电/" + OprFuction.TimeToString(bjobj.Stime))
+                                                {
+                                                    showdt.Rows[i]["bjtime"] = "断电/" + OprFuction.TimeToString(bjobj.Stime);
+                                                }
+                                            }
+
+                                            if (!string.IsNullOrEmpty(bjobj.Kzk))
+                                            {
+                                                string[] kzk = bjobj.Kzk.Split('|');
+                                                string kzqy = "";
+                                                if (kzk.Length > 0)
+                                                {
+                                                    for (int k = 0; k < kzk.Length; k++)
+                                                    {
+                                                        lock (StaticClass.allPointDtLockObj)
+                                                        {
+                                                            DataRow[] row1 = StaticClass.AllPointDt.Select("point='" + kzk[i] + "'");
+                                                            if (row1.Length > 0)
+                                                            {
+                                                                kzqy = kzqy + kzk[i] + "(" + row1[0]["wz"] + ")|";
+                                                            }
+                                                        }
+
+                                                    }
+                                                }
+                                                if (kzqy.Length > 1)
+                                                {
+                                                    kzqy = kzqy.Substring(0, kzqy.Length - 1);
+                                                }
+                                                showdt.Rows[i]["ddqy"] = kzqy;
+                                            }
+                                            else
+                                            {
+                                                showdt.Rows[i]["ddqy"] = "";
+                                            }
+
+
+                                            if (showdt.Rows[i]["cstime"] != null && showdt.Rows[i]["cstime"].ToString() != bjobj.Cs + "/" + bjobj.Bz2)
+                                            {
+                                                showdt.Rows[i]["cstime"] = bjobj.Cs + "/" + bjobj.Bz2;
+                                            }
+
+                                            if (!string.IsNullOrEmpty(bjobj.Kdid))
+                                            {
+                                                if (null != showdt.Rows[i]["kdid"])
+                                                {
+                                                    if (showdt.Rows[i]["kdid"].ToString() != bjobj.Kdid)
+                                                    {
+
+                                                        #region 修改馈电
+                                                        kdid1 = bjobj.Kdid.Split(',');
+                                                        lock (StaticClass.bjobj)
+                                                        {
+                                                            try
+                                                            {
+                                                                for (int z = 0; z < kdid1.Length; z++)
+                                                                {
+                                                                    if (!string.IsNullOrEmpty(kdid1[z]))
+                                                                    {
+                                                                        temp = long.Parse(kdid1[z]);
+                                                                        if (StaticClass.jcbdata.ContainsKey(temp))
+                                                                        {
+                                                                            tempobj = StaticClass.jcbdata[temp];
+                                                                            showdt.Rows[i]["kdtime"] = OprFuction.StateChange(tempobj.Type.ToString()) + "/" + tempobj.Stime;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            catch (Exception ex)
+                                                            {
+                                                                Basic.Framework.Logging.LogHelper.Error(ex);
+                                                            }
+                                                        }
+                                                        showdt.Rows[i]["kdid"] = bjobj.Kdid;
+                                                        #endregion
+                                                    }
+                                                    else
+                                                    {
+                                                        updateflag = true;
+                                                        kdid1 = bjobj.Kdid.Split(',');
+                                                        for (int z = 0; z < kdid1.Length; z++)
+                                                        {
+                                                            if (!string.IsNullOrEmpty(kdid1[z]))
+                                                            {
+                                                                temp = long.Parse(kdid1[z]);
+                                                                if (StaticClass.jcbdata.ContainsKey(temp))
+                                                                {
+                                                                    tempobj = StaticClass.jcbdata[temp];
+                                                                    endkdlist.Add(tempobj);
+                                                                    if (OprFuction.IsInitTime(tempobj.Etime))
+                                                                    {
+                                                                        updateflag = false;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        if (updateflag)
+                                                        {
+                                                            lb = endkdlist.OrderByDescending(pp => pp.Etime).First();
+                                                            if (lb.Type == (short)DeviceDataState.DataPowerOffFail)
+                                                            {
+                                                                nt = ((short)DeviceDataState.DataPowerOffSuc).ToString();
+                                                            }
+                                                            else if (lb.Type == (short)DeviceDataState.DataPowerOnFail)
+                                                            {
+                                                                nt = ((short)DeviceDataState.DataPowerOnSuc).ToString();
+                                                            }
+                                                            showdt.Rows[i]["kdtime"] = OprFuction.StateChange(nt) + "/" + lb.Etime;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            showdt.Rows[i]["bjtime"] = "";
+                                            showdt.Rows[i]["ddqy"] = "";
+                                            showdt.Rows[i]["kdtime"] = "";
+                                            showdt.Rows[i]["cstime"] = "";
+                                        }
+                                    }
                                 }
                                 else
                                 {
@@ -668,13 +790,14 @@ namespace Sys.Safety.Client.Display
                                 {
                                     row["yjz"] = r["xxyj"];
                                 }
-                                //row["fzh"] = r["fzh"] + "/" + r["tdh"] + "/" + r["dzh"];
+                                row["fzh"] = r["fzh"] + "/" + r["tdh"] + "/" + r["dzh"];
                                 row["ssz"] = r["ssz"];
                                 row["state"] = OprFuction.StateChange(r["zt"].ToString());
                                 row["sbstate"] = OprFuction.StateChange(r["sbzt"].ToString());
                                 row["stime"] = OprFuction.TimeToString(DateTime.Parse(r["time"].ToString()));
+                                row["time"] = OprFuction.TimeToString(DateTime.Parse(r["time"].ToString()));
                                 span = nowtime - DateTime.Parse(r["time"].ToString());
-                                row["cxtime"] = String.Format("{0:D2}:{1:D2}:{2:D2}:{3:D2}", span.Days, span.Hours, span.Minutes, span.Seconds);                               
+                                row["cxtime"] = String.Format("{0:D2}:{1:D2}:{2:D2}:{3:D2}", span.Days, span.Hours, span.Minutes, span.Seconds);
                                 row["zdz"] = r["ssz"];
                                 row["zxz"] = r["ssz"];
                                 row["pjz"] = r["ssz"];

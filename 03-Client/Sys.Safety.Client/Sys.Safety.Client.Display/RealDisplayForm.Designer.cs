@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RealDisplayForm));
-            DevExpress.Sparkline.LineSparklineView lineSparklineView1 = new DevExpress.Sparkline.LineSparklineView();
+            DevExpress.Sparkline.LineSparklineView lineSparklineView2 = new DevExpress.Sparkline.LineSparklineView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
@@ -50,6 +50,7 @@
             this.tlab_crupage = new DevExpress.XtraBars.BarHeaderItem();
             this.tbtn_xyy = new DevExpress.XtraBars.BarButtonItem();
             this.btn_my = new DevExpress.XtraBars.BarButtonItem();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.ckc_lx = new DevExpress.XtraBars.BarCheckItem();
             this.chk_wg = new DevExpress.XtraBars.BarCheckItem();
             this.ckc_ju = new DevExpress.XtraBars.BarCheckItem();
@@ -57,7 +58,6 @@
             this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
             this.bar_mh = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -105,6 +105,7 @@
             this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -170,9 +171,9 @@
             // gridC
             // 
             this.gridC.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gridC.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gridC.Location = new System.Drawing.Point(0, 0);
             this.gridC.MainView = this.gview;
             this.gridC.Name = "gridC";
@@ -278,8 +279,9 @@
             this.barButtonItem21,
             this.barStaticItem1,
             this.barButtonItem22,
-            this.barStaticItem2});
-            this.barManager1.MaxItemId = 56;
+            this.barStaticItem2,
+            this.barButtonItem23});
+            this.barManager1.MaxItemId = 57;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSparklineEdit1,
             this.repositoryItemPictureEdit1,
@@ -358,6 +360,13 @@
             this.btn_my.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btn_my.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_my_ItemClick);
             // 
+            // barStaticItem2
+            // 
+            this.barStaticItem2.Caption = "共0条记录";
+            this.barStaticItem2.Id = 55;
+            this.barStaticItem2.Name = "barStaticItem2";
+            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
             // ckc_lx
             // 
             this.ckc_lx.Caption = "启用自动翻页";
@@ -418,13 +427,6 @@
             // 
             this.repositoryItemTextEdit1.AutoHeight = false;
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
-            // 
-            // barStaticItem2
-            // 
-            this.barStaticItem2.Caption = "共0条记录";
-            this.barStaticItem2.Id = 55;
-            this.barStaticItem2.Name = "barStaticItem2";
-            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // bar3
             // 
@@ -605,7 +607,7 @@
             // 
             // barButtonItem10
             // 
-            this.barButtonItem10.Caption = "运行记录查询";
+            this.barButtonItem10.Caption = "列表显示(运行记录)";
             this.barButtonItem10.Id = 33;
             this.barButtonItem10.Name = "barButtonItem10";
             this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
@@ -620,15 +622,14 @@
             // 
             // barButtonItem12
             // 
-            this.barButtonItem12.Caption = "显示设置（编排）";
+            this.barButtonItem12.Caption = "页面编排(显示设置)";
             this.barButtonItem12.Id = 35;
             this.barButtonItem12.Name = "barButtonItem12";
-            this.barButtonItem12.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.barButtonItem12.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick);
             // 
             // barButtonItem13
             // 
-            this.barButtonItem13.Caption = "快速定义";
+            this.barButtonItem13.Caption = "参数设置(快速定义)";
             this.barButtonItem13.Id = 36;
             this.barButtonItem13.Name = "barButtonItem13";
             this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
@@ -718,7 +719,7 @@
             // repositoryItemSparklineEdit1
             // 
             this.repositoryItemSparklineEdit1.Name = "repositoryItemSparklineEdit1";
-            this.repositoryItemSparklineEdit1.View = lineSparklineView1;
+            this.repositoryItemSparklineEdit1.View = lineSparklineView2;
             // 
             // repositoryItemPictureEdit1
             // 
@@ -761,9 +762,17 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem13),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem14),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem15),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem23),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem16)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
+            // 
+            // barButtonItem23
+            // 
+            this.barButtonItem23.Caption = "模拟量图显示";
+            this.barButtonItem23.Id = 56;
+            this.barButtonItem23.Name = "barButtonItem23";
+            this.barButtonItem23.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem23_ItemClick);
             // 
             // RealDisplayForm
             // 
@@ -867,6 +876,7 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem22;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem23;
 
     }
 }

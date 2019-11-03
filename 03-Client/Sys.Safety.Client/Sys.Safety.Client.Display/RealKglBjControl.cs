@@ -69,17 +69,17 @@ namespace Sys.Safety.Client.Display
         /// <summary>
         /// 列表显示名称
         /// </summary>
-        public string[] colname = new string[] { "测点编号","安装位置","当前值","设备状态",
-            "开始时间","持续时间","报警值","断电状态/时刻",
+        public string[] colname = new string[] { "测点编号","安装位置","设备类型名称","当前值","设备状态",
+            "开始时间","持续时间","报警/断电","报警/断电值","断电状态/时刻",
             "断电值","区域","馈电异常/时刻","措施/时刻","kzk","id","endtime"};//"分站/通道/地址",
 
         /// <summary>
         /// 表列头名称
         /// </summary>
-        public string[] tcolname = new string[] {"point","wz",
-            "ssz","sbstate", "stime","cxtime","bjz","ddtime","ddz","qy","kdtime","cs","kzk","id" ,"endtime"};//"fzh",
+        public string[] tcolname = new string[] {"point","wz","devname",
+            "ssz","sbstate", "stime","cxtime","bjddzt","bjz","ddtime","ddz","qy","kdtime","cs","kzk","id" ,"endtime"};//"fzh",
 
-        public int[] colwith = new int[] { 60, 160,  50, 80, 130, 80, 110, 130, 110, 160, 130, 130, 80, 80, 80 };
+        public int[] colwith = new int[] { 60, 160, 120, 50, 80, 130, 80, 110, 110, 130, 110, 160, 130, 130, 80, 80, 80 };
 
         /// <summary>
         /// 显示showdt操作对象锁  20170705
@@ -147,7 +147,7 @@ namespace Sys.Safety.Client.Display
             long key = 0;
             List<long> listkey;
             Dictionary<string, string> kzkd = new Dictionary<string, string>();
-            object wz = "", bjz = "", ddz = "", fzh = "", sszn = "", state = "", stime = "", etime = "",
+            object wz = "", devname = "", bjddzt = "", bjz = "", ddz = "", fzh = "", sszn = "", state = "", stime = "", etime = "",
                 cxtime = "", ddtime = "", cs = "", cut = "", allvalue = "", idn = "", qy = "", sbstate = "";
 
             #region 删除已结束的记录
@@ -451,6 +451,7 @@ namespace Sys.Safety.Client.Display
                                 if (row.Length > 0)
                                 {
                                     wz = row[0]["wz"];
+                                    devname = row[0]["devname"];
                                 }
                             }
                             fzh = obj.Fzh + "/" + obj.Kh + "/" + obj.Dzh;
@@ -468,6 +469,16 @@ namespace Sys.Safety.Client.Display
                                 etime = OprFuction.TimeToString(obj.Etime);
                             }
                             ddtime = OprFuction.TimeToString(obj.Stime);
+
+                            if (obj.Isalarm > 0 && string.IsNullOrEmpty(obj.Kzk))
+                            {
+                                bjddzt = "报警";
+                            }
+                            else if (!string.IsNullOrEmpty(obj.Kzk))
+                            {
+                                bjddzt = "断电";
+                            }
+
                             cs = obj.Cs;
                             cut = 1;
                             allvalue = obj.Ssz;
@@ -527,6 +538,8 @@ namespace Sys.Safety.Client.Display
                                             r = showdt.NewRow();
                                             r["point"] = point;
                                             r["wz"] = wz;
+                                            r["devname"] = devname;
+                                            r["bjddzt"] = bjddzt;
                                             r["bjz"] = bjz;
                                             r["ddz"] = ddz;
                                             //r["fzh"] = fzh;
@@ -541,7 +554,8 @@ namespace Sys.Safety.Client.Display
                                             {
                                                 r["cs"] = cs + "/" + obj.Bz2;
                                             }
-                                            else {
+                                            else
+                                            {
                                                 r["cs"] = "";
                                             }
                                             //r["count"] = 1;
@@ -572,6 +586,8 @@ namespace Sys.Safety.Client.Display
                                     r = showdt.NewRow();
                                     r["point"] = point;
                                     r["wz"] = wz;
+                                    r["devname"] = devname;
+                                    r["bjddzt"] = bjddzt;
                                     r["bjz"] = bjz;
                                     //r["fzh"] = fzh;
                                     r["ssz"] = sszn;
@@ -711,7 +727,7 @@ namespace Sys.Safety.Client.Display
                     #region 判断报警断电是否还存在
                     foreach (long key in jc_b.Keys)
                     {
-                        if (!StaticClass.jcbdata.ContainsKey(key) || (StaticClass.jcbdata[key].Isalarm == 0 &&string.IsNullOrEmpty( StaticClass.jcbdata[key].Kzk)))//如果用户取消报警(只有报警，没有控制时，可取消)，此时数据处理会将标记置成正常，客户端显示的时候也取消报警  20170627
+                        if (!StaticClass.jcbdata.ContainsKey(key) || (StaticClass.jcbdata[key].Isalarm == 0 && string.IsNullOrEmpty(StaticClass.jcbdata[key].Kzk)))//如果用户取消报警(只有报警，没有控制时，可取消)，此时数据处理会将标记置成正常，客户端显示的时候也取消报警  20170627
                         {
                             deletelist.Add(key);
                         }
